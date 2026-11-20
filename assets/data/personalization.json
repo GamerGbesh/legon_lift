@@ -1,0 +1,2358 @@
+{
+ "schemaVersion": 1,
+ "app": "Legon Lift",
+ "disclaimer": "General fitness and nutrition education, not medical advice. If you have a medical condition, check with a doctor (e.g. University of Ghana Hospital, Legon) before starting.",
+ "values_note": "Food protein/kcal values are rounded approximations for typical Ghanaian portions (FAO/INFOODS West African Food Composition Table 2019; USDA FoodData Central). Display with '~'.",
+ "defaultProfile": {
+  "sex": "male",
+  "age_y": 22,
+  "height_cm": 172,
+  "weight_kg": 95,
+  "goal_weight_kg": null,
+  "waist_cm": null,
+  "activity_level": "lightly_active",
+  "goal": "recomp",
+  "experience": "never",
+  "days_per_week": 3,
+  "session_minutes": 60,
+  "split": "push_pull_legs",
+  "limitations": [],
+  "training_time": "evening",
+  "budget": "tight",
+  "diet_notes": [],
+  "units": "metric",
+  "programId": "ppl_3day",
+  "reminder_weekdays": [
+   1,
+   3,
+   5
+  ]
+ },
+ "programSelection": {
+  "rule": "pick by (split, days_per_week); fall back to ppl_3day",
+  "table": [
+   {
+    "split": "push_pull_legs",
+    "days_per_week": [
+     3,
+     4,
+     5,
+     6
+    ],
+    "programId": "ppl_3day"
+   },
+   {
+    "split": "push_pull_legs",
+    "days_per_week": [
+     2
+    ],
+    "programId": "upper_lower_2day",
+    "note": "PPL needs 3 days; with 2 days the app suggests Upper/Lower 2-day."
+   },
+   {
+    "split": "upper_lower",
+    "days_per_week": [
+     2
+    ],
+    "programId": "upper_lower_2day"
+   },
+   {
+    "split": "upper_lower",
+    "days_per_week": [
+     3
+    ],
+    "programId": "upper_lower_rotating_3day"
+   },
+   {
+    "split": "upper_lower",
+    "days_per_week": [
+     4,
+     5,
+     6
+    ],
+    "programId": "upper_lower_4day"
+   },
+   {
+    "split": "chestback_legs_armsshoulders",
+    "days_per_week": [
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "programId": "chest_back_legs_arms_3day"
+   },
+   {
+    "split": "full_body",
+    "days_per_week": [
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "programId": "upper_lower_rotating_3day",
+    "note": "No full-body template ships; the user asked for a split. Suggest Upper/Lower."
+   },
+   {
+    "split": "custom",
+    "days_per_week": [
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "programId": null,
+    "note": "Opens the custom program editor, pre-filled from ppl_3day Phase 1."
+   }
+  ]
+ },
+ "gym": {
+  "name": "University of Ghana campus gym (Legon)",
+  "equipment": [
+   "cable",
+   "lat_pulldown_machine",
+   "shoulder_press_machine",
+   "chest_press_machine",
+   "bike",
+   "treadmill",
+   "barbell",
+   "dumbbell",
+   "leg_press",
+   "plates",
+   "calf_raise_machine",
+   "leg_curl_machine",
+   "leg_extension_machine",
+   "smith_machine",
+   "bench",
+   "bodyweight"
+  ],
+  "equipmentLabels": {
+   "cable": "Cable machine",
+   "lat_pulldown_machine": "Lat pulldown machine",
+   "shoulder_press_machine": "Shoulder press machine",
+   "chest_press_machine": "Chest press machine",
+   "bike": "Exercise bike",
+   "treadmill": "Treadmill",
+   "barbell": "Barbells",
+   "dumbbell": "Dumbbells",
+   "leg_press": "Leg press",
+   "plates": "Weight plates",
+   "calf_raise_machine": "Calf raise machine ('ankle machine')",
+   "leg_curl_machine": "Leg curl machine",
+   "leg_extension_machine": "Leg extension machine",
+   "smith_machine": "Smith machine",
+   "bench": "Adjustable benches",
+   "bodyweight": "Floor space / bodyweight",
+   "ankle_strap": "Ankle strap for the cable (not confirmed)"
+  },
+  "optionalEquipment": [
+   "ankle_strap"
+  ],
+  "equipmentNotes": {
+   "calf_raise_machine": "Listed as 'Ankle machine' in equipments.txt; the user confirmed it is a calf raise machine.",
+   "ankle_strap": "Not on the gym list. Tick it only if the gym has an ankle cuff for the cable machine.",
+   "smith_machine": "Bar weight unknown (often 7-20 kg, some are counterbalanced). Ask on the first visit.",
+   "leg_press": "Empty sled weight unknown. By default only added plates are logged.",
+   "leg_curl_machine": "Seated or lying version unknown; Settings lets the user pick."
+  },
+  "platesKg": [
+   25,
+   20,
+   15,
+   10,
+   5,
+   2.5,
+   1.25
+  ],
+  "barKg": 20,
+  "smithBarKg": 10,
+  "smithBarKnown": false,
+  "legPressSledKg": 0,
+  "legPressSledKnown": false,
+  "legCurlType": "seated",
+  "dumbbellStepKg": 2,
+  "dumbbellMaxKg": 40
+ },
+ "defaults": {
+  "restCompoundSec": 120,
+  "restIsolationSec": 75,
+  "warmupSetRestSec": 45,
+  "hotDayExtraRestSec": 30,
+  "hydrationNudgeEveryMin": 15
+ },
+ "onboarding": {
+  "fields": [
+   {
+    "id": "parq",
+    "label": "Safety check",
+    "type": "parq",
+    "required": true,
+    "ref": "safety.parq"
+   },
+   {
+    "id": "units",
+    "label": "Units",
+    "type": "enum",
+    "options": [
+     "metric",
+     "imperial"
+    ],
+    "default": "metric",
+    "required": true
+   },
+   {
+    "id": "sex",
+    "label": "Sex",
+    "type": "enum",
+    "options": [
+     "male",
+     "female"
+    ],
+    "default": "male",
+    "required": true
+   },
+   {
+    "id": "age_y",
+    "label": "Age",
+    "type": "int",
+    "min": 16,
+    "max": 80,
+    "default": 22,
+    "required": true,
+    "note": "Under 18: show 'train with supervision' notice"
+   },
+   {
+    "id": "height_cm",
+    "label": "Height",
+    "type": "number",
+    "min": 140,
+    "max": 210,
+    "default": 172,
+    "required": true
+   },
+   {
+    "id": "weight_kg",
+    "label": "Current weight",
+    "type": "number",
+    "min": 40,
+    "max": 250,
+    "default": 95,
+    "required": true
+   },
+   {
+    "id": "goal_weight_kg",
+    "label": "Goal weight (optional)",
+    "type": "number",
+    "min": 40,
+    "max": 250,
+    "default": null,
+    "required": false
+   },
+   {
+    "id": "waist_cm",
+    "label": "Waist at navel (optional)",
+    "type": "number",
+    "min": 50,
+    "max": 200,
+    "default": null,
+    "required": false
+   },
+   {
+    "id": "activity_level",
+    "label": "Daily activity outside the gym",
+    "type": "enum",
+    "options": [
+     "sedentary",
+     "lightly_active",
+     "moderately_active",
+     "very_active",
+     "extra_active"
+    ],
+    "default": "lightly_active",
+    "required": true,
+    "hint": "If unsure between two, pick the lower one."
+   },
+   {
+    "id": "baseline_steps",
+    "label": "Average daily steps (optional)",
+    "type": "int",
+    "min": 0,
+    "max": 40000,
+    "default": null,
+    "required": false
+   },
+   {
+    "id": "goal",
+    "label": "Main goal",
+    "type": "enum",
+    "options": [
+     "recomp",
+     "fat_loss",
+     "muscle_gain",
+     "maintain"
+    ],
+    "default": "recomp",
+    "required": true,
+    "labels": {
+     "recomp": "Lose fat & build muscle",
+     "fat_loss": "Lose fat",
+     "muscle_gain": "Build muscle",
+     "maintain": "Maintain & get fit"
+    }
+   },
+   {
+    "id": "experience",
+    "label": "Training experience",
+    "type": "enum",
+    "options": [
+     "never",
+     "lt_3_months",
+     "3_to_12_months",
+     "gt_1_year"
+    ],
+    "default": "never",
+    "required": true
+   },
+   {
+    "id": "days_per_week",
+    "label": "Days per week",
+    "type": "int",
+    "min": 2,
+    "max": 6,
+    "default": 3,
+    "required": true
+   },
+   {
+    "id": "session_minutes",
+    "label": "Session length (incl. warm-up)",
+    "type": "enum",
+    "options": [
+     30,
+     45,
+     60,
+     75
+    ],
+    "default": 60,
+    "required": true
+   },
+   {
+    "id": "split",
+    "label": "Preferred split",
+    "type": "enum",
+    "options": [
+     "push_pull_legs",
+     "upper_lower",
+     "chestback_legs_armsshoulders",
+     "full_body",
+     "custom"
+    ],
+    "default": "push_pull_legs",
+    "required": true
+   },
+   {
+    "id": "limitations",
+    "label": "Injuries / limitations",
+    "type": "multi_enum",
+    "options": [
+     "knee",
+     "lower_back",
+     "shoulder",
+     "wrist_elbow",
+     "hip",
+     "ankle",
+     "other"
+    ],
+    "default": [],
+    "required": false
+   },
+   {
+    "id": "training_time",
+    "label": "Usual training time",
+    "type": "enum",
+    "options": [
+     "morning",
+     "afternoon",
+     "evening"
+    ],
+    "default": "evening",
+    "required": false
+   },
+   {
+    "id": "budget",
+    "label": "Food budget",
+    "type": "enum",
+    "options": [
+     "tight",
+     "moderate",
+     "comfortable"
+    ],
+    "default": "tight",
+    "required": false
+   },
+   {
+    "id": "diet_notes",
+    "label": "Diet notes",
+    "type": "multi_enum",
+    "options": [
+     "no_pork",
+     "vegetarian",
+     "lactose_intolerant",
+     "groundnut_allergy",
+     "fish_allergy"
+    ],
+    "default": [],
+    "required": false
+   },
+   {
+    "id": "reminders",
+    "label": "Reminders",
+    "type": "object",
+    "default": {
+     "weigh_in_time": "06:30",
+     "workout_days": [
+      "mon",
+      "wed",
+      "fri"
+     ]
+    },
+    "required": false
+   }
+  ],
+  "storage": "device_only; weight, waist and photos excluded from any sync/analytics by default"
+ },
+ "limitation_rules": {
+  "knee": {
+   "avoid_ids": [
+    "supported_split_squat",
+    "dumbbell_step_up"
+   ],
+   "avoid_patterns": [
+    "lunge"
+   ],
+   "cue": "Knees: on the leg press put your feet a bit higher, lower only as deep as feels fine. Leg extension: lighter weight, slow. Stop any exercise that hurts more than 3/10."
+  },
+  "lower_back": {
+   "avoid_ids": [
+    "barbell_romanian_deadlift",
+    "barbell_bent_over_row",
+    "smith_machine_bent_over_row",
+    "bodyweight_good_morning",
+    "prone_superman_back_extension"
+   ],
+   "avoid_patterns": [],
+   "lock_unlocks": [
+    "barbell_floor_lifts"
+   ],
+   "cue": "Lower back: rows stay chest-supported or seated; keep the dumbbell RDL light with a flat back and stop at mid-shin."
+  },
+  "shoulder": {
+   "avoid_ids": [
+    "barbell_bench_press",
+    "dumbbell_fly",
+    "incline_dumbbell_fly",
+    "smith_machine_shoulder_press",
+    "seated_dumbbell_shoulder_press",
+    "lat_pulldown_wide"
+   ],
+   "avoid_patterns": [],
+   "cue": "Shoulders: machine presses with elbows slightly in front of the body; pull-downs with the close neutral grip."
+  },
+  "wrist_elbow": {
+   "avoid_ids": [
+    "barbell_curl",
+    "smith_machine_close_grip_bench_press",
+    "triceps_bar_pushdown"
+   ],
+   "avoid_patterns": [],
+   "cue": "Wrists/elbows: neutral grips (hammer curl, rope pushdown); wrists straight."
+  },
+  "hip": {
+   "avoid_ids": [
+    "supported_split_squat"
+   ],
+   "avoid_patterns": [],
+   "cue": "Hips: squat only as deep as is comfortable; widen the stance a little."
+  },
+  "ankle": {
+   "avoid_ids": [
+    "dumbbell_standing_calf_raise",
+    "dumbbell_step_up"
+   ],
+   "avoid_patterns": [],
+   "cue": "Ankles: seated or leg-press calf work only; no single-leg balance work."
+  },
+  "other": {
+   "avoid_ids": [],
+   "avoid_patterns": [],
+   "cue": "Use the 'It hurts' button on any exercise that causes pain; the app will offer a swap."
+  }
+ },
+ "formulas": {
+  "unit_conversions": {
+   "lb_to_kg": 0.45359237,
+   "in_to_cm": 2.54,
+   "ft_to_in": 12
+  },
+  "bmi": {
+   "expression": "weight_kg / (height_cm/100)^2",
+   "display_only": true
+  },
+  "bmr": {
+   "method": "mifflin_st_jeor",
+   "expression": "coef_weight*weight_kg + coef_height*height_cm + coef_age*age_y + constant",
+   "coef_weight": 10,
+   "coef_height": 6.25,
+   "coef_age": -5,
+   "constant": {
+    "male": 5,
+    "female": -161
+   },
+   "expected_error_pct": 10,
+   "citation": [
+    "mifflin_1990",
+    "frankenfield_2005"
+   ]
+  },
+  "activity_multipliers": {
+   "sedentary": 1.2,
+   "lightly_active": 1.375,
+   "moderately_active": 1.55,
+   "very_active": 1.725,
+   "extra_active": 1.9
+  },
+  "activity_descriptions": {
+   "sedentary": "Mostly sitting (lectures, laptop), little walking, no training",
+   "lightly_active": "Walk around campus daily, train 1-3x/week",
+   "moderately_active": "On your feet a lot, or train 4-5x/week, or 10k+ steps daily",
+   "very_active": "Physical job or hard training 6-7x/week",
+   "extra_active": "Athlete training twice a day or heavy manual labour"
+  },
+  "tdee": {
+   "expression": "bmr * activity_multipliers[activity_level]",
+   "note": "Includes training; do not add exercise calories on top."
+  },
+  "calorie_target": {
+   "expression": "round_to(tdee * (1 + goal_adjustment), rounding_kcal), then max(floor)",
+   "rounding_kcal": 50,
+   "goal_adjustment": {
+    "recomp": {
+     "bmi_gte_25": -0.2,
+     "bmi_lt_25": -0.1
+    },
+    "fat_loss": {
+     "default": -0.2,
+     "max_if_bmi_gte_30": -0.25
+    },
+    "muscle_gain": {
+     "default": 0.075,
+     "range": [
+      0.05,
+      0.1
+     ]
+    },
+    "maintain": {
+     "default": 0.0
+    }
+   },
+   "floor": {
+    "male": {
+     "min_kcal": 1500,
+     "min_fraction_of_bmr": 1.0
+    },
+    "female": {
+     "min_kcal": 1200,
+     "min_fraction_of_bmr": 0.95
+    },
+    "expression": "max(min_kcal, bmr*min_fraction_of_bmr)"
+   },
+   "citation": [
+    "aragon_2017",
+    "longland_2016",
+    "barakat_2020"
+   ]
+  },
+  "rate_of_loss": {
+   "target_pct_bw_per_week": [
+    0.5,
+    0.75
+   ],
+   "acceptable_pct_bw_per_week": [
+    0.25,
+    1.0
+   ],
+   "kcal_per_kg_fat_rule_of_thumb": 7700,
+   "ignore_first_weeks_for_adjustment": 2,
+   "citation": [
+    "helms_2014",
+    "aragon_2017",
+    "hall_2008"
+   ]
+  },
+  "protein": {
+   "reference_weight": {
+    "rule": "if bmi < 25: weight_kg; elif goal_weight_kg: max(goal_weight_kg, ref_bmi*height_m^2); else ref_bmi*height_m^2",
+    "ref_bmi": 25
+   },
+   "g_per_kg_ref": {
+    "min": 1.6,
+    "target": 1.9,
+    "max": 2.2
+   },
+   "rounding_g": 5,
+   "sanity_min_g_per_kg_actual": 1.2,
+   "per_meal_g_per_kg_ref": 0.4,
+   "meals_per_day": [
+    3,
+    5
+   ],
+   "rationale": "ISSN 1.4-2.0 g/kg (higher in a deficit); Morton 2018 plateau ~1.6 g/kg (CI to 2.2). For BMI>=25 scale to reference (BMI-25 or goal) weight, since adipose tissue has minimal protein requirement; avoids impractical 200 g+ targets.",
+   "citation": [
+    "jager_2017",
+    "morton_2018",
+    "helms_2014",
+    "kerksick_2017",
+    "examine_protein"
+   ]
+  },
+  "fat_carbs_advanced": {
+   "fat_g": "max(0.8*reference_weight_kg, 0.25*calorie_target/9)",
+   "carb_g": "(calorie_target - protein_g*4 - fat_g*9)/4",
+   "shown_only_in_advanced_mode": true
+  },
+  "water": {
+   "base_ml_per_kg": 30,
+   "base_clamp_ml": [
+    2000,
+    4000
+   ],
+   "hot_climate_add_ml": 500,
+   "training_add_ml_per_hour": 750,
+   "rounding_ml": 250,
+   "cap_ml": 5000,
+   "max_ml_per_hour": 1000,
+   "sachet_ml": 500,
+   "expression": "round_to(clamp(30*weight_kg, 2000, 4000) + 500 + (training_day ? 750*session_minutes/60 : 0), 250), cap 5000",
+   "citation": [
+    "efsa_2010",
+    "iom_2005",
+    "sawka_2007",
+    "mcdermott_2017"
+   ]
+  },
+  "steps": {
+   "default_start_if_unknown": 7000,
+   "start_expression": "clamp(baseline_steps + 2000, 6000, 10000)",
+   "progression": {
+    "every_weeks": 2,
+    "if_hit_days_of_7": 5,
+    "increase": 1000,
+    "max": 10000
+   },
+   "citation": [
+    "who_2020",
+    "paluch_2022"
+   ]
+  },
+  "recalculate_targets": {
+   "every_kg_lost": 4,
+   "or_every_weeks": 8
+  }
+ },
+ "worked_example": {
+  "inputs": {
+   "sex": "male",
+   "weight_kg": 95,
+   "height_cm": 172,
+   "age_y": 22,
+   "activity_level": "lightly_active",
+   "goal": "recomp",
+   "session_minutes": 60
+  },
+  "bmi": 32.1,
+  "bmr_kcal": 1920,
+  "tdee_kcal": 2640,
+  "calorie_target_kcal": 2100,
+  "daily_deficit_kcal": 540,
+  "target_rate_kg_per_week": [
+   0.48,
+   0.71
+  ],
+  "reference_weight_kg": 74,
+  "protein_g": {
+   "min": 120,
+   "target": 140,
+   "max": 165
+  },
+  "protein_points_per_day": 7,
+  "per_meal_protein_g": 30,
+  "fat_g": 60,
+  "carb_g": 250,
+  "water_ml": {
+   "rest_day": 3250,
+   "training_day": 4000,
+   "rest_day_sachets": 6.5,
+   "training_day_sachets": 8
+  },
+  "steps_target": 7000,
+  "waist_reference_cm": {
+   "who_increased_risk_gt": 94,
+   "who_high_risk_gt": 102,
+   "waist_to_height_goal_lt_cm": 86
+  }
+ },
+ "protein_points": {
+  "grams_per_point": 20,
+  "daily_points_expression": "round(protein_target_g / 20)",
+  "good_day_points_expression": "round(protein_min_g / 20)",
+  "items": [
+   {
+    "label": "3 eggs",
+    "points": 1
+   },
+   {
+    "label": "1-2 eggs",
+    "points": 0.5
+   },
+   {
+    "label": "1 tin sardines / mackerel / tuna",
+    "points": 1
+   },
+   {
+    "label": "1 palm (~100 g) chicken / goat / beef / fish",
+    "points": 1
+   },
+   {
+    "label": "1/2 medium tilapia",
+    "points": 1
+   },
+   {
+    "label": "3 sticks khebab",
+    "points": 1.5
+   },
+   {
+    "label": "100 g wagashi",
+    "points": 1
+   },
+   {
+    "label": "1 scoop whey",
+    "points": 1
+   },
+   {
+    "label": "1 cup cooked beans",
+    "points": 0.5
+   },
+   {
+    "label": "250 ml milk or 3 tbsp milk powder",
+    "points": 0.5
+   },
+   {
+    "label": "200 ml plain yoghurt",
+    "points": 0.5
+   },
+   {
+    "label": "3 koose",
+    "points": 0.5
+   },
+   {
+    "label": "30-40 g groundnuts",
+    "points": 0.5
+   },
+   {
+    "label": "1.5 tbsp abobi / shrimp powder",
+    "points": 0.5
+   },
+   {
+    "label": "40 g dry soya chunks",
+    "points": 1
+   }
+  ]
+ },
+ "daily_checklist": [
+  {
+   "id": "protein",
+   "label": "Protein points",
+   "type": "counter",
+   "target_ref": "protein_points.daily_points_expression"
+  },
+  {
+   "id": "water",
+   "label": "Water (sachets)",
+   "type": "counter",
+   "target_ref": "formulas.water"
+  },
+  {
+   "id": "veg_fruit",
+   "label": "Veg or fruit with 2+ meals",
+   "type": "bool"
+  },
+  {
+   "id": "steps",
+   "label": "Step target reached",
+   "type": "bool"
+  },
+  {
+   "id": "sleep",
+   "label": "7+ hours sleep last night",
+   "type": "bool"
+  },
+  {
+   "id": "no_sugary_drinks",
+   "label": "No sugary drinks (or 1 max)",
+   "type": "bool"
+  }
+ ],
+ "good_day_rule": "protein >= good_day_points AND >= 3 of the other 5 items",
+ "portion_guide": {
+  "method": "hand_portions",
+  "citation": [
+   "precision_nutrition_hand"
+  ],
+  "per_meal_male_deficit": {
+   "protein_palms": 2,
+   "carb_cupped_hands": [
+    1,
+    2
+   ],
+   "veg_fists": 2,
+   "fat_thumbs": [
+    1,
+    2
+   ]
+  },
+  "per_meal_female_deficit": {
+   "protein_palms": 1,
+   "carb_cupped_hands": [
+    1,
+    1
+   ],
+   "veg_fists": 1,
+   "fat_thumbs": [
+    1,
+    1
+   ]
+  },
+  "equivalents": {
+   "palm_protein": "~100 g cooked meat/fish = ~20-25 g protein",
+   "cupped_hand_carb": "~1/2 cup cooked rice = ~120 kcal",
+   "thumb_fat": "~1 tbsp oil/paste = ~100-120 kcal"
+  },
+  "swallow_rule": "Start at 3/4 of your usual kenkey/banku/fufu ball or waakye scoop; after 2 weeks try 1/2 if hunger is fine. Keep the fish/meat portion."
+ },
+ "meal_ideas": [
+  {
+   "id": "oats_milk_eggs",
+   "name": "Oats + milk + eggs",
+   "meal_type": "breakfast",
+   "components": [
+    "60 g oats",
+    "250 ml milk or 3 tbsp milk powder",
+    "2 boiled eggs",
+    "1 banana"
+   ],
+   "protein_g": 30,
+   "kcal_approx": 550,
+   "cost_tier": "medium",
+   "tips": "Little or no sugar; sweeten with banana.",
+   "tags": [
+    "home"
+   ],
+   "contains": [
+    "milk",
+    "egg"
+   ]
+  },
+  {
+   "id": "hausa_koko_upgrade",
+   "name": "Hausa koko upgrade",
+   "meal_type": "breakfast",
+   "components": [
+    "1 cup Hausa koko",
+    "2 tbsp milk powder",
+    "3 koose",
+    "2 boiled eggs"
+   ],
+   "protein_g": 25,
+   "kcal_approx": 550,
+   "cost_tier": "low",
+   "tips": "Plain koko is ~3 g protein; milk + eggs make it a meal. Max 3 koose (fried).",
+   "tags": [
+    "street"
+   ],
+   "contains": [
+    "milk",
+    "egg"
+   ]
+  },
+  {
+   "id": "egg_bread",
+   "name": "Egg bread",
+   "meal_type": "breakfast",
+   "components": [
+    "3-egg omelette with onion/tomato/pepper",
+    "2 slices tea or brown bread"
+   ],
+   "protein_g": 24,
+   "kcal_approx": 450,
+   "cost_tier": "low",
+   "tips": "Ask for less margarine/oil. Add a 4th egg for +6 g.",
+   "tags": [
+    "street"
+   ],
+   "contains": [
+    "egg",
+    "gluten"
+   ]
+  },
+  {
+   "id": "sardine_bread",
+   "name": "Sardine bread",
+   "meal_type": "breakfast",
+   "components": [
+    "1 tin sardines, drained",
+    "2 slices bread",
+    "onion, tomato"
+   ],
+   "protein_g": 26,
+   "kcal_approx": 450,
+   "cost_tier": "low",
+   "tips": "Drain the oil.",
+   "tags": [
+    "home"
+   ],
+   "contains": [
+    "fish",
+    "gluten"
+   ]
+  },
+  {
+   "id": "tuna_gari_foto",
+   "name": "Tuna with gari foto or yam",
+   "meal_type": "lunch",
+   "components": [
+    "1 tin tuna in brine",
+    "1 cupped hand gari foto or boiled yam",
+    "vegetables"
+   ],
+   "protein_g": 30,
+   "kcal_approx": 450,
+   "cost_tier": "medium",
+   "tips": "Tuna in brine is leaner than in oil.",
+   "tags": [
+    "home"
+   ],
+   "contains": [
+    "fish"
+   ]
+  },
+  {
+   "id": "red_red_upgrade",
+   "name": "Red red, upgraded",
+   "meal_type": "lunch",
+   "components": [
+    "1.5 cups beans stew",
+    "1 boiled egg or 1 piece fish",
+    "1/2 plantain (boiled or few fried slices)"
+   ],
+   "protein_g": 28,
+   "kcal_approx": 650,
+   "cost_tier": "low",
+   "tips": "Ask for less palm oil and fewer fried plantain slices.",
+   "tags": [
+    "street",
+    "home"
+   ],
+   "contains": [
+    "egg"
+   ]
+  },
+  {
+   "id": "waakye_smart",
+   "name": "Waakye, smart order",
+   "meal_type": "lunch",
+   "components": [
+    "1 scoop waakye",
+    "2 boiled eggs",
+    "1 piece fish or chicken",
+    "salad",
+    "small shito"
+   ],
+   "protein_g": 35,
+   "kcal_approx": 700,
+   "cost_tier": "medium",
+   "tips": "Skip/limit gari, spaghetti (talia), extra shito. A full 'everything' plate is often 1,100+ kcal. Wele adds little useful protein.",
+   "tags": [
+    "street"
+   ],
+   "contains": [
+    "egg",
+    "fish",
+    "gluten"
+   ]
+  },
+  {
+   "id": "kenkey_fish",
+   "name": "Kenkey with fish",
+   "meal_type": "lunch_or_dinner",
+   "components": [
+    "1/2-1 ball Ga kenkey",
+    "1 medium fried/grilled fish or 4-5 keta school boys",
+    "pepper with onion/tomato"
+   ],
+   "protein_g": 30,
+   "kcal_approx": 700,
+   "cost_tier": "low",
+   "tips": "Kenkey is mostly carbs (~8-10 g protein per ball). Get 2 fish rather than 2 balls; grilled over fried.",
+   "tags": [
+    "street"
+   ],
+   "contains": [
+    "fish"
+   ]
+  },
+  {
+   "id": "banku_tilapia",
+   "name": "Banku and tilapia",
+   "meal_type": "dinner",
+   "components": [
+    "1 medium grilled tilapia",
+    "1 small banku",
+    "pepper and onions"
+   ],
+   "protein_g": 35,
+   "kcal_approx": 750,
+   "cost_tier": "high",
+   "tips": "Lean, high-protein. Share a big banku.",
+   "tags": [
+    "street"
+   ],
+   "contains": [
+    "fish"
+   ]
+  },
+  {
+   "id": "light_soup_fish",
+   "name": "Light soup with fish or goat",
+   "meal_type": "dinner",
+   "components": [
+    "light soup",
+    "2 pieces fish or goat",
+    "1/2-1 small fufu or rice ball"
+   ],
+   "protein_g": 30,
+   "kcal_approx": 600,
+   "cost_tier": "medium",
+   "tips": "Low-oil soup. The meat pieces are what count.",
+   "tags": [
+    "street",
+    "home"
+   ],
+   "contains": [
+    "fish"
+   ]
+  },
+  {
+   "id": "groundnut_soup_smart",
+   "name": "Groundnut soup, smart",
+   "meal_type": "dinner",
+   "components": [
+    "1 ladle groundnut soup",
+    "1 chicken thigh/drumstick or fish",
+    "1/2 omo tuo (rice ball)"
+   ],
+   "protein_g": 30,
+   "kcal_approx": 750,
+   "cost_tier": "medium",
+   "tips": "Calorie-dense: skim the oil layer, keep the ball small.",
+   "tags": [
+    "street",
+    "home"
+   ],
+   "contains": [
+    "groundnut"
+   ]
+  },
+  {
+   "id": "kontomire_ampesi",
+   "name": "Kontomire stew + ampesi",
+   "meal_type": "lunch_or_dinner",
+   "components": [
+    "kontomire stew with 2 eggs or momone/mackerel",
+    "a little agushie",
+    "boiled yam/plantain"
+   ],
+   "protein_g": 28,
+   "kcal_approx": 600,
+   "cost_tier": "low",
+   "tips": "1 tbsp palm oil per serving at home.",
+   "tags": [
+    "home"
+   ],
+   "contains": [
+    "egg",
+    "fish"
+   ]
+  },
+  {
+   "id": "garden_egg_yam",
+   "name": "Garden egg stew + yam",
+   "meal_type": "lunch_or_dinner",
+   "components": [
+    "garden egg stew with tinned mackerel or 2 eggs",
+    "boiled yam"
+   ],
+   "protein_g": 25,
+   "kcal_approx": 550,
+   "cost_tier": "low",
+   "tips": "",
+   "tags": [
+    "home"
+   ],
+   "contains": [
+    "fish",
+    "egg"
+   ]
+  },
+  {
+   "id": "jollof_chicken",
+   "name": "Jollof / fried rice + chicken",
+   "meal_type": "lunch_or_dinner",
+   "components": [
+    "1-1.5 cupped hands rice",
+    "1 grilled chicken quarter",
+    "small coleslaw"
+   ],
+   "protein_g": 35,
+   "kcal_approx": 750,
+   "cost_tier": "medium",
+   "tips": "Ask for grilled chicken, less rice and less coleslaw dressing.",
+   "tags": [
+    "street"
+   ],
+   "contains": [
+    "egg"
+   ]
+  },
+  {
+   "id": "okro_banku",
+   "name": "Okro stew + banku",
+   "meal_type": "dinner",
+   "components": [
+    "okro stew with fish/crab/meat",
+    "small banku"
+   ],
+   "protein_g": 25,
+   "kcal_approx": 650,
+   "cost_tier": "medium",
+   "tips": "",
+   "tags": [
+    "street",
+    "home"
+   ],
+   "contains": [
+    "fish"
+   ]
+  },
+  {
+   "id": "khebab",
+   "name": "Khebab snack",
+   "meal_type": "snack",
+   "components": [
+    "3 sticks beef or chicken khebab"
+   ],
+   "protein_g": 28,
+   "kcal_approx": 300,
+   "cost_tier": "medium",
+   "tips": "Great post-gym snack; skip the fried yam.",
+   "tags": [
+    "street"
+   ],
+   "contains": []
+  },
+  {
+   "id": "wagashi_stew",
+   "name": "Wagashi stew",
+   "meal_type": "lunch_or_dinner",
+   "components": [
+    "100 g wagashi in tomato stew",
+    "rice or yam"
+   ],
+   "protein_g": 25,
+   "kcal_approx": 550,
+   "cost_tier": "medium",
+   "tips": "",
+   "tags": [
+    "home",
+    "vegetarian"
+   ],
+   "contains": [
+    "milk"
+   ]
+  },
+  {
+   "id": "soya_chunks_stew",
+   "name": "Soya chunks stew",
+   "meal_type": "lunch_or_dinner",
+   "components": [
+    "40 g dry soya chunks in stew",
+    "rice or yam"
+   ],
+   "protein_g": 20,
+   "kcal_approx": 450,
+   "cost_tier": "low",
+   "tips": "Very cheap vegetarian protein.",
+   "tags": [
+    "home",
+    "vegetarian"
+   ],
+   "contains": [
+    "soy"
+   ]
+  },
+  {
+   "id": "yoghurt_groundnuts",
+   "name": "Yoghurt + groundnuts",
+   "meal_type": "snack",
+   "components": [
+    "200 ml plain yoghurt",
+    "30 g roasted groundnuts"
+   ],
+   "protein_g": 15,
+   "kcal_approx": 350,
+   "cost_tier": "low",
+   "tips": "Pick plain/low-sugar over sweet sachet drinks.",
+   "tags": [
+    "vegetarian"
+   ],
+   "contains": [
+    "milk",
+    "groundnut"
+   ]
+  },
+  {
+   "id": "boiled_eggs",
+   "name": "Boiled eggs",
+   "meal_type": "snack",
+   "components": [
+    "3-4 boiled eggs"
+   ],
+   "protein_g": 21,
+   "kcal_approx": 260,
+   "cost_tier": "low",
+   "tips": "Easiest emergency protein.",
+   "tags": [
+    "vegetarian"
+   ],
+   "contains": [
+    "egg"
+   ]
+  },
+  {
+   "id": "milk_drink",
+   "name": "Milk drink",
+   "meal_type": "snack",
+   "components": [
+    "~40 g milk powder in water or 500 ml fresh milk"
+   ],
+   "protein_g": 13,
+   "kcal_approx": 250,
+   "cost_tier": "low",
+   "tips": "",
+   "tags": [
+    "vegetarian"
+   ],
+   "contains": [
+    "milk"
+   ]
+  },
+  {
+   "id": "indomie_eggs",
+   "name": "Indomie + 2 eggs + veg",
+   "meal_type": "snack",
+   "components": [
+    "1 pack noodles",
+    "2 eggs",
+    "cabbage/onion/tomato"
+   ],
+   "protein_g": 15,
+   "kcal_approx": 550,
+   "cost_tier": "low",
+   "tips": "Noodles alone are low protein; always add eggs and veg; use half the seasoning oil.",
+   "tags": [
+    "home"
+   ],
+   "contains": [
+    "egg",
+    "gluten"
+   ]
+  },
+  {
+   "id": "whey_shake",
+   "name": "Whey shake (optional)",
+   "meal_type": "snack",
+   "components": [
+    "1 scoop whey in water"
+   ],
+   "protein_g": 25,
+   "kcal_approx": 120,
+   "cost_tier": "high",
+   "tips": "Convenient, not needed. Food first.",
+   "tags": [
+    "supplement"
+   ],
+   "contains": [
+    "milk"
+   ]
+  }
+ ],
+ "low_protein_foods_pair_with_protein": [
+  "gari soakings",
+  "plain koko",
+  "bread alone",
+  "indomie alone",
+  "fried yam / plantain chips",
+  "kelewele",
+  "bofrot",
+  "meat pie",
+  "chips"
+ ],
+ "pantry_protein_boosters": [
+  "eggs",
+  "canned sardines/mackerel/tuna",
+  "milk powder",
+  "abobi (dried anchovy) or shrimp powder",
+  "groundnuts",
+  "soya chunks",
+  "cooked beans"
+ ],
+ "progress_tracking": {
+  "weigh_in": {
+   "frequency": "daily_preferred_min_3_per_week",
+   "protocol": [
+    "Morning",
+    "After toilet",
+    "Before food/water",
+    "Same clothing or none",
+    "Same scale on hard flat floor"
+   ],
+   "display": "7_day_rolling_average",
+   "min_weigh_ins_for_weekly_avg": 3,
+   "daily_noise_kg": [
+    0.5,
+    2.0
+   ],
+   "message": "Your weight bounces day to day. Only the weekly average matters."
+  },
+  "waist": {
+   "frequency": "weekly",
+   "site": "navel",
+   "protocol": "Standing relaxed, end of normal exhale, 2 readings averaged",
+   "who_male_cm": {
+    "increased_risk_gt": 94,
+    "high_risk_gt": 102
+   },
+   "who_female_cm": {
+    "increased_risk_gt": 80,
+    "high_risk_gt": 88
+   },
+   "waist_to_height_goal_lt": 0.5
+  },
+  "photos": {
+   "optional": true,
+   "frequency_weeks": 4,
+   "poses": [
+    "front",
+    "side",
+    "back"
+   ],
+   "storage": "app_private_with_optional_lock",
+   "compare_view": true
+  },
+  "strength_anchor_lifts": [
+   {
+    "key": "leg_press",
+    "exercise_any": [
+     "leg_press"
+    ]
+   },
+   {
+    "key": "chest_press_or_bench",
+    "exercise_any": [
+     "machine_chest_press",
+     "smith_machine_bench_press"
+    ]
+   },
+   {
+    "key": "lat_pulldown",
+    "exercise_any": [
+     "lat_pulldown_wide"
+    ]
+   },
+   {
+    "key": "shoulder_press_machine",
+    "exercise_any": [
+     "machine_shoulder_press"
+    ]
+   },
+   {
+    "key": "romanian_deadlift_or_goblet_squat",
+    "exercise_any": [
+     "dumbbell_romanian_deadlift",
+     "barbell_romanian_deadlift",
+     "dumbbell_goblet_squat"
+    ]
+   }
+  ],
+  "weekly_check_in": {
+   "rate_expression": "(avg_this_week - avg_last_week)/avg_last_week*100  (negative = loss); use 2-week mean once >=3 weeks of data",
+   "ignore_weeks": [
+    1,
+    2
+   ],
+   "rules": [
+    {
+     "id": "on_track",
+     "condition": "loss_pct between 0.5 and 1.0",
+     "consecutive": 2,
+     "action": "none",
+     "message": "On track, keep going."
+    },
+    {
+     "id": "too_fast",
+     "condition": "loss_pct > 1.0 after week 3",
+     "consecutive": 2,
+     "action": {
+      "kcal": 150
+     },
+     "message": "Losing a bit fast. Add one protein snack (~150 kcal) to protect muscle and energy."
+    },
+    {
+     "id": "slow_ok",
+     "condition": "loss_pct between 0.25 and 0.5",
+     "consecutive": 2,
+     "action": {
+      "steps_if_waist_flat": 1000
+     },
+     "message": "Slow but steady. If your waist isn't dropping, add 1,000 steps."
+    },
+    {
+     "id": "plateau",
+     "condition": "loss_pct < 0.25 AND waist change >= 0",
+     "consecutive": 3,
+     "action": {
+      "first": "adherence_check",
+      "then_one_of": [
+       {
+        "kcal": -150
+       },
+       {
+        "steps": 2000
+       }
+      ]
+     },
+     "message": "Plateau. First check protein points, portions and drinks. If those are solid, we'll trim 150 kcal or add 2,000 steps."
+    },
+    {
+     "id": "recomp",
+     "condition": "abs(loss_pct) < 0.25 AND waist decreasing AND strength increasing",
+     "consecutive": 2,
+     "action": "none",
+     "message": "The scale is lying: waist down and strength up means you're losing fat and gaining muscle."
+    },
+    {
+     "id": "gaining",
+     "condition": "gain_pct > 0.5",
+     "consecutive": 2,
+     "action": {
+      "first": "adherence_check",
+      "then": {
+       "kcal": -150
+      }
+     },
+     "message": "Weight is creeping up. Review portions and drinks first."
+    },
+    {
+     "id": "fatigued",
+     "condition": "user reports exhaustion/poor sleep AND strength dropping",
+     "consecutive": 2,
+     "action": {
+      "kcal": 175
+     },
+     "message": "You may be under-fuelled or stressed. Eat a bit more and prioritise sleep."
+    }
+   ],
+   "guards": {
+    "max_kcal_change_per_adjustment": 200,
+    "min_weeks_between_adjustments": 2,
+    "never_below_floor": true
+   },
+   "maintenance_break": {
+    "offer_after_weeks": 12,
+    "duration_weeks": [
+     1,
+     2
+    ],
+    "kcal": "tdee"
+   }
+  }
+ },
+ "expectations_timeline": [
+  {
+   "weeks": "1-2",
+   "scale_kg": "-1 to -2.5 total (mostly water/glycogen)",
+   "body": "Feel tighter",
+   "strength": "Learning machines and form; soreness; weights feel awkward, that's normal."
+  },
+  {
+   "weeks": "3-4",
+   "scale_kg": "-0.4 to -0.8 per week",
+   "body": "Waist -1 to -3 cm total",
+   "strength": "Fast neural gains, often +10-20% on machines; soreness fades."
+  },
+  {
+   "weeks": "5-8",
+   "scale_kg": "-0.4 to -0.7 per week; some flat weeks are normal",
+   "body": "Clothes looser; waist -3 to -6 cm total",
+   "strength": "Steady rep/weight increases most weeks."
+  },
+  {
+   "weeks": "9-12",
+   "scale_kg": "-0.3 to -0.6 per week",
+   "body": "Visible in photos; waist -5 to -8 cm total",
+   "strength": "Many lifts +30-50% vs week 1; first plateaus on some lifts."
+  },
+  {
+   "weeks": "12_total",
+   "scale_kg": "about -6 to -10 (6-10% of body weight)",
+   "body": "~1-2 kg muscle gain likely, hidden by fat loss",
+   "strength": "Confident with the whole gym."
+  }
+ ],
+ "adherence": {
+  "streak": {
+   "unit": "week",
+   "week_counts_if_sessions_gte": "planned_days - 1",
+   "min_sessions_floor": 1
+  },
+  "grace_tokens": {
+   "earn_every_completed_weeks": 4,
+   "max_banked": 2,
+   "auto_apply_on_missed_week": true
+  },
+  "never_miss_twice": true,
+  "pause_mode": {
+   "reasons": [
+    "illness",
+    "exams",
+    "travel",
+    "injury"
+   ],
+   "max_weeks": 3,
+   "freezes": [
+    "streak",
+    "reminders"
+   ]
+  },
+  "minimum_viable_session_minutes": 20,
+  "habit_badge_rule": "4 of 5 days per week for a habit row",
+  "implementation_intention_template": "After my [cue, e.g. last lecture on Mon/Wed/Fri], I will [walk to the gym].",
+  "habit_automaticity_median_days": 66,
+  "gym_bag_reminder": {
+   "when": "evening_before_workout",
+   "items": [
+    "towel",
+    "1-1.5 L water bottle",
+    "phone charged",
+    "earphones",
+    "gym shoes"
+   ]
+  },
+  "citation": [
+   "lally_2010",
+   "gollwitzer_2006",
+   "burke_2011"
+  ]
+ },
+ "safety": {
+  "parq": {
+   "source": "Paraphrased from PAR-Q+ (Warburton et al.; 2023 form at eparmedx.com). Link to the official form.",
+   "on_any_yes": {
+    "block_programme_until_ack": true,
+    "message": "Please talk to a doctor (e.g. University of Ghana Hospital, Legon) before starting, or complete the full PAR-Q+ follow-up. You can still browse the app.",
+    "ack_label": "I've been cleared by a doctor to exercise"
+   },
+   "re_ask_every_months": 12,
+   "questions": [
+    {
+     "id": "parq_1",
+     "text": "Has a doctor ever told you that you have a heart condition or high blood pressure?"
+    },
+    {
+     "id": "parq_2",
+     "text": "Do you feel pain in your chest at rest, during daily activities, or when you are physically active?"
+    },
+    {
+     "id": "parq_3",
+     "text": "In the past 12 months, have you lost balance because of dizziness or lost consciousness?",
+     "note": "Answer NO if dizziness came only from hard breathing during vigorous exercise."
+    },
+    {
+     "id": "parq_4",
+     "text": "Have you been diagnosed with another chronic medical condition (e.g. diabetes, asthma, kidney disease, sickle cell disease)?"
+    },
+    {
+     "id": "parq_5",
+     "text": "Are you currently taking prescribed medicine for a chronic medical condition?"
+    },
+    {
+     "id": "parq_6",
+     "text": "Do you currently have, or have you had in the past 12 months, a bone, joint or soft-tissue (muscle, ligament, tendon) problem that could get worse with more activity?",
+     "note": "Answer NO if it no longer limits you."
+    },
+    {
+     "id": "parq_7",
+     "text": "Has a doctor ever said you should only do medically supervised physical activity?"
+    }
+   ],
+   "ghana_extra_questions": [
+    {
+     "id": "gh_sickle",
+     "text": "Do you have sickle cell trait (AS) or sickle cell disease (SS/SC)?",
+     "blocks": false,
+     "advice": {
+      "trait": "Hydrate well, avoid all-out efforts in heat, build intensity gradually over 3-4 weeks, stop at unusual muscle pain or breathlessness.",
+      "disease": "Please get a doctor's clearance first."
+     }
+    },
+    {
+     "id": "gh_recent_fever",
+     "text": "Have you had malaria, typhoid or a fever in the past 2 weeks?",
+     "blocks": false,
+     "advice": "Wait until 1-2 weeks after full recovery, then restart at 50% of usual loads."
+    },
+    {
+     "id": "gh_diabetes_meds",
+     "text": "Do you have diabetes or take blood-sugar medicines?",
+     "blocks": false,
+     "advice": "Carry a sweet snack and don't train fasted."
+    }
+   ]
+  },
+  "red_flags_stop_now": [
+   "Chest pain, pressure or tightness, or pain spreading to arm, jaw or back",
+   "Severe breathlessness out of proportion to effort, or wheeze that won't settle",
+   "Fainting, near-fainting, sudden dizziness or confusion",
+   "Racing or irregular heartbeat / palpitations",
+   "Sudden severe headache, vision change, or weakness/numbness on one side",
+   "Sharp joint pain, a 'pop' with pain or swelling, or pain that changes how you move",
+   "After a session: dark/cola-coloured urine with severe muscle pain or swelling (possible rhabdomyolysis) - go to hospital the same day"
+  ],
+  "heat_illness": [
+   {
+    "id": "dehydration_cramps",
+    "severity": "mild",
+    "signs": [
+     "thirst",
+     "dark urine",
+     "muscle cramps",
+     "headache"
+    ],
+    "action": "Pause, drink water/ORS, move to shade or a fan."
+   },
+   {
+    "id": "heat_exhaustion",
+    "severity": "moderate",
+    "signs": [
+     "heavy sweating",
+     "cold clammy skin",
+     "dizziness",
+     "nausea",
+     "weakness",
+     "fast weak pulse",
+     "headache"
+    ],
+    "action": "Stop training. Cool place, lie down legs up, sip water/ORS, loosen clothing. Get help if not better in 30 min."
+   },
+   {
+    "id": "heat_stroke",
+    "severity": "emergency",
+    "signs": [
+     "confusion",
+     "slurred speech",
+     "odd behaviour",
+     "collapse",
+     "hot skin (may stop sweating)",
+     "seizure",
+     "temperature >= 40 C"
+    ],
+    "action": "Call 112 / 193. Cool aggressively right away (cold water/ice on body, fanning) while waiting."
+   }
+  ],
+  "heat_prevention": [
+   "Train in cooler parts of the day when possible.",
+   "Drink 400-600 ml in the 2 hours before training.",
+   "Bring a 1-1.5 L bottle.",
+   "Wear light, breathable clothing.",
+   "Rest longer between sets if the gym is hot.",
+   "Heat acclimatisation takes ~10-14 days, so go easier in your first 2 weeks.",
+   "Be extra careful after illness, poor sleep or alcohol."
+  ],
+  "emergency": {
+   "ghana_national": "112",
+   "ambulance": "193",
+   "nearest_facility": "University of Ghana Hospital, Legon",
+   "user_emergency_contact": true
+  },
+  "citation": [
+   "warburton_2011",
+   "casa_2015",
+   "sawka_2007"
+  ]
+ },
+ "milestones": [
+  {
+   "id": "akwaaba",
+   "category": "consistency",
+   "title": "Akwaaba",
+   "desc": "Completed your first session",
+   "rule": {
+    "sessions_completed_gte": 1
+   }
+  },
+  {
+   "id": "first_full_week",
+   "category": "consistency",
+   "title": "First Full Week",
+   "desc": "All planned sessions in week 1",
+   "rule": {
+    "week_index": 1,
+    "sessions_eq_planned": true
+   }
+  },
+  {
+   "id": "sessions_10",
+   "category": "consistency",
+   "title": "Double Digits",
+   "desc": "10 sessions done",
+   "rule": {
+    "sessions_completed_gte": 10
+   }
+  },
+  {
+   "id": "sessions_25",
+   "category": "consistency",
+   "title": "Quarter Century",
+   "desc": "25 sessions done",
+   "rule": {
+    "sessions_completed_gte": 25
+   }
+  },
+  {
+   "id": "sessions_50",
+   "category": "consistency",
+   "title": "Fifty Strong",
+   "desc": "50 sessions done",
+   "rule": {
+    "sessions_completed_gte": 50
+   }
+  },
+  {
+   "id": "sessions_100",
+   "category": "consistency",
+   "title": "Centurion",
+   "desc": "100 sessions done",
+   "rule": {
+    "sessions_completed_gte": 100
+   }
+  },
+  {
+   "id": "streak_4w",
+   "category": "consistency",
+   "title": "Month Locked In",
+   "desc": "4-week streak",
+   "rule": {
+    "week_streak_gte": 4
+   }
+  },
+  {
+   "id": "streak_12w",
+   "category": "consistency",
+   "title": "One Semester Strong",
+   "desc": "12-week streak",
+   "rule": {
+    "week_streak_gte": 12
+   }
+  },
+  {
+   "id": "exam_survivor",
+   "category": "consistency",
+   "title": "Exam Season Survivor",
+   "desc": "Kept your streak through exam weeks",
+   "rule": {
+    "streak_maintained_during_tag": "exams"
+   }
+  },
+  {
+   "id": "harmattan_hero",
+   "category": "consistency",
+   "title": "Harmattan Hero",
+   "desc": "8 weeks of training in Dec-Feb",
+   "rule": {
+    "weeks_trained_in_months": [
+     12,
+     1,
+     2
+    ],
+    "gte": 8
+   }
+  },
+  {
+   "id": "rainy_season_regular",
+   "category": "consistency",
+   "title": "Rainy Season Regular",
+   "desc": "8 weeks of training in Apr-Jul",
+   "rule": {
+    "weeks_trained_in_months": [
+     4,
+     5,
+     6,
+     7
+    ],
+    "gte": 8
+   }
+  },
+  {
+   "id": "early_bird",
+   "category": "consistency",
+   "title": "Early Bird",
+   "desc": "5 sessions started before 08:00",
+   "rule": {
+    "sessions_started_before": "08:00",
+    "gte": 5
+   }
+  },
+  {
+   "id": "comeback",
+   "category": "consistency",
+   "title": "Comeback",
+   "desc": "Trained within 7 days after a missed week",
+   "rule": {
+    "session_within_days_after_missed_week": 7
+   }
+  },
+  {
+   "id": "leg_press_bw",
+   "category": "strength",
+   "title": "Leg Press = Body Weight",
+   "desc": "Leg press total load (incl. sled) >= body weight",
+   "rule": {
+    "load_x_bodyweight_gte": 1.0,
+    "reps_gte": 5,
+    "include_sled_weight": true,
+    "exercise_any": [
+     "leg_press"
+    ]
+   }
+  },
+  {
+   "id": "leg_press_1_5bw",
+   "category": "strength",
+   "title": "Leg Press 1.5x BW",
+   "desc": "Leg press 1.5x body weight",
+   "rule": {
+    "load_x_bodyweight_gte": 1.5,
+    "reps_gte": 5,
+    "include_sled_weight": true,
+    "exercise_any": [
+     "leg_press"
+    ]
+   }
+  },
+  {
+   "id": "first_plate_bench",
+   "category": "strength",
+   "title": "First Plate Bench",
+   "desc": "Bench (barbell or Smith) with 60 kg",
+   "rule": {
+    "exercise_any": [
+     "barbell_bench_press",
+     "smith_machine_bench_press"
+    ],
+    "load_kg_gte": 60,
+    "reps_gte": 1
+   }
+  },
+  {
+   "id": "chest_press_half_bw",
+   "category": "strength",
+   "title": "Chest Press Half BW",
+   "desc": "Chest press machine 50% BW x 8",
+   "rule": {
+    "load_x_bodyweight_gte": 0.5,
+    "reps_gte": 8,
+    "exercise_any": [
+     "machine_chest_press"
+    ]
+   }
+  },
+  {
+   "id": "pulldown_half_bw",
+   "category": "strength",
+   "title": "Pulldown Half BW",
+   "desc": "Lat pulldown 50% BW x 10",
+   "rule": {
+    "load_x_bodyweight_gte": 0.5,
+    "reps_gte": 10,
+    "exercise_any": [
+     "lat_pulldown_wide",
+     "lat_pulldown_close_neutral",
+     "lat_pulldown_underhand"
+    ]
+   }
+  },
+  {
+   "id": "pulldown_3q_bw",
+   "category": "strength",
+   "title": "Pulldown 3/4 BW",
+   "desc": "Lat pulldown 75% BW x 8",
+   "rule": {
+    "load_x_bodyweight_gte": 0.75,
+    "reps_gte": 8,
+    "exercise_any": [
+     "lat_pulldown_wide",
+     "lat_pulldown_close_neutral",
+     "lat_pulldown_underhand"
+    ]
+   }
+  },
+  {
+   "id": "rdl_60",
+   "category": "strength",
+   "title": "RDL 60",
+   "desc": "Romanian deadlift 60 kg x 8",
+   "rule": {
+    "load_kg_gte": 60,
+    "reps_gte": 8,
+    "exercise_any": [
+     "barbell_romanian_deadlift",
+     "dumbbell_romanian_deadlift"
+    ]
+   }
+  },
+  {
+   "id": "rdl_bw",
+   "category": "strength",
+   "title": "RDL Body Weight",
+   "desc": "Romanian deadlift body weight x 5",
+   "rule": {
+    "load_x_bodyweight_gte": 1.0,
+    "reps_gte": 5,
+    "exercise_any": [
+     "barbell_romanian_deadlift",
+     "dumbbell_romanian_deadlift"
+    ]
+   }
+  },
+  {
+   "id": "goblet_20",
+   "category": "strength",
+   "title": "Goblet 20",
+   "desc": "Goblet squat 20 kg DB x 10",
+   "rule": {
+    "load_kg_gte": 20,
+    "reps_gte": 10,
+    "exercise_any": [
+     "dumbbell_goblet_squat",
+     "goblet_box_squat"
+    ]
+   }
+  },
+  {
+   "id": "db_row_25",
+   "category": "strength",
+   "title": "Row 25",
+   "desc": "Dumbbell row 25 kg x 10 each arm",
+   "rule": {
+    "load_kg_gte": 25,
+    "reps_gte": 10,
+    "exercise_any": [
+     "one_arm_db_row"
+    ]
+   }
+  },
+  {
+   "id": "shoulder_press_40bw",
+   "category": "strength",
+   "title": "Press 40% BW",
+   "desc": "Shoulder press machine 40% BW x 8",
+   "rule": {
+    "load_x_bodyweight_gte": 0.4,
+    "reps_gte": 8,
+    "exercise_any": [
+     "machine_shoulder_press"
+    ]
+   }
+  },
+  {
+   "id": "pr_any",
+   "category": "strength",
+   "title": "New PR",
+   "desc": "Beat a previous best on any lift",
+   "repeatable": true,
+   "rule": {
+    "estimated_1rm_gt_previous_best": true
+   }
+  },
+  {
+   "id": "strength_25",
+   "category": "strength",
+   "title": "+25% Stronger",
+   "desc": "Anchor lifts average +25% vs week 1",
+   "rule": {
+    "anchor_lifts_avg_increase_pct_gte": 25
+   }
+  },
+  {
+   "id": "strength_50",
+   "category": "strength",
+   "title": "+50% Stronger",
+   "desc": "Anchor lifts average +50% vs week 1",
+   "rule": {
+    "anchor_lifts_avg_increase_pct_gte": 50
+   }
+  },
+  {
+   "id": "minus_2_5kg",
+   "category": "body",
+   "title": "First 2.5",
+   "desc": "-2.5 kg (7-day average)",
+   "rule": {
+    "avg7_loss_kg_gte": 2.5
+   }
+  },
+  {
+   "id": "minus_5kg",
+   "category": "body",
+   "title": "Minus 5",
+   "desc": "-5 kg (7-day average)",
+   "rule": {
+    "avg7_loss_kg_gte": 5
+   }
+  },
+  {
+   "id": "minus_10kg",
+   "category": "body",
+   "title": "Minus 10",
+   "desc": "-10 kg (7-day average)",
+   "rule": {
+    "avg7_loss_kg_gte": 10
+   }
+  },
+  {
+   "id": "minus_5pct",
+   "category": "body",
+   "title": "5% Health Win",
+   "desc": "-5% body weight: clinically meaningful",
+   "rule": {
+    "avg7_loss_pct_gte": 5
+   }
+  },
+  {
+   "id": "minus_10pct",
+   "category": "body",
+   "title": "10% Health Win",
+   "desc": "-10% body weight",
+   "rule": {
+    "avg7_loss_pct_gte": 10
+   }
+  },
+  {
+   "id": "waist_minus_5",
+   "category": "body",
+   "title": "Waist -5 cm",
+   "desc": "Waist down 5 cm from start",
+   "rule": {
+    "waist_loss_cm_gte": 5
+   }
+  },
+  {
+   "id": "waist_minus_10",
+   "category": "body",
+   "title": "Waist -10 cm",
+   "desc": "Waist down 10 cm from start",
+   "rule": {
+    "waist_loss_cm_gte": 10
+   }
+  },
+  {
+   "id": "waist_lt_102",
+   "category": "body",
+   "title": "Under 102",
+   "desc": "Waist below 102 cm (WHO high-risk line)",
+   "rule": {
+    "waist_cm_lt": 102,
+    "sex": "male",
+    "only_if_start_gte": 102
+   }
+  },
+  {
+   "id": "waist_lt_94",
+   "category": "body",
+   "title": "Under 94",
+   "desc": "Waist below 94 cm (WHO increased-risk line)",
+   "rule": {
+    "waist_cm_lt": 94,
+    "sex": "male",
+    "only_if_start_gte": 94
+   }
+  },
+  {
+   "id": "whtr_lt_0_5",
+   "category": "body",
+   "title": "Half Your Height",
+   "desc": "Waist-to-height ratio below 0.5",
+   "rule": {
+    "waist_to_height_lt": 0.5
+   }
+  },
+  {
+   "id": "bmi_lt_30",
+   "category": "body",
+   "title": "Under 30",
+   "desc": "BMI below 30 (shown softly)",
+   "rule": {
+    "bmi_lt": 30,
+    "only_if_start_gte": 30
+   },
+   "low_emphasis": true
+  },
+  {
+   "id": "recomp_detective",
+   "category": "body",
+   "title": "Recomp Detective",
+   "desc": "Weight flat but waist down 2+ cm over 4 weeks",
+   "rule": {
+    "weeks": 4,
+    "abs_weight_change_pct_lt": 1,
+    "waist_loss_cm_gte": 2
+   }
+  },
+  {
+   "id": "protein_pro",
+   "category": "habit",
+   "title": "Protein Pro",
+   "desc": "Protein points hit 5 of 7 days",
+   "rule": {
+    "habit": "protein",
+    "days_of_7_gte": 5
+   }
+  },
+  {
+   "id": "protein_pro_month",
+   "category": "habit",
+   "title": "Protein Pro x4",
+   "desc": "Protein Pro 4 weeks in a row",
+   "rule": {
+    "badge": "protein_pro",
+    "consecutive_weeks_gte": 4
+   }
+  },
+  {
+   "id": "hydrated_heat",
+   "category": "habit",
+   "title": "Hydrated in the Heat",
+   "desc": "Water target 7 of 7 days",
+   "rule": {
+    "habit": "water",
+    "days_of_7_gte": 7
+   }
+  },
+  {
+   "id": "stepper_8k",
+   "category": "habit",
+   "title": "Stepper",
+   "desc": "Average >= 8,000 steps for a week",
+   "rule": {
+    "weekly_avg_steps_gte": 8000
+   }
+  },
+  {
+   "id": "stepper_10k",
+   "category": "habit",
+   "title": "Stepper 10K",
+   "desc": "Average >= 10,000 steps for a week",
+   "rule": {
+    "weekly_avg_steps_gte": 10000
+   }
+  },
+  {
+   "id": "sleep_champion",
+   "category": "habit",
+   "title": "Sleep Champion",
+   "desc": "7+ h average sleep for a week",
+   "rule": {
+    "weekly_avg_sleep_h_gte": 7
+   }
+  },
+  {
+   "id": "cardio_20",
+   "category": "habit",
+   "title": "Cardio Starter",
+   "desc": "20 min continuous bike/treadmill",
+   "rule": {
+    "cardio_continuous_min_gte": 20
+   }
+  },
+  {
+   "id": "cardio_30",
+   "category": "habit",
+   "title": "Cardio Builder",
+   "desc": "30 min continuous bike/treadmill",
+   "rule": {
+    "cardio_continuous_min_gte": 30
+   }
+  }
+ ],
+ "milestone_notes": "No milestone depends on the ambiguous 'ankle machine'. Machine loads use an editable per-machine sled/carriage weight. Body milestones use 7-day averages only.",
+ "tips": {
+  "rest_timer_tips": [
+   "Sip water now, a few mouthfuls every rest.",
+   "Breathe slowly through your nose; you're ready when you can talk in full sentences.",
+   "Next set: same weight. If all reps felt easy (2+ left in the tank), add a small step next time.",
+   "Shake out your arms and legs, but stay near your station.",
+   "Wipe the bench/seat before you leave the machine.",
+   "Check your setup for the next set: seat height, grip, feet flat.",
+   "Stopping 1-3 reps before failure is ideal for beginners.",
+   "Hot in here? It's fine to rest 30 extra seconds.",
+   "Quality reps beat heavy, sloppy reps.",
+   "Write down how hard that felt (easy / just right / hard); the app uses it to progress you."
+  ],
+  "pre_workout": [
+   "Eat a meal with carbs + protein 1-3 hours before (e.g. egg bread, red red, kenkey + fish), not a heavy oily plate right before.",
+   "Drink 400-600 ml of water in the 2 hours before training.",
+   "Pack: towel, 1-1.5 L bottle, charged phone, earphones.",
+   "Short on time? Do the 20-minute version. Showing up is the win.",
+   "Training soon after a long fast? A banana or small koko 30-60 min before helps.",
+   "Skip energy drinks; if you like coffee, a small cup is enough."
+  ],
+  "warm_up": [
+   "5 minutes on the bike or treadmill until you're lightly sweating.",
+   "Do 1-2 light warm-up sets of your first exercise before working sets.",
+   "In Accra's heat you warm up fast, so don't overdo the cardio warm-up."
+  ],
+  "during_workout_heat": [
+   "Aim for a few mouthfuls of water every rest; about 500-750 ml across the session.",
+   "Feeling dizzy, nauseous or cold and clammy? Stop and cool down; it may be heat exhaustion.",
+   "Confusion or collapse in someone is an emergency: call 112 / 193 and cool them with water."
+  ],
+  "post_workout": [
+   "Get 25-40 g protein within a couple of hours (e.g. 3 khebab sticks, sardine bread, 4 boiled eggs, tilapia).",
+   "Refill your water: drink until your urine is pale again.",
+   "Sweated a lot? Salt your food normally or take ORS.",
+   "A short 10-minute walk later helps soreness.",
+   "Log how you felt; it shapes your next session."
+  ],
+  "daily_nutrition": [
+   "Protein at every meal: about 2 palms.",
+   "Shrink the swallow, keep the fish.",
+   "Ask for grilled over fried, and small shito.",
+   "Skim the oil layer off groundnut and palm-nut soups.",
+   "Swap the soft drink or malt for water; that's ~200-250 kcal saved.",
+   "Add kontomire, garden eggs, okro, cabbage or fruit to 2+ meals.",
+   "Spend the extra cedi on an extra egg or fish, not extra gari or talia."
+  ],
+  "hydration": [
+   "Your water target is shown in 500 ml sachets.",
+   "Pale-straw urine means you're hydrated; dark yellow means drink more.",
+   "Don't force more than ~1 L per hour; over-drinking plain water can be dangerous.",
+   "Harmattan dryness still dehydrates you; keep drinking."
+  ],
+  "sleep": [
+   "Aim for 7-9 hours; muscle is built while you recover.",
+   "Same wake time every day, even weekends.",
+   "Phone away 30 minutes before bed.",
+   "No big coffee or energy drinks after 3 pm.",
+   "Exam all-nighter? Make tomorrow's session the 20-minute version."
+  ],
+  "soreness": [
+   "Soreness 1-3 days after training is normal in your first weeks; it fades by week 3.",
+   "Easy walking and moving help more than total rest.",
+   "Sharp or joint pain, swelling, or soreness worsening after 3 days is not normal; rest and get it checked.",
+   "Dark/cola urine with severe muscle pain: go to hospital the same day."
+  ],
+  "missed_session": [
+   "Missed one? No problem. Just don't miss twice.",
+   "Your streak is weekly; you can still make this week count.",
+   "Ill with fever or malaria? Use pause mode and come back 1-2 weeks after recovery.",
+   "Do the next session in your plan; no need to 'make up' the missed one."
+  ],
+  "plateau": [
+   "Weight flat but waist down? That's recomposition, so keep going.",
+   "Check the basics first: protein points, portion sizes, sugary drinks.",
+   "We change one thing at a time: -150 kcal or +2,000 steps.",
+   "Plateaus of 1-2 weeks are normal; we look at 3-week trends."
+  ],
+  "weigh_in": [
+   "Weigh in the morning, after the toilet, before eating or drinking.",
+   "Only the 7-day average matters.",
+   "Big kenkey/banku night or salty soup? Expect a temporary jump tomorrow."
+  ],
+  "gym_etiquette": [
+   "Re-rack your plates and dumbbells.",
+   "Wipe down benches and seats.",
+   "Busy gym? Offer to share a machine (alternate sets).",
+   "Ask a gym staff member to show you a machine if unsure; everyone was a beginner."
+  ],
+  "budget": [
+   "Eggs by the crate and beans in bulk are the cheapest protein.",
+   "Keep 3-4 tins of sardines/mackerel in your room.",
+   "Milk powder turns koko, oats and gari into protein.",
+   "Abobi or shrimp powder: +5-10 g protein for pesewas.",
+   "Creatine monohydrate (3-5 g/day) is the only supplement worth it if money allows; skip fat burners."
+  ],
+  "safety": [
+   "Stop immediately for chest pain, fainting, severe breathlessness or palpitations.",
+   "Emergency: 112, Ambulance: 193. Nearest: University of Ghana Hospital, Legon.",
+   "Sickle cell trait? Hydrate well and build intensity gradually."
+  ]
+ },
+ "tips_rotation": {
+  "mode": "random_within_key",
+  "no_repeat_days": 7
+ },
+ "references": {
+  "mifflin_1990": "Mifflin MD, St Jeor ST, et al. Am J Clin Nutr. 1990;51(2):241-247.",
+  "frankenfield_2005": "Frankenfield D, et al. J Am Diet Assoc. 2005;105(5):775-789.",
+  "jager_2017": "Jager R, et al. ISSN position stand: protein and exercise. J Int Soc Sports Nutr. 2017;14:20.",
+  "aragon_2017": "Aragon AA, et al. ISSN position stand: diets and body composition. J Int Soc Sports Nutr. 2017;14:16.",
+  "kerksick_2017": "Kerksick CM, et al. ISSN position stand: nutrient timing. J Int Soc Sports Nutr. 2017;14:33.",
+  "kreider_2017": "Kreider RB, et al. ISSN position stand: creatine. J Int Soc Sports Nutr. 2017;14:18.",
+  "helms_2014": "Helms ER, Aragon AA, Fitschen PJ. J Int Soc Sports Nutr. 2014;11:20.",
+  "morton_2018": "Morton RW, et al. Br J Sports Med. 2018;52(6):376-384.",
+  "longland_2016": "Longland TM, et al. Am J Clin Nutr. 2016;103(3):738-746.",
+  "barakat_2020": "Barakat C, et al. Body recomposition. Strength Cond J. 2020;42(5):7-21.",
+  "hall_2008": "Hall KD. Int J Obes. 2008;32(3):573-576.",
+  "examine_protein": "Examine.com protein intake guide and creatine monograph.",
+  "wafct_2019": "FAO/INFOODS West African Food Composition Table, 2019.",
+  "usda_fdc": "USDA FoodData Central.",
+  "ghana_fbdg_2023": "Ghana Food-Based Dietary Guidelines, MoFA/GHS with FAO, 2023; Ghana FDA for packaged-food labels.",
+  "who_2020": "Bull FC, et al. WHO 2020 guidelines on physical activity and sedentary behaviour. Br J Sports Med. 2020;54:1451-1462.",
+  "paluch_2022": "Paluch AE, et al. Lancet Public Health. 2022;7(3):e219-e228.",
+  "efsa_2010": "EFSA. Dietary reference values for water. EFSA J. 2010;8(3):1459.",
+  "iom_2005": "Institute of Medicine. DRIs for Water, Potassium, Sodium, Chloride, and Sulfate. 2005.",
+  "sawka_2007": "Sawka MN, et al. ACSM position stand: exercise and fluid replacement. Med Sci Sports Exerc. 2007;39(2):377-390.",
+  "mcdermott_2017": "McDermott BP, et al. NATA position statement: fluid replacement. J Athl Train. 2017;52(9):877-895.",
+  "casa_2015": "Casa DJ, et al. NATA position statement: exertional heat illnesses. J Athl Train. 2015;50(9):986-1000.",
+  "warburton_2011": "Warburton DER, et al. PAR-Q+ and ePARmed-X+. Health Fit J Can. 2011;4(2):3-23; current form eparmedx.com.",
+  "who_waist_2008": "WHO. Waist circumference and waist-hip ratio: expert consultation. 2008.",
+  "ashwell_2016": "Ashwell M, Gibson S. BMJ Open. 2016;6:e010159.",
+  "lally_2010": "Lally P, et al. Eur J Soc Psychol. 2010;40(6):998-1009.",
+  "gollwitzer_2006": "Gollwitzer PM, Sheeran P. Adv Exp Soc Psychol. 2006;38:69-119.",
+  "burke_2011": "Burke LE, et al. J Am Diet Assoc. 2011;111(1):92-102.",
+  "cheung_2003": "Cheung K, et al. Sports Med. 2003;33(2):145-164.",
+  "hirshkowitz_2015": "Hirshkowitz M, et al. Sleep Health. 2015;1(1):40-43.",
+  "precision_nutrition_hand": "Precision Nutrition hand-portion method."
+ }
+}

@@ -1,0 +1,1712 @@
+[
+  {
+    "id": "lat_pulldown_wide",
+    "name": "Wide-Grip Lat Pulldown",
+    "aliases": [
+      "Lat Pulldown",
+      "Overhand Lat Pulldown",
+      "Front Pulldown"
+    ],
+    "category": "pull",
+    "primaryMuscles": [
+      "lats"
+    ],
+    "secondaryMuscles": [
+      "upper_back",
+      "biceps",
+      "rear_delts"
+    ],
+    "equipment": [
+      "lat_pulldown_machine"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "stack",
+    "weightIncrementKg": 5,
+    "startingWeightKg": {
+      "low": 30,
+      "high": 40,
+      "note": "Stacks differ between machines. Start around 30 kg; you should hit 12 clean reps with 2-3 left in the tank. If the stack has a small add-on weight, use it for 2.5 kg jumps."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 90,
+    "durationSeconds": null,
+    "setup": [
+      "Attach the long straight bar to the top pulley (it is usually already there).",
+      "Sit down and set the thigh pad so it presses firmly on top of your thighs with feet flat on the floor - you should not lift off the seat when you pull.",
+      "Stand up, grab the bar with an overhand grip about 1.5x shoulder width (hands just outside the bend of the bar), then sit down holding it.",
+      "Lean back only slightly (about 10-20 degrees), chest up, arms fully straight overhead."
+    ],
+    "cues": [
+      "Pull your elbows down to your back pockets",
+      "Bar to upper chest, chest up to meet it",
+      "Squeeze your armpits shut for 1 second",
+      "Control it up for 2-3 seconds, full stretch at the top"
+    ],
+    "mistakes": [
+      "Leaning far back and turning it into a row",
+      "Yanking with body swing to move too much weight",
+      "Stopping halfway up instead of getting a full stretch",
+      "Pulling the bar behind the neck",
+      "Shrugging shoulders up to the ears at the bottom"
+    ],
+    "breathing": "Breathe in at the top with arms straight; exhale as you pull the bar down to your chest.",
+    "safety": "Very shoulder- and back-friendly first lift for a heavier beginner because you are seated and supported. Always pull to the front (never behind the neck). Let the stack touch down gently between sets; don't let go of the bar while it is loaded. Hot, humid gym: wipe the handle/bar and your palms with a towel before each set so your grip doesn't slip, and sip water between sets.",
+    "substitutions": [
+      "lat_pulldown_close_neutral",
+      "lat_pulldown_underhand",
+      "straight_arm_cable_pulldown"
+    ],
+    "freeExerciseDbId": "Wide-Grip_Lat_Pulldown",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wide-Grip_Lat_Pulldown/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wide-Grip_Lat_Pulldown/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=lueEJGjTuPQ",
+      "title": "Wide-Grip Lat Pulldown | Back Exercise Guide",
+      "channel": "Bodybuilding.com",
+      "verified": true
+    },
+    "sources": [
+      "https://barbend.com/close-grip-vs-wide-grip-lat-pulldown/",
+      "https://www.barbellmedicine.com/blog/lat-pulldown-hypertrophy/",
+      "https://builtwithscience.com/workouts/back-exercises-that-blew-up-my-back/",
+      "https://barbend.com/lat-pulldown/",
+      "https://github.com/yuhonas/free-exercise-db",
+      "https://www.youtube.com/watch?v=lueEJGjTuPQ"
+    ]
+  },
+  {
+    "id": "lat_pulldown_close_neutral",
+    "name": "Close-Grip Neutral Lat Pulldown",
+    "aliases": [
+      "V-Bar Pulldown",
+      "Neutral-Grip Pulldown",
+      "Close-Grip Pulldown"
+    ],
+    "category": "pull",
+    "primaryMuscles": [
+      "lats"
+    ],
+    "secondaryMuscles": [
+      "upper_back",
+      "biceps",
+      "rear_delts"
+    ],
+    "equipment": [
+      "lat_pulldown_machine"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "stack",
+    "weightIncrementKg": 5,
+    "startingWeightKg": {
+      "low": 30,
+      "high": 45,
+      "note": "Most people are a little stronger here than with the wide bar. Start ~30-35 kg and aim for 12 clean reps with 2-3 in reserve."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 90,
+    "durationSeconds": null,
+    "setup": [
+      "Clip the V-handle (double-D / close-grip row handle) onto the top pulley of the lat pulldown machine. If there is no V-handle, use the lat bar with a shoulder-width grip.",
+      "Set the thigh pad snug on your thighs, feet flat.",
+      "Grab the handle with palms facing each other, sit down, arms straight overhead.",
+      "Sit tall with a slight lean back and your chest up."
+    ],
+    "cues": [
+      "Elbows drive down and slightly back",
+      "Bring the handle to your upper chest",
+      "Keep chest proud, don't hunch",
+      "Slow on the way up - feel the lats stretch"
+    ],
+    "mistakes": [
+      "Rounding forward and crunching the abs to pull",
+      "Leaning way back and rowing",
+      "Using a short range of motion",
+      "Letting the weight stack slam"
+    ],
+    "breathing": "Inhale at the top; exhale while pulling down; inhale on the controlled return.",
+    "safety": "Neutral grip is the most comfortable on the shoulders and elbows - a great default if the wide grip bothers your shoulders. Hot, humid gym: wipe the handle/bar and your palms with a towel before each set so your grip doesn't slip, and sip water between sets.",
+    "substitutions": [
+      "lat_pulldown_wide",
+      "lat_pulldown_underhand",
+      "seated_cable_row"
+    ],
+    "freeExerciseDbId": "V-Bar_Pulldown",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/V-Bar_Pulldown/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/V-Bar_Pulldown/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=xvpjyZexgh0",
+      "title": "How to do Close Grip V-bar Lat Pulldown the correct way (Perfect Technique)",
+      "channel": "Lean Physique Lab",
+      "verified": true
+    },
+    "sources": [
+      "https://barbend.com/close-grip-vs-wide-grip-lat-pulldown/",
+      "https://www.barbellmedicine.com/blog/lat-pulldown-hypertrophy/",
+      "https://www.strongerbyscience.com/rowing/",
+      "https://github.com/yuhonas/free-exercise-db",
+      "https://www.youtube.com/watch?v=xvpjyZexgh0"
+    ]
+  },
+  {
+    "id": "lat_pulldown_underhand",
+    "name": "Underhand Close-Grip Lat Pulldown",
+    "aliases": [
+      "Reverse-Grip Lat Pulldown",
+      "Supinated Pulldown",
+      "Chin-up Grip Pulldown"
+    ],
+    "category": "pull",
+    "primaryMuscles": [
+      "lats"
+    ],
+    "secondaryMuscles": [
+      "biceps",
+      "upper_back"
+    ],
+    "equipment": [
+      "lat_pulldown_machine"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "stack",
+    "weightIncrementKg": 5,
+    "startingWeightKg": {
+      "low": 30,
+      "high": 40,
+      "note": "Start ~30 kg. The biceps help a lot here, so this often feels the strongest of the pulldown variations."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 90,
+    "durationSeconds": null,
+    "setup": [
+      "Use the straight lat bar on the top pulley.",
+      "Thigh pad snug on top of your thighs, feet flat.",
+      "Grab the bar palms facing you, hands about shoulder-width apart, and sit down.",
+      "Chest up, slight lean back, arms fully straight."
+    ],
+    "cues": [
+      "Elbows down to your sides, close to the ribs",
+      "Bar to upper chest",
+      "Squeeze the lats, not just the arms",
+      "Control the return to a full stretch"
+    ],
+    "mistakes": [
+      "Hands too close (strains wrists)",
+      "Curling the bar down with the arms only",
+      "Swinging the torso back and forth",
+      "Half reps"
+    ],
+    "breathing": "Inhale at the top; exhale as you pull down.",
+    "safety": "If your wrists or elbows feel strained in the palms-up position, switch to the neutral-grip pulldown. Hot, humid gym: wipe the handle/bar and your palms with a towel before each set so your grip doesn't slip, and sip water between sets.",
+    "substitutions": [
+      "lat_pulldown_close_neutral",
+      "lat_pulldown_wide",
+      "seated_cable_row"
+    ],
+    "freeExerciseDbId": "Underhand_Cable_Pulldowns",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Underhand_Cable_Pulldowns/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Underhand_Cable_Pulldowns/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=apzFTbsm7HU",
+      "title": "How To: Reverse Lat Pulldown",
+      "channel": "ScottHermanFitness",
+      "verified": true
+    },
+    "sources": [
+      "https://barbend.com/close-grip-vs-wide-grip-lat-pulldown/",
+      "https://www.barbellmedicine.com/blog/lat-pulldown-hypertrophy/",
+      "https://barbend.com/lat-pulldown/",
+      "https://github.com/yuhonas/free-exercise-db",
+      "https://www.youtube.com/watch?v=apzFTbsm7HU"
+    ]
+  },
+  {
+    "id": "straight_arm_cable_pulldown",
+    "name": "Straight-Arm Cable Pulldown",
+    "aliases": [
+      "Cable Lat Pullover",
+      "Straight-Arm Lat Pushdown",
+      "Rope Straight-Arm Pulldown"
+    ],
+    "category": "pull",
+    "primaryMuscles": [
+      "lats"
+    ],
+    "secondaryMuscles": [
+      "triceps",
+      "abs",
+      "rear_delts"
+    ],
+    "equipment": [
+      "cable"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "cable",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 10,
+      "high": 20,
+      "note": "Much lighter than pulldowns - start ~10-15 kg. If you can't keep your arms straight, it's too heavy."
+    },
+    "defaultSets": 2,
+    "repRange": [
+      12,
+      15
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Set the cable pulley to the highest position and attach a straight bar or a rope.",
+      "Grab it with arms straight (palms down on a bar), and step back 2 big steps so the cable pulls up and forward.",
+      "Feet hip-width, soft knees, hinge forward ~30 degrees at the hips with a flat back.",
+      "Start with arms up in front of you at about eye level, elbows only slightly bent."
+    ],
+    "cues": [
+      "Arms stay long - sweep down in an arc",
+      "Pull the bar to your thighs",
+      "Squeeze the lats hard at the bottom",
+      "Slow up until you feel the lats stretch"
+    ],
+    "mistakes": [
+      "Bending the elbows and turning it into a triceps pushdown",
+      "Standing too close so the stack bottoms out",
+      "Rounding the back or bouncing the torso",
+      "Going too heavy"
+    ],
+    "breathing": "Exhale as you sweep the bar down; inhale on the way up.",
+    "safety": "Low-load, joint-friendly lat isolation and a good way to learn to 'feel' your lats. Keep the ribs down so the low back doesn't arch. Hot, humid gym: wipe the handle/bar and your palms with a towel before each set so your grip doesn't slip, and sip water between sets.",
+    "substitutions": [
+      "lat_pulldown_wide",
+      "lat_pulldown_close_neutral"
+    ],
+    "freeExerciseDbId": "Straight-Arm_Pulldown",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Straight-Arm_Pulldown/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Straight-Arm_Pulldown/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=wcVDItawocI",
+      "title": "Straight Arm Pulldown - Back Exercise - Bodybuilding.com",
+      "channel": "Bodybuilding.com",
+      "verified": true
+    },
+    "sources": [
+      "https://builtwithscience.com/workouts/back-exercises-that-blew-up-my-back/",
+      "https://barbend.com/lat-pulldown/",
+      "https://github.com/yuhonas/free-exercise-db",
+      "https://www.youtube.com/watch?v=wcVDItawocI"
+    ]
+  },
+  {
+    "id": "seated_cable_row",
+    "name": "Seated Cable Row",
+    "aliases": [
+      "Low Cable Row",
+      "Seated Row",
+      "Cable Row (V-Handle)"
+    ],
+    "category": "pull",
+    "primaryMuscles": [
+      "upper_back",
+      "lats"
+    ],
+    "secondaryMuscles": [
+      "rear_delts",
+      "biceps",
+      "traps"
+    ],
+    "equipment": [
+      "cable"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "stack",
+    "weightIncrementKg": 5,
+    "startingWeightKg": {
+      "low": 30,
+      "high": 45,
+      "note": "Start ~30-35 kg. Pick a weight you can pull for 12 reps with your torso still, 2-3 reps left in reserve."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 90,
+    "durationSeconds": null,
+    "setup": [
+      "Use the low-row station if the gym has one (often built into the lat pulldown machine). If not, put the cable on the LOWEST setting and sit on a flat bench or the floor facing it, feet braced against the machine frame.",
+      "Attach the V-handle (close neutral grip). A straight bar with a shoulder-width grip also works.",
+      "Sit tall with knees slightly bent, feet pressed on the foot plate (or against the machine frame), and grab the handle.",
+      "Scoot back until your arms are straight with the weight lifted off the stack, torso upright."
+    ],
+    "cues": [
+      "Chest up, sit tall",
+      "Pull the handle to your belly button / lower ribs",
+      "Elbows back, squeeze shoulder blades together",
+      "Let the shoulders reach forward on the way back, torso stays still"
+    ],
+    "mistakes": [
+      "Rocking the torso back and forth to heave the weight",
+      "Rounding the lower back at the stretch",
+      "Shrugging up toward the ears",
+      "Pulling to the chest with flared elbows"
+    ],
+    "breathing": "Exhale as you row the handle in; inhale as you let it go forward.",
+    "safety": "Keep a slight bend in the knees and a neutral spine - small forward lean at the stretch is fine, but don't fold over. Very back-friendly when you keep the torso still. Hot, humid gym: wipe the handle/bar and your palms with a towel before each set so your grip doesn't slip, and sip water between sets.",
+    "substitutions": [
+      "chest_supported_db_row",
+      "one_arm_db_row",
+      "lat_pulldown_close_neutral"
+    ],
+    "freeExerciseDbId": "Seated_Cable_Rows",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Cable_Rows/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Cable_Rows/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=xQNrFHEMhI4",
+      "title": "Seated Cable Row | Exercise Guide",
+      "channel": "Bodybuilding.com",
+      "verified": true
+    },
+    "sources": [
+      "https://barbend.com/seated-cable-row/",
+      "https://www.strongerbyscience.com/rowing/",
+      "https://github.com/yuhonas/free-exercise-db",
+      "https://www.youtube.com/watch?v=xQNrFHEMhI4"
+    ]
+  },
+  {
+    "id": "chest_supported_db_row",
+    "name": "Chest-Supported Dumbbell Row",
+    "aliases": [
+      "Incline Dumbbell Row",
+      "Incline Bench Row",
+      "Seal Row (DB)"
+    ],
+    "category": "pull",
+    "primaryMuscles": [
+      "upper_back",
+      "lats"
+    ],
+    "secondaryMuscles": [
+      "rear_delts",
+      "biceps",
+      "traps"
+    ],
+    "equipment": [
+      "dumbbell",
+      "bench"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "dumbbell",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 10,
+      "high": 16,
+      "note": "Per dumbbell. Start around 10-12.5 kg each and add weight once you hit 12 clean reps on all sets."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 90,
+    "durationSeconds": null,
+    "setup": [
+      "Set an adjustable bench to about 30-45 degrees incline.",
+      "Place a dumbbell on each side of the front of the bench.",
+      "Lie face-down with your chest at the top edge of the pad (chin just over the top), feet planted on the floor or toes on the floor behind.",
+      "Pick up the dumbbells with a neutral grip (palms facing each other); arms hang straight down."
+    ],
+    "cues": [
+      "Chest glued to the pad",
+      "Drive elbows up and back toward your hips",
+      "Squeeze shoulder blades together at the top",
+      "Lower slowly to a full stretch"
+    ],
+    "mistakes": [
+      "Lifting the chest off the bench to cheat the weight up",
+      "Setting the bench too flat so the dumbbells hit the floor",
+      "Shrugging instead of rowing",
+      "Jerky, fast reps"
+    ],
+    "breathing": "Exhale as you row up; inhale as you lower.",
+    "safety": "The best row for a beginner because the bench supports your torso and takes all stress off the lower back. If lying on your stomach feels uncomfortable, raise the incline a notch and keep your feet planted. Put a towel on the pad - the vinyl gets slippery with sweat. Hot, humid gym: wipe the handle/bar and your palms with a towel before each set so your grip doesn't slip, and sip water between sets.",
+    "substitutions": [
+      "seated_cable_row",
+      "one_arm_db_row",
+      "smith_machine_bent_over_row"
+    ],
+    "freeExerciseDbId": "Dumbbell_Incline_Row",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Incline_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Incline_Row/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=llFTFDwmGcw",
+      "title": "How to PROPERLY Incline Dumbbell Row (CHEST SUPPORTED ROW DONE RIGHT)",
+      "channel": "Colossus Fitness",
+      "verified": true
+    },
+    "sources": [
+      "https://barbend.com/chest-supported-row/",
+      "https://www.strongerbyscience.com/rowing/",
+      "https://setforset.com/blogs/news/chest-supported-rows",
+      "https://github.com/yuhonas/free-exercise-db",
+      "https://www.youtube.com/watch?v=llFTFDwmGcw"
+    ]
+  },
+  {
+    "id": "one_arm_db_row",
+    "name": "One-Arm Dumbbell Row",
+    "aliases": [
+      "Single-Arm Dumbbell Row",
+      "Bench-Supported DB Row",
+      "Bent-Over One-Arm Row"
+    ],
+    "category": "pull",
+    "primaryMuscles": [
+      "lats",
+      "upper_back"
+    ],
+    "secondaryMuscles": [
+      "rear_delts",
+      "biceps",
+      "forearms"
+    ],
+    "equipment": [
+      "dumbbell",
+      "bench"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": true,
+    "loadType": "dumbbell",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 12,
+      "high": 20,
+      "note": "Per arm. Start around 12-16 kg; this is usually one of the heaviest dumbbell lifts you'll do. Pick a weight you can row 12 times without twisting, with 2-3 reps left."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Stand beside a flat bench. Put the same-side knee and hand on the bench (e.g. left knee + left hand) - or keep both feet on the floor with one hand on the bench in a staggered stance if kneeling is uncomfortable.",
+      "Back flat and roughly parallel to the floor, head in line with your spine.",
+      "Pick up the dumbbell with the free hand, neutral grip, arm hanging straight down under the shoulder."
+    ],
+    "cues": [
+      "Pull the dumbbell to your hip, not your chest",
+      "Elbow close to the body",
+      "Don't twist the torso open",
+      "Full stretch at the bottom"
+    ],
+    "mistakes": [
+      "Rotating the torso to swing the weight up",
+      "Rounding the back",
+      "Shrugging the shoulder up",
+      "Doing fewer or sloppier reps on the weaker side"
+    ],
+    "breathing": "Exhale as you row; inhale as you lower.",
+    "safety": "Using the bench as support keeps the lower back safe. Start each set with your weaker side and match reps on the other side. Hot, humid gym: wipe the handle/bar and your palms with a towel before each set so your grip doesn't slip, and sip water between sets.",
+    "substitutions": [
+      "chest_supported_db_row",
+      "seated_cable_row"
+    ],
+    "freeExerciseDbId": "One-Arm_Dumbbell_Row",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Dumbbell_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Arm_Dumbbell_Row/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=gfUg6qWohTk",
+      "title": "STOP F*cking Up Dumbbell Rows (PROPER FORM!)",
+      "channel": "ATHLEAN-X™",
+      "verified": true
+    },
+    "sources": [
+      "https://www.strongerbyscience.com/rowing/",
+      "https://barbend.com/dumbbell-row/",
+      "https://github.com/yuhonas/free-exercise-db",
+      "https://www.youtube.com/watch?v=gfUg6qWohTk"
+    ]
+  },
+  {
+    "id": "smith_machine_bent_over_row",
+    "name": "Smith Machine Bent-Over Row",
+    "aliases": [
+      "Smith Row",
+      "Smith Machine Barbell Row"
+    ],
+    "category": "pull",
+    "primaryMuscles": [
+      "upper_back",
+      "lats"
+    ],
+    "secondaryMuscles": [
+      "rear_delts",
+      "biceps",
+      "lower_back",
+      "hamstrings"
+    ],
+    "equipment": [
+      "smith_machine",
+      "plates"
+    ],
+    "mechanic": "compound",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "smith",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 25,
+      "high": 40,
+      "note": "Total including the bar (Smith bars typically weigh ~7-20 kg - ask staff or treat the empty bar as 15 kg). Later-stage lift: add it after 4-6 weeks of supported rows."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 90,
+    "durationSeconds": null,
+    "setup": [
+      "Set the Smith bar just below knee height and set the safety stops a few inches lower.",
+      "Stand close with feet hip-width, grip the bar overhand a little wider than shoulder width.",
+      "Unhook the bar, soften your knees and hinge at the hips until your torso is about 45 degrees (or slightly lower) with a flat back.",
+      "Let the bar hang at arm's length."
+    ],
+    "cues": [
+      "Hips back, flat back, brace your abs",
+      "Pull the bar to your lower ribs / belly",
+      "Elbows back at ~45 degrees",
+      "Torso stays still - no bouncing"
+    ],
+    "mistakes": [
+      "Standing up more each rep until it becomes a shrug",
+      "Rounding the lower back",
+      "Jerking the weight with the hips",
+      "Going too heavy before the hinge position is solid"
+    ],
+    "breathing": "Big breath and brace before each rep; exhale as the bar reaches your body; inhale as you lower.",
+    "safety": "Your lower back holds the bent-over position, so keep the weight moderate and stop the set if your back starts to round or ache. The chest-supported row is the safer default for the first month. Hot, humid gym: wipe the handle/bar and your palms with a towel before each set so your grip doesn't slip, and sip water between sets.",
+    "substitutions": [
+      "chest_supported_db_row",
+      "barbell_bent_over_row",
+      "seated_cable_row"
+    ],
+    "freeExerciseDbId": "Smith_Machine_Bent_Over_Row",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Bent_Over_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Bent_Over_Row/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=7PhvyukQ4Sw",
+      "title": "How To: Smith Machine- Overhand-Grip Bent-Over Row",
+      "channel": "ScottHermanFitness",
+      "verified": true
+    },
+    "sources": [
+      "https://www.strongerbyscience.com/rowing/",
+      "https://barbend.com/barbell-row/",
+      "https://github.com/yuhonas/free-exercise-db",
+      "https://www.youtube.com/watch?v=7PhvyukQ4Sw"
+    ]
+  },
+  {
+    "id": "barbell_bent_over_row",
+    "name": "Barbell Bent-Over Row",
+    "aliases": [
+      "Barbell Row",
+      "Bent-Over Row",
+      "Pendlay-style Row"
+    ],
+    "category": "pull",
+    "primaryMuscles": [
+      "upper_back",
+      "lats"
+    ],
+    "secondaryMuscles": [
+      "rear_delts",
+      "biceps",
+      "lower_back",
+      "hamstrings",
+      "forearms"
+    ],
+    "equipment": [
+      "barbell",
+      "plates"
+    ],
+    "mechanic": "compound",
+    "difficulty": 3,
+    "unilateral": false,
+    "loadType": "barbell",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 30,
+      "high": 40,
+      "note": "Total including the bar (an Olympic bar is 20 kg; some gym bars are lighter - check). Later-stage lift (after ~2-3 months). Start at the low end and only add 2.5 kg when every rep keeps a flat back."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      6,
+      10
+    ],
+    "restSeconds": 120,
+    "durationSeconds": null,
+    "setup": [
+      "Load the bar on the floor (there is no squat rack on the gym list). Pick it up like a deadlift: bar over mid-foot, bend the knees, flat back, stand up tall. If that pickup feels awkward or your back rounds, do the Smith machine row instead.",
+      "Feet hip-width, grip overhand just outside shoulder width.",
+      "Soften the knees and hinge at the hips until your torso is 30-45 degrees above parallel, back flat, bar hanging below the shoulders.",
+      "Brace your abs hard before the first rep."
+    ],
+    "cues": [
+      "Brace, flat back",
+      "Row the bar to your belly button",
+      "Squeeze shoulder blades at the top",
+      "Lower under control - torso doesn't move"
+    ],
+    "mistakes": [
+      "Rounded lower back",
+      "Standing more upright each rep",
+      "Using hip drive and momentum",
+      "Bar drifting away from the body"
+    ],
+    "breathing": "Brace with a full breath before each rep; exhale at the top; re-breathe at the bottom.",
+    "safety": "Most demanding row on the lower back - only add it once the dumbbell RDL hinge feels solid and the supported rows are progressing. Keep the load conservative and stop if the back rounds. Hot, humid gym: wipe the handle/bar and your palms with a towel before each set so your grip doesn't slip, and sip water between sets.",
+    "substitutions": [
+      "smith_machine_bent_over_row",
+      "chest_supported_db_row",
+      "seated_cable_row"
+    ],
+    "freeExerciseDbId": "Bent_Over_Barbell_Row",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Barbell_Row/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Barbell_Row/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=9efgcAjQe7E",
+      "title": "How To: Barbell Bent-Over Row",
+      "channel": "ScottHermanFitness",
+      "verified": true
+    },
+    "sources": [
+      "https://www.strongerbyscience.com/rowing/",
+      "https://barbend.com/barbell-row/",
+      "https://github.com/yuhonas/free-exercise-db",
+      "https://www.youtube.com/watch?v=9efgcAjQe7E"
+    ]
+  },
+  {
+    "id": "cable_face_pull",
+    "name": "Cable Face Pull",
+    "aliases": [
+      "Face Pull",
+      "Rope Face Pull"
+    ],
+    "category": "pull",
+    "primaryMuscles": [
+      "rear_delts"
+    ],
+    "secondaryMuscles": [
+      "upper_back",
+      "traps"
+    ],
+    "equipment": [
+      "cable"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "cable",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 10,
+      "high": 20,
+      "note": "Light! Start ~10-15 kg. If you lean back or can't pause with hands by your ears, it's too heavy."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      12,
+      15
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Set the cable pulley at about forehead/eye height and attach the rope.",
+      "Grab both ends of the rope with palms facing each other (thumbs toward you), step back until arms are straight.",
+      "Stagger your feet slightly, stand tall, ribs down."
+    ],
+    "cues": [
+      "Pull the rope toward your face/forehead",
+      "Split the rope apart - hands end beside your ears",
+      "Elbows high and wide",
+      "Pause 1 second, then return slowly"
+    ],
+    "mistakes": [
+      "Leaning back and using body weight",
+      "Pulling to the chin/neck with low elbows (turns into a row)",
+      "Shrugging the shoulders",
+      "Going too heavy"
+    ],
+    "breathing": "Exhale as you pull toward your face; inhale as the rope returns.",
+    "safety": "Excellent for shoulder health and posture, especially to balance all the pressing on push day. Keep it light and controlled. Hot, humid gym: wipe the handle/bar and your palms with a towel before each set so your grip doesn't slip, and sip water between sets.",
+    "substitutions": [
+      "cable_rear_delt_fly",
+      "incline_reverse_db_fly"
+    ],
+    "freeExerciseDbId": "Face_Pull",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Face_Pull/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Face_Pull/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=eTCBSFlCJ_s",
+      "title": "How to do a Face Pull | Proper Form & Technique | NASM",
+      "channel": "National Academy of Sports Medicine (NASM)",
+      "verified": true
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/Face_pull_(exercise)",
+      "https://barbend.com/face-pulls/",
+      "https://github.com/yuhonas/free-exercise-db",
+      "https://www.youtube.com/watch?v=eTCBSFlCJ_s"
+    ]
+  },
+  {
+    "id": "incline_reverse_db_fly",
+    "name": "Chest-Supported Reverse Dumbbell Fly",
+    "aliases": [
+      "Incline Reverse Fly",
+      "Prone Rear Delt Raise",
+      "Rear Delt Fly (Incline Bench)"
+    ],
+    "category": "pull",
+    "primaryMuscles": [
+      "rear_delts"
+    ],
+    "secondaryMuscles": [
+      "upper_back",
+      "traps"
+    ],
+    "equipment": [
+      "dumbbell",
+      "bench"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "dumbbell",
+    "weightIncrementKg": 2,
+    "startingWeightKg": {
+      "low": 4,
+      "high": 7.5,
+      "note": "Per dumbbell - it should feel almost too light. Use the smallest dumbbells available (often 4-5 kg); move up to the next dumbbell only when 15 strict reps are easy."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      12,
+      20
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Set an adjustable bench to about 30-45 degrees incline.",
+      "Lie face-down with your chest near the top edge of the pad, feet on the floor.",
+      "Hold a light dumbbell in each hand, palms facing each other, arms hanging straight down with a small bend in the elbows."
+    ],
+    "cues": [
+      "Arms wide, like spreading wings",
+      "Lead with your elbows - arms wide, elbows soft",
+      "Raise until arms are level with your body",
+      "Slow down - no swinging"
+    ],
+    "mistakes": [
+      "Bending the elbows and turning it into a row",
+      "Too heavy, so the traps take over",
+      "Lifting the chest off the bench",
+      "Short, fast reps"
+    ],
+    "breathing": "Exhale as you lift the dumbbells out; inhale as you lower.",
+    "safety": "Chest support removes any lower-back load - great for a heavier beginner. Keep weights light to protect the shoulders. Towel on the pad for sweat. Hot, humid gym: wipe the handle/bar and your palms with a towel before each set so your grip doesn't slip, and sip water between sets.",
+    "substitutions": [
+      "cable_rear_delt_fly",
+      "cable_face_pull"
+    ],
+    "freeExerciseDbId": "Reverse_Flyes",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Flyes/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Flyes/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=51YM340QE9M",
+      "title": "Target & Grow Your Rear Delts with the Incline Bench Reverse Fly",
+      "channel": "Mind Pump TV",
+      "verified": true
+    },
+    "sources": [
+      "https://github.com/yuhonas/free-exercise-db",
+      "https://www.youtube.com/watch?v=51YM340QE9M"
+    ]
+  },
+  {
+    "id": "cable_rear_delt_fly",
+    "name": "Cable Rear Delt Fly",
+    "aliases": [
+      "Cable Reverse Fly",
+      "Single-Arm Cable Rear Delt Fly",
+      "Standing Cable Reverse Fly"
+    ],
+    "category": "pull",
+    "primaryMuscles": [
+      "rear_delts"
+    ],
+    "secondaryMuscles": [
+      "upper_back",
+      "traps"
+    ],
+    "equipment": [
+      "cable"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 2,
+    "unilateral": true,
+    "loadType": "cable",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 2.5,
+      "high": 7.5,
+      "note": "Per arm - use the lightest pin settings (stacks often start at 2.5-5 kg). Done one arm at a time on a single cable; both arms at once if the gym has a dual-pulley crossover."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      12,
+      20
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Set the pulley at shoulder height and clip on a single D-handle (or hold the cable end/ball stopper with no attachment).",
+      "Single cable: stand side-on to the machine and take the handle with the FAR hand, arm across your body.",
+      "Dual-pulley crossover (if available): cross your arms - left hand takes the right cable, right hand the left cable.",
+      "Stand tall, soft elbows, arm(s) out in front at shoulder height."
+    ],
+    "cues": [
+      "Sweep the arm out and back in a wide arc",
+      "Keep the elbow soft and fixed",
+      "Stop when your arm lines up with your body",
+      "Control the return"
+    ],
+    "mistakes": [
+      "Rotating the torso to help",
+      "Pulling with a bent arm like a row",
+      "Using too much weight",
+      "Shrugging"
+    ],
+    "breathing": "Exhale as you sweep the arm back; inhale on the return.",
+    "safety": "Gentle on joints; keep the load light. Needs only a single D-handle - no ankle strap. Most stacks start at 2.5-5 kg, so the first pin may be your working weight; if even that is too heavy, use the chest-supported reverse dumbbell fly instead. Hot, humid gym: wipe the handle/bar and your palms with a towel before each set so your grip doesn't slip, and sip water between sets.",
+    "substitutions": [
+      "incline_reverse_db_fly",
+      "cable_face_pull"
+    ],
+    "freeExerciseDbId": "Cable_Rear_Delt_Fly",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Rear_Delt_Fly/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Rear_Delt_Fly/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=JENKmsEZQO8",
+      "title": "How To - Standing Cable Rear Delt Fly - Hunter Labrada",
+      "channel": "Labrada Nutrition",
+      "verified": true
+    },
+    "sources": [
+      "https://github.com/yuhonas/free-exercise-db",
+      "https://www.youtube.com/watch?v=JENKmsEZQO8"
+    ]
+  },
+  {
+    "id": "db_bicep_curl",
+    "name": "Dumbbell Biceps Curl",
+    "aliases": [
+      "Dumbbell Curl",
+      "Standing DB Curl",
+      "Alternating Dumbbell Curl"
+    ],
+    "category": "pull",
+    "primaryMuscles": [
+      "biceps"
+    ],
+    "secondaryMuscles": [
+      "forearms"
+    ],
+    "equipment": [
+      "dumbbell"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "dumbbell",
+    "weightIncrementKg": 2,
+    "startingWeightKg": {
+      "low": 8,
+      "high": 12,
+      "note": "Per dumbbell. Start ~8-10 kg; you should curl 12 reps without swinging."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Stand tall with feet hip-width, a dumbbell in each hand at your sides, palms facing forward.",
+      "Elbows tucked close to your ribs, shoulders back.",
+      "Option: do both arms together or alternate arms - or sit on the end of a bench to stop swinging."
+    ],
+    "cues": [
+      "Elbows pinned to your sides",
+      "Curl up, squeeze the biceps at the top",
+      "Lower slowly for 2-3 seconds",
+      "No body swing"
+    ],
+    "mistakes": [
+      "Swinging the hips/back to lift the weight",
+      "Elbows drifting forward",
+      "Dropping the weight on the way down",
+      "Half reps"
+    ],
+    "breathing": "Exhale as you curl up; inhale as you lower.",
+    "safety": "Low risk. If the elbows ache, use a slightly lighter weight and slower tempo, or switch to hammer curls. Hot, humid gym: wipe the handle/bar and your palms with a towel before each set so your grip doesn't slip, and sip water between sets.",
+    "substitutions": [
+      "cable_bicep_curl",
+      "db_hammer_curl",
+      "incline_db_curl",
+      "barbell_curl"
+    ],
+    "freeExerciseDbId": "Dumbbell_Bicep_Curl",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bicep_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bicep_Curl/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=sAq_ocpRh_I",
+      "title": "How To: Alternating Dumbbell Curl",
+      "channel": "ScottHermanFitness",
+      "verified": true
+    },
+    "sources": [
+      "https://fitnessvolt.com/jeff-nippard-ranks-best-and-worst-bicep-exercises/",
+      "https://github.com/yuhonas/free-exercise-db",
+      "https://www.youtube.com/watch?v=sAq_ocpRh_I"
+    ]
+  },
+  {
+    "id": "cable_bicep_curl",
+    "name": "Cable Biceps Curl",
+    "aliases": [
+      "Standing Cable Curl",
+      "Straight-Bar Cable Curl"
+    ],
+    "category": "pull",
+    "primaryMuscles": [
+      "biceps"
+    ],
+    "secondaryMuscles": [
+      "forearms"
+    ],
+    "equipment": [
+      "cable"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "cable",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 15,
+      "high": 25,
+      "note": "Start ~15-20 kg on the stack. Cable stacks vary a lot - adjust for 12 strict reps."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Set the cable pulley to the lowest position and attach a short straight bar (or a rope for a hammer-style curl).",
+      "Grab the bar palms up, shoulder-width, and stand one small step back from the machine.",
+      "Stand tall, elbows at your sides, arms straight with the weight just off the stack."
+    ],
+    "cues": [
+      "Elbows stay at your sides",
+      "Curl to your upper chest",
+      "Squeeze at the top",
+      "Slow lowering - keep tension"
+    ],
+    "mistakes": [
+      "Leaning back to lift more",
+      "Letting the stack crash between reps",
+      "Elbows moving forward"
+    ],
+    "breathing": "Exhale as you curl; inhale as you lower.",
+    "safety": "The cable keeps constant tension and is very elbow-friendly. Rope attachment = hammer curl variant if wrists feel strained. Hot, humid gym: wipe the handle/bar and your palms with a towel before each set so your grip doesn't slip, and sip water between sets.",
+    "substitutions": [
+      "db_bicep_curl",
+      "barbell_curl",
+      "db_hammer_curl"
+    ],
+    "freeExerciseDbId": "Standing_Biceps_Cable_Curl",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Biceps_Cable_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Biceps_Cable_Curl/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=NFzTWp2qpiE",
+      "title": "How To Do Cable Bicep Curls - Full Video Tutorial and Step-by-Step Guide",
+      "channel": "Fit Father Project - Fitness For Busy Fathers",
+      "verified": true
+    },
+    "sources": [
+      "https://fitnessvolt.com/jeff-nippard-ranks-best-and-worst-bicep-exercises/",
+      "https://github.com/yuhonas/free-exercise-db",
+      "https://www.youtube.com/watch?v=NFzTWp2qpiE"
+    ]
+  },
+  {
+    "id": "barbell_curl",
+    "name": "Barbell Curl",
+    "aliases": [
+      "Standing Barbell Curl",
+      "Straight-Bar Curl"
+    ],
+    "category": "pull",
+    "primaryMuscles": [
+      "biceps"
+    ],
+    "secondaryMuscles": [
+      "forearms"
+    ],
+    "equipment": [
+      "barbell",
+      "plates"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "barbell",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 15,
+      "high": 25,
+      "note": "Total including bar. An empty 20 kg Olympic bar is a fair start for most; if 12 strict reps with 2-3 left feels impossible, use a lighter fixed/short bar if the gym has one, or do dumbbell curls."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 75,
+    "durationSeconds": null,
+    "setup": [
+      "Load the bar (or use the empty bar). Pick it up from the floor by bending your knees and keeping your back flat - no rack is needed for this weight.",
+      "Grip palms up, hands shoulder-width.",
+      "Stand tall with feet hip-width, knees soft, bar resting against your thighs."
+    ],
+    "cues": [
+      "Elbows pinned at your sides",
+      "Curl the bar up in an arc to your upper chest",
+      "Squeeze, then lower slowly",
+      "Glutes and abs tight - no hip swing"
+    ],
+    "mistakes": [
+      "Swinging the torso back to cheat",
+      "Elbows travelling forward",
+      "Wrists bending back",
+      "Grip too narrow, straining the wrists"
+    ],
+    "breathing": "Exhale as you curl up; inhale as you lower.",
+    "safety": "A straight bar can strain the wrists/elbows for some people (no EZ bar available here) - if it does, switch to dumbbell or cable curls. Hot, humid gym: wipe the handle/bar and your palms with a towel before each set so your grip doesn't slip, and sip water between sets.",
+    "substitutions": [
+      "db_bicep_curl",
+      "cable_bicep_curl"
+    ],
+    "freeExerciseDbId": "Barbell_Curl",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Curl/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=LY1V6UbRHFM",
+      "title": "How To: Straight-Bar Bicep Curl",
+      "channel": "ScottHermanFitness",
+      "verified": true
+    },
+    "sources": [
+      "https://fitnessvolt.com/jeff-nippard-ranks-best-and-worst-bicep-exercises/",
+      "https://barbend.com/barbell-curl/",
+      "https://github.com/yuhonas/free-exercise-db",
+      "https://www.youtube.com/watch?v=LY1V6UbRHFM"
+    ]
+  },
+  {
+    "id": "db_hammer_curl",
+    "name": "Dumbbell Hammer Curl",
+    "aliases": [
+      "Hammer Curl",
+      "Neutral-Grip Curl"
+    ],
+    "category": "pull",
+    "primaryMuscles": [
+      "biceps",
+      "forearms"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "dumbbell"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "dumbbell",
+    "weightIncrementKg": 2,
+    "startingWeightKg": {
+      "low": 8,
+      "high": 14,
+      "note": "Per dumbbell. You'll usually be a little stronger than on regular curls - start ~10 kg."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Stand tall, a dumbbell in each hand at your sides, palms facing your thighs (thumbs forward).",
+      "Elbows tucked in, shoulders back.",
+      "Variant: rope on the low cable pulley, same neutral grip."
+    ],
+    "cues": [
+      "Thumbs up, like holding hammers",
+      "Elbows stay at your sides",
+      "Curl up and squeeze",
+      "Lower slowly"
+    ],
+    "mistakes": [
+      "Swinging the body",
+      "Elbows flaring forward",
+      "Rushing the lowering part"
+    ],
+    "breathing": "Exhale up; inhale down.",
+    "safety": "The neutral grip is the friendliest curl for wrists and elbows. Hot, humid gym: wipe the handle/bar and your palms with a towel before each set so your grip doesn't slip, and sip water between sets.",
+    "substitutions": [
+      "db_bicep_curl",
+      "cable_bicep_curl"
+    ],
+    "freeExerciseDbId": "Hammer_Curls",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hammer_Curls/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hammer_Curls/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=zC3nLlEvin4",
+      "title": "How To: Dumbbell Hammer Curl",
+      "channel": "ScottHermanFitness",
+      "verified": true
+    },
+    "sources": [
+      "https://fitnessvolt.com/jeff-nippard-ranks-best-and-worst-bicep-exercises/",
+      "https://www.masterclass.com/articles/hammer-curl-guide",
+      "https://github.com/yuhonas/free-exercise-db",
+      "https://www.youtube.com/watch?v=zC3nLlEvin4"
+    ]
+  },
+  {
+    "id": "incline_db_curl",
+    "name": "Incline Dumbbell Curl",
+    "aliases": [
+      "Seated Incline Curl",
+      "Incline Bench Biceps Curl"
+    ],
+    "category": "pull",
+    "primaryMuscles": [
+      "biceps"
+    ],
+    "secondaryMuscles": [
+      "forearms"
+    ],
+    "equipment": [
+      "dumbbell",
+      "bench"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "dumbbell",
+    "weightIncrementKg": 2,
+    "startingWeightKg": {
+      "low": 6,
+      "high": 10,
+      "note": "Per dumbbell. Expect to use ~20-30% less than standing curls because of the stretched position."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Set an adjustable bench to about 45-60 degrees.",
+      "Sit back with your head and upper back on the pad, a dumbbell in each hand.",
+      "Let your arms hang straight down, slightly behind your torso, palms facing forward."
+    ],
+    "cues": [
+      "Arms hang straight down - feel the stretch",
+      "Curl without moving the elbows forward",
+      "Squeeze at the top",
+      "Lower all the way, slowly"
+    ],
+    "mistakes": [
+      "Elbows swinging forward to finish the rep",
+      "Bench too flat (strains the front of the shoulder)",
+      "Lifting the head/shoulders off the pad",
+      "Too heavy"
+    ],
+    "breathing": "Exhale as you curl; inhale as you lower.",
+    "safety": "The stretched position is great for growth but can bother stiff shoulders. If you feel pain in the front of the shoulder, raise the bench angle or use regular curls. Hot, humid gym: wipe the handle/bar and your palms with a towel before each set so your grip doesn't slip, and sip water between sets.",
+    "substitutions": [
+      "db_bicep_curl",
+      "cable_bicep_curl",
+      "db_hammer_curl"
+    ],
+    "freeExerciseDbId": "Incline_Dumbbell_Curl",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Curl/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=soxrZlIl35U",
+      "title": "How To: Seated Incline Dumbbell Bicep Curl",
+      "channel": "ScottHermanFitness",
+      "verified": true
+    },
+    "sources": [
+      "https://fitnessvolt.com/jeff-nippard-top-biceps-exercises",
+      "https://fitnessvolt.com/jeff-nippard-ranks-best-and-worst-bicep-exercises/",
+      "https://barbend.com/incline-dumbbell-curl/",
+      "https://github.com/yuhonas/free-exercise-db",
+      "https://www.youtube.com/watch?v=soxrZlIl35U"
+    ]
+  },
+  {
+    "id": "db_shrug",
+    "name": "Dumbbell Shrug",
+    "aliases": [
+      "DB Shrug",
+      "Shoulder Shrug"
+    ],
+    "category": "pull",
+    "primaryMuscles": [
+      "traps"
+    ],
+    "secondaryMuscles": [
+      "forearms"
+    ],
+    "equipment": [
+      "dumbbell"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "dumbbell",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 20,
+      "high": 30,
+      "note": "Per dumbbell. Grip is usually the limit - start ~20 kg each."
+    },
+    "defaultSets": 2,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Stand tall with a dumbbell in each hand at your sides, palms facing in.",
+      "Feet hip-width, knees soft, arms straight."
+    ],
+    "cues": [
+      "Shoulders straight up to your ears",
+      "Pause and squeeze 1-2 seconds",
+      "Lower slowly to a full stretch",
+      "Arms stay straight - no rolling"
+    ],
+    "mistakes": [
+      "Rolling the shoulders in circles",
+      "Bending the elbows / curling",
+      "Bouncing quick reps",
+      "Jutting the head forward"
+    ],
+    "breathing": "Exhale as you shrug up; inhale as you lower.",
+    "safety": "Simple and safe. Keep your neck neutral (look straight ahead). Hot, humid gym: wipe the handle/bar and your palms with a towel before each set so your grip doesn't slip, and sip water between sets.",
+    "substitutions": [
+      "smith_machine_shrug"
+    ],
+    "freeExerciseDbId": "Dumbbell_Shrug",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Shrug/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Shrug/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=cJRVVxmytaM",
+      "title": "How To: Dumbbell Shrugs",
+      "channel": "ScottHermanFitness",
+      "verified": true
+    },
+    "sources": [
+      "https://barbend.com/dumbbell-shrug/",
+      "https://github.com/yuhonas/free-exercise-db",
+      "https://www.youtube.com/watch?v=cJRVVxmytaM"
+    ]
+  },
+  {
+    "id": "smith_machine_shrug",
+    "name": "Smith Machine Shrug",
+    "aliases": [
+      "Smith Shrug",
+      "Barbell Shrug (Smith)"
+    ],
+    "category": "pull",
+    "primaryMuscles": [
+      "traps"
+    ],
+    "secondaryMuscles": [
+      "forearms"
+    ],
+    "equipment": [
+      "smith_machine",
+      "plates"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "smith",
+    "weightIncrementKg": 5,
+    "startingWeightKg": {
+      "low": 40,
+      "high": 60,
+      "note": "Total including the Smith bar (Smith bars weigh ~7-20 kg - ask staff or treat the empty bar as 15 kg). Grip usually fails before the traps - towel your hands and the bar."
+    },
+    "defaultSets": 2,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 75,
+    "durationSeconds": null,
+    "setup": [
+      "Use the Smith machine: set the bar hooks at mid-thigh height so you never lift the bar off the floor (there is no rack for a free barbell).",
+      "Load the plates evenly on both sides, set the safety stops just below the starting height.",
+      "Grip overhand just outside your thighs (a bit wider than shoulder-width), stand tall, twist the bar to unhook it, arms straight, bar against your thighs."
+    ],
+    "cues": [
+      "Shoulders straight up",
+      "Hold the top for 1 second",
+      "Slow down",
+      "Look straight ahead"
+    ],
+    "mistakes": [
+      "Rolling shoulders",
+      "Bending the elbows",
+      "Hips pushing the bar up",
+      "Forgetting to set the safety stops"
+    ],
+    "breathing": "Exhale up; inhale down.",
+    "safety": "Smith version only: the bar starts at thigh height so your back never has to deadlift it from the floor. Re-hook the bar by twisting it at the end of the set. Sweaty hands slip - no straps listed, so use dumbbell shrugs if grip limits you. Hot, humid gym: wipe the handle/bar and your palms with a towel before each set so your grip doesn't slip, and sip water between sets.",
+    "substitutions": [
+      "db_shrug"
+    ],
+    "freeExerciseDbId": "Barbell_Shrug",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Shrug/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Shrug/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=9xGqgGFAtiM",
+      "title": "Barbell Shrug - Shoulder Exercise - Bodybuilding.com",
+      "channel": "Bodybuilding.com",
+      "verified": true
+    },
+    "sources": [
+      "https://barbend.com/shrugs/",
+      "https://github.com/yuhonas/free-exercise-db",
+      "https://www.youtube.com/watch?v=9xGqgGFAtiM"
+    ]
+  },
+  {
+    "id": "db_romanian_deadlift",
+    "name": "Dumbbell Romanian Deadlift",
+    "aliases": [
+      "DB RDL",
+      "Dumbbell Stiff-Leg Deadlift"
+    ],
+    "category": "legs",
+    "primaryMuscles": [
+      "hamstrings",
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "lower_back",
+      "upper_back",
+      "forearms"
+    ],
+    "equipment": [
+      "dumbbell"
+    ],
+    "mechanic": "compound",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "dumbbell",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 12,
+      "high": 20,
+      "note": "Per dumbbell. Learn the hinge first with light weights (~10-12.5 kg each) for 2 weeks, then progress."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 120,
+    "durationSeconds": null,
+    "setup": [
+      "Stand with feet hip-width, a dumbbell in each hand in front of your thighs, palms facing you.",
+      "Unlock your knees slightly - they stay at this bend the whole set.",
+      "Brace your abs and pull your shoulders back and down."
+    ],
+    "cues": [
+      "Push your hips back like closing a car door with your butt",
+      "Dumbbells slide down close to your legs",
+      "Flat back - stop when you feel a big hamstring stretch (around mid-shin)",
+      "Squeeze glutes to stand up"
+    ],
+    "mistakes": [
+      "Rounding the back to reach lower",
+      "Bending the knees into a squat",
+      "Dumbbells drifting away from the legs",
+      "Hyper-arching / leaning back at the top"
+    ],
+    "breathing": "Breathe in and brace before lowering; exhale as you stand back up.",
+    "safety": "Later-stage hinge (add after ~3-4 weeks). It's the safe 'deadlift' version for a beginner: you only go as low as your hamstrings allow with a flat back - that might be just below the knees at first. Practice the hip-hinge with no weight against a wall first. Stop if you feel it in the lower back more than the hamstrings. Hot, humid gym: wipe the handle/bar and your palms with a towel before each set so your grip doesn't slip, and sip water between sets.",
+    "substitutions": [
+      "cable_pull_through",
+      "prone_superman_back_extension"
+    ],
+    "freeExerciseDbId": "Stiff-Legged_Dumbbell_Deadlift",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Stiff-Legged_Dumbbell_Deadlift/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Stiff-Legged_Dumbbell_Deadlift/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=FQKfr1YDhEk",
+      "title": "How To: Dumbbell Romanian Deadlift",
+      "channel": "ScottHermanFitness",
+      "verified": true
+    },
+    "sources": [
+      "https://www.garagegymreviews.com/how-to-deadlift-with-dumbbells",
+      "https://sweat.com/blogs/fitness/how-to-dumbbell-romanian-deadlift",
+      "https://github.com/yuhonas/free-exercise-db",
+      "https://www.youtube.com/watch?v=FQKfr1YDhEk"
+    ]
+  },
+  {
+    "id": "cable_pull_through",
+    "name": "Cable Pull-Through",
+    "aliases": [
+      "Rope Pull-Through",
+      "Cable Hip Hinge"
+    ],
+    "category": "legs",
+    "primaryMuscles": [
+      "glutes",
+      "hamstrings"
+    ],
+    "secondaryMuscles": [
+      "lower_back"
+    ],
+    "equipment": [
+      "cable"
+    ],
+    "mechanic": "compound",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "cable",
+    "weightIncrementKg": 5,
+    "startingWeightKg": {
+      "low": 15,
+      "high": 30,
+      "note": "Start ~15-20 kg to learn the hinge; the cable pulls you backward, so the load stays easy on the spine."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      12,
+      15
+    ],
+    "restSeconds": 75,
+    "durationSeconds": null,
+    "setup": [
+      "Set the cable pulley at the lowest setting and attach the rope.",
+      "Face away from the machine, straddle the cable, and grab the rope between your legs with both hands.",
+      "Walk forward 2-3 steps until the weight lifts, feet a bit wider than shoulder-width, knees soft."
+    ],
+    "cues": [
+      "Hips back - let the rope pull your hands between your legs",
+      "Flat back, arms just hold on",
+      "Drive hips forward to stand tall",
+      "Squeeze glutes hard at the top"
+    ],
+    "mistakes": [
+      "Squatting down instead of hinging",
+      "Pulling with the arms",
+      "Leaning back / over-arching at the top",
+      "Standing too close to the machine"
+    ],
+    "breathing": "Inhale as you hinge back; exhale as you drive the hips forward.",
+    "safety": "Back-extension alternative since there's no hyperextension bench: it trains the hip extensors with low spinal load and is a great hinge teacher before RDLs. Hot, humid gym: wipe the handle/bar and your palms with a towel before each set so your grip doesn't slip, and sip water between sets.",
+    "substitutions": [
+      "db_romanian_deadlift",
+      "prone_superman_back_extension"
+    ],
+    "freeExerciseDbId": "Pull_Through",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pull_Through/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pull_Through/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=NEDrQPoITMc",
+      "title": "Cable Pull-Through",
+      "channel": "Glute Lab",
+      "verified": true
+    },
+    "sources": [
+      "https://barbend.com/cable-pull-through/",
+      "https://github.com/yuhonas/free-exercise-db",
+      "https://www.youtube.com/watch?v=NEDrQPoITMc"
+    ]
+  },
+  {
+    "id": "prone_superman_back_extension",
+    "name": "Prone Superman Back Extension",
+    "aliases": [
+      "Superman",
+      "Floor Back Extension",
+      "Prone Back Raise"
+    ],
+    "category": "pull",
+    "primaryMuscles": [
+      "lower_back"
+    ],
+    "secondaryMuscles": [
+      "glutes",
+      "hamstrings",
+      "upper_back"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "bodyweight",
+    "weightIncrementKg": 0,
+    "startingWeightKg": null,
+    "defaultSets": 2,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 45,
+    "durationSeconds": null,
+    "setup": [
+      "Lay a mat (or towel) on the floor - no hyperextension bench is listed at this gym.",
+      "Lie face-down, legs straight, arms reaching forward overhead (easier: hands by your sides).",
+      "Look at the floor so your neck stays neutral."
+    ],
+    "cues": [
+      "Lift chest, arms and legs a few inches together",
+      "Squeeze glutes and hold 2 seconds",
+      "Lower slowly",
+      "Small, controlled lift - no cranking"
+    ],
+    "mistakes": [
+      "Throwing the head back to look up",
+      "Jerking up as high as possible",
+      "Holding the breath",
+      "Bending the knees"
+    ],
+    "breathing": "Exhale as you lift; breathe steadily during the hold; inhale as you lower.",
+    "safety": "Bodyweight back-extension substitute. Keep the range small - a few inches is plenty. If lying on your stomach is uncomfortable, do arms-only or legs-only lifts, or swap in the cable pull-through. Wipe the mat - sweaty floors are slippery. Hot, humid gym: wipe the handle/bar and your palms with a towel before each set so your grip doesn't slip, and sip water between sets.",
+    "substitutions": [
+      "cable_pull_through",
+      "db_romanian_deadlift"
+    ],
+    "freeExerciseDbId": "Superman",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Superman/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Superman/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=cZxtPxeR2H8",
+      "title": "Superman Exercise For The Back — (LOW BACK AND CORE EXERCISES)",
+      "channel": "Fit Father Project - Fitness For Busy Fathers",
+      "verified": true
+    },
+    "sources": [
+      "https://github.com/yuhonas/free-exercise-db",
+      "https://www.youtube.com/watch?v=cZxtPxeR2H8"
+    ]
+  }
+]

@@ -1,0 +1,1618 @@
+[
+  {
+    "id": "general_warmup_cardio",
+    "name": "Easy Cardio Warm-Up (Bike or Treadmill)",
+    "aliases": [
+      "Pulse Raiser",
+      "5-Minute Warm-Up",
+      "General Warm-Up"
+    ],
+    "category": "warmup",
+    "primaryMuscles": [
+      "cardio"
+    ],
+    "secondaryMuscles": [
+      "quads",
+      "glutes",
+      "calves"
+    ],
+    "equipment": [
+      "bike",
+      "treadmill"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "time",
+    "weightIncrementKg": null,
+    "startingWeightKg": null,
+    "defaultSets": 1,
+    "repRange": null,
+    "restSeconds": 0,
+    "durationSeconds": 300,
+    "setup": [
+      "Use whichever is free: an upright bike or a treadmill.",
+      "Bike: set the seat so your knee is only slightly bent (about 25-35 degrees) when the pedal is at the bottom; resistance low (level 2-4 of most consoles).",
+      "Treadmill: clip the safety key to your shirt, stand on the side rails, start the belt at its slowest speed (about 1-2 km/h), step on while holding the rails lightly, then raise to 4.5-5 km/h, incline 0-2%, and let go of the rails.",
+      "Put your water bottle and towel within reach; Legon afternoons are hot, so start sipping now.",
+      "Use the same machine at the end of the session for a 3-5 minute easy cool-down walk/ride."
+    ],
+    "cues": [
+      "Easy pace - you could hold a full conversation (effort 3/10).",
+      "Last minute: pick it up slightly until you feel warm and lightly sweaty.",
+      "Shoulders relaxed, breathe through your nose if you can."
+    ],
+    "mistakes": [
+      "Going hard here and tiring yourself out before lifting.",
+      "Skipping it because you walked to the gym - a few minutes on the machine still raises muscle and joint temperature.",
+      "Holding the treadmill rails with straight arms."
+    ],
+    "breathing": "Relaxed, steady breathing. If you cannot speak in full sentences, slow down.",
+    "safety": "Five minutes of low-intensity cardio warms knees, hips and ankles before loading them - important at 95 kg. In the heat, keep it easy; you will sweat early. Stop and tell staff if you feel dizzy, chest pain or unusually short of breath.",
+    "substitutions": [
+      "bike_steady_state",
+      "treadmill_brisk_walk"
+    ],
+    "freeExerciseDbId": "Bicycling_Stationary",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bicycling_Stationary/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bicycling_Stationary/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=tuLNGCYnuy8",
+      "title": "Correct Stationary Bike Set Up",
+      "channel": "FoundationPT",
+      "verified": true
+    },
+    "sources": [
+      "https://www.acefitness.org/resources/everyone/blog/6593/the-importance-of-a-warm-up/",
+      "https://www.nhs.uk/live-well/exercise/how-to-warm-up-before-exercising/",
+      "https://www.hss.edu/health-library/move-better/set-up-exercise-bike",
+      "https://www.youtube.com/watch?v=tuLNGCYnuy8"
+    ]
+  },
+  {
+    "id": "bike_steady_state",
+    "name": "Stationary Bike - Steady State (Zone 2)",
+    "aliases": [
+      "Upright Bike Steady Ride",
+      "LISS Bike",
+      "Zone 2 Cycling"
+    ],
+    "category": "cardio",
+    "primaryMuscles": [
+      "cardio"
+    ],
+    "secondaryMuscles": [
+      "quads",
+      "glutes",
+      "hamstrings",
+      "calves"
+    ],
+    "equipment": [
+      "bike"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "time",
+    "weightIncrementKg": null,
+    "startingWeightKg": null,
+    "defaultSets": 1,
+    "repRange": null,
+    "restSeconds": 0,
+    "durationSeconds": 900,
+    "setup": [
+      "Seat height: stand next to the bike, set the seat roughly level with your hip bone. Sit, put your heel on the pedal at the very bottom - your leg should be almost straight. Pedalling on the balls of your feet then gives a small knee bend.",
+      "Seat fore/aft (if adjustable): with pedals level, your front knee should sit roughly over the pedal, not far in front of it.",
+      "Handlebars at seat height or a bit higher so you sit upright - more comfortable for the lower back and belly.",
+      "Choose 'manual' mode. Start at a low resistance level and adjust until you reach the target effort.",
+      "Have water and a towel ready; position near a fan if there is one."
+    ],
+    "cues": [
+      "Effort 5-6/10: you can talk in short sentences but not sing.",
+      "Smooth circles - push down and pull back through the bottom.",
+      "Cadence around 70-90 RPM; add resistance rather than spinning like crazy.",
+      "Knees track straight over your feet, not caving in.",
+      "Relax your grip and shoulders."
+    ],
+    "mistakes": [
+      "Seat too low (knees come up high and hurt at the front) or too high (hips rock side to side).",
+      "Resistance so low you just spin with no effort - or so high you grind at 40 RPM.",
+      "Hunching over the handlebars and putting weight on the hands.",
+      "Starting with 40+ minutes in week one and dreading the next session."
+    ],
+    "breathing": "Steady, rhythmic breathing; you should be able to say a sentence. If you are gasping, lower resistance.",
+    "safety": "The best low-impact cardio for a 95 kg beginner - no pounding on knees or ankles. Approx. heart rate target for a 20-something: about 120-140 bpm (roughly 60-70% of max) - the 'talk test' works just as well. Do it AFTER lifting (or on non-lifting days) so it doesn't tire your legs before squats/presses. Start with 10-15 min and build to 20-30 min. In hot, humid weather drink before you're thirsty; stop if dizzy or nauseous.",
+    "substitutions": [
+      "treadmill_incline_walk",
+      "treadmill_brisk_walk",
+      "bike_intervals"
+    ],
+    "freeExerciseDbId": "Bicycling_Stationary",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bicycling_Stationary/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bicycling_Stationary/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=tuLNGCYnuy8",
+      "title": "Correct Stationary Bike Set Up",
+      "channel": "FoundationPT",
+      "verified": true
+    },
+    "sources": [
+      "https://www.strongerbyscience.com/cardio/",
+      "https://www.hss.edu/health-library/move-better/set-up-exercise-bike",
+      "https://www.garagegymreviews.com/bike-seat-height",
+      "https://www.youtube.com/watch?v=tuLNGCYnuy8"
+    ]
+  },
+  {
+    "id": "treadmill_incline_walk",
+    "name": "Treadmill Incline Walk",
+    "aliases": [
+      "Incline Walking",
+      "Hill Walk",
+      "12-3-30 style walk (beginner version)"
+    ],
+    "category": "cardio",
+    "primaryMuscles": [
+      "cardio"
+    ],
+    "secondaryMuscles": [
+      "glutes",
+      "hamstrings",
+      "calves",
+      "quads"
+    ],
+    "equipment": [
+      "treadmill"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "time",
+    "weightIncrementKg": null,
+    "startingWeightKg": null,
+    "defaultSets": 1,
+    "repRange": null,
+    "restSeconds": 0,
+    "durationSeconds": 900,
+    "setup": [
+      "Check the treadmill is working and clip the safety key/cord to your shirt.",
+      "Stand on the side rails, start the belt at its slowest speed (about 1-2 km/h) at 0% incline, then step on while holding the rails lightly.",
+      "Raise speed to 4.5-5.0 km/h first, then raise incline gradually to 4-6% for the first sessions.",
+      "Progress over weeks: add incline 1-2% at a time up to ~10-12%, or add minutes (15 -> 20 -> 30). Keep speed a walking pace (4.5-5.5 km/h).",
+      "Wear proper trainers (not slides/sandals) and keep water nearby."
+    ],
+    "cues": [
+      "Hands OFF the rails - arms swing naturally.",
+      "Stand tall, slight forward lean from the ankles, not bending at the waist.",
+      "Full foot contact: heel lands, push through the whole foot.",
+      "Effort 5-6/10 - breathing harder but able to talk.",
+      "Short, quick steps if your calves or shins burn."
+    ],
+    "mistakes": [
+      "Gripping the handrails and leaning back - this cuts the work dramatically and wrecks posture.",
+      "Cranking the incline to 15% in week one and getting shin or calf pain.",
+      "Walking too fast and starting to jog uphill.",
+      "Stepping off a moving belt to grab water."
+    ],
+    "breathing": "Breathe steadily through nose and mouth; if you can't talk, drop the incline 1-2% first, then speed.",
+    "safety": "Excellent for a 95 kg beginner: burns lots of calories with far less joint impact than running. Build incline slowly because calves, Achilles and shins need time to adapt. Most gym treadmills are rated for 130-150 kg, so you're fine. To stop: lower speed, then lower incline, then step onto the side rails. Hot gym = higher heart rate; that's normal, but slow down if dizzy. Do after lifting or on rest days.",
+    "substitutions": [
+      "treadmill_brisk_walk",
+      "bike_steady_state"
+    ],
+    "freeExerciseDbId": "Walking_Treadmill",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Walking_Treadmill/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Walking_Treadmill/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=NAsObfFJXvE",
+      "title": "How To: Incline Treadmill Walk (12-3-30 Workout)",
+      "channel": "Live Lean TV Daily Exercises",
+      "verified": true
+    },
+    "sources": [
+      "https://www.hingehealth.com/gb/en/resources/articles/incline-walking/",
+      "https://www.strongerbyscience.com/cardio/",
+      "https://www.nhs.uk/live-well/exercise/walking-for-health/",
+      "https://www.youtube.com/watch?v=NAsObfFJXvE"
+    ]
+  },
+  {
+    "id": "treadmill_brisk_walk",
+    "name": "Treadmill Brisk Walk",
+    "aliases": [
+      "Brisk Walk",
+      "Flat Treadmill Walk",
+      "Power Walk"
+    ],
+    "category": "cardio",
+    "primaryMuscles": [
+      "cardio"
+    ],
+    "secondaryMuscles": [
+      "quads",
+      "glutes",
+      "calves",
+      "hamstrings"
+    ],
+    "equipment": [
+      "treadmill"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "time",
+    "weightIncrementKg": null,
+    "startingWeightKg": null,
+    "defaultSets": 1,
+    "repRange": null,
+    "restSeconds": 0,
+    "durationSeconds": 900,
+    "setup": [
+      "Clip the safety key to your clothing.",
+      "Stand on the side rails, start the belt at its slowest speed (about 1-2 km/h), step on, then increase to a brisk pace of about 5.0-6.0 km/h.",
+      "Incline 1% (simulates outdoor walking); increase to 2-3% later if it feels too easy.",
+      "Use it as a cool-down (5 min at an easier 4-4.5 km/h) or as a standalone 15-30 min session on off days."
+    ],
+    "cues": [
+      "Walk like you're late for a lecture - purposeful, not a jog.",
+      "Arms bent and swinging, hands off the rails.",
+      "Eyes forward, not down at your feet.",
+      "Effort 4-5/10 - slightly out of breath but chatting is easy."
+    ],
+    "mistakes": [
+      "Holding the rails.",
+      "Over-striding (big heel-first lunges) - take shorter, quicker steps.",
+      "Looking down at your phone the whole time and drifting to the back of the belt."
+    ],
+    "breathing": "Easy rhythmic breathing; you should be able to talk.",
+    "safety": "The gentlest cardio option - good for the very first weeks, recovery days or when knees/shins feel tired. Brisk walking is a proven fat-loss tool when paired with a calorie deficit. Hydrate in the heat and stop if light-headed.",
+    "substitutions": [
+      "treadmill_incline_walk",
+      "bike_steady_state",
+      "general_warmup_cardio"
+    ],
+    "freeExerciseDbId": "Walking_Treadmill",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Walking_Treadmill/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Walking_Treadmill/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=jkJkmy8IHXU",
+      "title": "How to Walk Properly on a Treadmill to Reduce Pain | Expert Tips for Comfort and Relief",
+      "channel": "Clegg & Guest Physical Therapy",
+      "verified": true
+    },
+    "sources": [
+      "https://www.nhs.uk/live-well/exercise/walking-for-health/",
+      "https://www.strongerbyscience.com/cardio/",
+      "https://www.youtube.com/watch?v=jkJkmy8IHXU"
+    ]
+  },
+  {
+    "id": "bike_intervals",
+    "name": "Stationary Bike Intervals (Beginner)",
+    "aliases": [
+      "Bike HIIT (beginner)",
+      "Bike Sprints",
+      "Bike 30/90 Intervals"
+    ],
+    "category": "cardio",
+    "primaryMuscles": [
+      "cardio"
+    ],
+    "secondaryMuscles": [
+      "quads",
+      "glutes",
+      "hamstrings",
+      "calves"
+    ],
+    "equipment": [
+      "bike"
+    ],
+    "mechanic": "compound",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "time",
+    "weightIncrementKg": null,
+    "startingWeightKg": null,
+    "defaultSets": 1,
+    "repRange": null,
+    "restSeconds": 0,
+    "durationSeconds": 900,
+    "setup": [
+      "Set the bike up exactly as for steady state (heel on pedal at bottom = almost straight leg).",
+      "Warm up 3-4 minutes easy.",
+      "Then repeat: 30 seconds HARD (raise resistance 2-4 levels, effort 7-8/10) + 90 seconds EASY (back to warm-up resistance, effort 3/10).",
+      "Week 1-2 of using intervals: 4 rounds. Build to 6-8 rounds over a month.",
+      "Finish with 2-3 minutes easy spinning. Total about 15 minutes."
+    ],
+    "cues": [
+      "Hard parts: stay seated, push with resistance - don't flail at max RPM.",
+      "Hard = breathing heavily, can only say a word or two.",
+      "Easy parts: really ease off so you recover.",
+      "Keep knees tracking over toes, upper body still."
+    ],
+    "mistakes": [
+      "Doing intervals in the first 3-4 weeks before building a base with steady rides.",
+      "All-out sprints with no resistance (pedals spin away and hips bounce).",
+      "Skipping the warm-up or cool-down.",
+      "Doing intervals right before a leg day - it will hurt your squats/leg press."
+    ],
+    "breathing": "Breathe hard but controlled during efforts; slow, deep breaths during the 90-second easy recovery.",
+    "safety": "Use only after 3-4 weeks of steady cardio and only 1x per week (max 2) - for a 95 kg beginner who lifts 3x/week, more high-intensity work just adds fatigue. Bike is chosen over treadmill sprints because there's no impact. In the heat, keep the efforts at 7-8/10, not 10/10. Stop immediately if chest pain, dizziness or nausea. If you have any heart/blood-pressure condition, check with a doctor before intervals.",
+    "substitutions": [
+      "bike_steady_state",
+      "treadmill_incline_walk"
+    ],
+    "freeExerciseDbId": "Bicycling_Stationary",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bicycling_Stationary/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bicycling_Stationary/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=Rh8VswzWDow",
+      "title": "How To Do A HIIT On An Exercise Bike | The Body Coach",
+      "channel": "The Body Coach TV by Joe Wicks",
+      "verified": true
+    },
+    "sources": [
+      "https://www.strongerbyscience.com/hiit/",
+      "https://www.strongerbyscience.com/cardio/",
+      "https://www.youtube.com/watch?v=Rh8VswzWDow"
+    ]
+  },
+  {
+    "id": "arm_circles",
+    "name": "Arm Circles",
+    "aliases": [
+      "Standing Arm Circles",
+      "Arm Rotations"
+    ],
+    "category": "warmup",
+    "primaryMuscles": [
+      "front_delts",
+      "side_delts",
+      "rear_delts"
+    ],
+    "secondaryMuscles": [
+      "upper_back",
+      "chest"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "bodyweight",
+    "weightIncrementKg": null,
+    "startingWeightKg": null,
+    "defaultSets": 1,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 0,
+    "durationSeconds": null,
+    "setup": [
+      "Stand tall with feet hip-width apart, plenty of space around you.",
+      "Arms straight out to the sides at shoulder height.",
+      "Do 10-15 small circles forward, growing to big circles, then 10-15 backward."
+    ],
+    "cues": [
+      "Start small, finish big.",
+      "Keep your ribs down - don't arch your back.",
+      "Shoulders away from ears.",
+      "Smooth, controlled, not whipping."
+    ],
+    "mistakes": [
+      "Swinging wildly or fast enough to jerk the shoulder.",
+      "Shrugging the shoulders up.",
+      "Only going forward - do both directions."
+    ],
+    "breathing": "Breathe normally.",
+    "safety": "Gentle way to warm the shoulders before push or pull days. If any position pinches, make the circles smaller.",
+    "substitutions": [
+      "towel_shoulder_pass_through",
+      "scapular_wall_slides"
+    ],
+    "freeExerciseDbId": "Arm_Circles",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Arm_Circles/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Arm_Circles/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=UVMEnIaY8aU",
+      "title": "Arm Circles Exercise",
+      "channel": "Sworkit",
+      "verified": true
+    },
+    "sources": [
+      "https://www.nhs.uk/live-well/exercise/how-to-warm-up-before-exercising/",
+      "https://www.acefitness.org/resources/everyone/blog/6593/the-importance-of-a-warm-up/",
+      "https://www.youtube.com/watch?v=UVMEnIaY8aU"
+    ]
+  },
+  {
+    "id": "towel_shoulder_pass_through",
+    "name": "Towel Shoulder Pass-Through",
+    "aliases": [
+      "Shoulder Dislocates (towel)",
+      "Towel Pass-Overs",
+      "Overhead Towel Pass-Through"
+    ],
+    "category": "warmup",
+    "primaryMuscles": [
+      "front_delts",
+      "rear_delts"
+    ],
+    "secondaryMuscles": [
+      "chest",
+      "upper_back",
+      "lats"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "bodyweight",
+    "weightIncrementKg": null,
+    "startingWeightKg": null,
+    "defaultSets": 1,
+    "repRange": [
+      8,
+      10
+    ],
+    "restSeconds": 0,
+    "durationSeconds": null,
+    "setup": [
+      "Use a LONG towel (bath-towel size, roughly 1.2-1.5 m) or a long strap/belt - a small hand towel is too short for your shoulder width. Hold it pulled tight in front of your hips with a VERY wide grip - near the ends.",
+      "Do NOT use a barbell or the 20 kg Olympic bar for this - it's too heavy and stiff for a beginner's shoulders.",
+      "Stand tall, glutes squeezed lightly, ribs down."
+    ],
+    "cues": [
+      "Keep the towel tight and arms straight.",
+      "Lift slowly up over your head and back behind you as far as is comfortable, then return.",
+      "If you need to bend the elbows or feel a pinch, widen your grip.",
+      "Ribs down - don't arch your lower back to get the towel back."
+    ],
+    "mistakes": [
+      "Grip too narrow, forcing the shoulders.",
+      "Arching the lower back or poking the head forward.",
+      "Rushing through reps."
+    ],
+    "breathing": "Inhale as the towel goes up, exhale as it comes back down.",
+    "safety": "Safe, gradual shoulder opener before pressing and lat pulldowns. A towel lets you go as wide as you need. Stop if you feel pain (stretch is fine, pinch/pain is not). Skip if you've ever dislocated a shoulder.",
+    "substitutions": [
+      "arm_circles",
+      "scapular_wall_slides"
+    ],
+    "freeExerciseDbId": "Chest_And_Front_Of_Shoulder_Stretch",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Chest_And_Front_Of_Shoulder_Stretch/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Chest_And_Front_Of_Shoulder_Stretch/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=l5I_E0_My5s",
+      "title": "Shoulder Pass Through",
+      "channel": "HomeWODs",
+      "verified": true
+    },
+    "sources": [
+      "https://livestrong.com/article/13769529-shoulder-dislocates-exercise",
+      "https://www.nhs.uk/live-well/exercise/how-to-warm-up-before-exercising/",
+      "https://www.youtube.com/watch?v=l5I_E0_My5s"
+    ]
+  },
+  {
+    "id": "scapular_wall_slides",
+    "name": "Scapular Wall Slides",
+    "aliases": [
+      "Wall Slides",
+      "Wall Angels (slide)"
+    ],
+    "category": "warmup",
+    "primaryMuscles": [
+      "upper_back",
+      "traps"
+    ],
+    "secondaryMuscles": [
+      "side_delts",
+      "rear_delts"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "bodyweight",
+    "weightIncrementKg": null,
+    "startingWeightKg": null,
+    "defaultSets": 1,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 0,
+    "durationSeconds": null,
+    "setup": [
+      "Find a clear wall (or a smooth pillar).",
+      "Stand with your back against the wall, feet about a foot (30 cm) in front of it, knees soft.",
+      "Easiest version for beginners: face the wall and put your forearms on it in a 'goalpost' shape.",
+      "Back-to-wall version: elbows and backs of hands touch the wall in a 'W' shape, lower back gently against the wall."
+    ],
+    "cues": [
+      "Slide arms up into a 'Y', then pull elbows down into a 'W'.",
+      "Squeeze shoulder blades down and back as you lower.",
+      "Ribs down - don't arch to make it look better.",
+      "Only go as high as you can keep contact."
+    ],
+    "mistakes": [
+      "Arching the lower back away from the wall.",
+      "Shrugging shoulders up to the ears.",
+      "Forcing hands to touch the wall when mobility isn't there yet."
+    ],
+    "breathing": "Exhale as you slide up, inhale as you pull down.",
+    "safety": "Wakes up the mid/lower traps and helps posture before pull and push days. A larger chest/upper body can make the back-to-wall version awkward - the facing-the-wall forearm version is just as useful. No pain should be felt in the front of the shoulder.",
+    "substitutions": [
+      "arm_circles",
+      "towel_shoulder_pass_through"
+    ],
+    "freeExerciseDbId": null,
+    "images": [],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=c1rn3sjgbfY",
+      "title": "Active Physio Works: Scapular Wall Slide",
+      "channel": "Active Physio Works",
+      "verified": true
+    },
+    "sources": [
+      "https://www.hingehealth.com/resources/articles/wall-slides/",
+      "https://www.bodbot.com/Exercises/277/Scapular-Wall-Slides",
+      "https://www.youtube.com/watch?v=c1rn3sjgbfY"
+    ]
+  },
+  {
+    "id": "cat_cow",
+    "name": "Cat-Cow",
+    "aliases": [
+      "Cat-Camel",
+      "Cat Cow Stretch",
+      "Spinal Flexion-Extension"
+    ],
+    "category": "warmup",
+    "primaryMuscles": [
+      "lower_back"
+    ],
+    "secondaryMuscles": [
+      "upper_back",
+      "abs"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "bodyweight",
+    "weightIncrementKg": null,
+    "startingWeightKg": null,
+    "defaultSets": 1,
+    "repRange": [
+      8,
+      10
+    ],
+    "restSeconds": 0,
+    "durationSeconds": null,
+    "setup": [
+      "Use a mat or fold your towel under your knees.",
+      "Hands under shoulders, knees under hips, on all fours.",
+      "If kneeling is uncomfortable: do it standing with hands on your thighs or on a bench."
+    ],
+    "cues": [
+      "Cat: tuck the tailbone, round the back up to the ceiling, chin toward chest.",
+      "Cow: let the belly drop, chest forward, gaze slightly up.",
+      "Start each movement from the pelvis.",
+      "Slow - about one breath each way."
+    ],
+    "mistakes": [
+      "Rushing through it.",
+      "Only moving the neck instead of the whole spine.",
+      "Forcing the end range."
+    ],
+    "breathing": "Inhale into cow (belly down), exhale into cat (back round).",
+    "safety": "Gentle spinal mobility before deadlift/row/squat days. Keep it pain-free; don't force range if you have back pain. The standing version avoids kneeling on hard floors.",
+    "substitutions": [
+      "childs_pose",
+      "worlds_greatest_stretch"
+    ],
+    "freeExerciseDbId": "Cat_Stretch",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cat_Stretch/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cat_Stretch/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=1Y0YjXS9sKI",
+      "title": "How to Do a Cat Cow Stretch: A Guide from Physical Therapists",
+      "channel": "Hinge Health",
+      "verified": true
+    },
+    "sources": [
+      "https://www.hingehealth.com/resources/articles/cat-cow/",
+      "https://www.nhs.uk/live-well/exercise/flexibility-exercises/",
+      "https://www.youtube.com/watch?v=1Y0YjXS9sKI"
+    ]
+  },
+  {
+    "id": "standing_hip_circles",
+    "name": "Standing Hip Circles",
+    "aliases": [
+      "Hip Openers",
+      "Open/Close the Gate",
+      "Hip CARs (standing)"
+    ],
+    "category": "warmup",
+    "primaryMuscles": [
+      "glutes",
+      "adductors"
+    ],
+    "secondaryMuscles": [
+      "abductors",
+      "abs"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": true,
+    "loadType": "bodyweight",
+    "weightIncrementKg": null,
+    "startingWeightKg": null,
+    "defaultSets": 1,
+    "repRange": [
+      6,
+      8
+    ],
+    "restSeconds": 0,
+    "durationSeconds": null,
+    "setup": [
+      "Stand side-on to a machine frame, rack or wall and hold it with one hand for balance.",
+      "Stand on the leg closest to the support, slight bend in that knee.",
+      "Lift the outside knee to hip height."
+    ],
+    "cues": [
+      "Draw big slow circles with the knee: up, out to the side, back, down.",
+      "Then reverse direction ('close the gate').",
+      "Keep your torso tall and still - only the hip moves.",
+      "6-8 each direction, each leg."
+    ],
+    "mistakes": [
+      "Leaning the whole body to make the circle bigger.",
+      "Going fast and swinging.",
+      "Not holding on and losing balance."
+    ],
+    "breathing": "Breathe normally.",
+    "safety": "Lubricates the hip joint before leg day and squat patterns. Holding a support makes it safe and balanced for a heavier beginner.",
+    "substitutions": [
+      "leg_swings",
+      "worlds_greatest_stretch"
+    ],
+    "freeExerciseDbId": "Standing_Hip_Circles",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Hip_Circles/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Hip_Circles/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=qkrJXGVj_OQ",
+      "title": "Warm-up Exercise - Hip Circles",
+      "channel": "Live to Move Physical Therapy & Wellness",
+      "verified": true
+    },
+    "sources": [
+      "https://www.nhs.uk/live-well/exercise/how-to-warm-up-before-exercising/",
+      "https://www.acefitness.org/resources/everyone/blog/6593/the-importance-of-a-warm-up/",
+      "https://www.youtube.com/watch?v=qkrJXGVj_OQ"
+    ]
+  },
+  {
+    "id": "leg_swings",
+    "name": "Leg Swings (Front-Back and Side-Side)",
+    "aliases": [
+      "Dynamic Leg Swings",
+      "Front Leg Swings",
+      "Lateral Leg Swings"
+    ],
+    "category": "warmup",
+    "primaryMuscles": [
+      "hamstrings",
+      "adductors"
+    ],
+    "secondaryMuscles": [
+      "glutes",
+      "quads",
+      "abductors"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": true,
+    "loadType": "bodyweight",
+    "weightIncrementKg": null,
+    "startingWeightKg": null,
+    "defaultSets": 1,
+    "repRange": [
+      10,
+      12
+    ],
+    "restSeconds": 0,
+    "durationSeconds": null,
+    "setup": [
+      "Hold a sturdy machine frame or wall with one hand (front-back swings) or both hands (side-to-side swings).",
+      "Stand on one leg with a soft knee; the swinging leg hangs relaxed.",
+      "Do 10-12 front-back, then turn to face the support and do 10-12 side-to-side. Then switch legs."
+    ],
+    "cues": [
+      "Start small, gradually increase the swing.",
+      "Torso stays upright - the leg does the moving.",
+      "Relaxed, pendulum-like rhythm.",
+      "Toes of the standing foot point forward."
+    ],
+    "mistakes": [
+      "Kicking up as high as possible from the first rep.",
+      "Rounding the back to get the leg higher.",
+      "Swinging into people or equipment - check your space."
+    ],
+    "breathing": "Breathe normally, exhale on the forward swing if it helps rhythm.",
+    "safety": "A dynamic way to loosen hamstrings, hip flexors and groin before leg day. Keep it controlled; ballistic kicks at full range are unnecessary.",
+    "substitutions": [
+      "standing_hip_circles",
+      "worlds_greatest_stretch"
+    ],
+    "freeExerciseDbId": "Front_Leg_Raises",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Leg_Raises/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Leg_Raises/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=difYoBtZi2s",
+      "title": "How To Do Leg Swings",
+      "channel": "PureGym",
+      "verified": true
+    },
+    "sources": [
+      "https://www.nhs.uk/live-well/exercise/how-to-warm-up-before-exercising/",
+      "https://www.acefitness.org/resources/everyone/blog/6593/the-importance-of-a-warm-up/",
+      "https://www.youtube.com/watch?v=difYoBtZi2s"
+    ]
+  },
+  {
+    "id": "bodyweight_box_squat",
+    "name": "Bodyweight Squat to Bench",
+    "aliases": [
+      "Box Squat (bodyweight)",
+      "Sit-to-Stand",
+      "Bench Squat"
+    ],
+    "category": "warmup",
+    "primaryMuscles": [
+      "quads",
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "adductors",
+      "hamstrings",
+      "abs"
+    ],
+    "equipment": [
+      "bench",
+      "bodyweight"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "bodyweight",
+    "weightIncrementKg": null,
+    "startingWeightKg": null,
+    "defaultSets": 2,
+    "repRange": [
+      8,
+      10
+    ],
+    "restSeconds": 30,
+    "durationSeconds": null,
+    "setup": [
+      "Place a flat bench (or set an adjustable bench flat) on a non-slip floor; a standard bench is about 43-45 cm high - roughly knee height, which is perfect.",
+      "Stand in front of it with your heels about 15-30 cm from the bench, feet shoulder-width, toes turned out slightly.",
+      "Arms straight out in front for balance."
+    ],
+    "cues": [
+      "Sit back and down until your butt lightly touches the bench - don't plop.",
+      "Knees push out in line with your toes.",
+      "Chest up, whole foot on the floor.",
+      "Stand up by driving the floor away; squeeze glutes at the top."
+    ],
+    "mistakes": [
+      "Crashing down onto the bench.",
+      "Knees caving in.",
+      "Heels lifting off the floor.",
+      "Rocking forward to get up (use your legs, not momentum)."
+    ],
+    "breathing": "Inhale on the way down, exhale as you stand.",
+    "safety": "Teaches the squat pattern and warms the knees and hips safely - the bench sets a consistent, safe depth for a 95 kg beginner. Never stack loose weight plates on the bench to sit on - they can slide out from under you. If standing up from the bench is too hard at first, just touch it lightly without sitting, or hold the end of the bench/a machine frame for balance. Use as a warm-up before leg day and as a squat-pattern practice.",
+    "substitutions": [
+      "glute_bridge",
+      "worlds_greatest_stretch"
+    ],
+    "freeExerciseDbId": "Bodyweight_Squat",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bodyweight_Squat/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bodyweight_Squat/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=7LpLZOdz68A",
+      "title": "Bodyweight Box Squat | Step-by-Step Tutorial",
+      "channel": "Physio Plus Fitness",
+      "verified": true
+    },
+    "sources": [
+      "https://www.acefitness.org/resources/everyone/blog/6593/the-importance-of-a-warm-up/",
+      "https://www.nhs.uk/live-well/exercise/how-to-warm-up-before-exercising/",
+      "https://www.youtube.com/watch?v=7LpLZOdz68A"
+    ]
+  },
+  {
+    "id": "glute_bridge",
+    "name": "Glute Bridge (Activation)",
+    "aliases": [
+      "Hip Bridge",
+      "Bodyweight Glute Bridge",
+      "Butt Lift"
+    ],
+    "category": "warmup",
+    "primaryMuscles": [
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "hamstrings",
+      "abs",
+      "lower_back"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "bodyweight",
+    "weightIncrementKg": null,
+    "startingWeightKg": null,
+    "defaultSets": 2,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 30,
+    "durationSeconds": null,
+    "setup": [
+      "Lay a mat or your towel on a clear patch of floor.",
+      "Lie on your back, knees bent, feet flat and hip-width apart, heels about a hand's length from your butt.",
+      "Arms by your sides, palms down."
+    ],
+    "cues": [
+      "Tuck your pelvis slightly, brace the abs.",
+      "Drive through your heels and lift hips until shoulders-hips-knees form a line.",
+      "Squeeze glutes hard for 2 seconds at the top.",
+      "Lower slowly with control."
+    ],
+    "mistakes": [
+      "Over-arching the lower back at the top (feel it in the back = too high).",
+      "Pushing through the toes instead of the heels.",
+      "Feeling only hamstrings - bring the feet a little closer.",
+      "Rushing reps without the squeeze."
+    ],
+    "breathing": "Exhale as you lift, inhale as you lower.",
+    "safety": "Wakes up the glutes before squats, leg press and RDLs and supports the lower back. Low-impact and safe for a heavier beginner. Getting up and down from the floor is part of the exercise - roll to your side and push up with your hands.",
+    "substitutions": [
+      "bodyweight_box_squat",
+      "cat_cow"
+    ],
+    "freeExerciseDbId": "Butt_Lift_Bridge",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butt_Lift_Bridge/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butt_Lift_Bridge/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SKOMwg1JLrU",
+      "title": "How to do a Glute bridge",
+      "channel": "National Academy of Sports Medicine (NASM)",
+      "verified": true
+    },
+    "sources": [
+      "https://www.strengthlog.com/glute-bridge/",
+      "https://www.acefitness.org/resources/everyone/blog/6593/the-importance-of-a-warm-up/",
+      "https://www.youtube.com/watch?v=SKOMwg1JLrU"
+    ]
+  },
+  {
+    "id": "worlds_greatest_stretch",
+    "name": "World's Greatest Stretch (Supported)",
+    "aliases": [
+      "Lunge with Rotation",
+      "Spiderman Lunge with Reach",
+      "WGS"
+    ],
+    "category": "warmup",
+    "primaryMuscles": [
+      "glutes",
+      "quads"
+    ],
+    "secondaryMuscles": [
+      "hamstrings",
+      "adductors",
+      "upper_back",
+      "obliques"
+    ],
+    "equipment": [
+      "bodyweight",
+      "bench"
+    ],
+    "mechanic": "compound",
+    "difficulty": 2,
+    "unilateral": true,
+    "loadType": "bodyweight",
+    "weightIncrementKg": null,
+    "startingWeightKg": null,
+    "defaultSets": 1,
+    "repRange": [
+      4,
+      5
+    ],
+    "restSeconds": 0,
+    "durationSeconds": null,
+    "setup": [
+      "Beginner-friendly version: put your hands on a flat bench instead of the floor.",
+      "Face the end of the bench and step one foot forward into a long lunge beside it, back knee down on a folded towel or slightly off the floor.",
+      "Place the hand opposite to the front leg on the bench/floor."
+    ],
+    "cues": [
+      "Drop the same-side elbow toward the inside of your front foot (only as low as comfortable; with the bench version, toward the inside of the front knee).",
+      "Then rotate and reach that arm to the ceiling, eyes following the hand.",
+      "Hold each position about 2 seconds, then switch sides.",
+      "Keep the back leg long and squeeze its glute."
+    ],
+    "mistakes": [
+      "Front knee caving inward.",
+      "Rushing through the positions.",
+      "Forcing the elbow to the floor - go only as low as is comfortable."
+    ],
+    "breathing": "Exhale as you drop the elbow and as you rotate open.",
+    "safety": "Opens the hips, hamstrings and upper back in one move - great before leg or pull days. Using a bench for the hands means less bending and more comfort for a heavier body. Difficulty 2 because of balance; hold a support if needed.",
+    "substitutions": [
+      "standing_hip_circles",
+      "half_kneeling_hip_flexor_stretch",
+      "leg_swings"
+    ],
+    "freeExerciseDbId": "Worlds_Greatest_Stretch",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Worlds_Greatest_Stretch/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Worlds_Greatest_Stretch/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=0gUTxg_fNfc",
+      "title": "The Worlds GREATEST Stretch",
+      "channel": "Squat University",
+      "verified": true
+    },
+    "sources": [
+      "https://www.acefitness.org/resources/everyone/blog/6593/the-importance-of-a-warm-up/",
+      "https://www.nhs.uk/live-well/exercise/how-to-warm-up-before-exercising/",
+      "https://www.youtube.com/watch?v=0gUTxg_fNfc"
+    ]
+  },
+  {
+    "id": "ankle_knee_to_wall",
+    "name": "Knee-to-Wall Ankle Rocks",
+    "aliases": [
+      "Ankle Rocks",
+      "Ankle Dorsiflexion Mobilisation",
+      "Knee to Wall"
+    ],
+    "category": "warmup",
+    "primaryMuscles": [
+      "calves"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "bodyweight"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": true,
+    "loadType": "bodyweight",
+    "weightIncrementKg": null,
+    "startingWeightKg": null,
+    "defaultSets": 1,
+    "repRange": [
+      10,
+      12
+    ],
+    "restSeconds": 0,
+    "durationSeconds": null,
+    "setup": [
+      "Face a wall (or the upright of a machine/rack) in a short split stance, front toes about 5-10 cm from the wall.",
+      "Hands on the wall for balance."
+    ],
+    "cues": [
+      "Keep the front heel glued to the floor.",
+      "Drive the knee forward over the middle toes to touch the wall, then back.",
+      "Smooth rocks, 10-12 per side.",
+      "When it's easy, move the foot slightly further from the wall."
+    ],
+    "mistakes": [
+      "Heel lifting.",
+      "Knee caving inward instead of tracking over the toes.",
+      "Bouncing hard into the end range."
+    ],
+    "breathing": "Breathe normally.",
+    "safety": "Better ankle mobility makes squats and leg press feel more stable and lets you keep your heels down. Very low stress on the joint - fine for any body weight.",
+    "substitutions": [
+      "calf_stretch_wall",
+      "bodyweight_box_squat"
+    ],
+    "freeExerciseDbId": null,
+    "images": [],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=ElrpduJn92Y",
+      "title": "Knee To Wall Exercise for Ankle Mobility",
+      "channel": "Dr. Jess Harvey, Osteopath & Health Coach",
+      "verified": true
+    },
+    "sources": [
+      "https://www.hingehealth.com/resources/articles/ankle-mobility-exercises/",
+      "https://www.acefitness.org/resources/everyone/blog/6593/the-importance-of-a-warm-up/",
+      "https://www.youtube.com/watch?v=ElrpduJn92Y"
+    ]
+  },
+  {
+    "id": "chest_doorway_stretch",
+    "name": "Chest Stretch (Doorway or Machine Upright)",
+    "aliases": [
+      "Doorway Pec Stretch",
+      "Upright Chest Stretch",
+      "Wall Chest Stretch"
+    ],
+    "category": "mobility",
+    "primaryMuscles": [
+      "chest"
+    ],
+    "secondaryMuscles": [
+      "front_delts"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": true,
+    "loadType": "time",
+    "weightIncrementKg": null,
+    "startingWeightKg": null,
+    "defaultSets": 1,
+    "repRange": null,
+    "restSeconds": 0,
+    "durationSeconds": 30,
+    "setup": [
+      "Find a doorframe, a sturdy machine upright (e.g. Smith machine or cable column) or a wall corner.",
+      "Place your forearm against it with the elbow at about shoulder height and bent 90 degrees ('goalpost' arm).",
+      "Stagger your feet, same-side foot forward."
+    ],
+    "cues": [
+      "Gently step/turn your body away until you feel a stretch across the chest.",
+      "Shoulder down, away from your ear.",
+      "Hold 30 s each side, relax and breathe.",
+      "Stretch should feel 4-6/10, never painful."
+    ],
+    "mistakes": [
+      "Elbow higher than the shoulder (can pinch the shoulder joint).",
+      "Twisting so far that the stretch goes into the front of the shoulder joint.",
+      "Bouncing."
+    ],
+    "breathing": "Slow, deep breaths; try to relax a little deeper on each exhale.",
+    "safety": "Ideal cooldown after push days (chest press, shoulder press). If you feel tingling or pinching in the front of the shoulder, lower the elbow. Only use a machine that's not loaded or being used by someone else.",
+    "substitutions": [
+      "bench_lat_stretch",
+      "towel_shoulder_pass_through"
+    ],
+    "freeExerciseDbId": null,
+    "images": [],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=B9uY01NoqBg",
+      "title": "Doorway Stretch",
+      "channel": "Baptist Health",
+      "verified": true
+    },
+    "sources": [
+      "https://www.acefitness.org/resources/everyone/blog/7008/stretching-before-and-after-exercise/",
+      "https://www.nhs.uk/live-well/exercise/flexibility-exercises/",
+      "https://www.youtube.com/watch?v=B9uY01NoqBg"
+    ]
+  },
+  {
+    "id": "bench_lat_stretch",
+    "name": "Kneeling Lat Stretch on Bench",
+    "aliases": [
+      "Bench Lat Stretch",
+      "Prayer Stretch on Bench",
+      "Bench T-Spine Stretch"
+    ],
+    "category": "mobility",
+    "primaryMuscles": [
+      "lats"
+    ],
+    "secondaryMuscles": [
+      "upper_back",
+      "triceps"
+    ],
+    "equipment": [
+      "bench"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "time",
+    "weightIncrementKg": null,
+    "startingWeightKg": null,
+    "defaultSets": 1,
+    "repRange": null,
+    "restSeconds": 0,
+    "durationSeconds": 40,
+    "setup": [
+      "Kneel in front of a flat bench on a folded towel or mat.",
+      "Place your elbows on the edge of the bench, shoulder-width apart, palms together or holding the towel.",
+      "Knees under or slightly behind your hips."
+    ],
+    "cues": [
+      "Sit your hips back toward your heels.",
+      "Let your chest sink toward the floor between your arms.",
+      "Keep the elbows on the bench.",
+      "Hold 30-45 s and breathe."
+    ],
+    "mistakes": [
+      "Flaring the ribs and over-arching the lower back.",
+      "Forcing the chest down so hard it pinches the shoulders.",
+      "Holding your breath."
+    ],
+    "breathing": "Breathe deeply into your back; exhale to sink a little lower.",
+    "safety": "Great after pull days (lat pulldown, rows) and for overhead mobility. If kneeling on the floor hurts, put the towel under the knees or stand and hinge forward with hands on the bench instead.",
+    "substitutions": [
+      "childs_pose",
+      "chest_doorway_stretch"
+    ],
+    "freeExerciseDbId": null,
+    "images": [],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=6Fc0u9xPkL8",
+      "title": "The Bench Stretch - The Ultimate Lat and Thoracic Spine Mobility Exercise",
+      "channel": "The Barbell Physio",
+      "verified": true
+    },
+    "sources": [
+      "https://www.hingehealth.com/resources/articles/lat-stretches/",
+      "https://www.acefitness.org/resources/everyone/blog/7008/stretching-before-and-after-exercise/",
+      "https://www.youtube.com/watch?v=6Fc0u9xPkL8"
+    ]
+  },
+  {
+    "id": "half_kneeling_hip_flexor_stretch",
+    "name": "Half-Kneeling Hip Flexor Stretch",
+    "aliases": [
+      "Kneeling Hip Flexor Stretch",
+      "Lunge Stretch",
+      "Couch Stretch (easy version)"
+    ],
+    "category": "mobility",
+    "primaryMuscles": [
+      "quads"
+    ],
+    "secondaryMuscles": [
+      "glutes",
+      "abs"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": true,
+    "loadType": "time",
+    "weightIncrementKg": null,
+    "startingWeightKg": null,
+    "defaultSets": 1,
+    "repRange": null,
+    "restSeconds": 0,
+    "durationSeconds": 30,
+    "setup": [
+      "Fold your towel under the back knee (or use a mat).",
+      "One knee down, the other foot flat in front so both knees are at about 90 degrees.",
+      "Hold a bench or machine for balance if needed."
+    ],
+    "cues": [
+      "Squeeze the glute of the back leg and tuck the pelvis slightly.",
+      "Then shift forward a little - small movement, big stretch.",
+      "Stay tall; don't arch the lower back.",
+      "Hold 30 s each side."
+    ],
+    "mistakes": [
+      "Lunging far forward and arching the back instead of tucking the pelvis.",
+      "No towel under the knee on a hard floor.",
+      "Letting the front knee cave in."
+    ],
+    "breathing": "Slow breaths; exhale and squeeze the glute a little harder to deepen the stretch.",
+    "safety": "Hip flexors get tight from long hours sitting in lectures; stretching them helps the lower back and squat. Kneel on something soft - knee pressure is higher at 95 kg.",
+    "substitutions": [
+      "worlds_greatest_stretch",
+      "bench_quad_stretch"
+    ],
+    "freeExerciseDbId": "Kneeling_Hip_Flexor",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kneeling_Hip_Flexor/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Kneeling_Hip_Flexor/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=mzPvzMivukw",
+      "title": "Back Exercises to Strengthen and Stretch (Half-Kneeling Hip Flexor Stretch) | HSS",
+      "channel": "Hospital for Special Surgery",
+      "verified": true
+    },
+    "sources": [
+      "https://www.acefitness.org/resources/everyone/blog/7008/stretching-before-and-after-exercise/",
+      "https://www.nhs.uk/live-well/exercise/flexibility-exercises/",
+      "https://www.youtube.com/watch?v=mzPvzMivukw"
+    ]
+  },
+  {
+    "id": "lying_hamstring_stretch_towel",
+    "name": "Lying Hamstring Stretch (Towel)",
+    "aliases": [
+      "Towel Hamstring Stretch",
+      "Supine Hamstring Stretch",
+      "Strap Hamstring Stretch"
+    ],
+    "category": "mobility",
+    "primaryMuscles": [
+      "hamstrings"
+    ],
+    "secondaryMuscles": [
+      "calves"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": true,
+    "loadType": "time",
+    "weightIncrementKg": null,
+    "startingWeightKg": null,
+    "defaultSets": 1,
+    "repRange": null,
+    "restSeconds": 0,
+    "durationSeconds": 30,
+    "setup": [
+      "Lie on your back on a mat (or a flat bench if the floor is busy/dirty).",
+      "Bend one knee with the foot flat; loop your towel around the ball of the other foot.",
+      "Hold an end of the towel in each hand."
+    ],
+    "cues": [
+      "Raise the straight leg until you feel a stretch behind the thigh.",
+      "Keep a tiny bend in the knee.",
+      "Pull gently with the towel - no yanking.",
+      "Hold 30 s each leg; lower back stays relaxed on the floor."
+    ],
+    "mistakes": [
+      "Locking the knee hard and feeling it behind the knee rather than the thigh.",
+      "Lifting the head and shoulders off the floor.",
+      "Bouncing the leg."
+    ],
+    "breathing": "Breathe slowly; on each exhale relax and let the leg come a little closer.",
+    "safety": "Lying down supports the lower back, which makes this safer than standing toe-touches for a heavier beginner. Good after leg day (leg curls, RDLs, leg press).",
+    "substitutions": [
+      "bench_quad_stretch",
+      "figure_four_glute_stretch"
+    ],
+    "freeExerciseDbId": "Hamstring_Stretch",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hamstring_Stretch/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hamstring_Stretch/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=O4mmCtewAJ8",
+      "title": "How to do a Lying Hamstring Stretch with Band or Towel",
+      "channel": "Get Strong with Emily",
+      "verified": true
+    },
+    "sources": [
+      "https://www.acefitness.org/resources/everyone/blog/7008/stretching-before-and-after-exercise/",
+      "https://www.nhs.uk/live-well/exercise/flexibility-exercises/",
+      "https://www.youtube.com/watch?v=O4mmCtewAJ8"
+    ]
+  },
+  {
+    "id": "bench_quad_stretch",
+    "name": "Quad Stretch (Foot on Bench)",
+    "aliases": [
+      "Rear-Foot-Elevated Quad Stretch",
+      "Standing Quad Stretch (bench-supported)"
+    ],
+    "category": "mobility",
+    "primaryMuscles": [
+      "quads"
+    ],
+    "secondaryMuscles": [
+      "glutes"
+    ],
+    "equipment": [
+      "bench",
+      "bodyweight"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": true,
+    "loadType": "time",
+    "weightIncrementKg": null,
+    "startingWeightKg": null,
+    "defaultSets": 1,
+    "repRange": null,
+    "restSeconds": 0,
+    "durationSeconds": 30,
+    "setup": [
+      "Stand with your back to a flat bench, about 60-90 cm in front of it.",
+      "Rest the top of one foot (laces down) on the bench behind you.",
+      "Hold a machine, rack upright or wall beside you for balance."
+    ],
+    "cues": [
+      "Stand tall and squeeze the glute of the back leg.",
+      "Slightly bend the standing knee to deepen the stretch.",
+      "Tuck the pelvis - feel it at the front of the thigh.",
+      "Hold 30 s each leg."
+    ],
+    "mistakes": [
+      "Arching the lower back.",
+      "Standing too close to the bench so the knee is cranked.",
+      "Letting the standing knee cave in."
+    ],
+    "breathing": "Breathe slowly and steadily.",
+    "safety": "Using a bench avoids having to reach back and grab your ankle, which can be hard at 95 kg. Always hold something for balance. Alternative: standing quad stretch holding your ankle with a machine for support.",
+    "substitutions": [
+      "half_kneeling_hip_flexor_stretch",
+      "lying_hamstring_stretch_towel"
+    ],
+    "freeExerciseDbId": "Standing_Elevated_Quad_Stretch",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Elevated_Quad_Stretch/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Elevated_Quad_Stretch/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=x3K8HJbaT7A",
+      "title": "Modified Quadriceps Stretch (Foot Resting on a Bench)",
+      "channel": "SPECTRUM Performance",
+      "verified": true
+    },
+    "sources": [
+      "https://www.acefitness.org/resources/everyone/blog/7008/stretching-before-and-after-exercise/",
+      "https://www.nhs.uk/live-well/exercise/flexibility-exercises/",
+      "https://www.youtube.com/watch?v=x3K8HJbaT7A"
+    ]
+  },
+  {
+    "id": "calf_stretch_wall",
+    "name": "Wall Calf Stretch",
+    "aliases": [
+      "Standing Calf Stretch",
+      "Gastrocnemius Stretch",
+      "Soleus Stretch"
+    ],
+    "category": "mobility",
+    "primaryMuscles": [
+      "calves"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "bodyweight"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": true,
+    "loadType": "time",
+    "weightIncrementKg": null,
+    "startingWeightKg": null,
+    "defaultSets": 1,
+    "repRange": null,
+    "restSeconds": 0,
+    "durationSeconds": 45,
+    "setup": [
+      "Face a wall or machine upright with both hands on it.",
+      "Step one foot back, keeping it straight and the heel on the floor, toes pointing forward."
+    ],
+    "cues": [
+      "Lean into the wall until you feel a stretch in the calf of the back leg.",
+      "Back heel stays down.",
+      "Hold about 30 s straight-knee, then bend the back knee slightly for about 15 s more (targets the lower calf/soleus).",
+      "Switch legs."
+    ],
+    "mistakes": [
+      "Heel lifting off the floor.",
+      "Back foot turned out.",
+      "Bouncing."
+    ],
+    "breathing": "Breathe steadily.",
+    "safety": "Essential after incline walking and leg day - calves and Achilles take a lot of load at 95 kg. Ease into it.",
+    "substitutions": [
+      "ankle_knee_to_wall",
+      "lying_hamstring_stretch_towel"
+    ],
+    "freeExerciseDbId": "Calf_Stretch_Hands_Against_Wall",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Stretch_Hands_Against_Wall/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Stretch_Hands_Against_Wall/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=mafo7o7OnFo",
+      "title": "Standing Calf Stretch (HSS)",
+      "channel": "Hospital for Special Surgery",
+      "verified": true
+    },
+    "sources": [
+      "https://www.acefitness.org/resources/everyone/blog/7008/stretching-before-and-after-exercise/",
+      "https://www.nhs.uk/live-well/exercise/flexibility-exercises/",
+      "https://www.youtube.com/watch?v=mafo7o7OnFo"
+    ]
+  },
+  {
+    "id": "figure_four_glute_stretch",
+    "name": "Figure-4 Glute Stretch",
+    "aliases": [
+      "Piriformis Stretch",
+      "Supine Figure Four",
+      "Seated Figure Four"
+    ],
+    "category": "mobility",
+    "primaryMuscles": [
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "lower_back",
+      "abductors"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": true,
+    "loadType": "time",
+    "weightIncrementKg": null,
+    "startingWeightKg": null,
+    "defaultSets": 1,
+    "repRange": null,
+    "restSeconds": 0,
+    "durationSeconds": 30,
+    "setup": [
+      "Lie on your back on a mat with both knees bent, feet flat.",
+      "Cross one ankle over the opposite knee to make a '4' shape.",
+      "Seated alternative (easier if lying is uncomfortable): sit tall on a flat bench, cross the ankle over the knee and hinge forward with a flat back."
+    ],
+    "cues": [
+      "Reach through and hold behind the bottom thigh.",
+      "Gently pull that thigh toward your chest.",
+      "Push the top knee slightly away.",
+      "Hold 30 s each side, head relaxed on the floor."
+    ],
+    "mistakes": [
+      "Lifting the head and straining the neck.",
+      "Rounding the back hard in the seated version.",
+      "Pulling so hard the knee hurts."
+    ],
+    "breathing": "Slow, deep breaths.",
+    "safety": "Releases the glutes and outer hip after leg day and squats. If pulling the leg in is hard because of the belly, use the seated-on-bench version - it works the same muscles. Should never be felt in the knee.",
+    "substitutions": [
+      "lying_hamstring_stretch_towel",
+      "childs_pose"
+    ],
+    "freeExerciseDbId": "Ankle_On_The_Knee",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Ankle_On_The_Knee/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Ankle_On_The_Knee/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=-g0nuyTHMrI",
+      "title": "Piriformis Figure 4 Stretch - Ask Doctor Jo",
+      "channel": "AskDoctorJo",
+      "verified": true
+    },
+    "sources": [
+      "https://www.acefitness.org/resources/everyone/blog/7008/stretching-before-and-after-exercise/",
+      "https://www.nhs.uk/live-well/exercise/flexibility-exercises/",
+      "https://www.youtube.com/watch?v=-g0nuyTHMrI"
+    ]
+  },
+  {
+    "id": "childs_pose",
+    "name": "Child's Pose",
+    "aliases": [
+      "Balasana",
+      "Rest Pose"
+    ],
+    "category": "mobility",
+    "primaryMuscles": [
+      "lower_back"
+    ],
+    "secondaryMuscles": [
+      "lats",
+      "glutes"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "time",
+    "weightIncrementKg": null,
+    "startingWeightKg": null,
+    "defaultSets": 1,
+    "repRange": null,
+    "restSeconds": 0,
+    "durationSeconds": 45,
+    "setup": [
+      "Kneel on a mat or towel, big toes together and knees wide (wider knees = more room for the belly).",
+      "Sit hips back toward heels and walk your hands forward.",
+      "If the floor is uncomfortable, put your forearms on a flat bench instead."
+    ],
+    "cues": [
+      "Let your chest sink toward the floor.",
+      "Forehead down or rest on your hands.",
+      "Reach long through the arms.",
+      "Breathe into your back for 30-60 s."
+    ],
+    "mistakes": [
+      "Knees together, which squashes the stomach and limits the stretch.",
+      "Forcing the hips down onto the heels.",
+      "Shrugging shoulders."
+    ],
+    "breathing": "Slow deep belly breathing - inhale through the nose, long exhale.",
+    "safety": "A relaxing end to every session; eases the lower back. Wide knees and a cushion under the hips or knees make it comfortable for a heavier beginner. Skip or use the bench version if knees complain.",
+    "substitutions": [
+      "bench_lat_stretch",
+      "cat_cow"
+    ],
+    "freeExerciseDbId": "Childs_Pose",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Childs_Pose/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Childs_Pose/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=_ZX_zTOBgp8",
+      "title": "How to do a Child's Pose Stretch | Proper Form & Technique | NASM",
+      "channel": "National Academy of Sports Medicine (NASM)",
+      "verified": true
+    },
+    "sources": [
+      "https://www.hingehealth.com/resources/articles/childs-pose/",
+      "https://www.acefitness.org/resources/everyone/blog/7008/stretching-before-and-after-exercise/",
+      "https://www.youtube.com/watch?v=_ZX_zTOBgp8"
+    ]
+  }
+]

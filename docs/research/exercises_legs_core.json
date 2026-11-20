@@ -1,0 +1,2003 @@
+[
+  {
+    "id": "leg_press",
+    "name": "Leg Press",
+    "aliases": [
+      "45-Degree Leg Press",
+      "Sled Leg Press",
+      "Seated Leg Press"
+    ],
+    "category": "legs",
+    "primaryMuscles": [
+      "quads",
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "adductors",
+      "hamstrings",
+      "calves"
+    ],
+    "equipment": [
+      "leg_press",
+      "plates"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "plate_loaded",
+    "weightIncrementKg": 10,
+    "startingWeightKg": {
+      "low": 20,
+      "high": 60,
+      "note": "Weight ADDED to the sled (the empty sled itself often weighs 30-70 kg and is not counted). Session 1: empty sled for a warm-up set of 15, then add 10 kg per side jumps until 12 reps feel like a 7/10 effort with 2-3 reps left."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 120,
+    "durationSeconds": null,
+    "setup": [
+      "If the backrest adjusts, set it so that at the bottom your knees can bend to about 90 degrees without your hips curling off the pad (a more upright back rest helps a heavier lifter keep the hips down).",
+      "Sit with your lower back and butt flat against the pad; grab the side handles.",
+      "Feet flat, shoulder-width apart, toes slightly out, in the MIDDLE of the platform (higher = more glutes, lower = more quads/knee stress).",
+      "Press the sled up, then rotate the safety handles OFF. Never fully lock out the knees at the top.",
+      "Re-engage the safety handles before you climb out after the last rep."
+    ],
+    "cues": [
+      "Whole foot pushes - heels stay down",
+      "Knees track over your toes, not caving in",
+      "Lower slow (2-3 s) until knees near 90 degrees",
+      "Butt stays glued to the seat",
+      "Stop just short of locking the knees"
+    ],
+    "mistakes": [
+      "Going so deep the lower back/hips peel off the pad (butt wink)",
+      "Locking the knees out hard at the top",
+      "Bouncing out of the bottom",
+      "Heels lifting / pushing through toes",
+      "Loading huge weight with tiny quarter reps"
+    ],
+    "breathing": "Breathe in as the sled comes down, brace, then exhale steadily as you press up.",
+    "safety": "The most joint-friendly heavy leg exercise for a 95 kg beginner - no spinal loading and no balance demand. Keep the range where your lower back stays flat; never lock the knees under load. If knees ache, move feet slightly higher and wider.",
+    "substitutions": [
+      "smith_machine_squat",
+      "dumbbell_goblet_squat",
+      "goblet_box_squat"
+    ],
+    "freeExerciseDbId": "Leg_Press",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Press/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=nDh_BlnLCGc",
+      "title": "How To Leg Press With Perfect Technique",
+      "channel": "Jeff Nippard",
+      "verified": true
+    },
+    "sources": [
+      "https://exrx.net/WeightExercises/Quadriceps/LV45LegPress",
+      "https://exrx.net/WeightExercises/Quadriceps/LVSeatedLegPress",
+      "https://www.youtube.com/watch?v=nDh_BlnLCGc",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  },
+  {
+    "id": "leg_extension",
+    "name": "Leg Extension",
+    "aliases": [
+      "Machine Leg Extension",
+      "Quad Extension"
+    ],
+    "category": "legs",
+    "primaryMuscles": [
+      "quads"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "leg_extension_machine"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "stack",
+    "weightIncrementKg": 5,
+    "startingWeightKg": {
+      "low": 15,
+      "high": 30,
+      "note": "Stacks vary by brand. Start light and pick a weight you can lift for 15 controlled reps with a 1-second squeeze at the top and 2-3 reps left."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 75,
+    "durationSeconds": null,
+    "setup": [
+      "Adjust the backrest so your knee joint lines up with the machine pivot (the red/marked dot on the side).",
+      "Set the shin pad so it sits on the lower shin, just above the ankle - not on the feet.",
+      "Sit all the way back, grab the side handles, and keep your hips down on the seat.",
+      "Pick the weight, then start with knees bent ~90 degrees."
+    ],
+    "cues": [
+      "Kick up smoothly, no swinging",
+      "Squeeze the quads hard for 1 second at the top",
+      "Lower slowly (about 3 seconds)",
+      "Hold the handles and keep your butt on the seat"
+    ],
+    "mistakes": [
+      "Swinging/jerking the weight up",
+      "Knee not lined up with the pivot",
+      "Lifting the hips off the seat",
+      "Dropping the weight fast on the way down"
+    ],
+    "breathing": "Exhale as you straighten the legs, inhale as you lower.",
+    "safety": "Use a moderate weight and controlled tempo; higher reps (12-15) are knee-friendly. If you feel sharp pain at the kneecap, shorten the range (stop the bottom a little higher) and drop the weight. Good finisher after leg press.",
+    "substitutions": [
+      "leg_press",
+      "goblet_box_squat"
+    ],
+    "freeExerciseDbId": "Leg_Extensions",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Extensions/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Extensions/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=YyvSfVjQeL0",
+      "title": "How To: Leg Extension (Cybex)",
+      "channel": "ScottHermanFitness",
+      "verified": true
+    },
+    "sources": [
+      "https://exrx.net/WeightExercises/Quadriceps/LVLegExtension",
+      "https://www.youtube.com/watch?v=YyvSfVjQeL0",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  },
+  {
+    "id": "seated_leg_curl",
+    "name": "Seated Leg Curl",
+    "aliases": [
+      "Seated Hamstring Curl"
+    ],
+    "category": "legs",
+    "primaryMuscles": [
+      "hamstrings"
+    ],
+    "secondaryMuscles": [
+      "calves"
+    ],
+    "equipment": [
+      "leg_curl_machine"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "stack",
+    "weightIncrementKg": 5,
+    "startingWeightKg": {
+      "low": 15,
+      "high": 30,
+      "note": "Leg Curl machine at UG gym: use this version if it is a seated machine, otherwise use lying_leg_curl. Pick a weight you can curl 12 times with a pause and 2-3 reps left."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 75,
+    "durationSeconds": null,
+    "setup": [
+      "Adjust the backrest so your knees line up with the machine pivot.",
+      "Lower leg pad rests on the back of your lower calf, just above the heel.",
+      "Bring the thigh/lap pad down snug on top of your thighs just above the knees so you cannot lift up.",
+      "Lean your chest slightly forward (stretches the hamstrings more) and hold the handles."
+    ],
+    "cues": [
+      "Pull your heels down and back under the seat",
+      "Pause and squeeze for a second",
+      "Control it back up - 2-3 seconds",
+      "Keep the thighs pinned under the pad"
+    ],
+    "mistakes": [
+      "Lap pad too loose so hips lift",
+      "Using momentum / bouncing at the top",
+      "Cutting the range short",
+      "Pointing toes hard and cramping calves"
+    ],
+    "breathing": "Exhale as you curl down, inhale as the pad returns.",
+    "safety": "Very low-risk machine. Research suggests the seated version (hips bent) may grow hamstrings more than the lying version, so prefer it if both exist. If calves cramp, flex your feet toward your shins.",
+    "substitutions": [
+      "lying_leg_curl",
+      "dumbbell_romanian_deadlift",
+      "cable_pull_through"
+    ],
+    "freeExerciseDbId": "Seated_Leg_Curl",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Leg_Curl/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Leg_Curl/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=ELOCsoDSmrg",
+      "title": "How To: Seated Leg Curl (Cybex)",
+      "channel": "ScottHermanFitness",
+      "verified": true
+    },
+    "sources": [
+      "https://exrx.net/WeightExercises/Hamstrings/LVSeatedLegCurlH",
+      "https://www.strengthlog.com/seated-leg-curl/",
+      "https://www.nasm.org/resource-center/exercise-library/seated-leg-curl",
+      "https://www.youtube.com/watch?v=ELOCsoDSmrg",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  },
+  {
+    "id": "lying_leg_curl",
+    "name": "Lying Leg Curl",
+    "aliases": [
+      "Prone Leg Curl",
+      "Lying Hamstring Curl"
+    ],
+    "category": "legs",
+    "primaryMuscles": [
+      "hamstrings"
+    ],
+    "secondaryMuscles": [
+      "calves"
+    ],
+    "equipment": [
+      "leg_curl_machine"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "stack",
+    "weightIncrementKg": 5,
+    "startingWeightKg": {
+      "low": 10,
+      "high": 25,
+      "note": "Use this if the gym leg curl machine is the lying (face-down) type. Lying curls usually feel heavier than seated - start light."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 75,
+    "durationSeconds": null,
+    "setup": [
+      "Lie face down with your knees just off the edge of the bench, lined up with the machine pivot.",
+      "Ankle pad sits on the back of your lower calves, just above the heels.",
+      "Grab the handles at the front; press your hips into the pad.",
+      "Pick a light weight on the first set to learn the movement."
+    ],
+    "cues": [
+      "Hips stay pressed into the pad",
+      "Curl heels toward your butt",
+      "Squeeze 1 second at the top",
+      "Lower slow to almost straight legs"
+    ],
+    "mistakes": [
+      "Hips lifting / back arching to cheat the weight up",
+      "Swinging the weight",
+      "Dropping the pad fast",
+      "Kneecaps resting on the hard edge of the bench"
+    ],
+    "breathing": "Exhale as you curl, inhale as you lower.",
+    "safety": "Keep the hips down to protect the lower back. A heavier lifter may find lying on the stomach uncomfortable - a towel under the hips helps; if it is very uncomfortable use dumbbell_romanian_deadlift instead.",
+    "substitutions": [
+      "seated_leg_curl",
+      "dumbbell_romanian_deadlift",
+      "cable_pull_through"
+    ],
+    "freeExerciseDbId": "Lying_Leg_Curls",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Leg_Curls/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Leg_Curls/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=1Tq3QdYUuHs",
+      "title": "How To: Prone Leg Curl (Cybex)",
+      "channel": "ScottHermanFitness",
+      "verified": true
+    },
+    "sources": [
+      "https://exrx.net/WeightExercises/Hamstrings/LVLyingLegCurl",
+      "https://www.youtube.com/watch?v=1Tq3QdYUuHs",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  },
+  {
+    "id": "dumbbell_goblet_squat",
+    "name": "Dumbbell Goblet Squat",
+    "aliases": [
+      "Goblet Squat",
+      "DB Goblet Squat"
+    ],
+    "category": "legs",
+    "primaryMuscles": [
+      "quads",
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "adductors",
+      "abs",
+      "upper_back"
+    ],
+    "equipment": [
+      "dumbbell"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "dumbbell",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 10,
+      "high": 20,
+      "note": "One dumbbell held at the chest. Do one bodyweight set first. If the bottom feels unstable or your heels lift, use goblet_box_squat instead until it feels solid."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 90,
+    "durationSeconds": null,
+    "setup": [
+      "Stand the dumbbell on end and cup the top head with both palms (\"goblet\" grip), held against your upper chest.",
+      "Feet a bit wider than shoulder-width, toes turned out 15-30 degrees.",
+      "Elbows point down, chest tall, eyes forward.",
+      "If heels lift, put the heels on two small (2.5-5 kg) plates."
+    ],
+    "cues": [
+      "Sit down between your heels",
+      "Knees out over the toes",
+      "Chest up - dumbbell stays touching you",
+      "Push the floor away to stand",
+      "Go as deep as you can keep a flat back"
+    ],
+    "mistakes": [
+      "Heels rising off the floor",
+      "Knees caving inward",
+      "Rounding the back / letting the dumbbell drift forward",
+      "Half reps from fear of depth"
+    ],
+    "breathing": "Big breath in and brace at the top, hold it on the way down, exhale as you stand.",
+    "safety": "The best free-weight squat to learn first - the weight in front helps you stay upright and it is easy to bail (just drop the DB to the floor in front). Depth: whatever you can do pain-free with a neutral back; a bench behind you is fine.",
+    "substitutions": [
+      "goblet_box_squat",
+      "leg_press",
+      "smith_machine_squat"
+    ],
+    "freeExerciseDbId": "Goblet_Squat",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Goblet_Squat/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Goblet_Squat/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=CkFzgR55gho",
+      "title": "How to Perform Dumbbell Goblet Squat",
+      "channel": "Physique Development",
+      "verified": true
+    },
+    "sources": [
+      "https://www.youtube.com/watch?v=3gpXflqRiEc",
+      "https://builtwithscience.com/fitness-tips/best-glutes-exercises/",
+      "https://www.youtube.com/watch?v=CkFzgR55gho",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  },
+  {
+    "id": "goblet_box_squat",
+    "name": "Goblet Box Squat to Bench",
+    "aliases": [
+      "Box Squat to Bench",
+      "Bench Squat",
+      "Squat to Bench"
+    ],
+    "category": "legs",
+    "primaryMuscles": [
+      "quads",
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "hamstrings",
+      "adductors",
+      "abs"
+    ],
+    "equipment": [
+      "bench",
+      "dumbbell"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "dumbbell",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 0,
+      "high": 16,
+      "note": "Week 1 can be bodyweight only (your 95 kg is already real load). Then hold one dumbbell at the chest, starting around 8-12 kg."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 90,
+    "durationSeconds": null,
+    "setup": [
+      "Place a flat bench (or an adjustable bench set flat) lengthwise or crosswise behind you, against a wall or a rack so it cannot slide.",
+      "Stand about a foot in front of it, feet shoulder-width, toes slightly out.",
+      "Hold a dumbbell vertically at your chest (or arms out front for bodyweight).",
+      "If touching the bench is too deep at first, only squat until your butt lightly brushes it, or use leg_press until it feels better. Do NOT stack loose plates on the bench to sit on - they can slide."
+    ],
+    "cues": [
+      "Reach your hips back to the bench",
+      "Touch softly - do not crash down",
+      "Stay tight, pause 1 second",
+      "Drive up through mid-foot, chest up"
+    ],
+    "mistakes": [
+      "Plopping down and relaxing on the bench",
+      "Rocking forward to stand up",
+      "Knees collapsing inward",
+      "Bench too far away so you have to fall back"
+    ],
+    "breathing": "Inhale and brace before you sit back; exhale as you stand up.",
+    "safety": "Great first squat for a heavier beginner: the bench sets a safe depth and gives confidence. Make sure the bench is stable and will not tip or slide; never sit back onto the end of a bench that can flip.",
+    "substitutions": [
+      "dumbbell_goblet_squat",
+      "leg_press",
+      "smith_machine_squat"
+    ],
+    "freeExerciseDbId": "Dumbbell_Squat_To_A_Bench",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Squat_To_A_Bench/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Squat_To_A_Bench/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=mIJub2k6YNg",
+      "title": "How To: Dumbbell Goblet Box Squat",
+      "channel": "Fitness Lab",
+      "verified": true
+    },
+    "sources": [
+      "https://www.youtube.com/watch?v=sWKlUCGfX9s",
+      "https://builtwithscience.com/fitness-tips/best-glutes-exercises/",
+      "https://www.youtube.com/watch?v=mIJub2k6YNg",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  },
+  {
+    "id": "smith_machine_squat",
+    "name": "Smith Machine Squat",
+    "aliases": [
+      "Smith Squat"
+    ],
+    "category": "legs",
+    "primaryMuscles": [
+      "quads",
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "adductors",
+      "hamstrings",
+      "lower_back",
+      "abs"
+    ],
+    "equipment": [
+      "smith_machine",
+      "plates"
+    ],
+    "mechanic": "compound",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "smith",
+    "weightIncrementKg": 5,
+    "startingWeightKg": {
+      "low": 20,
+      "high": 40,
+      "note": "TOTAL including the Smith bar (bars are often 15-20 kg, some counter-balanced to less - ask staff or treat the bar as ~15 kg). First session: empty bar for 2 sets to learn the groove, then add 2.5-5 kg per side."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 120,
+    "durationSeconds": null,
+    "setup": [
+      "Set the bar hooks at about upper-chest/shoulder height so you can unrack with a small knee bend.",
+      "Set the safety stops just below your lowest squat depth (try the depth with an empty bar first).",
+      "Step under the bar; rest it on the meaty upper back (traps), NOT the neck. Hands just outside shoulders.",
+      "Feet shoulder-width, slightly IN FRONT of the bar (about a half foot-length) so you can sit down and back, toes slightly out.",
+      "Stand up, twist the bar to unhook it."
+    ],
+    "cues": [
+      "Brace your belly like you are about to be poked",
+      "Sit down and slightly back",
+      "Knees out, whole foot on the floor",
+      "Thighs to about parallel (or a bench-safe depth)",
+      "Drive up, twist to rack when done"
+    ],
+    "mistakes": [
+      "Feet directly under the bar (puts stress on knees/lower back)",
+      "Bar on the neck",
+      "Forgetting to set the safeties",
+      "Bouncing at the bottom",
+      "Knees caving in"
+    ],
+    "breathing": "Deep breath and brace at the top, hold through the descent, exhale through pursed lips as you pass the hardest part on the way up.",
+    "safety": "The fixed path and safety stops make this safer than a free barbell squat for a solo beginner - you can just twist to rack at any point. Keep depth to what you control with a flat back. Wrap a towel around the bar if it digs in.",
+    "substitutions": [
+      "leg_press",
+      "dumbbell_goblet_squat",
+      "goblet_box_squat"
+    ],
+    "freeExerciseDbId": "Smith_Machine_Squat",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Squat/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Squat/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=vlEWja5L-g8",
+      "title": "Smith machine squats proper form",
+      "channel": "Jake Brog",
+      "verified": true
+    },
+    "sources": [
+      "https://www.youtube.com/watch?v=fEuYM-miK5U",
+      "https://www.youtube.com/watch?v=vlEWja5L-g8",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  },
+  {
+    "id": "supported_split_squat",
+    "name": "Supported Split Squat",
+    "aliases": [
+      "Assisted Split Squat",
+      "Static Lunge (Supported)"
+    ],
+    "category": "legs",
+    "primaryMuscles": [
+      "quads",
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "adductors",
+      "hamstrings",
+      "calves"
+    ],
+    "equipment": [
+      "bodyweight",
+      "smith_machine",
+      "dumbbell"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": true,
+    "loadType": "dumbbell",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 0,
+      "high": 8,
+      "note": "Start bodyweight, holding onto a support with one or both hands. When 3x12 per leg is easy, hold one light dumbbell in the hand on the same side as the BACK leg while the other hand keeps holding the support."
+    },
+    "defaultSets": 2,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Stand beside a stable support: the locked Smith machine bar set at waist/chest height, the Smith frame, or an adjustable bench upright.",
+      "Take a long step: one foot forward, the other back on the ball of the foot, feet hip-width apart (like on train tracks, not a tightrope).",
+      "Hold the support lightly - use it for balance, not to pull yourself up.",
+      "Most weight goes on the FRONT foot."
+    ],
+    "cues": [
+      "Drop the back knee straight down",
+      "Front heel stays heavy",
+      "Torso tall, slight forward lean is OK",
+      "Push through the front foot to rise",
+      "Finish all reps on one side, then switch"
+    ],
+    "mistakes": [
+      "Stance too narrow (wobbly)",
+      "Pushing off the back foot instead of the front",
+      "Front heel lifting",
+      "Banging the back knee on the floor"
+    ],
+    "breathing": "Inhale on the way down, exhale as you push up.",
+    "safety": "Holding a support removes the balance problem that makes lunges hard for heavier beginners. Go only as low as is comfortable for the knees - the back knee does not need to touch the floor. Count reps per leg.",
+    "substitutions": [
+      "dumbbell_step_up",
+      "goblet_box_squat",
+      "leg_press"
+    ],
+    "freeExerciseDbId": null,
+    "images": [],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=SGHnCftrZkA",
+      "title": "Beginner's Guide: Split Squat",
+      "channel": "SilverSneakers",
+      "verified": true
+    },
+    "sources": [
+      "https://www.youtube.com/watch?v=la0pLPq-3A8",
+      "https://www.youtube.com/watch?v=A_QtyYS1BzY",
+      "https://www.youtube.com/watch?v=SGHnCftrZkA"
+    ]
+  },
+  {
+    "id": "dumbbell_step_up",
+    "name": "Dumbbell Step-Up (Low Step)",
+    "aliases": [
+      "Step-Up",
+      "Bench Step-Up",
+      "Low Box Step-Up"
+    ],
+    "category": "legs",
+    "primaryMuscles": [
+      "quads",
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "hamstrings",
+      "adductors",
+      "calves"
+    ],
+    "equipment": [
+      "bench",
+      "dumbbell",
+      "bodyweight"
+    ],
+    "mechanic": "compound",
+    "difficulty": 2,
+    "unilateral": true,
+    "loadType": "dumbbell",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 0,
+      "high": 10,
+      "note": "Per hand. Start bodyweight on a LOW step; add 5-8 kg dumbbells only when 10 smooth reps per leg feel easy."
+    },
+    "defaultSets": 2,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 75,
+    "durationSeconds": null,
+    "setup": [
+      "Use the lowest stable step the gym has (an aerobic step or low box about 25-35 cm, if there is one - ask staff). A standard flat bench is about 43-45 cm, which is high for a 170 cm beginner: if that is the only option, use bodyweight only and hold a support (for example the Smith machine frame next to the bench) with one hand. Never stack loose plates to make a step.",
+      "Make sure the bench/step is stable and dry (wipe off sweat).",
+      "Place the WHOLE working foot on the step.",
+      "Hold dumbbells at your sides (or nothing for bodyweight)."
+    ],
+    "cues": [
+      "Lean slightly forward over the front foot",
+      "Drive through the heel of the top foot",
+      "Do not push off with the bottom foot",
+      "Stand tall at the top, then step down slowly",
+      "All reps one leg, then switch"
+    ],
+    "mistakes": [
+      "Step too high for your current strength",
+      "Bouncing off the back foot",
+      "Front knee caving inward",
+      "Dropping down fast on the way down"
+    ],
+    "breathing": "Exhale as you step up, inhale as you lower down.",
+    "safety": "Lower step height = less knee stress and easier balance. Never use a bench that wobbles, and step down with control. Skip load until balance is solid.",
+    "substitutions": [
+      "supported_split_squat",
+      "goblet_box_squat",
+      "leg_press"
+    ],
+    "freeExerciseDbId": "Dumbbell_Step_Ups",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Step_Ups/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Step_Ups/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=7AtIjR-QqVA",
+      "title": "Dumbbell Step Ups - Leg Exercise - Bodybuilding.com",
+      "channel": "Bodybuilding.com",
+      "verified": true
+    },
+    "sources": [
+      "https://www.youtube.com/watch?v=aKj-6hgiViA",
+      "https://www.youtube.com/watch?v=7AtIjR-QqVA",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  },
+  {
+    "id": "dumbbell_romanian_deadlift",
+    "name": "Dumbbell Romanian Deadlift",
+    "aliases": [
+      "DB RDL",
+      "Dumbbell RDL"
+    ],
+    "category": "legs",
+    "primaryMuscles": [
+      "hamstrings",
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "lower_back",
+      "upper_back",
+      "forearms",
+      "adductors"
+    ],
+    "equipment": [
+      "dumbbell"
+    ],
+    "mechanic": "compound",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "dumbbell",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 10,
+      "high": 20,
+      "note": "Per dumbbell. Learn the hinge first with light dumbbells (8-10 kg each); a deep hamstring stretch with a flat back matters more than load."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 90,
+    "durationSeconds": null,
+    "setup": [
+      "Stand tall, feet hip-width, a dumbbell in each hand in front of your thighs, palms facing you.",
+      "Unlock the knees slightly (soft knees) and keep them there the whole set.",
+      "Shoulders back and down, chest proud, look at the floor about 2 m ahead."
+    ],
+    "cues": [
+      "Push your hips back like closing a car door with your butt",
+      "Dumbbells slide down your thighs",
+      "Flat back - stop when hamstrings are tight (around mid-shin)",
+      "Squeeze glutes to stand up tall",
+      "Do not lean back at the top"
+    ],
+    "mistakes": [
+      "Rounding the lower back to reach lower",
+      "Turning it into a squat (bending knees too much)",
+      "Dumbbells drifting away from the legs",
+      "Hyper-extending/leaning back at the top"
+    ],
+    "breathing": "Inhale and brace at the top, hold as you hinge down, exhale as you stand up.",
+    "safety": "Range of motion ends where your back would start to round - for most beginners that is around the knees to mid-shin. Move slowly. If your lower back (not hamstrings) feels it, reduce weight and range. Dry hands - sweaty grip is a real issue in Accra heat.",
+    "substitutions": [
+      "cable_pull_through",
+      "seated_leg_curl",
+      "smith_machine_hip_thrust"
+    ],
+    "freeExerciseDbId": "Stiff-Legged_Dumbbell_Deadlift",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Stiff-Legged_Dumbbell_Deadlift/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Stiff-Legged_Dumbbell_Deadlift/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=hQgFixeXdZo",
+      "title": "Dumbbell Romanian (RDL) Deadlift |TECHNIQUE for Beginners",
+      "channel": "Mike | J2FIT Strength & Conditioning",
+      "verified": true
+    },
+    "sources": [
+      "https://www.youtube.com/watch?v=_oyxCn2iSjU",
+      "https://www.youtube.com/watch?v=hQgFixeXdZo",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  },
+  {
+    "id": "smith_machine_hip_thrust",
+    "name": "Smith Machine Hip Thrust",
+    "aliases": [
+      "Smith Hip Thrust",
+      "Barbell Hip Thrust (Smith)"
+    ],
+    "category": "legs",
+    "primaryMuscles": [
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "hamstrings",
+      "quads",
+      "adductors"
+    ],
+    "equipment": [
+      "smith_machine",
+      "bench",
+      "plates"
+    ],
+    "mechanic": "compound",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "smith",
+    "weightIncrementKg": 5,
+    "startingWeightKg": {
+      "low": 20,
+      "high": 50,
+      "note": "TOTAL including the Smith bar. Start with the bar only to learn the position; glutes are strong, so you can usually add 5-10 kg per session early on. A free barbell rolled over the hips works the same way once confident."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 90,
+    "durationSeconds": null,
+    "setup": [
+      "Put a flat bench crosswise inside the Smith machine, against something solid so it cannot slide.",
+      "Sit on the floor with your upper back (bottom of the shoulder blades) against the bench edge.",
+      "Set the bar at a height where it rests on your hip crease when you are sitting; wrap a folded towel or bar pad around the bar.",
+      "Feet flat, about shoulder-width; at the top your shins should be vertical (adjust feet forward/back).",
+      "Set the Smith safety stops just below the bar's lowest point (butt almost on the floor) so the bar can never pin you.",
+      "Hold the bar with both hands, push up and twist to unhook."
+    ],
+    "cues": [
+      "Chin tucked, eyes forward (not at the ceiling)",
+      "Drive through the heels",
+      "Ribs down - tuck the pelvis at the top",
+      "Squeeze glutes hard for 1 second",
+      "Lower until butt nearly touches the floor"
+    ],
+    "mistakes": [
+      "Arching the lower back instead of extending the hips",
+      "Feet too close (quads take over) or too far (hamstrings cramp)",
+      "Bench sliding away",
+      "No pad - bar bruising hips"
+    ],
+    "breathing": "Inhale at the bottom, exhale as you thrust up and squeeze.",
+    "safety": "Very back-friendly glute builder. Always use padding on the bar and set the safety stops. Twist to re-rack at the top when done. On a humid day, put a towel on the bench edge so your sweaty back does not slide.",
+    "substitutions": [
+      "dumbbell_hip_thrust",
+      "glute_bridge",
+      "cable_pull_through"
+    ],
+    "freeExerciseDbId": "Barbell_Hip_Thrust",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Hip_Thrust/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Hip_Thrust/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=ADgWjz9i42Y",
+      "title": "How to: Smith Machine Glute Bridge (Hip Thrust) | Grow Bigger Glutes w/ Minimal Setup",
+      "channel": "Physique Development",
+      "verified": true
+    },
+    "sources": [
+      "https://bretcontreras.com/how-to-hip-thrust/",
+      "https://builtwithscience.com/fitness-tips/best-glutes-exercises/",
+      "https://www.youtube.com/watch?v=i5gfOyZ-K0s",
+      "https://www.youtube.com/watch?v=ADgWjz9i42Y",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  },
+  {
+    "id": "dumbbell_hip_thrust",
+    "name": "Dumbbell Hip Thrust",
+    "aliases": [
+      "DB Hip Thrust",
+      "Bench Hip Thrust"
+    ],
+    "category": "legs",
+    "primaryMuscles": [
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "hamstrings",
+      "quads",
+      "adductors"
+    ],
+    "equipment": [
+      "dumbbell",
+      "bench"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "dumbbell",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 12,
+      "high": 25,
+      "note": "One dumbbell across the hips. Start with a set of 10-15 bodyweight reps. When the heaviest dumbbell becomes easy for 15, move to smith_machine_hip_thrust."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 90,
+    "durationSeconds": null,
+    "setup": [
+      "Sit on the floor with your upper back against the long side of a flat bench (bench against a wall or rack so it cannot slide).",
+      "Place one dumbbell horizontally across your hip crease with a towel underneath; hold both ends.",
+      "Feet flat, shoulder-width, knees bent so shins are vertical at the top."
+    ],
+    "cues": [
+      "Chin tucked, ribs down",
+      "Drive through the heels",
+      "Squeeze glutes hard at the top - body flat like a table",
+      "Pause 1 second, lower with control"
+    ],
+    "mistakes": [
+      "Overarching the lower back at the top",
+      "Letting the dumbbell roll toward the stomach",
+      "Pushing through the toes",
+      "Rushing the reps"
+    ],
+    "breathing": "Inhale at the bottom, exhale as you drive up.",
+    "safety": "Easy to set up and to get out of: just roll the dumbbell off to the side. Towel under the dumbbell for comfort; towel on the bench for a sweaty back.",
+    "substitutions": [
+      "smith_machine_hip_thrust",
+      "glute_bridge",
+      "cable_pull_through"
+    ],
+    "freeExerciseDbId": "Barbell_Hip_Thrust",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Hip_Thrust/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Hip_Thrust/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=29OfN4ztW_g",
+      "title": "Dumbbell Hip Thrust (FULL TUTORIAL) - Glute Exercises for Beginners",
+      "channel": "Mike | J2FIT Strength & Conditioning",
+      "verified": true
+    },
+    "sources": [
+      "https://bretcontreras.com/how-to-hip-thrust/",
+      "https://builtwithscience.com/fitness-tips/best-glutes-exercises/",
+      "https://www.youtube.com/watch?v=29OfN4ztW_g",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  },
+  {
+    "id": "glute_bridge",
+    "name": "Glute Bridge",
+    "aliases": [
+      "Floor Bridge",
+      "Hip Bridge",
+      "Bodyweight Glute Bridge"
+    ],
+    "category": "legs",
+    "primaryMuscles": [
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "hamstrings",
+      "abs"
+    ],
+    "equipment": [
+      "bodyweight",
+      "dumbbell"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "bodyweight",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": null,
+    "defaultSets": 2,
+    "repRange": [
+      12,
+      20
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Lie on your back on a mat if the gym has one (or a towel on a clean floor), knees bent, feet flat and hip-width apart about 20-30 cm from your butt.",
+      "Arms flat at your sides, palms down.",
+      "Optional progression: rest a dumbbell on your hips (hold the ends) once 20 reps feel easy."
+    ],
+    "cues": [
+      "Flatten your lower back to the floor first",
+      "Push through the heels",
+      "Squeeze glutes to lift hips into a straight line",
+      "Hold 2 seconds at the top",
+      "Lower slowly"
+    ],
+    "mistakes": [
+      "Arching the lower back at the top",
+      "Pushing through the toes",
+      "Knees falling in or out",
+      "Feet too far away (hamstrings cramp)"
+    ],
+    "breathing": "Exhale as you lift, inhale as you lower.",
+    "safety": "Excellent glute warm-up before leg day and a safe back-friendly exercise. Also good as a warm-up set before hip thrusts.",
+    "substitutions": [
+      "dumbbell_hip_thrust",
+      "smith_machine_hip_thrust"
+    ],
+    "freeExerciseDbId": "Butt_Lift_Bridge",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butt_Lift_Bridge/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butt_Lift_Bridge/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=OUgsJ8-Vi0E",
+      "title": "How to Perform the Perfect Glute Bridge",
+      "channel": "Airrosti Rehab Centers",
+      "verified": true
+    },
+    "sources": [
+      "https://www.acefitness.org/resources/everyone/exercise-library/57/glute-bridge/",
+      "https://www.youtube.com/watch?v=OUgsJ8-Vi0E",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  },
+  {
+    "id": "cable_pull_through",
+    "name": "Cable Pull-Through",
+    "aliases": [
+      "Glute Pull-Through",
+      "Rope Pull-Through"
+    ],
+    "category": "legs",
+    "primaryMuscles": [
+      "glutes",
+      "hamstrings"
+    ],
+    "secondaryMuscles": [
+      "lower_back",
+      "adductors",
+      "abs"
+    ],
+    "equipment": [
+      "cable"
+    ],
+    "mechanic": "compound",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "cable",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 15,
+      "high": 30,
+      "note": "Cable stack numbers differ by machine and pulley ratio. Start light enough that you can feel the stretch in the hamstrings without being pulled backwards."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 75,
+    "durationSeconds": null,
+    "setup": [
+      "Set the pulley to the LOWEST position and attach the rope (or a single handle held with both hands).",
+      "Face away from the machine, straddle the cable and grab the rope between your legs.",
+      "Walk 2-3 big steps forward so the weight lifts off the stack; feet a bit wider than shoulders, soft knees."
+    ],
+    "cues": [
+      "Hips back - let the rope pull your hands between your legs",
+      "Flat back, arms just hold on",
+      "Snap hips forward and squeeze glutes to stand",
+      "Stand tall, do not lean back"
+    ],
+    "mistakes": [
+      "Squatting instead of hinging",
+      "Pulling with the arms/shoulders",
+      "Rounding the back at the bottom",
+      "Standing too close so the weight hits the stack"
+    ],
+    "breathing": "Inhale as you hinge back, exhale as you drive the hips forward.",
+    "safety": "A beginner-friendly way to learn the hip hinge: the cable pulls you into the right position and the load is light on the spine. If you feel it in the lower back, reduce weight and range.",
+    "substitutions": [
+      "dumbbell_romanian_deadlift",
+      "smith_machine_hip_thrust",
+      "seated_leg_curl"
+    ],
+    "freeExerciseDbId": "Pull_Through",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pull_Through/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pull_Through/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=DbSF7ipBh5Y",
+      "title": "How to PROPERLY Perform a Glute Pull Through | Fix Your Cable Pull Through Form NOW!",
+      "channel": "Colossus Fitness",
+      "verified": true
+    },
+    "sources": [
+      "https://www.strengthlog.com/cable-pull-through/",
+      "https://www.youtube.com/watch?v=DbSF7ipBh5Y",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  },
+  {
+    "id": "cable_glute_kickback",
+    "name": "Cable Glute Kickback (Ankle Strap)",
+    "aliases": [
+      "Cable Kickback",
+      "Standing Cable Hip Extension"
+    ],
+    "category": "legs",
+    "primaryMuscles": [
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "hamstrings"
+    ],
+    "equipment": [
+      "cable",
+      "ankle_machine"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 2,
+    "unilateral": true,
+    "loadType": "cable",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 5,
+      "high": 15,
+      "note": "Per leg. Very light at first - this is a squeeze exercise, not a heavy one."
+    },
+    "defaultSets": 2,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "NOTE (equipment uncertain): this needs an ankle cuff/strap for the cable machine. The \"Ankle machine\" on the gym list may be that strap - confirm with gym staff. If no ankle strap exists, skip this and do glute_bridge or dumbbell_hip_thrust instead.",
+      "Set the pulley to the lowest position and clip the ankle strap on.",
+      "Wrap the strap around the working ankle; face the machine and hold the frame with both hands.",
+      "Step back so there is tension, stand on the non-working leg with a soft knee and lean the torso slightly forward."
+    ],
+    "cues": [
+      "Kick the leg back and slightly out",
+      "Squeeze the glute at the end - pause 1 second",
+      "Do not arch your lower back to get higher",
+      "Return slowly, keep tension",
+      "All reps one leg, then switch"
+    ],
+    "mistakes": [
+      "Swinging with momentum",
+      "Arching the lower back",
+      "Too much weight so the torso twists",
+      "Standing leg locked straight"
+    ],
+    "breathing": "Exhale as you kick back, inhale as you return.",
+    "safety": "Low spinal load. Holding the frame removes the balance challenge. Use light weight and control. Low priority accessory: only add if time allows within a 45-60 min session.",
+    "substitutions": [
+      "glute_bridge",
+      "dumbbell_hip_thrust",
+      "smith_machine_hip_thrust"
+    ],
+    "freeExerciseDbId": "One-Legged_Cable_Kickback",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Legged_Cable_Kickback/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Legged_Cable_Kickback/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=l4zReIOfPCQ",
+      "title": "How To Cable Kickback (Glute Kickback Form Tutorial)",
+      "channel": "Coach Jazz",
+      "verified": true
+    },
+    "sources": [
+      "https://exrx.net/WeightExercises/GluteusMaximus/CBGluteKickback",
+      "https://exrx.net/WeightExercises/GluteusMaximus/CBStandingHipExtension",
+      "https://www.youtube.com/watch?v=l4zReIOfPCQ",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  },
+  {
+    "id": "leg_press_calf_raise",
+    "name": "Leg Press Calf Raise",
+    "aliases": [
+      "Calf Press on Leg Press",
+      "Leg Press Calf Press"
+    ],
+    "category": "legs",
+    "primaryMuscles": [
+      "calves"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "leg_press",
+      "plates"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "plate_loaded",
+    "weightIncrementKg": 10,
+    "startingWeightKg": {
+      "low": 20,
+      "high": 60,
+      "note": "Weight ADDED to the sled. Usually done right after leg press - simply strip some plates off. Pick a load you can do 15 full-range reps with."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      12,
+      20
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Sit in the leg press as normal; place only the BALLS of your feet on the bottom edge of the platform, hip-width.",
+      "Press the sled up with legs straight but knees NOT hard-locked (a tiny bend).",
+      "KEEP THE SAFETY HANDLES ENGAGED if your machine allows calf raises with them on; otherwise keep the load modest."
+    ],
+    "cues": [
+      "Let the heels go back for a deep stretch - pause 1-2 s",
+      "Push through the big toe to point the feet",
+      "Squeeze at the top 1 second",
+      "Slow and full range, no bouncing"
+    ],
+    "mistakes": [
+      "Bouncing at the bottom",
+      "Bending the knees to help",
+      "Tiny partial reps",
+      "Feet too high so they slip"
+    ],
+    "breathing": "Breathe steadily: exhale as you press, inhale as you lower.",
+    "safety": "Main risk is the feet slipping off the platform with the sled above you. Use dry shoes, wipe sweat off the platform, keep the whole ball of each foot (not just the toes) on the platform and do not go so heavy that you cannot control the bottom. Re-engage the safety handles straight after the last rep before taking your feet off.",
+    "substitutions": [
+      "smith_machine_calf_raise",
+      "dumbbell_standing_calf_raise"
+    ],
+    "freeExerciseDbId": "Calf_Press_On_The_Leg_Press_Machine",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Press_On_The_Leg_Press_Machine/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Press_On_The_Leg_Press_Machine/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=KxEYX_cuesM",
+      "title": "Leg Press Calves",
+      "channel": "Renaissance Periodization",
+      "verified": true
+    },
+    "sources": [
+      "https://exrx.net/WeightExercises/Quadriceps/LV45LegPress",
+      "https://www.youtube.com/watch?v=PYZY00hI43w",
+      "https://www.youtube.com/watch?v=KxEYX_cuesM",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  },
+  {
+    "id": "smith_machine_calf_raise",
+    "name": "Smith Machine Calf Raise",
+    "aliases": [
+      "Smith Standing Calf Raise"
+    ],
+    "category": "legs",
+    "primaryMuscles": [
+      "calves"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "smith_machine",
+      "plates"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "smith",
+    "weightIncrementKg": 5,
+    "startingWeightKg": {
+      "low": 20,
+      "high": 50,
+      "note": "TOTAL including the Smith bar. Remember you are also lifting your own 95 kg - start with bar only and focus on full range."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Place a flat, stable 20 kg plate (or a low step) under the bar to stand on so the heels can drop below the toes.",
+      "Set the bar at shoulder height; bar on the upper back as for the Smith squat.",
+      "Stand with the balls of your feet on the edge of the plate, heels hanging off, legs straight with a soft knee.",
+      "Twist to unrack; set the safety stops just below the bar position."
+    ],
+    "cues": [
+      "Heels drop low - pause 1-2 s in the stretch",
+      "Rise up as high as possible onto the big toe",
+      "Squeeze 1 s at the top",
+      "Knees stay still"
+    ],
+    "mistakes": [
+      "Bouncing",
+      "Short range",
+      "Plate wobbling or sliding",
+      "Bending knees to push"
+    ],
+    "breathing": "Exhale on the way up, inhale on the way down.",
+    "safety": "The Smith machine handles balance. Make sure the plate you stand on cannot slide (rubber floor, flat plate). If balancing is awkward, use leg_press_calf_raise instead.",
+    "substitutions": [
+      "leg_press_calf_raise",
+      "dumbbell_standing_calf_raise"
+    ],
+    "freeExerciseDbId": "Smith_Machine_Calf_Raise",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Calf_Raise/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Calf_Raise/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=hh5516HCu4k",
+      "title": "Smith Machine Calves",
+      "channel": "Renaissance Periodization",
+      "verified": true
+    },
+    "sources": [
+      "https://www.youtube.com/watch?v=avO_qtvHJAg",
+      "https://www.youtube.com/watch?v=hh5516HCu4k",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  },
+  {
+    "id": "dumbbell_standing_calf_raise",
+    "name": "Dumbbell Standing Calf Raise",
+    "aliases": [
+      "DB Calf Raise",
+      "Single-Leg Dumbbell Calf Raise"
+    ],
+    "category": "legs",
+    "primaryMuscles": [
+      "calves"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "dumbbell",
+      "plates",
+      "bodyweight"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "dumbbell",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 0,
+      "high": 15,
+      "note": "Two-leg version: start with bodyweight or one dumbbell held in one hand (other hand on a support). Your 95 kg bodyweight already loads the calves well. Progress to single-leg holding one dumbbell."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      12,
+      20
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Stand on a flat 20 kg plate or a low step with the balls of your feet on the edge, heels free.",
+      "Hold a dumbbell in one hand; hold a rack, Smith frame or wall with the other for balance.",
+      "Legs straight with a soft knee."
+    ],
+    "cues": [
+      "Slow stretch at the bottom - pause",
+      "Rise high onto the big toe",
+      "Squeeze at the top",
+      "Do not bounce"
+    ],
+    "mistakes": [
+      "Bouncing out of the bottom",
+      "Rolling out onto the little toe",
+      "Short range",
+      "Leaning heavily on the support"
+    ],
+    "breathing": "Exhale up, inhale down.",
+    "safety": "Low-risk calf option that needs almost no setup. Make sure the plate/step does not slide.",
+    "substitutions": [
+      "leg_press_calf_raise",
+      "smith_machine_calf_raise"
+    ],
+    "freeExerciseDbId": "Standing_Dumbbell_Calf_Raise",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Dumbbell_Calf_Raise/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Dumbbell_Calf_Raise/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=wxwY7GXxL4k",
+      "title": "Standing Dumbbell Calf Raises - Calf Exercise - Bodybuilding.com",
+      "channel": "Bodybuilding.com",
+      "verified": true
+    },
+    "sources": [
+      "https://www.youtube.com/watch?v=hPA98_r-6e4",
+      "https://www.youtube.com/watch?v=wxwY7GXxL4k",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  },
+  {
+    "id": "dead_bug",
+    "name": "Dead Bug",
+    "aliases": [
+      "Dead Bug Crunch"
+    ],
+    "category": "core",
+    "primaryMuscles": [
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "obliques"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "bodyweight",
+    "weightIncrementKg": 0,
+    "startingWeightKg": null,
+    "defaultSets": 2,
+    "repRange": [
+      6,
+      10
+    ],
+    "restSeconds": 45,
+    "durationSeconds": null,
+    "setup": [
+      "Lie on your back on a mat if the gym has one (or a towel on a clean floor). Arms straight up toward the ceiling.",
+      "Lift knees above hips, bent 90 degrees (tabletop).",
+      "Press your lower back gently into the floor and keep it there.",
+      "Reps are counted per side (left arm/right leg = 1)."
+    ],
+    "cues": [
+      "Lower back stays glued to the floor",
+      "Slowly lower opposite arm and leg",
+      "Exhale fully as you reach",
+      "Only go as low as you can keep the back flat",
+      "Switch sides with control"
+    ],
+    "mistakes": [
+      "Lower back arching off the floor",
+      "Moving too fast",
+      "Holding the breath",
+      "Moving same-side arm and leg"
+    ],
+    "breathing": "Exhale slowly as the arm and leg extend, inhale as they return.",
+    "safety": "One of the safest core exercises - no spine flexion and no load. Easier version: keep the knee bent and just tap the heel to the floor.",
+    "substitutions": [
+      "plank",
+      "incline_plank",
+      "pallof_press"
+    ],
+    "freeExerciseDbId": "Dead_Bug",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dead_Bug/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dead_Bug/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=GbSC02oU3To",
+      "title": "How to Do a Dead Bug: A Guide from Physical Therapists",
+      "channel": "Hinge Health",
+      "verified": true
+    },
+    "sources": [
+      "https://www.acefitness.org/fitness-programs/exercises/dead-bug-exercise/",
+      "https://www.acefitness.org/resources/everyone/blog/6313/core-stability-exercises-to-improve-your-core-strength",
+      "https://www.youtube.com/watch?v=GbSC02oU3To",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  },
+  {
+    "id": "plank",
+    "name": "Front Plank",
+    "aliases": [
+      "Plank",
+      "Forearm Plank"
+    ],
+    "category": "core",
+    "primaryMuscles": [
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "obliques",
+      "front_delts",
+      "glutes"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "time",
+    "weightIncrementKg": 0,
+    "startingWeightKg": null,
+    "defaultSets": 3,
+    "repRange": null,
+    "restSeconds": 45,
+    "durationSeconds": 30,
+    "setup": [
+      "Forearms on the floor (on a mat or towel if available), elbows under the shoulders.",
+      "Legs straight back, toes on the floor, feet hip-width.",
+      "If this is too hard right now, start with incline_plank (hands/forearms on a bench) or on the knees."
+    ],
+    "cues": [
+      "Body straight from head to heels",
+      "Squeeze glutes and pull belly button in",
+      "Push the floor away with the forearms",
+      "Breathe - do not hold your breath",
+      "Stop when the hips sag"
+    ],
+    "mistakes": [
+      "Hips sagging toward the floor",
+      "Butt piked up high",
+      "Holding the breath",
+      "Looking up and straining the neck"
+    ],
+    "breathing": "Short, steady breaths through the nose/mouth while keeping the belly braced.",
+    "safety": "For a 95 kg beginner a full plank is genuinely hard; good form for 20 s beats sagging for 60 s. Stop the set the moment the lower back aches. Progress time by 5 s per week up to ~45-60 s.",
+    "substitutions": [
+      "incline_plank",
+      "dead_bug",
+      "side_plank"
+    ],
+    "freeExerciseDbId": "Plank",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Plank/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Plank/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=A2b2EmIg0dA",
+      "title": "How To Plank (Proper Form | Cues | Progressions)",
+      "channel": "E3 Rehab",
+      "verified": true
+    },
+    "sources": [
+      "https://www.acefitness.org/resources/everyone/blog/6313/core-stability-exercises-to-improve-your-core-strength",
+      "https://www.youtube.com/watch?v=6LqqeBtFn9M",
+      "https://www.youtube.com/watch?v=A2b2EmIg0dA",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  },
+  {
+    "id": "incline_plank",
+    "name": "Incline Plank (Hands on Bench)",
+    "aliases": [
+      "Elevated Plank",
+      "Bench Plank"
+    ],
+    "category": "core",
+    "primaryMuscles": [
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "obliques",
+      "front_delts",
+      "glutes"
+    ],
+    "equipment": [
+      "bench",
+      "bodyweight"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "time",
+    "weightIncrementKg": 0,
+    "startingWeightKg": null,
+    "defaultSets": 3,
+    "repRange": null,
+    "restSeconds": 45,
+    "durationSeconds": 30,
+    "setup": [
+      "Use a flat bench (or an adjustable bench at its flat setting) that is stable.",
+      "Place forearms (or straight arms) on the bench, elbows under shoulders.",
+      "Walk your feet back until your body is in a straight line.",
+      "The higher the support, the easier: Smith bar locked at hip height is an even easier version."
+    ],
+    "cues": [
+      "Straight line head to heels",
+      "Squeeze glutes",
+      "Ribs down, belly braced",
+      "Breathe steadily"
+    ],
+    "mistakes": [
+      "Hips sagging",
+      "Shrugging the shoulders to the ears",
+      "Holding breath"
+    ],
+    "breathing": "Steady short breaths while keeping the brace.",
+    "safety": "The ideal starting plank for a heavier beginner - less load on shoulders and lower back. When 3 x 45 s is easy, move to the floor plank.",
+    "substitutions": [
+      "plank",
+      "dead_bug"
+    ],
+    "freeExerciseDbId": null,
+    "images": [],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=QuLekEa1lIs",
+      "title": "How to do an Incline Plank - Strength Exercises - Wellen",
+      "channel": "Wellen",
+      "verified": true
+    },
+    "sources": [
+      "https://www.acefitness.org/resources/everyone/blog/6313/core-stability-exercises-to-improve-your-core-strength",
+      "https://www.youtube.com/watch?v=QuLekEa1lIs"
+    ]
+  },
+  {
+    "id": "side_plank",
+    "name": "Side Plank",
+    "aliases": [
+      "Side Bridge",
+      "Side Plank (Knees)"
+    ],
+    "category": "core",
+    "primaryMuscles": [
+      "obliques"
+    ],
+    "secondaryMuscles": [
+      "abs",
+      "abductors",
+      "side_delts"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 2,
+    "unilateral": true,
+    "loadType": "time",
+    "weightIncrementKg": 0,
+    "startingWeightKg": null,
+    "defaultSets": 2,
+    "repRange": null,
+    "restSeconds": 30,
+    "durationSeconds": 20,
+    "setup": [
+      "Lie on your side on a mat if the gym has one (or a towel on a clean floor), elbow directly under the shoulder.",
+      "BEGINNER VERSION: knees bent 90 degrees behind you, lift from the knees.",
+      "Full version: legs straight and stacked (or top foot in front for balance).",
+      "Time is per side."
+    ],
+    "cues": [
+      "Lift hips so the body is a straight line",
+      "Push the floor away with the elbow",
+      "Do not let the hips drop or roll back",
+      "Breathe"
+    ],
+    "mistakes": [
+      "Hips sagging",
+      "Body rolling forward or back",
+      "Elbow not under the shoulder",
+      "Holding breath"
+    ],
+    "breathing": "Steady breathing while braced.",
+    "safety": "Start with the bent-knee version - the straight-leg version puts a lot of load on the shoulder for a 95 kg lifter. Stop if the shoulder hurts. Spine-friendly oblique work (McGill \"big three\" style).",
+    "substitutions": [
+      "pallof_press",
+      "plank",
+      "incline_plank"
+    ],
+    "freeExerciseDbId": "Side_Bridge",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Bridge/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Bridge/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=44ND4bOB-T0",
+      "title": "How to do a Side Plank  | Proper Form & Technique | NASM",
+      "channel": "National Academy of Sports Medicine (NASM)",
+      "verified": true
+    },
+    "sources": [
+      "https://www.acefitness.org/resources/everyone/blog/6313/core-stability-exercises-to-improve-your-core-strength",
+      "https://www.youtube.com/watch?v=N_s9em1xTqU",
+      "https://www.youtube.com/watch?v=44ND4bOB-T0",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  },
+  {
+    "id": "cable_crunch",
+    "name": "Kneeling Cable Crunch",
+    "aliases": [
+      "Cable Crunch",
+      "Rope Crunch"
+    ],
+    "category": "core",
+    "primaryMuscles": [
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "obliques"
+    ],
+    "equipment": [
+      "cable"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "cable",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 15,
+      "high": 30,
+      "note": "Stack weights vary. Pick a weight you can crunch 12-15 times while feeling the abs, not the arms or hips."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Attach the rope to the HIGH pulley.",
+      "Hold the rope ends beside your face/ears and kneel down facing the machine, about an arm length away (a folded towel or mat under the knees).",
+      "Hips stay high (do not sit on your heels)."
+    ],
+    "cues": [
+      "Curl your ribs down toward your hips",
+      "Elbows go toward the thighs",
+      "Round your back - it is a crunch",
+      "Hips stay still, do not sit back",
+      "Slowly return to a stretch"
+    ],
+    "mistakes": [
+      "Sitting back on the heels / pulling with the hips",
+      "Pulling with the arms",
+      "Using too much weight",
+      "Keeping the back flat (no crunch)"
+    ],
+    "breathing": "Exhale hard as you crunch down, inhale as you rise.",
+    "safety": "Weighted ab exercise that is easy to load progressively. Keep the movement in the spine and hips still; do not yank the weight.",
+    "substitutions": [
+      "bench_leg_raise",
+      "dead_bug",
+      "plank"
+    ],
+    "freeExerciseDbId": "Cable_Crunch",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Crunch/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Crunch/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=3qjoXDTuyOE",
+      "title": "Cable Crunch - Abs / Core Exercise - Bodybuilding.com",
+      "channel": "Bodybuilding.com",
+      "verified": true
+    },
+    "sources": [
+      "https://www.youtube.com/watch?v=ToJeyhydUxU",
+      "https://www.youtube.com/watch?v=3qjoXDTuyOE",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  },
+  {
+    "id": "pallof_press",
+    "name": "Pallof Press",
+    "aliases": [
+      "Cable Anti-Rotation Press"
+    ],
+    "category": "core",
+    "primaryMuscles": [
+      "obliques",
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "glutes",
+      "front_delts"
+    ],
+    "equipment": [
+      "cable"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": true,
+    "loadType": "cable",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 5,
+      "high": 15,
+      "note": "Light. Choose a weight that tries to twist you but you can resist for 10 slow reps per side."
+    },
+    "defaultSets": 2,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 45,
+    "durationSeconds": null,
+    "setup": [
+      "Set a single handle at chest height on the cable machine.",
+      "Stand side-on to the machine, hold the handle with both hands at your chest.",
+      "Step sideways 2-3 steps away so the cable has tension; feet shoulder-width, soft knees.",
+      "Reps are per side - turn around and repeat."
+    ],
+    "cues": [
+      "Press the handle straight out from your chest",
+      "Do not let the cable twist you",
+      "Hold 2 seconds with arms straight",
+      "Glutes and abs tight",
+      "Bring it back slowly"
+    ],
+    "mistakes": [
+      "Rotating toward the machine",
+      "Leaning away from the cable",
+      "Too heavy",
+      "Shrugging"
+    ],
+    "breathing": "Exhale as you press out, breathe steadily during the hold, inhale as you bring it back.",
+    "safety": "Anti-rotation core training with no spine bending - very back-friendly and well suited to beginners.",
+    "substitutions": [
+      "side_plank",
+      "cable_woodchop",
+      "dead_bug"
+    ],
+    "freeExerciseDbId": "Pallof_Press",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pallof_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pallof_Press/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=otxypVv_0Es",
+      "title": "How To Perform The Pallof Press Exercise For Less Lower Back Pain",
+      "channel": "Dr. Carl Baird",
+      "verified": true
+    },
+    "sources": [
+      "https://www.youtube.com/watch?v=_2xWmYNnFS8",
+      "https://www.youtube.com/watch?v=otxypVv_0Es",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  },
+  {
+    "id": "cable_woodchop",
+    "name": "Cable Woodchop (High to Low)",
+    "aliases": [
+      "Wood Chopper",
+      "Cable Chop"
+    ],
+    "category": "core",
+    "primaryMuscles": [
+      "obliques"
+    ],
+    "secondaryMuscles": [
+      "abs",
+      "front_delts",
+      "glutes"
+    ],
+    "equipment": [
+      "cable"
+    ],
+    "mechanic": "compound",
+    "difficulty": 2,
+    "unilateral": true,
+    "loadType": "cable",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 7.5,
+      "high": 15,
+      "note": "Light and controlled. This is a core exercise, not an arm one."
+    },
+    "defaultSets": 2,
+    "repRange": [
+      10,
+      12
+    ],
+    "restSeconds": 45,
+    "durationSeconds": null,
+    "setup": [
+      "Set a single handle at the HIGH pulley.",
+      "Stand side-on, grab the handle with both hands, arms straight above the shoulder nearest the machine.",
+      "Step away so there is tension; feet wider than shoulders, soft knees.",
+      "Reps per side."
+    ],
+    "cues": [
+      "Pull diagonally across your body to the opposite hip",
+      "Turn the trunk and pivot the back foot",
+      "Arms stay long - the core does the work",
+      "Return slowly and under control"
+    ],
+    "mistakes": [
+      "Pulling with the arms only",
+      "Twisting from the lower back without pivoting hips/foot",
+      "Going too heavy and jerking",
+      "Rushing back up"
+    ],
+    "breathing": "Exhale as you chop down, inhale as you return.",
+    "safety": "Pivot the back foot so the hips turn with the shoulders - this protects the lower back. Keep the load light. If any back discomfort, swap for pallof_press.",
+    "substitutions": [
+      "pallof_press",
+      "side_plank"
+    ],
+    "freeExerciseDbId": "Standing_Cable_Wood_Chop",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Cable_Wood_Chop/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Cable_Wood_Chop/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=pAplQXk3dkU",
+      "title": "How To: Oblique Twist \"Wood Chopper\" (LF CAble)",
+      "channel": "ScottHermanFitness",
+      "verified": true
+    },
+    "sources": [
+      "https://www.youtube.com/watch?v=ZDt4MCvjMAA",
+      "https://www.youtube.com/watch?v=pAplQXk3dkU",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  },
+  {
+    "id": "bench_leg_raise",
+    "name": "Bench Leg Raise (Bent-Knee)",
+    "aliases": [
+      "Lying Leg Raise on Bench",
+      "Flat Bench Leg Raise",
+      "Bench Knee Raise"
+    ],
+    "category": "core",
+    "primaryMuscles": [
+      "abs"
+    ],
+    "secondaryMuscles": [
+      "obliques"
+    ],
+    "equipment": [
+      "bench",
+      "bodyweight"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "bodyweight",
+    "weightIncrementKg": 0,
+    "startingWeightKg": null,
+    "defaultSets": 2,
+    "repRange": [
+      8,
+      15
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Lie on your back on a flat bench, butt near the end, legs off the end.",
+      "Hold the bench behind your head (or the sides) for support.",
+      "BEGINNER VERSION: bend the knees 90 degrees; straight legs make it much harder."
+    ],
+    "cues": [
+      "Press the lower back into the bench",
+      "Bring the knees toward the chest",
+      "Curl the hips up slightly at the top",
+      "Lower slowly - stop before the back arches"
+    ],
+    "mistakes": [
+      "Lower back arching off the bench as the legs drop",
+      "Swinging the legs",
+      "Straight legs before you are ready",
+      "Only moving the hip flexors (no pelvic curl)"
+    ],
+    "breathing": "Exhale as the knees come up, inhale as they lower.",
+    "safety": "Long levers stress the lower back - stay with bent knees until 3x15 is easy. If the lower back aches, shorten the range or swap for dead_bug. Also works the hip flexors.",
+    "substitutions": [
+      "dead_bug",
+      "cable_crunch"
+    ],
+    "freeExerciseDbId": "Flat_Bench_Lying_Leg_Raise",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Flat_Bench_Lying_Leg_Raise/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Flat_Bench_Lying_Leg_Raise/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=_B8CJEYd5mI",
+      "title": "How To: Lying Leg Raise On Bench",
+      "channel": "Live Lean TV Daily Exercises",
+      "verified": true
+    },
+    "sources": [
+      "https://www.youtube.com/watch?v=0tzBVqiDwSs",
+      "https://www.youtube.com/watch?v=_B8CJEYd5mI",
+      "https://github.com/yuhonas/free-exercise-db"
+    ]
+  }
+]

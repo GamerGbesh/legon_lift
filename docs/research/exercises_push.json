@@ -1,0 +1,1705 @@
+[
+  {
+    "id": "machine_chest_press",
+    "name": "Machine Chest Press",
+    "aliases": [
+      "Seated Chest Press",
+      "Chest Press Machine",
+      "Machine Bench Press"
+    ],
+    "category": "push",
+    "primaryMuscles": [
+      "chest"
+    ],
+    "secondaryMuscles": [
+      "front_delts",
+      "triceps"
+    ],
+    "equipment": [
+      "chest_press_machine"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "stack",
+    "weightIncrementKg": 5,
+    "startingWeightKg": {
+      "low": 20,
+      "high": 35,
+      "note": "Machine stacks differ between brands, so ignore the number on other machines. Week 1: pick a weight you can press for 12 clean reps with about 3 reps left in the tank. Log the pin number and the seat setting in the app."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 90,
+    "durationSeconds": null,
+    "setup": [
+      "Adjust the seat so the handles line up with the middle of your chest (around nipple height), not your neck.",
+      "If the machine has a foot lever or start-position adjuster, set the handles so you feel a light stretch across your chest at the start, not a painful pull at the front of the shoulder.",
+      "Sit tall with your back and head on the pad, feet flat and a bit wider than hips.",
+      "Grip the horizontal handles (palms down) or the vertical ones (palms facing in, easier on the shoulders) with your wrists stacked straight over your forearms.",
+      "Before the first rep, pull your shoulder blades slightly back and down into the pad."
+    ],
+    "cues": [
+      "Chest up, shoulder blades in the pad",
+      "Push the handles away, not up",
+      "Elbows about 45-60 degrees from your body, not flared straight out",
+      "Stop just short of locking out",
+      "2-3 seconds back, feel the stretch"
+    ],
+    "mistakes": [
+      "Seat too low so you press upward like a shoulder press",
+      "Shoulders rolling forward off the pad at the end of each rep",
+      "Letting the stack slam between reps",
+      "Arching the lower back off the pad to move more weight",
+      "Bouncing out of the bottom with no control"
+    ],
+    "breathing": "Breathe in as the handles come back toward you, exhale steadily as you press them away. Don't hold your breath for the whole set.",
+    "safety": "The best first chest exercise for a beginner: the path is fixed, you can't drop anything and you don't need a spotter. If the front of a shoulder pinches, shorten the range at the start (move the handle adjuster forward) and use the neutral (palms-in) handles. Keep your feet planted so your hips stay on the seat.",
+    "substitutions": [
+      "dumbbell_bench_press",
+      "smith_machine_bench_press",
+      "incline_push_up"
+    ],
+    "freeExerciseDbId": "Machine_Bench_Press",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Bench_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Bench_Press/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=sqNwDkUU_Ps",
+      "title": "How To Use The Chest Press Machine",
+      "channel": "PureGym",
+      "verified": true
+    },
+    "sources": [
+      "https://exrx.net/WeightExercises/PectoralSternal/LVChestPress",
+      "https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/chest-press/vid-20084677",
+      "https://www.youtube.com/watch?v=sqNwDkUU_Ps"
+    ]
+  },
+  {
+    "id": "dumbbell_bench_press",
+    "name": "Dumbbell Bench Press",
+    "aliases": [
+      "Flat Dumbbell Press",
+      "DB Bench Press",
+      "Dumbbell Chest Press"
+    ],
+    "category": "push",
+    "primaryMuscles": [
+      "chest"
+    ],
+    "secondaryMuscles": [
+      "front_delts",
+      "triceps"
+    ],
+    "equipment": [
+      "dumbbell",
+      "bench"
+    ],
+    "mechanic": "compound",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "dumbbell",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 10,
+      "high": 14,
+      "note": "Per dumbbell. Start at 10 kg per hand in week 1 to learn getting the dumbbells into position safely, then move up. Go up to the next dumbbell pair available (usually +2 or +2.5 kg per hand). If that jump is too big, add reps first (double progression)."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 90,
+    "durationSeconds": null,
+    "setup": [
+      "Set an adjustable bench flat. Put the dumbbells on the floor at the end of the bench.",
+      "Sit on the end of the bench with a dumbbell standing upright on each thigh, close to your knees.",
+      "Lie back and use your knees to 'kick' the dumbbells up as your back reaches the bench, so they arrive over your chest with straight arms.",
+      "Feet flat on the floor, shoulder blades pulled back and down, a small natural arch in the lower back with your butt on the bench.",
+      "Start with the dumbbells over your lower chest, palms facing your feet or turned slightly in."
+    ],
+    "cues": [
+      "Shoulder blades pinched, chest proud",
+      "Lower to the sides of your chest, elbows about 45 degrees",
+      "Forearms vertical under the dumbbells",
+      "Press up and slightly together",
+      "Control the way down for 2-3 seconds"
+    ],
+    "mistakes": [
+      "Flaring elbows to 90 degrees (stresses the shoulder)",
+      "Dropping the dumbbells to the side when finished instead of bringing them to your chest and sitting up",
+      "Going too deep with a big stretch in week 1",
+      "Clanking the dumbbells together at the top",
+      "Hips lifting off the bench"
+    ],
+    "breathing": "Breathe in and brace on the way down, exhale as you press up.",
+    "safety": "Finishing the set safely: bring the dumbbells to your chest, tuck your knees up, and rock up to sitting with the dumbbells on your thighs. Don't drop them out wide. Dumbbells are friendlier on the shoulders than a barbell because your hands can find a comfortable path, and if you fail a rep you can lower them to the floor without getting stuck.",
+    "substitutions": [
+      "machine_chest_press",
+      "smith_machine_bench_press",
+      "barbell_bench_press"
+    ],
+    "freeExerciseDbId": "Dumbbell_Bench_Press",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bench_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bench_Press/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=VmB1G1K7v94",
+      "title": "How To: Dumbbell Chest Press",
+      "channel": "ScottHermanFitness",
+      "verified": true
+    },
+    "sources": [
+      "https://builtwithscience.com/fitness-tips/how-to-properly-bench-press",
+      "https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/chest-press/vid-20084677",
+      "https://www.strongerbyscience.com/how-to-bench/",
+      "https://www.youtube.com/watch?v=VmB1G1K7v94"
+    ]
+  },
+  {
+    "id": "incline_dumbbell_press",
+    "name": "Incline Dumbbell Press",
+    "aliases": [
+      "Incline DB Bench Press",
+      "Incline Dumbbell Bench Press"
+    ],
+    "category": "push",
+    "primaryMuscles": [
+      "chest",
+      "front_delts"
+    ],
+    "secondaryMuscles": [
+      "triceps"
+    ],
+    "equipment": [
+      "dumbbell",
+      "bench"
+    ],
+    "mechanic": "compound",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "dumbbell",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 8,
+      "high": 12,
+      "note": "Per dumbbell; about 20% lighter than your flat dumbbell press. Go up to the next dumbbell pair available (usually +2 or +2.5 kg per hand). If that jump is too big, add reps first (double progression)."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 90,
+    "durationSeconds": null,
+    "setup": [
+      "Set the bench back to a low incline, about 30 degrees (usually the 2nd or 3rd notch). Steeper turns it into a shoulder press.",
+      "Set the seat one notch up if it adjusts, so you don't slide down.",
+      "Sit with the dumbbells on your thighs, lie back and kick them up one at a time or together to the top of your chest.",
+      "Feet flat, shoulder blades back and down against the pad, chest up."
+    ],
+    "cues": [
+      "Low incline, chest up to the ceiling",
+      "Lower to your upper chest, elbows slightly tucked",
+      "Press up and slightly in, over your collarbones",
+      "Slow on the way down"
+    ],
+    "mistakes": [
+      "Bench too steep (45 degrees or more), so mostly shoulders work",
+      "Shoulders shrugging up toward the ears",
+      "Lowering the dumbbells too far down behind the body",
+      "Bouncing at the bottom"
+    ],
+    "breathing": "Inhale on the way down, exhale as you press up.",
+    "safety": "Keep the range comfortable for the shoulders: stop when your elbows are about level with the bench, or slightly below. Use the same safe exit as on the flat press: dumbbells to your chest, then sit up.",
+    "substitutions": [
+      "smith_machine_incline_press",
+      "dumbbell_bench_press",
+      "low_to_high_cable_fly"
+    ],
+    "freeExerciseDbId": "Incline_Dumbbell_Press",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Press/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=IP4oeKh1Sd4",
+      "title": "How to do the INCLINE DUMBBELL BENCH PRESS! | 2 Minute Tutorial",
+      "channel": "Max Euceda",
+      "verified": true
+    },
+    "sources": [
+      "https://exrx.net/WeightExercises/PectoralClavicular/DBInclineBenchPress",
+      "https://builtwithscience.com/fitness-tips/how-to-properly-bench-press",
+      "https://www.youtube.com/watch?v=IP4oeKh1Sd4"
+    ]
+  },
+  {
+    "id": "smith_machine_bench_press",
+    "name": "Smith Machine Bench Press",
+    "aliases": [
+      "Smith Bench",
+      "Smith Machine Flat Press"
+    ],
+    "category": "push",
+    "primaryMuscles": [
+      "chest"
+    ],
+    "secondaryMuscles": [
+      "front_delts",
+      "triceps"
+    ],
+    "equipment": [
+      "smith_machine",
+      "bench",
+      "plates"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "smith",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 20,
+      "high": 40,
+      "note": "TOTAL load including the bar. Smith bars weigh about 7-20 kg depending on the model (some are counterbalanced), so ask staff or log 'bar + plates'. Week 1: bar plus 5-10 kg per side (enough for 12 reps with about 3 left in the tank), then add 1.25-2.5 kg per side when you hit the top of the rep range."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 120,
+    "durationSeconds": null,
+    "setup": [
+      "Slide a flat bench under the Smith bar so the bar is over your mid/lower chest when you lie down (not over your face or neck).",
+      "Set the safety stops just below where the bar touches your chest. They catch the bar if you fail a rep.",
+      "Lie down, eyes roughly under the bar, feet flat. Grip a little wider than shoulder width.",
+      "Pinch your shoulder blades back and down, then twist the bar to unhook it (practice the hook/unhook with the empty bar first)."
+    ],
+    "cues": [
+      "Shoulder blades pinched",
+      "Bar to the lower chest",
+      "Elbows tucked about 45 degrees",
+      "Push your back into the bench",
+      "Twist to rack at the top"
+    ],
+    "mistakes": [
+      "Bench in the wrong place so the bar comes down on your neck or belly",
+      "Not setting the safety stops",
+      "Bouncing the bar off the chest",
+      "Forgetting to twist and re-hook, then letting go"
+    ],
+    "breathing": "Inhale and brace before you lower the bar, exhale through the hardest part of the press.",
+    "safety": "A good 'barbell-like' option without a spotter: set the safety stops every time and you can't get pinned. The fixed path is fine for building muscle. Keep the reps controlled.",
+    "substitutions": [
+      "machine_chest_press",
+      "dumbbell_bench_press",
+      "barbell_bench_press"
+    ],
+    "freeExerciseDbId": "Smith_Machine_Bench_Press",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Bench_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Bench_Press/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=z_r6hDOYtO0",
+      "title": "How To: Smith Machine- Bench Press",
+      "channel": "ScottHermanFitness",
+      "verified": true
+    },
+    "sources": [
+      "https://www.strongerbyscience.com/how-to-bench/",
+      "https://www.strengthlog.com/bench-press",
+      "https://www.youtube.com/watch?v=z_r6hDOYtO0"
+    ]
+  },
+  {
+    "id": "smith_machine_incline_press",
+    "name": "Smith Machine Incline Press",
+    "aliases": [
+      "Incline Smith Press",
+      "Smith Incline Bench Press"
+    ],
+    "category": "push",
+    "primaryMuscles": [
+      "chest",
+      "front_delts"
+    ],
+    "secondaryMuscles": [
+      "triceps"
+    ],
+    "equipment": [
+      "smith_machine",
+      "bench",
+      "plates"
+    ],
+    "mechanic": "compound",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "smith",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 20,
+      "high": 35,
+      "note": "TOTAL load including the bar (Smith bars vary, 7-20 kg). Start with the bar plus 2.5-5 kg per side."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 120,
+    "durationSeconds": null,
+    "setup": [
+      "Set an adjustable bench to about 30 degrees and slide it under the Smith machine.",
+      "Position the bench so the bar comes down to your upper chest, just below your collarbones.",
+      "Set the safety stops just below that touch point.",
+      "Grip slightly wider than shoulder width, pinch the shoulder blades back and down, feet flat, then twist to unhook."
+    ],
+    "cues": [
+      "Bar to your upper chest",
+      "Elbows slightly under the bar, not flared",
+      "Chest up, shoulders down",
+      "Smooth press, twist to rack"
+    ],
+    "mistakes": [
+      "Bench too upright",
+      "Bar landing on your neck or face because the bench is in the wrong spot",
+      "Shoulders shrugged up",
+      "Half reps with too much weight"
+    ],
+    "breathing": "Inhale on the way down, exhale as you press.",
+    "safety": "Check where the bar lands with an empty bar before loading. Always use the safety stops. If the shoulders feel pinched, lower the incline and narrow your grip slightly.",
+    "substitutions": [
+      "incline_dumbbell_press",
+      "low_to_high_cable_fly",
+      "machine_chest_press"
+    ],
+    "freeExerciseDbId": "Smith_Machine_Incline_Bench_Press",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Incline_Bench_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Incline_Bench_Press/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=b8DqTO6ak0k",
+      "title": "How To: Smith Machine- Incline Bench Press",
+      "channel": "ScottHermanFitness",
+      "verified": true
+    },
+    "sources": [
+      "https://builtwithscience.com/fitness-tips/how-to-properly-bench-press",
+      "https://www.strengthlog.com/bench-press",
+      "https://www.youtube.com/watch?v=b8DqTO6ak0k"
+    ]
+  },
+  {
+    "id": "barbell_bench_press",
+    "name": "Barbell Bench Press",
+    "aliases": [
+      "Flat Bench Press",
+      "Bench Press",
+      "BB Bench"
+    ],
+    "category": "push",
+    "primaryMuscles": [
+      "chest"
+    ],
+    "secondaryMuscles": [
+      "front_delts",
+      "triceps"
+    ],
+    "equipment": [
+      "barbell",
+      "bench",
+      "plates"
+    ],
+    "mechanic": "compound",
+    "difficulty": 3,
+    "unilateral": false,
+    "loadType": "barbell",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 20,
+      "high": 40,
+      "note": "TOTAL including a 20 kg Olympic bar (some gym bars are lighter, so check). First session: empty bar only, to practise unracking and the bar path. Then add 2.5-5 kg per side each session until 12 reps leave about 3 in the tank (often 30-40 kg total after a month of Smith/dumbbell pressing), then add 1.25-2.5 kg per side when you hit the top of the rep range. ONLY possible on a bench with built-in uprights AND safety arms/pins, or with a spotter. The gym equipment list doesn't confirm one; if there isn't one, the app should swap to smith_machine_bench_press."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      6,
+      10
+    ],
+    "restSeconds": 150,
+    "durationSeconds": null,
+    "setup": [
+      "REQUIRES a bench-press bench with uprights (rack). If the gym doesn't have one, do the Smith machine bench press instead. Lie down with your eyes directly under the bar.",
+      "Grip so that your forearms are vertical when the bar touches your chest (usually a bit wider than shoulder width, index fingers around the rings).",
+      "Squeeze your shoulder blades together and down, feet flat and planted, slight arch, butt stays on the bench.",
+      "Unrack with straight arms and move the bar over your shoulders before starting.",
+      "Set the safety arms/pins just below chest height if the station has them. If it doesn't, only bench with a spotter standing behind you. Never bench a barbell alone without safeties."
+    ],
+    "cues": [
+      "Squeeze the bar, shoulder blades in your back pockets",
+      "Bar to the lower chest / nipple line",
+      "Elbows about 45-70 degrees",
+      "Drive your feet into the floor",
+      "Press up and slightly back, finish over your shoulders"
+    ],
+    "mistakes": [
+      "Bouncing the bar off the chest",
+      "Elbows flared to 90 degrees",
+      "Wrists bent backwards",
+      "Butt lifting off the bench",
+      "Benching alone without a spotter or safety pins"
+    ],
+    "breathing": "Breathe in and brace before you lower the bar, then exhale steadily as you press up. Avoid long breath-holds, especially if you have (or don't know your) blood pressure.",
+    "safety": "Highest-skill press in this list, so it's kept as a later option (month 2+). Never bench a barbell alone without safety pins or a spotter. If no safeties or spotter are available, use the Smith machine or dumbbells instead. A heavier lifter's bigger chest means a shorter bar path, which is fine; don't force extra depth.",
+    "substitutions": [
+      "smith_machine_bench_press",
+      "dumbbell_bench_press",
+      "machine_chest_press"
+    ],
+    "freeExerciseDbId": "Barbell_Bench_Press_-_Medium_Grip",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Bench_Press_-_Medium_Grip/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Bench_Press_-_Medium_Grip/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=hWbUlkb5Ms4",
+      "title": "How To Bench Press With Perfect Technique (5 Steps)",
+      "channel": "Jeff Nippard",
+      "verified": true
+    },
+    "sources": [
+      "https://www.strongerbyscience.com/how-to-bench/",
+      "https://builtwithscience.com/fitness-tips/how-to-properly-bench-press",
+      "https://www.strengthlog.com/bench-press",
+      "https://www.youtube.com/watch?v=hWbUlkb5Ms4"
+    ]
+  },
+  {
+    "id": "dumbbell_fly",
+    "name": "Dumbbell Fly",
+    "aliases": [
+      "Flat Dumbbell Flye",
+      "DB Fly",
+      "Chest Fly"
+    ],
+    "category": "push",
+    "primaryMuscles": [
+      "chest"
+    ],
+    "secondaryMuscles": [
+      "front_delts"
+    ],
+    "equipment": [
+      "dumbbell",
+      "bench"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "dumbbell",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 5,
+      "high": 8,
+      "note": "Per dumbbell. Flyes are an arm-out lever so keep them light, about half (or less) of your dumbbell press weight. Go up to the next dumbbell pair available (usually +2 or +2.5 kg per hand). If that jump is too big, add reps first (double progression)."
+    },
+    "defaultSets": 2,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 75,
+    "durationSeconds": null,
+    "setup": [
+      "Lie on a flat bench with a dumbbell in each hand, pressed up over your chest, palms facing each other.",
+      "Bend your elbows slightly (like hugging a tree) and keep that bend fixed for the whole set.",
+      "Feet flat, shoulder blades pinched back."
+    ],
+    "cues": [
+      "Hug a big tree",
+      "Open wide until you feel a stretch, not pain",
+      "Elbows stay slightly bent and point out",
+      "Squeeze your chest to bring them back up"
+    ],
+    "mistakes": [
+      "Turning it into a press by bending the elbows more and more",
+      "Lowering too deep so the shoulders take the stretch",
+      "Going too heavy",
+      "Clanking the dumbbells at the top (tension leaves the chest)"
+    ],
+    "breathing": "Inhale as your arms open, exhale as you bring them together.",
+    "safety": "Stop when your elbows are roughly level with the bench. Overstretching under load is the main risk to the shoulder. If the front of your shoulder hurts, swap to a cable fly or the machine chest press.",
+    "substitutions": [
+      "high_to_low_cable_fly",
+      "incline_dumbbell_fly",
+      "machine_chest_press"
+    ],
+    "freeExerciseDbId": "Dumbbell_Flyes",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Flyes/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Flyes/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=eozdVDA78K0",
+      "title": "How To: Dumbbell Flys On A Flat Bench",
+      "channel": "ScottHermanFitness",
+      "verified": true
+    },
+    "sources": [
+      "https://barbend.com/dumbbell-flye-variations/",
+      "https://www.youtube.com/watch?v=eozdVDA78K0"
+    ]
+  },
+  {
+    "id": "incline_dumbbell_fly",
+    "name": "Incline Dumbbell Fly",
+    "aliases": [
+      "Incline DB Flye",
+      "Incline Chest Fly"
+    ],
+    "category": "push",
+    "primaryMuscles": [
+      "chest"
+    ],
+    "secondaryMuscles": [
+      "front_delts"
+    ],
+    "equipment": [
+      "dumbbell",
+      "bench"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "dumbbell",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 4,
+      "high": 7,
+      "note": "Per dumbbell; slightly lighter than flat flyes. Go up to the next dumbbell pair available (usually +2 or +2.5 kg per hand). If that jump is too big, add reps first (double progression)."
+    },
+    "defaultSets": 2,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 75,
+    "durationSeconds": null,
+    "setup": [
+      "Set the bench to about 30 degrees.",
+      "Sit back with a dumbbell in each hand, press them up over your upper chest, palms facing each other.",
+      "Soft bend in the elbows, shoulder blades back, feet flat."
+    ],
+    "cues": [
+      "Big arc, elbows soft and fixed",
+      "Stretch across the upper chest",
+      "Bring the dumbbells together over your collarbones",
+      "Slow down, squeeze up"
+    ],
+    "mistakes": [
+      "Bench too steep",
+      "Bending the elbows into a press",
+      "Lowering the dumbbells behind the line of the body",
+      "Going too heavy"
+    ],
+    "breathing": "Inhale on the way out, exhale on the way back up.",
+    "safety": "Same shoulder rule as the flat fly: stop when your elbows reach bench level. The low-to-high cable fly works the same muscles and is usually more comfortable if this one bothers the shoulders.",
+    "substitutions": [
+      "low_to_high_cable_fly",
+      "dumbbell_fly",
+      "incline_dumbbell_press"
+    ],
+    "freeExerciseDbId": "Incline_Dumbbell_Flyes",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Flyes/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Flyes/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=idAvu2HvqSQ",
+      "title": "HOW TO: Incline Dumbbell Fly || PERFECT FORM (GROWTH & STRENGTH)",
+      "channel": "ScottHermanFitness",
+      "verified": true
+    },
+    "sources": [
+      "https://exrx.net/WeightExercises/PectoralClavicular/DBInclineFly",
+      "https://www.youtube.com/watch?v=idAvu2HvqSQ"
+    ]
+  },
+  {
+    "id": "high_to_low_cable_fly",
+    "name": "Cable Fly (High to Low)",
+    "aliases": [
+      "Cable Crossover",
+      "High Cable Fly",
+      "Standing Cable Fly"
+    ],
+    "category": "push",
+    "primaryMuscles": [
+      "chest"
+    ],
+    "secondaryMuscles": [
+      "front_delts"
+    ],
+    "equipment": [
+      "cable"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "cable",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 5,
+      "high": 10,
+      "note": "Per side (the number on each stack). Cable stacks and pulley ratios differ a lot. If the stack only goes up in 5 kg steps, add reps before weight."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 75,
+    "durationSeconds": null,
+    "setup": [
+      "NEEDS A DUAL-PULLEY CABLE STATION (two stacks). With a single cable column, do one arm at a time.",
+      "Set both pulleys at the top (or just above head height) with single D-handles.",
+      "Grab a handle in each hand and take one step forward into a staggered stance so the cables pull your arms slightly back.",
+      "Lean your torso forward a little, chest up, elbows softly bent."
+    ],
+    "cues": [
+      "Chest up, slight forward lean",
+      "Sweep the hands down and together toward your belt buckle",
+      "Elbows stay slightly bent, like hugging",
+      "Squeeze the chest for a second",
+      "Let the arms open slowly until you feel a stretch"
+    ],
+    "mistakes": [
+      "Too heavy, so the body rocks and the arms bend into a press",
+      "Shoulders rolling forward at the end",
+      "Standing too far back so the cables yank the shoulders open",
+      "Rushing the way back"
+    ],
+    "breathing": "Exhale as you bring the handles together, inhale as they open.",
+    "safety": "Cables keep tension on the chest and are kind to the shoulders, which makes them a good fly option for beginners. Keep the stretch moderate. Staggered stance keeps you balanced.",
+    "substitutions": [
+      "dumbbell_fly",
+      "low_to_high_cable_fly",
+      "machine_chest_press"
+    ],
+    "freeExerciseDbId": "Cable_Crossover",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Crossover/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Crossover/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=8Um35Es-ROE",
+      "title": "How To: Cable Fly (High-To-Low) || 3 GOLDEN RULES",
+      "channel": "ScottHermanFitness",
+      "verified": true
+    },
+    "sources": [
+      "https://gymgeek.com/exercises/chest/chest-flys/",
+      "https://www.youtube.com/watch?v=8Um35Es-ROE"
+    ]
+  },
+  {
+    "id": "low_to_high_cable_fly",
+    "name": "Cable Fly (Low to High)",
+    "aliases": [
+      "Low Cable Crossover",
+      "Upper Chest Cable Fly",
+      "Low-to-High Cable Fly"
+    ],
+    "category": "push",
+    "primaryMuscles": [
+      "chest"
+    ],
+    "secondaryMuscles": [
+      "front_delts"
+    ],
+    "equipment": [
+      "cable"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "cable",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 2.5,
+      "high": 7.5,
+      "note": "Per side. Lighter than the high-to-low fly. If 5 kg steps are too big, add reps first."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      12,
+      15
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Needs a dual-pulley cable station (or do one arm at a time on a single column).",
+      "Set both pulleys at the lowest position with D-handles.",
+      "Grab the handles, step forward into a split stance, arms down by your sides and slightly back, palms facing forward.",
+      "Chest up, slight bend in the elbows."
+    ],
+    "cues": [
+      "Scoop up and in to chin/upper-chest height",
+      "Elbows soft, palms up",
+      "Squeeze the upper chest at the top",
+      "Lower slowly to a stretch"
+    ],
+    "mistakes": [
+      "Raising the hands above head height (turns into a front raise)",
+      "Shrugging the shoulders",
+      "Too heavy, body rocking",
+      "Bending the elbows into a curl"
+    ],
+    "breathing": "Exhale as you raise the handles, inhale as they come back down.",
+    "safety": "Very shoulder-friendly upper-chest option. Keep the weight light and the reps smooth.",
+    "substitutions": [
+      "incline_dumbbell_fly",
+      "incline_dumbbell_press",
+      "high_to_low_cable_fly"
+    ],
+    "freeExerciseDbId": "Low_Cable_Crossover",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Low_Cable_Crossover/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Low_Cable_Crossover/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=eQ_NBB6OBH4",
+      "title": "HOW TO: Chest \"Low-To-High\" Cable Fly (BIGGER UPPER CHEST) || PERFECT FORM",
+      "channel": "ScottHermanFitness",
+      "verified": true
+    },
+    "sources": [
+      "https://weighttraining.guide/exercises/incline-cable-fly",
+      "https://www.youtube.com/watch?v=eQ_NBB6OBH4"
+    ]
+  },
+  {
+    "id": "incline_push_up",
+    "name": "Incline Push-Up",
+    "aliases": [
+      "Hands-Elevated Push-Up",
+      "Smith Machine Incline Push-Up",
+      "Bench Push-Up"
+    ],
+    "category": "push",
+    "primaryMuscles": [
+      "chest"
+    ],
+    "secondaryMuscles": [
+      "triceps",
+      "front_delts",
+      "abs"
+    ],
+    "equipment": [
+      "bodyweight",
+      "smith_machine",
+      "bench"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "bodyweight",
+    "weightIncrementKg": 0,
+    "startingWeightKg": null,
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      15
+    ],
+    "restSeconds": 75,
+    "durationSeconds": null,
+    "setup": [
+      "Best option: lock the Smith machine bar on its hooks at about hip height AND set the safety stops directly under it, so the bar can't drop if it rotates off the hooks. That gives an adjustable, stable incline. Otherwise use the edge of a sturdy flat bench braced against a wall or rack (or a wall for the easiest version).",
+      "Hands on the bar slightly wider than shoulder width, walk your feet back until your body is a straight line from head to heels.",
+      "Squeeze your glutes and brace your abs.",
+      "Progression: each week or two, lower the Smith bar one notch. When you can do 15 good reps on a low setting, move on toward floor push-ups."
+    ],
+    "cues": [
+      "Body like a plank: straight from head to heels",
+      "Chest to the bar",
+      "Elbows at 45 degrees, not flared",
+      "Push the bar away",
+      "Glutes tight, no sagging hips"
+    ],
+    "mistakes": [
+      "Hips sagging or piking up",
+      "Head poking forward to 'reach' the bar",
+      "Half reps",
+      "Setting the incline too low too soon"
+    ],
+    "breathing": "Inhale on the way down, exhale as you push up.",
+    "safety": "At 95 kg, a full floor push-up means pushing roughly 60 kg, so a hands-elevated version is the right starting point. It also builds a strong core. On the Smith machine, always set the safety stops under the bar as well as hooking it; on a bench, make sure it can't slide or tip. A good warm-up set before chest pressing, or a finisher.",
+    "substitutions": [
+      "machine_chest_press",
+      "dumbbell_bench_press",
+      "smith_machine_bench_press"
+    ],
+    "freeExerciseDbId": "Incline_Push-Up",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Push-Up/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=Z0bRiVhnO8Q",
+      "title": "How to Do Incline Push Ups",
+      "channel": "LIVESTRONG",
+      "verified": true
+    },
+    "sources": [
+      "https://www.strengthlog.com/push-up/",
+      "https://www.acefitness.org/resources/everyone/exercise-library/41/push-up/",
+      "https://www.youtube.com/watch?v=Z0bRiVhnO8Q"
+    ]
+  },
+  {
+    "id": "machine_shoulder_press",
+    "name": "Machine Shoulder Press",
+    "aliases": [
+      "Seated Shoulder Press Machine",
+      "Machine Overhead Press",
+      "Machine Military Press"
+    ],
+    "category": "push",
+    "primaryMuscles": [
+      "front_delts"
+    ],
+    "secondaryMuscles": [
+      "side_delts",
+      "triceps"
+    ],
+    "equipment": [
+      "shoulder_press_machine"
+    ],
+    "mechanic": "compound",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "stack",
+    "weightIncrementKg": 5,
+    "startingWeightKg": {
+      "low": 15,
+      "high": 30,
+      "note": "Machine stacks differ between brands, so ignore the number on other machines. Pick a weight you can press for 12 reps with 3 left in the tank. Log the seat setting too."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 90,
+    "durationSeconds": null,
+    "setup": [
+      "Adjust the seat so the handles start at about shoulder height (roughly level with your chin or just above your shoulders).",
+      "Sit with your back flat against the pad, feet flat on the floor.",
+      "Use the neutral (palms-facing-in) handles if the machine has them. They are easier on the shoulders.",
+      "Wrists straight, elbows slightly in front of your body, not pointing straight out to the sides."
+    ],
+    "cues": [
+      "Back on the pad, ribs down",
+      "Press up, not forward",
+      "Stop just short of locking out",
+      "Lower to shoulder height under control"
+    ],
+    "mistakes": [
+      "Arching the lower back off the pad",
+      "Seat too high, so the range is tiny",
+      "Seat too low, so the handles start far below the shoulders and stress them",
+      "Shrugging up to the ears"
+    ],
+    "breathing": "Exhale as you press up, inhale as you lower.",
+    "safety": "The safest way for a beginner to learn overhead pressing: fixed path and back support. If overhead pressing pinches a shoulder, use the neutral grip and stop a few cm short of the top.",
+    "substitutions": [
+      "seated_dumbbell_shoulder_press",
+      "smith_machine_shoulder_press"
+    ],
+    "freeExerciseDbId": "Machine_Shoulder_Military_Press",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Shoulder_Military_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Shoulder_Military_Press/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=3R14MnZbcpw",
+      "title": "How to PROPERLY Shoulder Machine Press (LEARN FAST)",
+      "channel": "Colossus Fitness",
+      "verified": true
+    },
+    "sources": [
+      "https://www.acefitness.org/resources/pros/expert-articles/9074/smart-shoulder-solutions-an-evidence-based-approach-to-training-the-deltoids/",
+      "https://www.lyfta.app/exercise/lever-shoulder-press-2q",
+      "https://www.youtube.com/watch?v=3R14MnZbcpw"
+    ]
+  },
+  {
+    "id": "seated_dumbbell_shoulder_press",
+    "name": "Seated Dumbbell Shoulder Press",
+    "aliases": [
+      "DB Shoulder Press",
+      "Seated Dumbbell Overhead Press",
+      "Dumbbell Military Press"
+    ],
+    "category": "push",
+    "primaryMuscles": [
+      "front_delts"
+    ],
+    "secondaryMuscles": [
+      "side_delts",
+      "triceps"
+    ],
+    "equipment": [
+      "dumbbell",
+      "bench"
+    ],
+    "mechanic": "compound",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "dumbbell",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 8,
+      "high": 12,
+      "note": "Per dumbbell. Go up to the next dumbbell pair available (usually +2 or +2.5 kg per hand). If that jump is too big, add reps first (double progression)."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 90,
+    "durationSeconds": null,
+    "setup": [
+      "Set an adjustable bench to upright, or one notch back from vertical (about 75-85 degrees).",
+      "Sit with the dumbbells standing on your thighs, then kick them up one at a time to shoulder height.",
+      "Back against the pad, feet flat and wide for balance.",
+      "Palms facing forward with elbows slightly in front of the body, or palms facing each other (easier on the shoulders)."
+    ],
+    "cues": [
+      "Back on the pad, ribs down",
+      "Press up and slightly in",
+      "Forearms vertical",
+      "Lower until the dumbbells are about ear/chin height",
+      "Don't lock out hard"
+    ],
+    "mistakes": [
+      "Big lower-back arch (bench too far back or weight too heavy)",
+      "Elbows flared directly out to the sides",
+      "Banging the dumbbells together at the top",
+      "Short half reps"
+    ],
+    "breathing": "Exhale as you press up, inhale as you lower.",
+    "safety": "Seated with back support protects the lower back, which matters for a heavier beginner. Getting the dumbbells up and down safely: kick them up from your thighs, and lower them back to your thighs at the end, don't drop them from overhead.",
+    "substitutions": [
+      "machine_shoulder_press",
+      "smith_machine_shoulder_press"
+    ],
+    "freeExerciseDbId": "Seated_Dumbbell_Press",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Dumbbell_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Dumbbell_Press/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=rO_iEImwHyo",
+      "title": "How to do the SEATED DUMBBELL SHOULDER PRESS! | 2 Minute Tutorial",
+      "channel": "Max Euceda",
+      "verified": true
+    },
+    "sources": [
+      "https://www.acefitness.org/resources/pros/expert-articles/9074/smart-shoulder-solutions-an-evidence-based-approach-to-training-the-deltoids/",
+      "https://www.youtube.com/watch?v=rO_iEImwHyo"
+    ]
+  },
+  {
+    "id": "smith_machine_shoulder_press",
+    "name": "Smith Machine Seated Shoulder Press",
+    "aliases": [
+      "Smith Overhead Press",
+      "Smith Military Press"
+    ],
+    "category": "push",
+    "primaryMuscles": [
+      "front_delts"
+    ],
+    "secondaryMuscles": [
+      "side_delts",
+      "triceps"
+    ],
+    "equipment": [
+      "smith_machine",
+      "bench",
+      "plates"
+    ],
+    "mechanic": "compound",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "smith",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 15,
+      "high": 30,
+      "note": "TOTAL load including the bar (Smith bars vary, 7-20 kg). Start with the bar alone or bar plus 2.5 kg per side."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 90,
+    "durationSeconds": null,
+    "setup": [
+      "Set a bench upright (or one notch back) under the Smith machine.",
+      "Position the bench so the bar comes down IN FRONT of your face to about chin/upper-chest level. Never behind your neck.",
+      "Set the safety stops a little below the lowest point you'll lower to (about chin level, bar in front of your face), so the bar can never reach your face or head.",
+      "Grip slightly wider than shoulder width, back on the pad, then twist to unhook."
+    ],
+    "cues": [
+      "Bar in front of your face, never behind the neck",
+      "Ribs down, back on the pad",
+      "Press straight up",
+      "Lower to chin height"
+    ],
+    "mistakes": [
+      "Bench placed so the bar comes down behind the head",
+      "Big lower-back arch",
+      "Bar crashing onto the safeties",
+      "Grip too wide"
+    ],
+    "breathing": "Exhale as you press, inhale as you lower.",
+    "safety": "Use only in-front-of-the-face pressing. Set the safety stops so the bar can't hit your face or head. If the fixed bar path feels awkward on your shoulders, use the shoulder press machine or dumbbells instead.",
+    "substitutions": [
+      "machine_shoulder_press",
+      "seated_dumbbell_shoulder_press"
+    ],
+    "freeExerciseDbId": "Smith_Machine_Overhead_Shoulder_Press",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Overhead_Shoulder_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Overhead_Shoulder_Press/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=evtRb6cPF-Q",
+      "title": "Smith Machine Shoulder Press Tutorial",
+      "channel": "Prep Coach UK",
+      "verified": true
+    },
+    "sources": [
+      "https://www.acefitness.org/resources/pros/expert-articles/9074/smart-shoulder-solutions-an-evidence-based-approach-to-training-the-deltoids/",
+      "https://www.youtube.com/watch?v=evtRb6cPF-Q"
+    ]
+  },
+  {
+    "id": "dumbbell_lateral_raise",
+    "name": "Dumbbell Lateral Raise",
+    "aliases": [
+      "Side Lateral Raise",
+      "Side Raise",
+      "DB Lateral Raise"
+    ],
+    "category": "push",
+    "primaryMuscles": [
+      "side_delts"
+    ],
+    "secondaryMuscles": [
+      "front_delts",
+      "traps"
+    ],
+    "equipment": [
+      "dumbbell"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "dumbbell",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 4,
+      "high": 6,
+      "note": "Per dumbbell. The side delts are small, so almost everyone starts too heavy. If the next dumbbell is a big % jump, add reps (up to 20) before going up."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      12,
+      20
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Stand tall (or sit on the end of a bench to stop swinging), dumbbells at your sides, palms facing in.",
+      "Lean very slightly forward at the hips, chest up.",
+      "Soft bend in the elbows."
+    ],
+    "cues": [
+      "Lead with your elbows, raise out to the sides",
+      "Stop at shoulder height",
+      "Hands level with your elbows, thumbs level, not pointing down",
+      "Shoulders away from your ears",
+      "Lower slowly for 2-3 seconds"
+    ],
+    "mistakes": [
+      "Swinging the body to lift heavier dumbbells",
+      "Shrugging so the traps do the work",
+      "Raising far above shoulder height",
+      "Turning thumbs down hard (the 'pouring a jug' move), which can pinch the shoulder"
+    ],
+    "breathing": "Exhale as you raise, inhale as you lower.",
+    "safety": "Light weight and strict form. Raising slightly in front of the body (about 20-30 degrees forward, the 'scapular plane') is usually most comfortable for the shoulder joint.",
+    "substitutions": [
+      "cable_lateral_raise",
+      "machine_shoulder_press"
+    ],
+    "freeExerciseDbId": "Side_Lateral_Raise",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Lateral_Raise/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Lateral_Raise/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=PzsMitRdI_8",
+      "title": "How to do the DUMBBELL LATERAL RAISE! | 2 Minute Tutorial",
+      "channel": "Max Euceda",
+      "verified": true
+    },
+    "sources": [
+      "https://exrx.net/WeightExercises/DeltoidLateral/DBLateralRaise",
+      "https://www.acefitness.org/resources/pros/expert-articles/9074/smart-shoulder-solutions-an-evidence-based-approach-to-training-the-deltoids/",
+      "https://www.youtube.com/watch?v=PzsMitRdI_8"
+    ]
+  },
+  {
+    "id": "cable_lateral_raise",
+    "name": "Cable Lateral Raise",
+    "aliases": [
+      "Single-Arm Cable Lateral Raise",
+      "Cable Side Raise",
+      "Low-Pulley Lateral Raise"
+    ],
+    "category": "push",
+    "primaryMuscles": [
+      "side_delts"
+    ],
+    "secondaryMuscles": [
+      "front_delts",
+      "traps"
+    ],
+    "equipment": [
+      "cable"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 2,
+    "unilateral": true,
+    "loadType": "cable",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 2.5,
+      "high": 5,
+      "note": "Per arm. Use the lightest plate on the stack to learn it. If the stack only steps in 5 kg, add reps (up to 20) before going up."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      12,
+      20
+    ],
+    "restSeconds": 45,
+    "durationSeconds": null,
+    "setup": [
+      "Set a single cable pulley at the lowest position with a D-handle.",
+      "Stand side-on to the machine and grab the handle with the hand farthest from the stack, so the cable crosses in front of your body.",
+      "Hold the machine with your other hand for balance, feet about hip width.",
+      "Soft bend in the working elbow."
+    ],
+    "cues": [
+      "Sweep the arm out and up to shoulder height",
+      "Lead with the elbow",
+      "Keep the shoulder down, don't shrug",
+      "Lower slowly, feel the tension the whole way"
+    ],
+    "mistakes": [
+      "Leaning far away and yanking the weight",
+      "Shrugging",
+      "Bending the elbow more and more as you tire",
+      "Too heavy"
+    ],
+    "breathing": "Exhale as you raise, inhale as you lower.",
+    "safety": "Cables keep constant tension, so a light weight works fine. Do all reps on your weaker side first, then match them on the other side. Rest about 30-45 seconds between arms.",
+    "substitutions": [
+      "dumbbell_lateral_raise",
+      "machine_shoulder_press"
+    ],
+    "freeExerciseDbId": "Standing_Low-Pulley_Deltoid_Raise",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Low-Pulley_Deltoid_Raise/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Low-Pulley_Deltoid_Raise/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=qitQHqNZbeM",
+      "title": "How to PROPERLY Cable Lateral Raise (TRY THIS!)",
+      "channel": "Colossus Fitness",
+      "verified": true
+    },
+    "sources": [
+      "https://exrx.net/WeightExercises/DeltoidLateral/DBLateralRaise",
+      "https://www.acefitness.org/resources/pros/expert-articles/9074/smart-shoulder-solutions-an-evidence-based-approach-to-training-the-deltoids/",
+      "https://www.youtube.com/watch?v=qitQHqNZbeM"
+    ]
+  },
+  {
+    "id": "dumbbell_front_raise",
+    "name": "Dumbbell Front Raise",
+    "aliases": [
+      "Front Raise",
+      "DB Front Raise"
+    ],
+    "category": "push",
+    "primaryMuscles": [
+      "front_delts"
+    ],
+    "secondaryMuscles": [
+      "side_delts",
+      "chest"
+    ],
+    "equipment": [
+      "dumbbell"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "dumbbell",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 4,
+      "high": 7,
+      "note": "Per dumbbell (or one 8-10 kg dumbbell held with both hands). OPTIONAL: pressing already hits the front delts hard, so drop this first if the session runs long."
+    },
+    "defaultSets": 2,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Stand tall with the dumbbells in front of your thighs, palms facing your legs (or facing each other, which is easier on the shoulders).",
+      "Feet hip-width, knees soft, abs braced.",
+      "Can be done alternating arms or both together."
+    ],
+    "cues": [
+      "Raise straight out in front to shoulder height",
+      "Arms almost straight, soft elbows",
+      "No swinging, no leaning back",
+      "Lower slowly"
+    ],
+    "mistakes": [
+      "Leaning back and swinging",
+      "Raising above shoulder height",
+      "Too heavy",
+      "Shrugging"
+    ],
+    "breathing": "Exhale as you raise, inhale as you lower.",
+    "safety": "Optional accessory. Pressing already works the front delts a lot, so a beginner on 45-60 minute sessions can skip this. Keep it light and strict. A cable front raise (low pulley, face away or toward the stack) is a fine alternative.",
+    "substitutions": [
+      "dumbbell_lateral_raise",
+      "machine_shoulder_press"
+    ],
+    "freeExerciseDbId": "Front_Dumbbell_Raise",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Dumbbell_Raise/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Dumbbell_Raise/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=-t7fuZ0KhDA",
+      "title": "How To: Dumbbell Front Raise",
+      "channel": "ScottHermanFitness",
+      "verified": true
+    },
+    "sources": [
+      "https://exrx.net/WeightExercises/DeltoidAnterior/DBAlternatingFrontRaise",
+      "https://www.acefitness.org/resources/pros/expert-articles/9074/smart-shoulder-solutions-an-evidence-based-approach-to-training-the-deltoids/",
+      "https://www.youtube.com/watch?v=-t7fuZ0KhDA"
+    ]
+  },
+  {
+    "id": "triceps_rope_pushdown",
+    "name": "Triceps Rope Pushdown",
+    "aliases": [
+      "Rope Pushdown",
+      "Cable Rope Pressdown",
+      "Rope Triceps Extension"
+    ],
+    "category": "push",
+    "primaryMuscles": [
+      "triceps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "cable"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "cable",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 10,
+      "high": 20,
+      "note": "Number on the stack; cable machines vary. If the stack only steps in 5 kg, add reps before weight."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Set the cable pulley at the top and attach the rope.",
+      "Grab the rope with palms facing each other, thumbs near the knobs.",
+      "Step back half a step, feet hip-width, slight forward lean from the hips, chest up.",
+      "Pin your elbows to your sides, forearms about parallel to the floor."
+    ],
+    "cues": [
+      "Elbows glued to your sides",
+      "Push down and spread the rope apart at the bottom",
+      "Squeeze the back of the arm for a second",
+      "Only the forearms move",
+      "Control it back up to about 90 degrees"
+    ],
+    "mistakes": [
+      "Elbows drifting forward so the lats and shoulders take over",
+      "Leaning way over the rope and using bodyweight",
+      "Letting the hands fly up past the chest",
+      "Shrugging the shoulders"
+    ],
+    "breathing": "Exhale as you push down, inhale as the rope comes back up.",
+    "safety": "One of the most elbow-friendly triceps moves, a good beginner staple. If your elbows ache, use a lighter weight, more reps, and a slower lowering phase.",
+    "substitutions": [
+      "triceps_bar_pushdown",
+      "overhead_cable_triceps_extension",
+      "seated_dumbbell_overhead_triceps_extension"
+    ],
+    "freeExerciseDbId": "Triceps_Pushdown_-_Rope_Attachment",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Pushdown_-_Rope_Attachment/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Pushdown_-_Rope_Attachment/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=vB5OHsJ3EME",
+      "title": "How To: Rope Push-Down",
+      "channel": "ScottHermanFitness",
+      "verified": true
+    },
+    "sources": [
+      "https://www.acefitness.org/resources/everyone/exercise-library/185/triceps-pushdowns/",
+      "https://barbend.com/triceps-pushdown/",
+      "https://www.youtube.com/watch?v=vB5OHsJ3EME"
+    ]
+  },
+  {
+    "id": "triceps_bar_pushdown",
+    "name": "Triceps Bar Pushdown",
+    "aliases": [
+      "Straight Bar Pushdown",
+      "V-Bar Pushdown",
+      "Cable Triceps Pushdown"
+    ],
+    "category": "push",
+    "primaryMuscles": [
+      "triceps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "cable"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 1,
+    "unilateral": false,
+    "loadType": "cable",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 12.5,
+      "high": 25,
+      "note": "Usually a bit heavier than the rope version. Stack numbers vary between machines."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Attach a straight bar (or V-bar, if the gym has one) to the top pulley.",
+      "Overhand grip, hands about shoulder-width (straight bar) or close together (V-bar).",
+      "Stand close to the stack, slight forward lean, chest up, elbows pinned to your sides."
+    ],
+    "cues": [
+      "Elbows locked at your sides",
+      "Push the bar to your thighs",
+      "Squeeze at the bottom",
+      "Let it rise slowly to chest height"
+    ],
+    "mistakes": [
+      "Elbows flaring out or drifting forward",
+      "Using the shoulders and body to push",
+      "Wrists bending back",
+      "Bar coming up past chest height"
+    ],
+    "breathing": "Exhale as you push down, inhale on the way up.",
+    "safety": "Keep wrists straight. If the straight bar strains your wrists, use the rope or a V-bar. Elbow-friendly when done with control.",
+    "substitutions": [
+      "triceps_rope_pushdown",
+      "overhead_cable_triceps_extension"
+    ],
+    "freeExerciseDbId": "Triceps_Pushdown",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Pushdown/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Pushdown/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=-zLyUAo1gMw",
+      "title": "How to do the CABLE TRICEP PUSHDOWN! | 2 Minute Tutorial",
+      "channel": "Max Euceda",
+      "verified": true
+    },
+    "sources": [
+      "https://www.acefitness.org/resources/everyone/exercise-library/185/triceps-pushdowns/",
+      "https://barbend.com/triceps-pushdown/",
+      "https://www.youtube.com/watch?v=-zLyUAo1gMw"
+    ]
+  },
+  {
+    "id": "overhead_cable_triceps_extension",
+    "name": "Overhead Cable Triceps Extension",
+    "aliases": [
+      "Cable Overhead Extension",
+      "Rope Overhead Triceps Extension",
+      "Cable French Press"
+    ],
+    "category": "push",
+    "primaryMuscles": [
+      "triceps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "cable"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "cable",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 7.5,
+      "high": 15,
+      "note": "Lighter than pushdowns because the triceps start in a stretched position. Stack numbers vary."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Attach the rope and set the pulley at about chest height (easiest way to get into position; a low pulley also works).",
+      "Grab the rope, turn your back to the machine and step forward into a split stance, bringing your hands behind your head.",
+      "Lean forward slightly, brace your abs, elbows pointing forward/up, close to your head.",
+      "Start with your hands behind your head and a comfortable stretch in the triceps."
+    ],
+    "cues": [
+      "Elbows pointing forward and stay still",
+      "Straighten your arms forward and up",
+      "Feel the stretch behind the head",
+      "Ribs down, don't arch"
+    ],
+    "mistakes": [
+      "Elbows flaring wide",
+      "Arching the lower back",
+      "Moving the upper arms so the shoulders help",
+      "Going too heavy, so the stretch becomes painful"
+    ],
+    "breathing": "Exhale as you extend, inhale as the rope comes back behind your head.",
+    "safety": "Overhead triceps work trains the long head in a stretched position, which is great for growth. Use a moderate weight and a comfortable stretch. If your shoulders are tight overhead, set the pulley at chest height and lean further forward.",
+    "substitutions": [
+      "seated_dumbbell_overhead_triceps_extension",
+      "triceps_rope_pushdown"
+    ],
+    "freeExerciseDbId": "Triceps_Overhead_Extension_with_Rope",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Overhead_Extension_with_Rope/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Overhead_Extension_with_Rope/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=57fWTQID-1Y",
+      "title": "How to PROPERLY Overhead Cable Tricep Extension (FIX THIS NOW!)",
+      "channel": "Colossus Fitness",
+      "verified": true
+    },
+    "sources": [
+      "https://catalystathletics.com/exercise/817/Cable-Overhead-Tricep-Extension",
+      "https://www.youtube.com/watch?v=57fWTQID-1Y"
+    ]
+  },
+  {
+    "id": "seated_dumbbell_overhead_triceps_extension",
+    "name": "Seated Dumbbell Overhead Triceps Extension",
+    "aliases": [
+      "Seated French Press",
+      "Two-Hand Dumbbell Overhead Extension",
+      "Seated Triceps Press"
+    ],
+    "category": "push",
+    "primaryMuscles": [
+      "triceps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "dumbbell",
+      "bench"
+    ],
+    "mechanic": "isolation",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "dumbbell",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 8,
+      "high": 14,
+      "note": "ONE dumbbell held with both hands (the number is that single dumbbell). Move up to the next heavier single dumbbell (usually +2 or +2.5 kg). If that jump is too big, add reps first (double progression)."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      10,
+      15
+    ],
+    "restSeconds": 60,
+    "durationSeconds": null,
+    "setup": [
+      "Set the bench upright (back support helps a lot) and sit with your feet flat.",
+      "Hold one dumbbell vertically with both hands cupping the top plate (diamond shape with thumbs and index fingers).",
+      "Get it overhead: rest it on your thigh, sit tall, then press it up with both hands.",
+      "Elbows pointing forward/up, close to your head."
+    ],
+    "cues": [
+      "Elbows point to the ceiling",
+      "Lower behind your head slowly",
+      "Stretch, then straighten",
+      "Back on the pad, ribs down"
+    ],
+    "mistakes": [
+      "Elbows flaring out wide",
+      "Arching the lower back",
+      "Dropping too fast into the stretch",
+      "Grip slipping: hold the plate, not the handle"
+    ],
+    "breathing": "Inhale as you lower, exhale as you extend.",
+    "safety": "Grip the dumbbell firmly. It's over your head. Use a weight you fully control. To finish, bring it back over your head and lower it to your lap. If the elbows complain, use the cable version.",
+    "substitutions": [
+      "overhead_cable_triceps_extension",
+      "triceps_rope_pushdown"
+    ],
+    "freeExerciseDbId": "Seated_Triceps_Press",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Triceps_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Triceps_Press/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=YbX7Wd8jQ-Q",
+      "title": "How To: Dumbbell Seated Overhead Tricep Extension",
+      "channel": "ScottHermanFitness",
+      "verified": true
+    },
+    "sources": [
+      "https://catalystathletics.com/exercise/828/Dumbbell-Overhead-Tricep-Extension/",
+      "https://www.youtube.com/watch?v=YbX7Wd8jQ-Q"
+    ]
+  },
+  {
+    "id": "smith_machine_close_grip_bench_press",
+    "name": "Smith Machine Close-Grip Bench Press",
+    "aliases": [
+      "Close-Grip Smith Press",
+      "Narrow-Grip Bench Press"
+    ],
+    "category": "push",
+    "primaryMuscles": [
+      "triceps",
+      "chest"
+    ],
+    "secondaryMuscles": [
+      "front_delts"
+    ],
+    "equipment": [
+      "smith_machine",
+      "bench",
+      "plates"
+    ],
+    "mechanic": "compound",
+    "difficulty": 2,
+    "unilateral": false,
+    "loadType": "smith",
+    "weightIncrementKg": 2.5,
+    "startingWeightKg": {
+      "low": 20,
+      "high": 35,
+      "note": "TOTAL including the bar (Smith bars vary, 7-20 kg). Usually about 10-15% lighter than your regular Smith bench."
+    },
+    "defaultSets": 3,
+    "repRange": [
+      8,
+      12
+    ],
+    "restSeconds": 90,
+    "durationSeconds": null,
+    "setup": [
+      "Flat bench under the Smith bar so the bar lands on your lower chest.",
+      "Set the safety stops just below the chest touch point.",
+      "Grip about shoulder-width (hands just outside your chest, NOT touching in the middle, which strains the wrists).",
+      "Shoulder blades back, feet flat, twist to unhook."
+    ],
+    "cues": [
+      "Shoulder-width grip",
+      "Elbows tucked close to your sides",
+      "Bar to the lower chest",
+      "Press with the triceps, lock out softly"
+    ],
+    "mistakes": [
+      "Grip too narrow (wrist and elbow pain)",
+      "Elbows flaring out",
+      "Bouncing off the chest",
+      "No safety stops"
+    ],
+    "breathing": "Inhale on the way down, exhale as you press.",
+    "safety": "A heavier compound triceps option that's safe without a spotter on the Smith machine. Keep the grip at shoulder width to protect the wrists and elbows.",
+    "substitutions": [
+      "triceps_bar_pushdown",
+      "smith_machine_bench_press",
+      "incline_push_up"
+    ],
+    "freeExerciseDbId": "Smith_Machine_Close-Grip_Bench_Press",
+    "images": [
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Close-Grip_Bench_Press/0.jpg",
+      "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Smith_Machine_Close-Grip_Bench_Press/1.jpg"
+    ],
+    "video": {
+      "url": "https://www.youtube.com/watch?v=qf_FTh3QyYs",
+      "title": "Smith Machine Narrow Grip Bench Press",
+      "channel": "Renaissance Periodization",
+      "verified": true
+    },
+    "sources": [
+      "https://www.strongerbyscience.com/how-to-bench/",
+      "https://www.strengthlog.com/bench-press",
+      "https://www.youtube.com/watch?v=qf_FTh3QyYs"
+    ]
+  }
+]

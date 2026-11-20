@@ -1,0 +1,454 @@
+[
+ {
+  "id": "machine_calf_raise",
+  "name": "Calf Raise Machine",
+  "aliases": [
+   "Standing Calf Raise Machine",
+   "Seated Calf Raise Machine",
+   "Ankle Machine",
+   "Calf Machine"
+  ],
+  "category": "legs",
+  "primaryMuscles": [
+   "calves"
+  ],
+  "secondaryMuscles": [],
+  "equipment": [
+   "calf_raise_machine"
+  ],
+  "mechanic": "isolation",
+  "difficulty": 1,
+  "unilateral": false,
+  "loadType": "stack",
+  "weightIncrementKg": 5,
+  "startingWeightKg": {
+   "low": 30,
+   "high": 60,
+   "note": "This is the machine listed as the 'Ankle machine' at the UG gym. Stack numbers differ between brands, so treat the number as a pin setting. Standing machine: start where 15 slow, full-range reps feel steady. Seated machine (plates on a lever over your knees): log only the plates you add and start with 10-20 kg."
+  },
+  "defaultSets": 3,
+  "repRange": [
+   12,
+   20
+  ],
+  "restSeconds": 60,
+  "durationSeconds": null,
+  "setup": [
+   "Check which kind it is. Standing: pads rest on your shoulders. Seated: a pad rests on top of your thighs just above the knees.",
+   "Standing: set the shoulder pads so you have to bend your knees slightly to get under them, then stand up tall to lift the weight off the stack.",
+   "Seated: set the thigh pad so it presses lightly on your lower thighs, then push up on your toes and release the safety lever.",
+   "Put only the balls of your feet on the edge of the step, hip-width apart, toes pointing forward. Heels hang off.",
+   "Hold the handles lightly for balance. Wipe the step dry if it is sweaty."
+  ],
+  "cues": [
+   "Let your heels sink below the step for a deep stretch, pause 1-2 seconds",
+   "Push through the big toe and rise as high as you can",
+   "Squeeze at the top for 1 second",
+   "Slow on the way down, no bouncing",
+   "Knees stay still: only the ankles move"
+  ],
+  "mistakes": [
+   "Bouncing at the bottom instead of pausing",
+   "Tiny half reps with heavy weight",
+   "Bending and straightening the knees to help (standing version)",
+   "Rolling onto the outside edges of the feet"
+  ],
+  "breathing": "Breathe out as you rise, breathe in as you lower. Keep breathing steadily for the whole set.",
+  "safety": "A very safe machine for a beginner. The main risk is a foot slipping off a wet step, so use dry shoes, keep the whole ball of each foot on the step and re-engage the safety lever (seated) before you step off. On the standing version, do not round your back under the pads; stand tall. Calves get very sore after the first sessions, so keep week 1 easy.",
+  "substitutions": [
+   "leg_press_calf_raise",
+   "smith_machine_calf_raise",
+   "dumbbell_standing_calf_raise"
+  ],
+  "freeExerciseDbId": "Standing_Calf_Raises",
+  "images": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Calf_Raises/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Calf_Raises/1.jpg"
+  ],
+  "video": {
+   "url": "https://www.youtube.com/watch?v=VFly5vISChc",
+   "title": "Standing Calf Raise Machine • One of the best options for calf development (muscle on back side of",
+   "channel": "Dr. John Andrus DPT",
+   "verified": true
+  },
+  "sources": [
+   "https://www.strengthlog.com/standing-calf-raise/",
+   "https://www.strengthlog.com/seated-calf-raise/",
+   "https://www.youtube.com/watch?v=VFly5vISChc",
+   "https://www.youtube.com/watch?v=z1N8ZRsb4bg"
+  ]
+ },
+ {
+  "id": "barbell_romanian_deadlift",
+  "name": "Barbell Romanian Deadlift",
+  "aliases": [
+   "Barbell RDL",
+   "RDL",
+   "Romanian Deadlift"
+  ],
+  "category": "legs",
+  "primaryMuscles": [
+   "hamstrings",
+   "glutes"
+  ],
+  "secondaryMuscles": [
+   "lower_back",
+   "upper_back",
+   "forearms",
+   "adductors"
+  ],
+  "equipment": [
+   "barbell",
+   "plates"
+  ],
+  "mechanic": "compound",
+  "difficulty": 3,
+  "unilateral": false,
+  "loadType": "barbell",
+  "weightIncrementKg": 5,
+  "startingWeightKg": {
+   "low": 30,
+   "high": 50,
+   "note": "Total weight including the 20 kg bar. A good first guess is 1.6-1.8x the per-hand weight you use on the dumbbell RDL (e.g. 2 x 16 kg dumbbells -> about 26-30 kg on the bar). Only used from Phase 3 (week 9) after 8 weeks of dumbbell RDLs."
+  },
+  "defaultSets": 3,
+  "repRange": [
+   6,
+   10
+  ],
+  "restSeconds": 150,
+  "durationSeconds": null,
+  "setup": [
+   "There is no rack at the UG gym, so this lift starts from the floor. Load the largest-diameter plates you can (20 kg plates if your total allows) so the bar sits around mid-shin. If only small plates fit your load and the bar sits very low, do the dumbbell RDL instead.",
+   "Stand with the bar over the middle of your feet, feet hip-width apart, toes forward.",
+   "Get the bar to standing safely: bend your knees, grip just outside your legs with palms facing you, flat back, chest up, then stand up by pushing the floor away. This pick-up is not a rep.",
+   "Stand tall with the bar against your thighs, soft knees, shoulders back and down.",
+   "Put the bar back down the same way at the end of the set: bend the knees and keep your back flat."
+  ],
+  "cues": [
+   "Push your hips back like closing a car door with your butt",
+   "Bar slides down your thighs, stays touching your legs",
+   "Flat back: stop when your hamstrings are tight, usually just below the knees to mid-shin",
+   "Squeeze your glutes to stand up tall",
+   "Do not lean back at the top"
+  ],
+  "mistakes": [
+   "Rounding the lower back to reach lower",
+   "Bending the knees more and more so it turns into a squat",
+   "Letting the bar drift forward away from the legs",
+   "Rushing the lowering phase or bouncing at the bottom",
+   "Picking the bar up from the floor with a rounded back"
+  ],
+  "breathing": "Breathe in and brace your stomach at the top, keep the brace while you hinge down, breathe out as you stand up. Do not hold your breath for several reps in a row.",
+  "safety": "Range of motion ends where your back would start to round, not where the bar touches the floor. Start light and add weight only when every rep looks the same. If you feel it in your lower back rather than your hamstrings, lighten the load and push the hips further back. Stop with any sharp back pain and switch to the dumbbell RDL or cable pull-through.",
+  "substitutions": [
+   "dumbbell_romanian_deadlift",
+   "cable_pull_through",
+   "smith_machine_hip_thrust"
+  ],
+  "freeExerciseDbId": "Romanian_Deadlift",
+  "images": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Romanian_Deadlift/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Romanian_Deadlift/1.jpg"
+  ],
+  "video": {
+   "url": "https://www.youtube.com/watch?v=3VXmecChYYM",
+   "title": "How to do the ROMANIAN DEADLIFT! | 2 Minute Tutorial",
+   "channel": "Max Euceda",
+   "verified": true
+  },
+  "sources": [
+   "https://www.strengthlog.com/romanian-deadlift/",
+   "https://barbend.com/romanian-deadlift/",
+   "https://www.youtube.com/watch?v=3VXmecChYYM"
+  ]
+ },
+ {
+  "id": "bodyweight_good_morning",
+  "name": "Bodyweight Good Morning (Hip Hinge Drill)",
+  "aliases": [
+   "Hip Hinge Drill",
+   "Bodyweight Good Morning",
+   "Hands-on-Hips Hinge"
+  ],
+  "category": "warmup",
+  "primaryMuscles": [
+   "hamstrings",
+   "glutes"
+  ],
+  "secondaryMuscles": [
+   "lower_back"
+  ],
+  "equipment": [
+   "bodyweight"
+  ],
+  "mechanic": "compound",
+  "difficulty": 1,
+  "unilateral": false,
+  "loadType": "bodyweight",
+  "weightIncrementKg": null,
+  "startingWeightKg": null,
+  "defaultSets": 1,
+  "repRange": [
+   8,
+   12
+  ],
+  "restSeconds": 0,
+  "durationSeconds": null,
+  "setup": [
+   "No weight at all. The pictures show a bar on the back: ignore the bar, you only copy the body position.",
+   "Stand tall, feet hip-width apart, knees slightly bent.",
+   "Put your hands on your hips, or cross them over your chest. Do not pull on your neck."
+  ],
+  "cues": [
+   "Push your hips back to touch an imaginary wall behind you",
+   "Keep your back long and flat, chest proud",
+   "Go down slowly (about 3 seconds) until you feel the backs of your legs stretch",
+   "Squeeze your glutes to stand up"
+  ],
+  "mistakes": [
+   "Bending the knees a lot so it becomes a squat",
+   "Rounding the back to go lower",
+   "Looking straight up and cranking the neck"
+  ],
+  "breathing": "Breathe in on the way down, breathe out as you stand up.",
+  "safety": "This drill teaches the hip hinge you use in Romanian deadlifts, so do it slowly and stop the moment your lower back starts to round. Stop if you feel pain in the back rather than a stretch in the hamstrings.",
+  "substitutions": [
+   "glute_bridge",
+   "leg_swings"
+  ],
+  "freeExerciseDbId": "Good_Morning",
+  "images": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Good_Morning/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Good_Morning/1.jpg"
+  ],
+  "video": {
+   "url": "https://www.youtube.com/watch?v=CEWrzRLvqFg",
+   "title": "Bodyweight Good Morning (Hip Hinge)",
+   "channel": "AID Personal Training",
+   "verified": true
+  },
+  "sources": [
+   "https://www.strengthlog.com/good-morning/",
+   "https://www.motra.com/exercises/bodyweightGoodMorning",
+   "https://www.youtube.com/watch?v=CEWrzRLvqFg"
+  ]
+ },
+ {
+  "id": "scapular_pulldown",
+  "name": "Scapular Pulldown (Straight Arms)",
+  "aliases": [
+   "Scap Pulldown",
+   "Lat Pulldown Shrug",
+   "Scapular Depression Pulldown"
+  ],
+  "category": "warmup",
+  "primaryMuscles": [
+   "traps",
+   "lats"
+  ],
+  "secondaryMuscles": [
+   "upper_back"
+  ],
+  "equipment": [
+   "lat_pulldown_machine"
+  ],
+  "mechanic": "isolation",
+  "difficulty": 1,
+  "unilateral": false,
+  "loadType": "stack",
+  "weightIncrementKg": 5,
+  "startingWeightKg": {
+   "low": 15,
+   "high": 30,
+   "note": "Light: about half of what you use for lat pulldowns, just enough to pull your arms fully overhead. This is a warm-up, not a working set."
+  },
+  "defaultSets": 1,
+  "repRange": [
+   10,
+   12
+  ],
+  "restSeconds": 0,
+  "durationSeconds": null,
+  "setup": [
+   "Sit at the lat pulldown with your thighs under the pad, same as a normal pulldown.",
+   "Take the bar with a shoulder-width or slightly wider grip, arms straight.",
+   "Let the weight pull your shoulders up toward your ears. This is the start position. The pictures show the same movement on a pull-up bar."
+  ],
+  "cues": [
+   "Arms stay straight the whole time",
+   "Pull your shoulders down away from your ears",
+   "Hold 1 second with shoulder blades down, then let them rise slowly",
+   "Small movement: a few centimetres is correct"
+  ],
+  "mistakes": [
+   "Bending the elbows so it becomes a light pulldown",
+   "Leaning back to move the bar",
+   "Using so much weight that the movement disappears"
+  ],
+  "breathing": "Breathe out as you pull the shoulders down, breathe in as they rise.",
+  "safety": "Very low risk. It wakes up the muscles that hold your shoulder blades in place before pulling. If the pulldown is busy, do scapular wall slides instead.",
+  "substitutions": [
+   "scapular_wall_slides",
+   "straight_arm_cable_pulldown"
+  ],
+  "freeExerciseDbId": "Scapular_Pull-Up",
+  "images": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Scapular_Pull-Up/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Scapular_Pull-Up/1.jpg"
+  ],
+  "video": {
+   "url": "https://www.youtube.com/watch?v=0tddxSQwIm0",
+   "title": "Scapular Pull Down",
+   "channel": "Revo Physiotherapy and Sports Performance Denver",
+   "verified": true
+  },
+  "sources": [
+   "https://www.rehabhero.ca/exercise/scapular-pulldown",
+   "https://catalystathletics.com/exercise/917/Scap-Pulldown/",
+   "https://www.youtube.com/watch?v=0tddxSQwIm0"
+  ]
+ },
+ {
+  "id": "seated_dumbbell_lateral_raise",
+  "name": "Seated Dumbbell Lateral Raise",
+  "aliases": [
+   "Seated Side Lateral Raise",
+   "Seated Lateral Raise",
+   "Seated DB Side Raise"
+  ],
+  "category": "push",
+  "primaryMuscles": [
+   "side_delts"
+  ],
+  "secondaryMuscles": [
+   "front_delts",
+   "traps"
+  ],
+  "equipment": [
+   "dumbbell",
+   "bench"
+  ],
+  "mechanic": "isolation",
+  "difficulty": 1,
+  "unilateral": false,
+  "loadType": "dumbbell",
+  "weightIncrementKg": 2,
+  "startingWeightKg": {
+   "low": 4,
+   "high": 6,
+   "note": "Per dumbbell. Sitting removes body swing, so start lighter than you think: 15 smooth reps with 2-3 left."
+  },
+  "defaultSets": 3,
+  "repRange": [
+   12,
+   20
+  ],
+  "restSeconds": 60,
+  "durationSeconds": null,
+  "setup": [
+   "Sit on the end of a flat bench (or an upright seat), feet flat and a little apart.",
+   "Hold a light dumbbell in each hand by your sides, palms facing in, elbows slightly bent.",
+   "Sit tall: chest up, shoulders down away from your ears."
+  ],
+  "cues": [
+   "Lead with the elbows, not the hands",
+   "Raise out to the sides until the arms are level with the shoulders",
+   "Pinkies level with or slightly above the thumbs, never higher",
+   "Lower slowly over 2 seconds"
+  ],
+  "mistakes": [
+   "Shrugging the shoulders up to the ears",
+   "Leaning back or rocking to swing the weight",
+   "Lifting above shoulder height",
+   "Going too heavy and turning it into a front raise"
+  ],
+  "breathing": "Breathe out as you raise, breathe in as you lower.",
+  "safety": "Very low risk. If the front of the shoulder pinches, raise slightly forward of the body (about 20-30 degrees) and stop at shoulder height.",
+  "substitutions": [
+   "dumbbell_lateral_raise",
+   "cable_lateral_raise",
+   "machine_shoulder_press"
+  ],
+  "freeExerciseDbId": "Seated_Side_Lateral_Raise",
+  "images": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Side_Lateral_Raise/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Side_Lateral_Raise/1.jpg"
+  ],
+  "video": null,
+  "sources": [
+   "https://github.com/yuhonas/free-exercise-db"
+  ]
+ },
+ {
+  "id": "head_supported_db_rear_delt_raise",
+  "name": "Head-Supported Dumbbell Rear Delt Raise",
+  "aliases": [
+   "Bent Over Rear Delt Raise With Head On Bench",
+   "Rear Delt Raise Head on Bench",
+   "Bent-Over Reverse Fly"
+  ],
+  "category": "pull",
+  "primaryMuscles": [
+   "rear_delts"
+  ],
+  "secondaryMuscles": [
+   "upper_back",
+   "traps"
+  ],
+  "equipment": [
+   "dumbbell",
+   "bench"
+  ],
+  "mechanic": "isolation",
+  "difficulty": 1,
+  "unilateral": false,
+  "loadType": "dumbbell",
+  "weightIncrementKg": 2,
+  "startingWeightKg": {
+   "low": 2,
+   "high": 6,
+   "note": "Per dumbbell. Rear delts are small: start very light and use 15-20 controlled reps."
+  },
+  "defaultSets": 3,
+  "repRange": [
+   12,
+   20
+  ],
+  "restSeconds": 60,
+  "durationSeconds": null,
+  "setup": [
+   "Set an adjustable bench to a high incline and stand behind it.",
+   "Hinge forward until your forehead rests on the top of the backrest; back flat, knees soft.",
+   "Let a light dumbbell hang in each hand under your shoulders, palms facing each other."
+  ],
+  "cues": [
+   "Keep the forehead on the bench the whole set",
+   "Sweep the arms out wide, like spreading wings",
+   "Stop when the arms are in line with the body",
+   "Lower slowly; do not let the weights clank"
+  ],
+  "mistakes": [
+   "Lifting the head off the bench and standing up",
+   "Squeezing the shoulder blades hard so the back does the work",
+   "Bending the elbows more and more to row the weight",
+   "Using weights that are too heavy"
+  ],
+  "breathing": "Breathe out as you raise the arms, breathe in as you lower them.",
+  "safety": "The head support takes load off the lower back, which is why it suits beginners and anyone with back niggles. Set the bench so you do not have to round your back to reach it.",
+  "substitutions": [
+   "incline_reverse_db_fly",
+   "cable_face_pull",
+   "cable_rear_delt_fly"
+  ],
+  "freeExerciseDbId": "Bent_Over_Dumbbell_Rear_Delt_Raise_With_Head_On_Bench",
+  "images": [
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Dumbbell_Rear_Delt_Raise_With_Head_On_Bench/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Bent_Over_Dumbbell_Rear_Delt_Raise_With_Head_On_Bench/1.jpg"
+  ],
+  "video": null,
+  "sources": [
+   "https://github.com/yuhonas/free-exercise-db"
+  ]
+ }
+]
