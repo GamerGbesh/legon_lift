@@ -1,4 +1,6 @@
 // Owner: WS4. Onboarding step 1 (SPEC 4.2): welcome and optional first name.
+import 'dart:math' as math;
+
 import 'package:material_ui/material_ui.dart';
 
 import '../../../app/theme/tokens.dart';
@@ -59,7 +61,8 @@ class _WelcomeStepState extends State<WelcomeStep> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Icon(Icons.keyboard_arrow_up_rounded, color: Colors.white, size: 40),
-                Icon(Icons.fitness_center, color: t.primary, size: 34),
+                // Material Symbols draw this barbell diagonally; level it to match the app icon.
+                Transform.rotate(angle: -math.pi / 4, child: Icon(Icons.fitness_center, color: t.primary, size: 40)),
               ],
             ),
           ),

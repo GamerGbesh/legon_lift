@@ -138,7 +138,8 @@ class MilestoneStore extends ChangeNotifier {
 
   /// Estimated-best-single records set in [sessions].
   Future<List<PersonalRecord>> _newPrs(List<Session> sessions) async {
-    final setIds = {for (final s in sessions) for (final x in s.allSets) x.id};
+    // Only sets that beat an earlier best ("isPr"); a first-ever record is a baseline, not a PR.
+    final setIds = {for (final s in sessions) for (final x in s.allSets) if (x.isPr) x.id};
     final exerciseIds = {for (final s in sessions) for (final x in s.allSets) x.exerciseId};
     final out = <PersonalRecord>[];
     for (final id in exerciseIds) {

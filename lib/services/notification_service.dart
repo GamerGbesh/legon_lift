@@ -11,6 +11,9 @@ abstract final class LegonNotifications {
   static const String restChannelId = 'rest_timer';
   static const String remindersChannelId = 'reminders';
 
+  /// Silent channel of the live rest countdown (must never pop up or make a sound).
+  static const String countdownChannelId = 'rest_countdown';
+
   /// Small icon (the launcher icon until a dedicated status-bar icon exists).
   static const String icon = '@mipmap/ic_launcher';
 
@@ -36,6 +39,16 @@ abstract final class LegonNotifications {
         sound: const RawResourceAndroidNotificationSound(restSound),
         vibrationPattern: restVibration,
       );
+
+  static const AndroidNotificationChannel countdownChannel = AndroidNotificationChannel(
+    countdownChannelId,
+    'Rest countdown',
+    description: 'Silent live countdown while you rest with the app in the background.',
+    importance: Importance.low,
+    playSound: false,
+    enableVibration: false,
+    showBadge: false,
+  );
 
   static const AndroidNotificationChannel remindersChannel = AndroidNotificationChannel(
     remindersChannelId,
@@ -84,6 +97,7 @@ class LocalNotificationService implements NotificationService {
         settings: const InitializationSettings(android: AndroidInitializationSettings(LegonNotifications.icon)),
       );
       await android.createNotificationChannel(LegonNotifications.restChannel);
+      await android.createNotificationChannel(LegonNotifications.countdownChannel);
       await android.createNotificationChannel(LegonNotifications.remindersChannel);
     });
   }

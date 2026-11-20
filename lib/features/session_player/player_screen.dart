@@ -223,7 +223,7 @@ class _TopBar extends StatelessWidget {
               ),
               Icon(Icons.timer_outlined, size: 18, color: t.muted),
               const SizedBox(width: Space.xs),
-              Text(Fmt.clock(c.elapsed.inSeconds), style: AppText.tabular(AppText.body).copyWith(color: t.muted)),
+              _ElapsedClock(controller: c),
               const SizedBox(width: Space.m),
             ],
           ),
@@ -276,5 +276,40 @@ class _Finishing extends StatelessWidget {
             Text('Saving your workout…', style: AppText.body.copyWith(color: context.tokens.muted)),
           ],
         ),
+      );
+}
+
+/// The workout clock in the top bar. Repaints itself every second (the controller only ticks
+/// while a timer runs).
+class _ElapsedClock extends StatefulWidget {
+  const _ElapsedClock({required this.controller});
+
+  final SessionPlayerController controller;
+
+  @override
+  State<_ElapsedClock> createState() => _ElapsedClockState();
+}
+
+class _ElapsedClockState extends State<_ElapsedClock> {
+  Timer? _timer;
+
+  @override
+  void initState() {
+    super.initState();
+    _timer = Timer.periodic(const Duration(seconds: 1), (_) {
+      if (mounted) setState(() {});
+    });
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => Text(
+        Fmt.clock(widget.controller.elapsed.inSeconds),
+        style: AppText.tabular(AppText.body).copyWith(color: context.tokens.muted),
       );
 }

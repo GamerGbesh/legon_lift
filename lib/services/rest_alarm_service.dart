@@ -30,9 +30,9 @@ class LocalNotificationRestAlarm implements RestAlarm {
 
   static NotificationDetails _countdownDetails(DateTime endsAt) => NotificationDetails(
         android: AndroidNotificationDetails(
-          LegonNotifications.restChannelId,
-          'Rest timer',
-          channelDescription: 'Tells you when your rest between sets is over.',
+          LegonNotifications.countdownChannelId,
+          'Rest countdown',
+          channelDescription: 'Silent live countdown while you rest with the app in the background.',
           icon: LegonNotifications.icon,
           importance: Importance.low,
           priority: Priority.low,
@@ -67,7 +67,7 @@ class LocalNotificationRestAlarm implements RestAlarm {
       await _call(() => LegonNotifications.plugin.show(
             id: LegonNotifications.restCountdownId,
             title: 'Resting',
-            body: body,
+            body: body.startsWith('Rest over: ') ? 'Next: ${body.substring(11)}' : body,
             notificationDetails: _countdownDetails(at),
           ));
     }

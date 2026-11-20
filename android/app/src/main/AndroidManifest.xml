@@ -4,9 +4,11 @@
     <uses-permission android:name="android.permission.VIBRATE"/>
     <!-- Re-schedule workout reminders after a reboot (flutter_local_notifications). -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <!-- Optional exact rest alarm; without the grant we fall back to inexact + live countdown (SPEC 9.3).
-         USE_EXACT_ALARM is deliberately NOT requested. -->
-    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <!-- Exact rest alarms. This is a personal, sideloaded app (not on Play), so USE_EXACT_ALARM (granted at
+         install) is fine; SCHEDULE_EXACT_ALARM covers Android 12. Without either we fall back to inexact + a
+         silent live countdown (SPEC 9.3). -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" android:maxSdkVersion="32"/>
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
     <application
         android:label="Legon Lift"
         android:name="${applicationName}"
