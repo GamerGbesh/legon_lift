@@ -7,7 +7,8 @@ String dateKey(DateTime d) =>
     '${d.year.toString().padLeft(4, '0')}-${d.month.toString().padLeft(2, '0')}-${d.day.toString().padLeft(2, '0')}';
 
 /// The default user created at [createdAt].
-UserProfile profileAt(DateTime createdAt) => UserProfile.defaults(createdAt);
+/// Pinned to age 22: the expected kcal numbers in these tests were worked out for it.
+UserProfile profileAt(DateTime createdAt) => UserProfile.defaults(createdAt).copyWith(ageY: 22);
 
 /// One logged set.
 SetLog setLog(

@@ -290,6 +290,16 @@ class FakeSessionRepository implements SessionRepository {
   }
 
   @override
+  Future<void> saveReflection(String sessionId, {int? feeling, String? note, double? bodyweightKg}) async {
+    sessions[sessionId] = _require(sessionId).copyWith(
+      feeling: () => feeling,
+      note: () => note,
+      bodyweightKg: () => bodyweightKg,
+    );
+    _changed();
+  }
+
+  @override
   Future<void> discard(String sessionId) async {
     sessions[sessionId] = _require(sessionId).copyWith(status: SessionStatus.discarded, endedAt: () => _clock.now(), cursor: () => null);
     _changed();

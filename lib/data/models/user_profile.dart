@@ -40,10 +40,10 @@ class UserProfile {
     required this.createdAt,
   });
 
-  /// The default user of SPEC (male, 22 y, 172 cm, 95 kg, beginner, recomp, Mon/Wed/Fri, 60 min, PPL).
+  /// The default user (male, 21 y, 172 cm, 95 kg, beginner, recomp, Mon/Wed/Fri, 60 min, PPL).
   factory UserProfile.defaults(DateTime now) => UserProfile(
         sex: Sex.male,
-        ageY: 22,
+        ageY: 21,
         heightCm: 172,
         weightKg: 95,
         activityLevel: ActivityLevel.lightlyActive,

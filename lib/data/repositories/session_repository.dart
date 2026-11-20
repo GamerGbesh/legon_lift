@@ -47,6 +47,9 @@ abstract class SessionRepository {
   /// Marks the session completed (ended now) and clears the cursor.
   Future<Session> complete(String sessionId, {int? feeling, String? note, double? bodyweightKg});
 
+  /// Saves the summary screen's optional reflection on a completed session (keeps `ended_at`).
+  Future<void> saveReflection(String sessionId, {int? feeling, String? note, double? bodyweightKg});
+
   /// Marks the session discarded (kept out of history and progression).
   Future<void> discard(String sessionId);
 
@@ -288,6 +291,17 @@ class SqfliteSessionRepository implements SessionRepository {
     if (done == null) throw StateError('Unknown session $sessionId');
     _changed();
     return done;
+  }
+
+  @override
+  Future<void> saveReflection(String sessionId, {int? feeling, String? note, double? bodyweightKg}) async {
+    await _d.update(
+      'sessions',
+      {'feeling': feeling, 'note': note, 'bodyweight_kg': bodyweightKg, 'updated_at': _nowMs},
+      where: 'id = ?',
+      whereArgs: [sessionId],
+    );
+    _changed();
   }
 
   @override
