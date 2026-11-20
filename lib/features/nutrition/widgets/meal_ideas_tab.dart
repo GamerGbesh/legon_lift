@@ -10,6 +10,8 @@ import '../../../app/theme/typography.dart';
 import '../../../data/assets/asset_catalog.dart';
 import '../../../data/models/models.dart';
 import '../../../domain/api.dart';
+import '../../../domain/meal_scaler.dart';
+import '../../../state/nutrition_store.dart';
 import '../../../state/profile_store.dart';
 import '../../../widgets/empty_state.dart';
 import '../../../widgets/section_header.dart';
@@ -43,6 +45,9 @@ class _MealIdeasTabState extends State<MealIdeasTab> {
   String? _cost;
   bool _costFromBudget = true;
 
+  /// "Size portions for me": scale each meal to this meal's share of the daily targets.
+  bool _sized = true;
+
   @override
   Widget build(BuildContext context) {
     final p = context.read<AssetCatalog>().personalization;
@@ -57,6 +62,10 @@ class _MealIdeasTabState extends State<MealIdeasTab> {
     ];
     final t = context.tokens;
     final valuesNote = p.raw['values_note'];
+    final targets = context.watch<NutritionStore>().targets;
+    ScaledMeal? sizedFor(MealIdea m) => _sized
+        ? scaleMeal(m, calorieKcal: targets.calorieTargetKcal, proteinG: targets.proteinTargetG)
+        : null;
 
     return ListView(
       padding: const EdgeInsets.fromLTRB(Space.page, Space.l, Space.page, Space.xxl),
@@ -100,9 +109,23 @@ class _MealIdeasTabState extends State<MealIdeasTab> {
               ),
           ],
         ),
+        const SizedBox(height: Space.s),
+        Card(
+          child: SwitchListTile(
+            value: _sized,
+            onChanged: (v) => setState(() => _sized = v),
+            title: Text('Size portions for me', style: AppText.bodyStrong.copyWith(color: t.onSurface)),
+            subtitle: Text(
+              'For ${groupedInt(targets.calorieTargetKcal)} kcal and ${targets.proteinTargetG} g protein a day: '
+              'breakfast 25%, lunch 30%, dinner 30%, snack 15%. More protein, less starch.',
+              style: AppText.label.copyWith(color: t.muted),
+            ),
+          ),
+        ),
         const SizedBox(height: Space.m),
         Text(
-          '${meals.length} ${meals.length == 1 ? 'idea' : 'ideas'}. Protein and kcal are rough values (~) for a typical portion.',
+          '${meals.length} ${meals.length == 1 ? 'idea' : 'ideas'}. Protein and kcal are rough values (~)'
+          '${_sized ? ' for your portion.' : ' for a typical portion.'}',
           style: AppText.label.copyWith(color: t.muted),
         ),
         const SizedBox(height: Space.m),
@@ -113,7 +136,7 @@ class _MealIdeasTabState extends State<MealIdeasTab> {
             body: 'Try "All" or "Any cost". Diet notes are saved to your profile.',
           )
         else
-          for (final m in meals) Padding(padding: const EdgeInsets.only(bottom: Space.m), child: _MealCard(meal: m)),
+          for (final m in meals) Padding(padding: const EdgeInsets.only(bottom: Space.m), child: _MealCard(meal: m, scaled: sizedFor(m))),
         const SectionHeader('What is 1 protein point?'),
         _ProteinPoints(p: p),
         const SectionHeader('Pair these with protein'),
@@ -147,9 +170,12 @@ class _ChipRow extends StatelessWidget {
 }
 
 class _MealCard extends StatefulWidget {
-  const _MealCard({required this.meal});
+  const _MealCard({required this.meal, this.scaled});
 
   final MealIdea meal;
+
+  /// The portion sized to the user's targets (null: show the standard portion).
+  final ScaledMeal? scaled;
 
   @override
   State<_MealCard> createState() => _MealCardState();
@@ -169,7 +195,12 @@ class _MealCardState extends State<_MealCard> {
   Widget build(BuildContext context) {
     final t = context.tokens;
     final m = widget.meal;
-    final points = m.proteinG / proteinGramsPerPoint;
+    final scaled = widget.scaled;
+    final sized = scaled != null && !scaled.isStandard;
+    final proteinG = sized ? scaled.proteinG : m.proteinG;
+    final kcal = sized ? scaled.kcal : m.kcalApprox;
+    final components = sized ? scaled.components : m.components;
+    final points = proteinG / proteinGramsPerPoint;
     final roundedPoints = (points * 2).round() / 2;
     return Card(
       clipBehavior: Clip.antiAlias,
@@ -191,12 +222,21 @@ class _MealCardState extends State<_MealCard> {
                 ),
                 const SizedBox(height: Space.xs),
                 Text(
-                  '~${m.proteinG} g protein (${trimNumber(roundedPoints)} ${roundedPoints == 1 ? 'point' : 'points'}) · ~${groupedInt(m.kcalApprox)} kcal · ${_cost(m.costTier)}',
-                  style: AppText.tabular(AppText.label).copyWith(color: t.muted),
+                  '${sized ? 'For you: ' : ''}~$proteinG g protein (${trimNumber(roundedPoints)} '
+                  '${roundedPoints == 1 ? 'point' : 'points'}) · ~${groupedInt(kcal)} kcal · ${_cost(m.costTier)}',
+                  style: AppText.tabular(AppText.label).copyWith(color: sized ? t.primary : t.muted),
                 ),
                 if (_open) ...[
                   const SizedBox(height: Space.m),
-                  for (final c in m.components) Bullet(c),
+                  for (final c in components) Bullet(c),
+                  if (sized) ...[
+                    const SizedBox(height: Space.s),
+                    Text(
+                      'Standard portion: ~${m.proteinG} g protein · ~${groupedInt(m.kcalApprox)} kcal '
+                      '(${m.components.join(', ')})',
+                      style: AppText.caption.copyWith(color: t.muted),
+                    ),
+                  ],
                   if (m.tips.isNotEmpty) ...[
                     const SizedBox(height: Space.s),
                     InfoNote(text: m.tips, icon: Icons.lightbulb_outline, color: t.primary),

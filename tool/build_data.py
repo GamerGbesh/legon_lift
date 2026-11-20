@@ -837,6 +837,40 @@ def build_personalization(exercise_ids):
               "tips_rotation", "references"):
         out[k] = copy.deepcopy(p[k])
 
+    # Role of each meal component, used to scale portions to the user's targets in the app
+    # (protein -> protein target, carb -> calories left, fat -> never bigger, veg/fixed -> unchanged,
+    # mixed -> halfway between protein and carb scaling).
+    meal_roles = {
+        "oats_milk_eggs": ["carb", "protein", "protein", "carb"],
+        "hausa_koko_upgrade": ["carb", "protein", "fat", "protein"],
+        "egg_bread": ["protein", "carb"],
+        "sardine_bread": ["protein", "carb", "veg"],
+        "tuna_gari_foto": ["protein", "carb", "veg"],
+        "red_red_upgrade": ["mixed", "protein", "carb"],
+        "waakye_smart": ["carb", "protein", "protein", "veg", "fat"],
+        "kenkey_fish": ["carb", "protein", "veg"],
+        "banku_tilapia": ["protein", "carb", "veg"],
+        "light_soup_fish": ["fixed", "protein", "carb"],
+        "groundnut_soup_smart": ["fat", "protein", "carb"],
+        "kontomire_ampesi": ["protein", "fat", "carb"],
+        "garden_egg_yam": ["protein", "carb"],
+        "jollof_chicken": ["carb", "protein", "veg"],
+        "okro_banku": ["protein", "carb"],
+        "khebab": ["protein"],
+        "wagashi_stew": ["protein", "carb"],
+        "soya_chunks_stew": ["protein", "carb"],
+        "yoghurt_groundnuts": ["protein", "fat"],
+        "boiled_eggs": ["protein"],
+        "milk_drink": ["protein"],
+        "indomie_eggs": ["carb", "protein", "veg"],
+        "whey_shake": ["protein"],
+    }
+    for m in out["meal_ideas"]:
+        roles = meal_roles.get(m["id"])
+        if roles is None or len(roles) != len(m["components"]):
+            raise SystemExit(f"meal_roles missing or wrong length for {m['id']}")
+        m["component_roles"] = roles
+
     # map milestone exercise names to real exercise ids
     for m in out["milestones"]:
         r = m["rule"]

@@ -190,10 +190,15 @@ class MealIdea {
     this.tips = '',
     this.tags = const [],
     this.contains = const [],
+    this.componentRoles = const [],
   });
 
   final String id, name, mealType;
   final List<String> components;
+
+  /// Role of each component for portion scaling: protein, carb, fat, veg, mixed or fixed
+  /// (aligned with [components]; empty = scale nothing).
+  final List<String> componentRoles;
   final int proteinG, kcalApprox;
   final String costTier, tips;
   final List<String> tags, contains;
@@ -209,6 +214,7 @@ class MealIdea {
         tips: readStringOrNull(j, 'tips') ?? '',
         tags: readStringList(j, 'tags', optional: true),
         contains: readStringList(j, 'contains', optional: true),
+        componentRoles: readStringList(j, 'component_roles', optional: true),
       );
 
   Json toJson() => {
@@ -222,6 +228,7 @@ class MealIdea {
         'tips': tips,
         'tags': tags,
         'contains': contains,
+        'component_roles': componentRoles,
       };
 
   MealIdea copyWith({
@@ -235,6 +242,7 @@ class MealIdea {
     String? tips,
     List<String>? tags,
     List<String>? contains,
+    List<String>? componentRoles,
   }) =>
       MealIdea(
         id: id ?? this.id,
@@ -247,9 +255,11 @@ class MealIdea {
         tips: tips ?? this.tips,
         tags: tags ?? this.tags,
         contains: contains ?? this.contains,
+        componentRoles: componentRoles ?? this.componentRoles,
       );
 
-  List<Object?> get _props => [id, name, mealType, components, proteinG, kcalApprox, costTier, tips, tags, contains];
+  List<Object?> get _props =>
+      [id, name, mealType, components, proteinG, kcalApprox, costTier, tips, tags, contains, componentRoles];
   @override
   bool operator ==(Object other) => other is MealIdea && propsEqual(_props, other._props);
   @override

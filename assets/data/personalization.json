@@ -862,6 +862,12 @@
    "contains": [
     "milk",
     "egg"
+   ],
+   "component_roles": [
+    "carb",
+    "protein",
+    "protein",
+    "carb"
    ]
   },
   {
@@ -884,6 +890,12 @@
    "contains": [
     "milk",
     "egg"
+   ],
+   "component_roles": [
+    "carb",
+    "protein",
+    "fat",
+    "protein"
    ]
   },
   {
@@ -904,6 +916,10 @@
    "contains": [
     "egg",
     "gluten"
+   ],
+   "component_roles": [
+    "protein",
+    "carb"
    ]
   },
   {
@@ -925,6 +941,11 @@
    "contains": [
     "fish",
     "gluten"
+   ],
+   "component_roles": [
+    "protein",
+    "carb",
+    "veg"
    ]
   },
   {
@@ -945,6 +966,11 @@
    ],
    "contains": [
     "fish"
+   ],
+   "component_roles": [
+    "protein",
+    "carb",
+    "veg"
    ]
   },
   {
@@ -966,6 +992,11 @@
    ],
    "contains": [
     "egg"
+   ],
+   "component_roles": [
+    "mixed",
+    "protein",
+    "carb"
    ]
   },
   {
@@ -990,6 +1021,13 @@
     "egg",
     "fish",
     "gluten"
+   ],
+   "component_roles": [
+    "carb",
+    "protein",
+    "protein",
+    "veg",
+    "fat"
    ]
   },
   {
@@ -1010,6 +1048,11 @@
    ],
    "contains": [
     "fish"
+   ],
+   "component_roles": [
+    "carb",
+    "protein",
+    "veg"
    ]
   },
   {
@@ -1030,6 +1073,11 @@
    ],
    "contains": [
     "fish"
+   ],
+   "component_roles": [
+    "protein",
+    "carb",
+    "veg"
    ]
   },
   {
@@ -1051,6 +1099,11 @@
    ],
    "contains": [
     "fish"
+   ],
+   "component_roles": [
+    "fixed",
+    "protein",
+    "carb"
    ]
   },
   {
@@ -1072,6 +1125,11 @@
    ],
    "contains": [
     "groundnut"
+   ],
+   "component_roles": [
+    "fat",
+    "protein",
+    "carb"
    ]
   },
   {
@@ -1093,6 +1151,11 @@
    "contains": [
     "egg",
     "fish"
+   ],
+   "component_roles": [
+    "protein",
+    "fat",
+    "carb"
    ]
   },
   {
@@ -1113,6 +1176,10 @@
    "contains": [
     "fish",
     "egg"
+   ],
+   "component_roles": [
+    "protein",
+    "carb"
    ]
   },
   {
@@ -1133,6 +1200,11 @@
    ],
    "contains": [
     "egg"
+   ],
+   "component_roles": [
+    "carb",
+    "protein",
+    "veg"
    ]
   },
   {
@@ -1153,6 +1225,10 @@
    ],
    "contains": [
     "fish"
+   ],
+   "component_roles": [
+    "protein",
+    "carb"
    ]
   },
   {
@@ -1169,7 +1245,10 @@
    "tags": [
     "street"
    ],
-   "contains": []
+   "contains": [],
+   "component_roles": [
+    "protein"
+   ]
   },
   {
    "id": "wagashi_stew",
@@ -1189,6 +1268,10 @@
    ],
    "contains": [
     "milk"
+   ],
+   "component_roles": [
+    "protein",
+    "carb"
    ]
   },
   {
@@ -1209,6 +1292,10 @@
    ],
    "contains": [
     "soy"
+   ],
+   "component_roles": [
+    "protein",
+    "carb"
    ]
   },
   {
@@ -1229,6 +1316,10 @@
    "contains": [
     "milk",
     "groundnut"
+   ],
+   "component_roles": [
+    "protein",
+    "fat"
    ]
   },
   {
@@ -1247,6 +1338,9 @@
    ],
    "contains": [
     "egg"
+   ],
+   "component_roles": [
+    "protein"
    ]
   },
   {
@@ -1265,6 +1359,9 @@
    ],
    "contains": [
     "milk"
+   ],
+   "component_roles": [
+    "protein"
    ]
   },
   {
@@ -1286,6 +1383,11 @@
    "contains": [
     "egg",
     "gluten"
+   ],
+   "component_roles": [
+    "carb",
+    "protein",
+    "veg"
    ]
   },
   {
@@ -1304,6 +1406,9 @@
    ],
    "contains": [
     "milk"
+   ],
+   "component_roles": [
+    "protein"
    ]
   }
  ],

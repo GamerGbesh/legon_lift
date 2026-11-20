@@ -401,6 +401,8 @@ FlTitlesData _dateTitles(ColorTokens t, DateTime origin, double maxX, double yIn
         interval: xInterval,
         getTitlesWidget: (v, meta) => SideTitleWidget(
           meta: meta,
+          // Keeps the first and last dates inside the chart instead of cut off at the edge.
+          fitInside: SideTitleFitInsideData.fromTitleMeta(meta, distanceFromEdge: 0),
           child: Text(dayMonth(_dayAt(origin, v)), style: _axisStyle(t)),
         ),
       ),
