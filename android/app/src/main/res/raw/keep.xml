@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- rest_done is referenced only by name from the rest_timer notification channel (SPEC 9.3),
+     so tell the resource shrinker to keep it. Source of truth: assets/sounds/rest_done.ogg (WS6). -->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@raw/rest_done" />

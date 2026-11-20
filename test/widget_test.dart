@@ -1,30 +1,51 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter_test/flutter_test.dart';
+import 'package:legon_lift/app/shell.dart';
+import 'package:legon_lift/features/onboarding/onboarding_flow.dart';
+import 'package:legon_lift/main.dart';
 import 'package:material_ui/material_ui.dart';
 
-import 'package:legon_lift/main.dart';
+import 'fakes/fakes.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
-
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
-
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
+  testWidgets('first launch shows onboarding', (tester) async {
+    final app = FakeApp();
+    await tester.pumpWidget(await buildRoot(app.deps));
     await tester.pump();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(find.byType(OnboardingFlow), findsOneWidget);
+    expect(find.byType(Shell), findsNothing);
+  });
+
+  testWidgets('"Skip, use defaults" then "Let\'s go" completes onboarding and opens the shell', (tester) async {
+    final app = FakeApp();
+    await tester.pumpWidget(await buildRoot(app.deps));
+    await tester.pump();
+
+    // Welcome, Safety and Body come first; "Skip, use defaults" appears after them.
+    for (var i = 0; i < 3; i++) {
+      await tester.tap(find.text('Next'));
+      await tester.pumpAndSettle();
+    }
+    await tester.tap(find.text('Skip, use defaults'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text("Let's go"));
+    await tester.pumpAndSettle();
+
+    expect(find.byType(Shell), findsOneWidget);
+    expect(app.settings.profile, isNotNull);
+    final active = await app.programs.active();
+    expect(active?.templateId, 'ppl_3day');
+    expect(app.notifications.gymBagWeekdays, [1, 3, 5]);
+  });
+
+  testWidgets('an onboarded user lands on the shell with five tabs', (tester) async {
+    final app = FakeApp.seeded();
+    await tester.pumpWidget(await buildRoot(app.deps));
+    await tester.pump();
+
+    expect(find.byType(Shell), findsOneWidget);
+    for (final tab in ['Today', 'Program', 'Library', 'Progress', 'You']) {
+      expect(find.widgetWithText(NavigationDestination, tab), findsOneWidget);
+    }
   });
 }

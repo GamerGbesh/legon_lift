@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- Android 13+ themed icon: foreground shapes in a single colour; the launcher tints them. -->
+  <path d="M392 452 L512 332 L632 452" fill="none" stroke="#FFFFFF"
+        stroke-width="60" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#FFFFFF">
+    <rect x="280" y="590" width="464" height="36"  rx="18"/>
+    <rect x="300" y="510" width="52"  height="196" rx="14"/>
+    <rect x="364" y="544" width="36"  height="128" rx="10"/>
+    <rect x="672" y="510" width="52"  height="196" rx="14"/>
+    <rect x="624" y="544" width="36"  height="128" rx="10"/>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- Adaptive-icon foreground: chevron + barbell on transparent. All art stays within radius 290
+       of (512,512), inside the 66/108 safe zone (radius 313). -->
+  <path d="M392 452 L512 332 L632 452" fill="none" stroke="#FFFFFF"
+        stroke-width="60" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="280" y="590" width="464" height="36"  rx="18" fill="#FFC629"/>
+  <rect x="300" y="510" width="52"  height="196" rx="14" fill="#FFC629"/>
+  <rect x="364" y="544" width="36"  height="128" rx="10" fill="#FFC629"/>
+  <rect x="672" y="510" width="52"  height="196" rx="14" fill="#FFC629"/>
+  <rect x="624" y="544" width="36"  height="128" rx="10" fill="#FFC629"/>
+</svg>
