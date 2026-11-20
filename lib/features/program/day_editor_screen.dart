@@ -14,6 +14,7 @@ import '../../data/assets/asset_catalog.dart';
 import '../../data/models/models.dart';
 import '../../state/profile_store.dart';
 import '../../state/program_store.dart';
+import '../../state/today_store.dart';
 import '../../widgets/exercise_thumb.dart';
 import '../../widgets/section_header.dart';
 import '../library/exercise_detail_screen.dart';
@@ -39,7 +40,8 @@ class DayEditorScreen extends StatelessWidget {
     }
     final custom = store.active?.isCustom ?? false;
     final sessionMinutes = context.watch<ProfileStore>().profile?.sessionMinutes ?? 60;
-    final minutes = store.estimateMinutes(day, sessionMinutes: sessionMinutes);
+    final minutes = context.watch<TodayStore>().dayPlans[dayId]?.estimatedMinutes ??
+        store.estimateMinutes(day, sessionMinutes: sessionMinutes);
     final slots = store.slotsFor(dayId);
     final anyReplaced = store.overrides.any((o) => o.dayId == dayId);
 
@@ -49,7 +51,7 @@ class DayEditorScreen extends StatelessWidget {
         actions: [
           if (!custom && anyReplaced)
             TextButton(
-              onPressed: () => unawaited(store.resetDay(dayId)),
+              onPressed: () => unawaited(_confirmReset(context, store, day.name)),
               child: const Text('Reset'),
             ),
         ],
@@ -90,6 +92,7 @@ class DayEditorScreen extends StatelessWidget {
               _SlotTile(
                 slot: slot,
                 custom: custom,
+                week: store.trainingWeek,
                 onSwap: () => unawaited(_swap(context, store, template, day, slot, custom)),
                 onToggle: (v) => unawaited(store.setOptionalEnabled(dayId, slot.item, v)),
                 onEdit: custom ? () => unawaited(_editItem(context, store, template, day, slot)) : null,
@@ -100,6 +103,22 @@ class DayEditorScreen extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Future<void> _confirmReset(BuildContext context, ProgramStore store, String dayName) async {
+    final ok = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text('Reset $dayName?'),
+        content: const Text('Replaced exercises and switched extras go back to the plan. '
+            'Your history and weights are kept.'),
+        actions: [
+          TextButton(onPressed: () => Navigator.of(context).pop(false), child: const Text('Cancel')),
+          FilledButton(onPressed: () => Navigator.of(context).pop(true), child: const Text('Reset')),
+        ],
+      ),
+    );
+    if (ok == true) await store.resetDay(dayId);
   }
 
   static String _blockName(BlockType type) => switch (type) {
@@ -184,6 +203,7 @@ class _SlotTile extends StatelessWidget {
   const _SlotTile({
     required this.slot,
     required this.custom,
+    required this.week,
     required this.onSwap,
     required this.onToggle,
     this.onEdit,
@@ -193,6 +213,7 @@ class _SlotTile extends StatelessWidget {
 
   final DaySlot slot;
   final bool custom;
+  final int week;
   final VoidCallback onSwap;
   final ValueChanged<bool> onToggle;
   final VoidCallback? onEdit, onRemove;
@@ -242,7 +263,16 @@ class _SlotTile extends StatelessWidget {
                         Text('Replaced: was ${catalog.tryExercise(item.exerciseId)?.name ?? item.exerciseId}',
                             style: AppText.caption.copyWith(color: t.secondary)),
                       if (optional && !custom)
-                        Text('Optional', style: AppText.caption.copyWith(color: t.secondary)),
+                        Text(
+                          slot.block.blockType != BlockType.finisher
+                              ? 'Optional'
+                              : !slot.enabled
+                                  ? 'Off: never added'
+                                  : week <= 1
+                                      ? 'Starts in week 2, when it fits your time'
+                                      : 'Added when it fits your time',
+                          style: AppText.caption.copyWith(color: t.secondary),
+                        ),
                     ],
                   ),
                 ),

@@ -7,6 +7,7 @@ import 'package:material_ui/material_ui.dart';
 import 'package:provider/provider.dart';
 
 import '../../../app/copy.dart';
+import '../../../app/routes.dart';
 import '../../../app/theme/tokens.dart';
 import '../../../app/theme/typography.dart';
 import '../../../core/format.dart';
@@ -197,6 +198,15 @@ class HeroCard extends StatelessWidget {
         icon: Icons.play_arrow_rounded,
         height: Sizes.heroButton,
         onPressed: () => openSession(context, inProgress.id),
+      );
+    }
+    if (plan.exerciseSteps.isEmpty && mode != HeroMode.doneToday) {
+      // An empty custom day: nothing to train yet, so send them to add exercises.
+      return BigButton(
+        label: 'Add exercises to this day',
+        icon: Icons.edit_note,
+        height: Sizes.heroButton,
+        onPressed: () => Navigator.of(context).pushNamed(Routes.programDay, arguments: plan.dayId),
       );
     }
     final start = blocked ? null : () => startWorkout(context, dayName: plan.dayName);

@@ -56,8 +56,23 @@ class SplitPickerScreen extends StatelessWidget {
       navigator.pop();
     }
 
-    Future<void> custom(ProgramTemplate tpl) async {
+    Future<void> custom(ProgramTemplate tpl, String what) async {
       final navigator = Navigator.of(context);
+      final ok = await showDialog<bool>(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text('Start $what?'),
+          content: const Text(
+            'Your history and weights are kept: every exercise remembers its own progress. '
+            'Edit the days from the Program tab.',
+          ),
+          actions: [
+            TextButton(onPressed: () => Navigator.of(context).pop(false), child: const Text('Cancel')),
+            FilledButton(onPressed: () => Navigator.of(context).pop(true), child: const Text('Start')),
+          ],
+        ),
+      );
+      if (ok != true) return;
       await store.createCustom(tpl);
       navigator.pop();
     }
@@ -94,7 +109,10 @@ class SplitPickerScreen extends StatelessWidget {
               subtitle: 'Start from the recommended plan and change anything.',
               icon: Icons.edit_note,
               selected: false,
-              onTap: () => unawaited(custom(CustomPrograms.fromTemplate(catalog.template(CustomPrograms.baseTemplateId)))),
+              onTap: () => unawaited(custom(
+                CustomPrograms.fromTemplate(catalog.template(CustomPrograms.baseTemplateId)),
+                'a custom Push / Pull / Legs',
+              )),
             ),
           ),
           OptionCard(
@@ -102,7 +120,7 @@ class SplitPickerScreen extends StatelessWidget {
             subtitle: '3 empty days with warm-up and cool-down. Add your own exercises.',
             icon: Icons.add_box_outlined,
             selected: false,
-            onTap: () => unawaited(custom(CustomPrograms.blank(catalog))),
+            onTap: () => unawaited(custom(CustomPrograms.blank(catalog), 'a blank program')),
           ),
         ],
       ),

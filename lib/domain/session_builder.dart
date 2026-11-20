@@ -129,6 +129,7 @@ class _SessionBuilder {
         case BlockType.finisher:
           final item = b.items.firstOrNull;
           if (item == null) break;
+          if (overrides[item.slotKey()]?.optionalEnabled == false) break; // switched off
           if (input.cardioOff) {
             equipmentNotices.add(cardioOffFinisherNotice);
             break;
@@ -142,6 +143,7 @@ class _SessionBuilder {
           if (finisherSeconds <= 0) finisher = null;
         case BlockType.cooldown:
           for (final item in b.items) {
+            if (overrides[item.slotKey()]?.optionalEnabled == false && (item.optional || b.optional)) continue;
             if (item.role == ItemRole.stretch) {
               if (!input.settings.cooldownBlock) continue;
               final resolved = _resolve(item, overrides);

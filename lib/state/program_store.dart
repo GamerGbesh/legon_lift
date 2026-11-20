@@ -229,10 +229,19 @@ class ProgramStore extends ChangeNotifier {
     final a = _active;
     if (a == null || !a.isCustom) return;
     final next = a.dayOrder.isEmpty ? null : a.nextDayId;
-    final order = custom.dayOrder;
+    // Keep the user's rotation order (reorderDays only changes the active program); new days go
+    // at the end, removed days drop out.
+    final ids = {for (final d in custom.phases.first.days) d.dayId};
+    final order = [
+      for (final id in a.dayOrder)
+        if (ids.contains(id)) id,
+      for (final id in custom.dayOrder)
+        if (!a.dayOrder.contains(id) && ids.contains(id)) id,
+    ];
     final i = next == null ? 0 : order.indexOf(next);
+    final saved = custom.copyWith(dayOrder: order);
     await _programs.save(a.copyWith(
-      customTemplate: () => custom,
+      customTemplate: () => saved,
       name: custom.name,
       dayOrder: order,
       nextDayIndex: i < 0 ? 0 : i,
@@ -259,10 +268,16 @@ class ProgramStore extends ChangeNotifier {
       block: block,
       item: item,
       exerciseId: _catalog.tryExercise(exId) == null ? item.exerciseId : exId,
-      enabled: !optional || (o?.optionalEnabled ?? !optional),
+      enabled: !optional || (o?.optionalEnabled ?? autoIncluded(block, item)),
       replaced: exId != item.exerciseId,
     );
   }
+
+  /// Optional items the session builder adds by itself unless switched off: the cardio finisher
+  /// (from week 2, when it fits the time) and the cool-down stretches. Optional main-lift extras
+  /// are off until switched on.
+  static bool autoIncluded(ProgramBlock block, ProgramItem item) =>
+      block.blockType == BlockType.finisher || block.blockType == BlockType.cooldown;
 
   /// [day] as it will be trained: replacements applied, optional items switched off removed and
   /// optional items switched on kept as regular items. Used for time estimates.

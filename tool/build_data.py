@@ -659,6 +659,35 @@ PROGRAM_META = {
 }
 
 
+# What the split picker shows. The draft's descriptions are research notes, not app text.
+PROGRAM_DESCRIPTIONS = {
+    "ppl_3day": "Push, pull and legs on separate days. Each muscle gets one hard session a week, "
+                "with shoulders and arms helping on the other days. 12 weeks, then an easy week and a re-test.",
+    "upper_lower_rotating_3day": "Upper body, lower body, repeat. Each muscle is trained about 1.5 times a "
+                                 "week, so you practise every lift more often. A strong choice if you like it.",
+    "chest_back_legs_arms_3day": "Chest and back together, then legs, then arms and shoulders. "
+                                 "Fine for beginners, with extra work for your arms.",
+    "upper_lower_2day": "Two full sessions a week: upper body and lower body. "
+                        "Good for busy weeks such as exams: you keep your progress on less time.",
+    "upper_lower_4day": "Upper, lower, upper, lower. For when you can train 4 days a week.",
+}
+
+
+_FOUNDATION = ("Learn every machine and movement, set safe starting weights, build the habit. "
+               "Machines + dumbbells only.")
+
+# Phase blurbs on the Program tab that the draft wrote as notes to itself.
+PHASE_GOALS = {
+    ("ppl_3day", "retest"): "Measure progress: one test set (stop with ~1 rep left) on each day's first two "
+                            "main lifts, then light accessories. Take body measurements.",
+    ("upper_lower_rotating_3day", "foundation"): _FOUNDATION + " Each muscle is trained about 1.5 times a week.",
+    ("chest_back_legs_arms_3day", "foundation"): _FOUNDATION,
+    ("upper_lower_2day", "foundation"): _FOUNDATION + " Every muscle is covered each week; add 2-3 brisk "
+                                        "30-minute walks on other days.",
+    ("upper_lower_4day", "foundation"): _FOUNDATION + " Each muscle is trained twice a week.",
+}
+
+
 def build_programs(exercises):
     draft = load("program_draft.json")
     b = ProgramBuilder(exercises)
@@ -672,6 +701,10 @@ def build_programs(exercises):
             p2 = build_phase2(p1, b.ex, b)
             p3 = build_phase3(p2, b)
             phases = [p1, p2, p3, build_deload(p3), build_retest(p3)]
+        for ph in phases:
+            goal = PHASE_GOALS.get((p["programId"], ph["phaseId"]))
+            if goal:
+                ph["goal"] = goal
         meta = PROGRAM_META[p["programId"]]
         programs.append({
             "programId": p["programId"],
@@ -681,7 +714,7 @@ def build_programs(exercises):
             "splitKey": meta["splitKey"],
             "daysPerWeek": p["daysPerWeek"],
             "dayOrder": p["dayOrder"],
-            "description": b.humanize(rename_text(p["description"])),
+            "description": PROGRAM_DESCRIPTIONS.get(p["programId"]) or b.humanize(rename_text(p["description"])),
             "targetUser": p["targetUser"],
             "scheduling": "rotating_pointer",
             "schedulingNotes": p["schedulingNotes"],

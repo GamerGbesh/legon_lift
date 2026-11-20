@@ -89,7 +89,7 @@
     "pull",
     "legs"
    ],
-   "description": "DEFAULT. Each muscle trained hard once per week with some overlap (shoulders/triceps on push, biceps/rear delts on pull). 12 weeks + deload + re-test.",
+   "description": "Push, pull and legs on separate days. Each muscle gets one hard session a week, with shoulders and arms helping on the other days. 12 weeks, then an easy week and a re-test.",
    "targetUser": "Beginner, body recomposition, 45-60 min sessions, UG Legon campus gym equipment only",
    "scheduling": "rotating_pointer",
    "schedulingNotes": "App tracks the NEXT day in the rotation, not weekdays. Missing a day never skips a workout. Recommend >= 1 rest day between sessions when possible (e.g. Mon/Wed/Fri or Tue/Thu/Sat).",
@@ -4511,7 +4511,7 @@
      "weeks": [
       14
      ],
-     "goal": "Measure progress: one RIR-1 rep test on each day's primary + first secondary lift, then light accessories. Take body measurements.",
+     "goal": "Measure progress: one test set (stop with ~1 rep left) on each day's first two main lifts, then light accessories. Take body measurements.",
      "rirWeekOffsets": {
       "14": 0
      },
@@ -5522,7 +5522,7 @@
     "upper_b",
     "lower_b"
    ],
-   "description": "Best evidence-based alternative: more frequent practice of each lift (~1.5x/week per muscle).",
+   "description": "Upper body, lower body, repeat. Each muscle is trained about 1.5 times a week, so you practise every lift more often. A strong choice if you like it.",
    "targetUser": "Beginner, body recomposition, 45-60 min sessions, UG Legon campus gym equipment only",
    "scheduling": "rotating_pointer",
    "schedulingNotes": "App tracks the NEXT day in the rotation, not weekdays. Missing a day never skips a workout. Recommend >= 1 rest day between sessions when possible (e.g. Mon/Wed/Fri or Tue/Thu/Sat).",
@@ -5543,7 +5543,7 @@
       3,
       4
      ],
-     "goal": "Same rules as PPL Phase 1. Rotation continues across weeks: wk1 Upper A/Lower A/Upper B, wk2 Lower B/Upper A/Lower A, ... Each muscle ~1.5x/week.",
+     "goal": "Learn every machine and movement, set safe starting weights, build the habit. Machines + dumbbells only. Each muscle is trained about 1.5 times a week.",
      "rirWeekOffsets": {
       "1": 1,
       "2": 0,
@@ -12831,7 +12831,7 @@
     "legs",
     "arms_shoulders"
    ],
-   "description": "Popular 'bro-ish' layout. Fine for beginners; arms get extra volume, chest/back get trained together.",
+   "description": "Chest and back together, then legs, then arms and shoulders. Fine for beginners, with extra work for your arms.",
    "targetUser": "Beginner, body recomposition, 45-60 min sessions, UG Legon campus gym equipment only",
    "scheduling": "rotating_pointer",
    "schedulingNotes": "App tracks the NEXT day in the rotation, not weekdays. Missing a day never skips a workout. Recommend >= 1 rest day between sessions when possible (e.g. Mon/Wed/Fri or Tue/Thu/Sat).",
@@ -12852,7 +12852,7 @@
       3,
       4
      ],
-     "goal": "Same rules as PPL Phase 1. ",
+     "goal": "Learn every machine and movement, set safe starting weights, build the habit. Machines + dumbbells only.",
      "rirWeekOffsets": {
       "1": 1,
       "2": 0,
@@ -18377,7 +18377,7 @@
     "upper_a",
     "lower_a"
    ],
-   "description": "Recommended fallback when the 3-week rolling average is < 2.5 sessions/week.",
+   "description": "Two full sessions a week: upper body and lower body. Good for busy weeks such as exams: you keep your progress on less time.",
    "targetUser": "Beginner, body recomposition, 45-60 min sessions, UG Legon campus gym equipment only",
    "scheduling": "rotating_pointer",
    "schedulingNotes": "App tracks the NEXT day in the rotation, not weekdays. Missing a day never skips a workout. Recommend >= 1 rest day between sessions when possible (e.g. Mon/Wed/Fri or Tue/Thu/Sat).",
@@ -18397,7 +18397,7 @@
       3,
       4
      ],
-     "goal": "Same rules as PPL Phase 1. Use when only 2 sessions/week are realistic; covers every muscle each week. Add 2-3 walks of 30 min on other days.",
+     "goal": "Learn every machine and movement, set safe starting weights, build the habit. Machines + dumbbells only. Every muscle is covered each week; add 2-3 brisk 30-minute walks on other days.",
      "rirWeekOffsets": {
       "1": 1,
       "2": 0,
@@ -22160,7 +22160,7 @@
     "upper_b",
     "lower_b"
    ],
-   "description": "For 4-day weeks. Alternative: keep PPL on the rotating pointer (P-Pu-L-P, Pu-L-P-Pu...).",
+   "description": "Upper, lower, upper, lower. For when you can train 4 days a week.",
    "targetUser": "Beginner, body recomposition, 45-60 min sessions, UG Legon campus gym equipment only",
    "scheduling": "rotating_pointer",
    "schedulingNotes": "App tracks the NEXT day in the rotation, not weekdays. Missing a day never skips a workout. Recommend >= 1 rest day between sessions when possible (e.g. Mon/Wed/Fri or Tue/Thu/Sat).",
@@ -22182,7 +22182,7 @@
       3,
       4
      ],
-     "goal": "Same rules as PPL Phase 1. Upper A Mon, Lower A Tue, Upper B Thu, Lower B Fri. Each muscle 2x/week.",
+     "goal": "Learn every machine and movement, set safe starting weights, build the habit. Machines + dumbbells only. Each muscle is trained twice a week.",
      "rirWeekOffsets": {
       "1": 1,
       "2": 0,

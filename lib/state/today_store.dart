@@ -88,6 +88,7 @@ class TodayStore extends ChangeNotifier {
 
   Session? _inProgress;
   SessionPlan? _preview;
+  Map<String, SessionPlan> _dayPlans = const {};
   StreakInfo _streak =
       const StreakInfo(weeks: 0, graceTokens: 0, thisWeekCounted: false, sessionsThisWeek: 0, targetThisWeek: 3);
   List<TodayCard> _cards = const [];
@@ -106,6 +107,10 @@ class TodayStore extends ChangeNotifier {
 
   /// Next workout as it would be built now (hero card).
   SessionPlan? get preview => _preview;
+
+  /// Every day of the program as it would be built now, by day id (Program tab and day editor
+  /// show these counts and times so they match the Today card).
+  Map<String, SessionPlan> get dayPlans => _dayPlans;
   StreakInfo get streak => _streak;
   List<TodayCard> get cards => _cards;
 
@@ -175,6 +180,7 @@ class TodayStore extends ChangeNotifier {
     final profile = _profile.profile;
     if (profile == null) {
       _preview = null;
+      _dayPlans = const {};
       _cards = const [];
       _week = const [];
       _loaded = true;
@@ -208,6 +214,18 @@ class TodayStore extends ChangeNotifier {
       cardioOff: false,
       states: states,
     );
+    final plans = <String, SessionPlan>{};
+    for (final d in _program.days) {
+      final plan = await _buildPlan(
+        dayId: d.dayId,
+        hotDay: false,
+        recentIllness: false,
+        cardioOff: false,
+        states: states,
+      );
+      if (plan != null) plans[d.dayId] = plan;
+    }
+    _dayPlans = plans;
     await _evaluateMilestonesOncePerDay(todayKey);
     _cards = await _buildCards(profile, now, completed, states);
     _loaded = true;
