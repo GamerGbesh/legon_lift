@@ -102,9 +102,9 @@ class OverviewView extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(child: StatTile(label: 'Workouts this month', value: '${h.sessionsThisMonth}')),
+            Expanded(child: StatTile(label: 'Workouts (month)', value: '${h.sessionsThisMonth}')),
             const SizedBox(width: Space.s),
-            Expanded(child: StatTile(label: 'Working sets this week', value: '${h.thisWeek.workingSets}')),
+            Expanded(child: StatTile(label: 'Sets (week)', value: '${h.thisWeek.workingSets}')),
           ],
         ),
         const SectionHeader('Weekly volume'),

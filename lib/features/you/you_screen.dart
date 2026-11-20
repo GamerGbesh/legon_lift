@@ -111,11 +111,11 @@ class YouScreen extends StatelessWidget {
                         ),
                         const SizedBox(width: Space.m),
                         Expanded(
-                          child: StatTile(label: 'Calories / day', value: '${nutrition.targets.calorieTargetKcal}'),
+                          child: StatTile(label: 'kcal/day', value: '${nutrition.targets.calorieTargetKcal}'),
                         ),
                         const SizedBox(width: Space.m),
                         Expanded(
-                          child: StatTile(label: 'Protein / day', value: '${nutrition.targets.proteinTargetG} g'),
+                          child: StatTile(label: 'Protein', value: '${nutrition.targets.proteinTargetG} g'),
                         ),
                       ],
                     ),

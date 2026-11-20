@@ -2037,6 +2037,8 @@ class SessionPlayerController extends ChangeNotifier {
             reason: work ? null : SkipReason.noTime);
       }
     }
+    // Lets a workout logged by mistake be deleted later today without leaving its progress behind.
+    await _guarded('undo snapshot', () => _sessions.saveUndoSnapshot(sessionId));
     final completed = await _sessions.complete(sessionId);
     _session = completed;
     await _guarded('progression', () => _progress(completed));

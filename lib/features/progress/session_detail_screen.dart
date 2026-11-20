@@ -13,6 +13,7 @@ import '../../core/format.dart';
 import '../../core/units.dart';
 import '../../data/assets/asset_catalog.dart';
 import '../../data/models/models.dart';
+import '../../data/repositories/session_repository.dart';
 import '../../state/history_store.dart';
 import '../../state/profile_store.dart';
 import '../../state/program_store.dart';
@@ -24,6 +25,7 @@ import '../../widgets/number_stepper.dart';
 import '../../widgets/undo_snackbar.dart';
 import '../library/exercise_detail_screen.dart';
 import '../session_player/player_screen.dart';
+import 'delete_workout.dart';
 import 'history_format.dart';
 import 'progress_widgets.dart';
 
@@ -41,6 +43,9 @@ class SessionDetailScreen extends StatefulWidget {
 class _SessionDetailScreenState extends State<SessionDetailScreen> {
   late final HistoryStore _history = context.read<HistoryStore>();
   late Future<Session?> _future;
+
+  /// Whether "Delete workout" is offered (logged today and the latest workout).
+  late final Future<bool> _canDelete = context.read<SessionRepository>().canDelete(widget.sessionId);
 
   /// Sets deleted on screen but kept in storage until their Undo window closes.
   final Map<String, Timer> _pendingDeletes = {};
@@ -156,7 +161,24 @@ class _SessionDetailScreenState extends State<SessionDetailScreen> {
           final dayOrder = context.select<ProgramStore, List<String>>((p) => p.active?.dayOrder ?? const []);
           final canRepeat = session.status == SessionStatus.completed && dayOrder.contains(session.dayId);
           return Scaffold(
-            appBar: AppBar(title: Text(session.dayName)),
+            appBar: AppBar(
+              title: Text(session.dayName),
+              actions: [
+                FutureBuilder<bool>(
+                  future: _canDelete,
+                  builder: (context, can) => can.data == true
+                      ? IconButton(
+                          tooltip: 'Delete this workout',
+                          icon: const Icon(Icons.delete_outline),
+                          onPressed: () async {
+                            final navigator = Navigator.of(context);
+                            if (await confirmAndDeleteWorkout(context, session)) navigator.pop();
+                          },
+                        )
+                      : const SizedBox.shrink(),
+                ),
+              ],
+            ),
             body: _SessionBody(
               session: session,
               hiddenSetIds: _pendingDeletes.keys.toSet(),

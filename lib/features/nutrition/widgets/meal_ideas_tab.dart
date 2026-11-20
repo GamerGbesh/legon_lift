@@ -191,7 +191,7 @@ class _MealCardState extends State<_MealCard> {
                 ),
                 const SizedBox(height: Space.xs),
                 Text(
-                  '~${m.proteinG} g protein (${trimNumber(roundedPoints)} points) · ~${groupedInt(m.kcalApprox)} kcal · ${_cost(m.costTier)}',
+                  '~${m.proteinG} g protein (${trimNumber(roundedPoints)} ${roundedPoints == 1 ? 'point' : 'points'}) · ~${groupedInt(m.kcalApprox)} kcal · ${_cost(m.costTier)}',
                   style: AppText.tabular(AppText.label).copyWith(color: t.muted),
                 ),
                 if (_open) ...[

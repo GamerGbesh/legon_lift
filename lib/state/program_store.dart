@@ -1,4 +1,6 @@
 // Owner: WS4. The active program, its phase/week and per-slot overrides (SPEC 4.5, 6.7, 7.4).
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
 
 import '../data/assets/asset_catalog.dart';
@@ -52,7 +54,27 @@ class ProgramStore extends ChangeNotifier {
     required this._programs,
     required this._sessions,
     this._states,
-  });
+  }) {
+    // A finished or deleted workout moves the rotation ("Next up") and the week: reload then.
+    _sub = _sessions.changes.listen((_) {
+      if (!_disposed) unawaited(load());
+    });
+  }
+
+  StreamSubscription<void>? _sub;
+  bool _disposed = false;
+
+  @override
+  void dispose() {
+    _disposed = true;
+    unawaited(_sub?.cancel());
+    super.dispose();
+  }
+
+  @override
+  void notifyListeners() {
+    if (!_disposed) super.notifyListeners();
+  }
 
   final AssetCatalog _catalog;
   final ProgramRepository _programs;

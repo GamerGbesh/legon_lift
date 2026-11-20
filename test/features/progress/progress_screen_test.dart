@@ -18,7 +18,7 @@ void main() {
 
   testWidgets('Overview: month count, weekly volume and hard sets charts', (tester) async {
     await pumpScreen(tester, FakeApp.seeded(), const ProgressScreen());
-    expect(find.text('Workouts this month'), findsOneWidget);
+    expect(find.text('Workouts (month)'), findsOneWidget);
     expect(find.widgetWithText(Card, '3'), findsWidgets);
     expect(find.byType(WeeklyVolumeChart), findsOneWidget);
     await tester.scrollUntilVisible(find.byType(HardSetsChart), 200);

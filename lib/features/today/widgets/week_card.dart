@@ -54,7 +54,7 @@ class WeekCard extends StatelessWidget {
                       Text(
                         streak.thisWeekCounted
                             ? 'This week already counts. Great job.'
-                            : 'Do ${(target - 1).clamp(1, 7)} or more workouts this week to keep it going.',
+                            : _remainingText((target - streak.sessionsThisWeek).clamp(1, 7), streak.weeks > 0),
                         style: AppText.label.copyWith(color: t.muted),
                       ),
                     ],
@@ -139,3 +139,7 @@ class _DayDot extends StatelessWidget {
     );
   }
 }
+
+/// "1 more workout this week starts your streak."
+String _remainingText(int left, bool hasStreak) =>
+    '$left more ${left == 1 ? 'workout' : 'workouts'} this week ${hasStreak ? 'keeps it going' : 'starts your streak'}.';

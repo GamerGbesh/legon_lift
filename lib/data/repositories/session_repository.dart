@@ -47,6 +47,19 @@ abstract class SessionRepository {
   /// Marks the session completed (ended now) and clears the cursor.
   Future<Session> complete(String sessionId, {int? feeling, String? note, double? bodyweightKg});
 
+  /// Remembers what finishing [sessionId] is about to change (exercise progress, personal bests,
+  /// program rotation, milestones) so [deleteCompleted] can put it back. Called right before the
+  /// session is completed.
+  Future<void> saveUndoSnapshot(String sessionId);
+
+  /// True when [sessionId] is a completed workout that ended today (local time) and is the most
+  /// recent completed workout: only then can it be deleted without undoing a later workout.
+  Future<bool> canDelete(String sessionId);
+
+  /// Deletes a completed workout logged by mistake and restores the snapshot taken before it was
+  /// completed. Callers check [canDelete] first.
+  Future<void> deleteCompleted(String sessionId);
+
   /// Saves the summary screen's optional reflection on a completed session (keeps `ended_at`).
   Future<void> saveReflection(String sessionId, {int? feeling, String? note, double? bodyweightKg});
 
@@ -291,6 +304,74 @@ class SqfliteSessionRepository implements SessionRepository {
     if (done == null) throw StateError('Unknown session $sessionId');
     _changed();
     return done;
+  }
+
+  // -- deleting a mistaken workout (same day only) ---------------------------------------------
+
+  static String _undoKey(String sessionId) => 'session_undo:$sessionId';
+
+  @override
+  Future<void> saveUndoSnapshot(String sessionId) async {
+    final s = await _one(_d, sessionId);
+    if (s == null) return;
+    final ids = {for (final e in s.exercises) e.exerciseId, for (final x in s.allSets) x.exerciseId}.toList();
+    final marks = List.filled(ids.length, '?').join(',');
+    final where = ids.isEmpty ? '0' : 'exercise_id IN ($marks)';
+    final snapshot = {
+      'exerciseIds': ids,
+      'exercise_state': await _d.query('exercise_state', where: where, whereArgs: ids),
+      'personal_records': await _d.query('personal_records', where: where, whereArgs: ids),
+      'programs': await _d.query('programs'),
+      'milestone_awards': await _d.query('milestone_awards'),
+    };
+    await _d.insert('kv', {'key': _undoKey(sessionId), 'value': jsonEncode(snapshot)},
+        conflictAlgorithm: ConflictAlgorithm.replace);
+  }
+
+  @override
+  Future<bool> canDelete(String sessionId) async {
+    final s = await _one(_d, sessionId);
+    if (s == null || s.status != SessionStatus.completed) return false;
+    final ended = (s.endedAt ?? s.startedAt).toLocal();
+    final now = _clock.now().toLocal();
+    if (ended.year != now.year || ended.month != now.month || ended.day != now.day) return false;
+    final later = Sqflite.firstIntValue(await _d.rawQuery(
+      'SELECT COUNT(*) FROM sessions WHERE status = ? AND id != ? AND COALESCE(ended_at, started_at) > ?',
+      [SessionStatus.completed.wire, sessionId, (s.endedAt ?? s.startedAt).millisecondsSinceEpoch],
+    ));
+    return (later ?? 0) == 0;
+  }
+
+  @override
+  Future<void> deleteCompleted(String sessionId) async {
+    await _d.transaction((txn) async {
+      final kv = await txn.query('kv', where: 'key = ?', whereArgs: [_undoKey(sessionId)], limit: 1);
+      await txn.delete('set_logs', where: 'session_id = ?', whereArgs: [sessionId]);
+      await txn.delete('session_exercises', where: 'session_id = ?', whereArgs: [sessionId]);
+      await txn.delete('sessions', where: 'id = ?', whereArgs: [sessionId]);
+      if (kv.isEmpty) return;
+      final snap = (jsonDecode(kv.first['value']! as String) as Map).cast<String, dynamic>();
+      final ids = [for (final id in (snap['exerciseIds'] as List? ?? const [])) '$id'];
+      List<Map<String, Object?>> rows(String table) =>
+          [for (final r in (snap[table] as List? ?? const [])) (r as Map).cast<String, Object?>()];
+      if (ids.isNotEmpty) {
+        final marks = List.filled(ids.length, '?').join(',');
+        for (final table in ['exercise_state', 'personal_records']) {
+          await txn.delete(table, where: 'exercise_id IN ($marks)', whereArgs: ids);
+          for (final r in rows(table)) {
+            await txn.insert(table, r, conflictAlgorithm: ConflictAlgorithm.replace);
+          }
+        }
+      }
+      for (final table in ['programs', 'milestone_awards']) {
+        await txn.delete(table);
+        for (final r in rows(table)) {
+          await txn.insert(table, r, conflictAlgorithm: ConflictAlgorithm.replace);
+        }
+      }
+      await txn.delete('kv', where: 'key = ?', whereArgs: [_undoKey(sessionId)]);
+    });
+    _changed();
   }
 
   @override

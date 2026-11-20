@@ -289,6 +289,31 @@ class FakeSessionRepository implements SessionRepository {
     return done;
   }
 
+  /// Snapshots taken (the fake does not roll other fakes back).
+  final List<String> undoSnapshots = [];
+
+  @override
+  Future<void> saveUndoSnapshot(String sessionId) async => undoSnapshots.add(sessionId);
+
+  @override
+  Future<bool> canDelete(String sessionId) async {
+    final s = sessions[sessionId];
+    if (s == null || s.status != SessionStatus.completed) return false;
+    final ended = (s.endedAt ?? s.startedAt).toLocal();
+    final now = _clock.now().toLocal();
+    if (ended.year != now.year || ended.month != now.month || ended.day != now.day) return false;
+    return !sessions.values.any((o) =>
+        o.id != sessionId &&
+        o.status == SessionStatus.completed &&
+        (o.endedAt ?? o.startedAt).isAfter(s.endedAt ?? s.startedAt));
+  }
+
+  @override
+  Future<void> deleteCompleted(String sessionId) async {
+    sessions.remove(sessionId);
+    _changed();
+  }
+
   @override
   Future<void> saveReflection(String sessionId, {int? feeling, String? note, double? bodyweightKg}) async {
     sessions[sessionId] = _require(sessionId).copyWith(

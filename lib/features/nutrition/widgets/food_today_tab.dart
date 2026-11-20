@@ -69,7 +69,7 @@ class _TargetsGrid extends StatelessWidget {
       ),
       _TargetTile(
         icon: Icons.water_drop,
-        label: training ? 'Water (training day)' : 'Water (rest day)',
+        label: training ? 'Water today' : 'Water (rest)',
         value: litres(store.waterTargetMl),
         caption: '${trimNumber(store.waterTargetSachets)} sachets\n'
             '${training ? 'Rest' : 'Training'} days: ${trimNumber(sachetsFor(otherMl))}',

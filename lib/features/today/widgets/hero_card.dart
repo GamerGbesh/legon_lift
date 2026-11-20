@@ -1,6 +1,8 @@
 // Owner: WS4. Next-workout hero card (SPEC 4.3): day, phase and week, focus muscles, exercise
 // thumbnails, time estimate, START WORKOUT, Preview and "Do a different day". Variants for a rest
 // day, a finished day, a blocked program and a workout in progress.
+import 'dart:async';
+
 import 'package:material_ui/material_ui.dart';
 import 'package:provider/provider.dart';
 
@@ -10,11 +12,13 @@ import '../../../app/theme/typography.dart';
 import '../../../core/format.dart';
 import '../../../data/assets/asset_catalog.dart';
 import '../../../data/models/models.dart';
+import '../../../data/repositories/session_repository.dart';
 import '../../../domain/api.dart';
 import '../../../state/program_store.dart';
 import '../../../state/today_store.dart';
 import '../../../widgets/big_button.dart';
 import '../../../widgets/exercise_thumb.dart';
+import '../../progress/delete_workout.dart';
 import '../sheets/day_picker_sheet.dart';
 import '../sheets/preview_sheet.dart';
 import '../today_actions.dart';
@@ -229,18 +233,41 @@ class _MoreMenu extends StatelessWidget {
 
   final VoidCallback? onStartAnother;
 
+  /// "Delete today's workout": the latest workout completed today, if any.
+  Future<void> _deleteToday(BuildContext context) async {
+    final now = DateTime.now();
+    final done = await context.read<SessionRepository>().listCompleted(from: DateTime(now.year, now.month, now.day));
+    if (done.isEmpty || !context.mounted) return;
+    done.sort((a, b) => (b.endedAt ?? b.startedAt).compareTo(a.endedAt ?? a.startedAt));
+    await confirmAndDeleteWorkout(context, done.first);
+  }
+
   @override
-  Widget build(BuildContext context) => PopupMenuButton<void>(
+  Widget build(BuildContext context) => PopupMenuButton<String>(
         tooltip: 'More',
-        enabled: onStartAnother != null,
+        onSelected: (v) {
+          if (v == 'another') onStartAnother?.call();
+          if (v == 'delete') unawaited(_deleteToday(context));
+        },
         itemBuilder: (_) => [
-          PopupMenuItem<void>(
+          if (onStartAnother != null)
+            const PopupMenuItem<String>(
+              value: 'another',
+              height: Sizes.minTap,
+              child: ListTile(
+                contentPadding: EdgeInsets.zero,
+                leading: Icon(Icons.add),
+                title: Text('Start another session'),
+              ),
+            ),
+          const PopupMenuItem<String>(
+            value: 'delete',
             height: Sizes.minTap,
-            onTap: onStartAnother,
-            child: const ListTile(
+            child: ListTile(
               contentPadding: EdgeInsets.zero,
-              leading: Icon(Icons.add),
-              title: Text('Start another session'),
+              leading: Icon(Icons.delete_outline),
+              title: Text("Delete today's workout"),
+              subtitle: Text('Logged it by mistake?'),
             ),
           ),
         ],
