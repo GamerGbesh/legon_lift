@@ -1,0 +1,3307 @@
+{
+ "schemaVersion": 1,
+ "note": "Rough values (~). Vendor portions vary a lot; when unsure pick the bigger serving.",
+ "categories": [
+  {
+   "id": "pantry",
+   "label": "Pantry & home"
+  },
+  {
+   "id": "protein",
+   "label": "Meat, fish & eggs"
+  },
+  {
+   "id": "staples",
+   "label": "Rice, bread & staples"
+  },
+  {
+   "id": "soups",
+   "label": "Soups & stews"
+  },
+  {
+   "id": "street",
+   "label": "Street & chop bar"
+  },
+  {
+   "id": "fastfood",
+   "label": "Fast food"
+  },
+  {
+   "id": "snacks",
+   "label": "Pastries & snacks"
+  },
+  {
+   "id": "breakfast",
+   "label": "Porridge & breakfast"
+  },
+  {
+   "id": "drinks",
+   "label": "Drinks"
+  },
+  {
+   "id": "fruitveg",
+   "label": "Fruit & veg"
+  },
+  {
+   "id": "extras",
+   "label": "Oils, sauces & sweet"
+  }
+ ],
+ "foods": [
+  {
+   "id": "sardines",
+   "name": "Sardines (tin)",
+   "cat": "pantry",
+   "servings": [
+    {
+     "label": "1 tin, oil drained",
+     "kcal": 190,
+     "p": 23
+    },
+    {
+     "label": "1 tin with the oil",
+     "kcal": 290,
+     "p": 23
+    },
+    {
+     "label": "½ tin, drained",
+     "kcal": 95,
+     "p": 11.5
+    }
+   ],
+   "aka": [
+    "titus",
+    "sardine"
+   ]
+  },
+  {
+   "id": "tuna",
+   "name": "Tuna (tin)",
+   "cat": "pantry",
+   "servings": [
+    {
+     "label": "1 tin in brine, drained",
+     "kcal": 120,
+     "p": 26
+    },
+    {
+     "label": "1 tin in oil, drained",
+     "kcal": 190,
+     "p": 26
+    },
+    {
+     "label": "½ tin in brine",
+     "kcal": 60,
+     "p": 13
+    }
+   ],
+   "aka": [
+    "tuna flakes"
+   ],
+   "note": "In brine is leaner than in oil."
+  },
+  {
+   "id": "mackerel_tin",
+   "name": "Mackerel in tomato sauce (tin)",
+   "cat": "pantry",
+   "servings": [
+    {
+     "label": "small tin (155 g)",
+     "kcal": 290,
+     "p": 22
+    },
+    {
+     "label": "¼ big tin (425 g)",
+     "kcal": 200,
+     "p": 15
+    },
+    {
+     "label": "big tin (425 g)",
+     "kcal": 800,
+     "p": 60
+    }
+   ],
+   "aka": [
+    "geisha",
+    "titus mackerel"
+   ]
+  },
+  {
+   "id": "corned_beef",
+   "name": "Corned beef",
+   "cat": "pantry",
+   "servings": [
+    {
+     "label": "100 g (⅓ big tin)",
+     "kcal": 220,
+     "p": 25
+    },
+    {
+     "label": "small tin (200 g)",
+     "kcal": 440,
+     "p": 50
+    },
+    {
+     "label": "big tin (340 g)",
+     "kcal": 750,
+     "p": 85
+    }
+   ],
+   "aka": [
+    "exeter"
+   ],
+   "note": "Salty and fatty: 2–3 times a week."
+  },
+  {
+   "id": "sausage_tin",
+   "name": "Sausage (tin / hot dog)",
+   "cat": "pantry",
+   "servings": [
+    {
+     "label": "1 sausage",
+     "kcal": 120,
+     "p": 5
+    }
+   ],
+   "aka": [
+    "frankfurter",
+    "hot dog sausage",
+    "cocktail sausage"
+   ],
+   "note": "Mostly fat. Count it as flavour, not protein."
+  },
+  {
+   "id": "indomie",
+   "name": "Indomie / instant noodles",
+   "cat": "pantry",
+   "servings": [
+    {
+     "label": "1 pack (70 g), all seasoning oil",
+     "kcal": 320,
+     "p": 7
+    },
+    {
+     "label": "1 pack, half the oil",
+     "kcal": 280,
+     "p": 7
+    },
+    {
+     "label": "1 super pack (120 g)",
+     "kcal": 550,
+     "p": 11
+    }
+   ],
+   "aka": [
+    "noodles",
+    "indomie",
+    "ramen",
+    "onion chicken"
+   ]
+  },
+  {
+   "id": "spaghetti",
+   "name": "Spaghetti / talia",
+   "cat": "pantry",
+   "servings": [
+    {
+     "label": "1 cup cooked",
+     "kcal": 220,
+     "p": 8
+    },
+    {
+     "label": "100 g dry",
+     "kcal": 350,
+     "p": 12
+    },
+    {
+     "label": "¼ pack dry (100 g)",
+     "kcal": 350,
+     "p": 12
+    }
+   ],
+   "aka": [
+    "talia",
+    "pasta",
+    "macaroni"
+   ]
+  },
+  {
+   "id": "oats",
+   "name": "Oats",
+   "cat": "pantry",
+   "servings": [
+    {
+     "label": "45 g (½ cup) dry",
+     "kcal": 170,
+     "p": 6
+    },
+    {
+     "label": "60 g dry",
+     "kcal": 230,
+     "p": 8
+    }
+   ],
+   "aka": [
+    "quaker",
+    "oat"
+   ]
+  },
+  {
+   "id": "milk_powder",
+   "name": "Milk powder",
+   "cat": "pantry",
+   "servings": [
+    {
+     "label": "1 tbsp",
+     "kcal": 40,
+     "p": 2
+    },
+    {
+     "label": "3 tbsp",
+     "kcal": 120,
+     "p": 6
+    },
+    {
+     "label": "1 sachet (≈ 25 g)",
+     "kcal": 125,
+     "p": 6.5
+    }
+   ],
+   "aka": [
+    "peak powder",
+    "cowbell",
+    "nido",
+    "dano"
+   ]
+  },
+  {
+   "id": "evap_milk",
+   "name": "Evaporated milk",
+   "cat": "pantry",
+   "servings": [
+    {
+     "label": "2 tbsp",
+     "kcal": 40,
+     "p": 2
+    },
+    {
+     "label": "1 small tin (160 g)",
+     "kcal": 215,
+     "p": 11
+    }
+   ],
+   "aka": [
+    "ideal milk",
+    "peak milk",
+    "carnation"
+   ]
+  },
+  {
+   "id": "fresh_milk",
+   "name": "Fresh milk",
+   "cat": "pantry",
+   "servings": [
+    {
+     "label": "1 glass (250 ml)",
+     "kcal": 160,
+     "p": 8
+    }
+   ],
+   "aka": [
+    "full cream milk"
+   ]
+  },
+  {
+   "id": "milo",
+   "name": "Milo powder",
+   "cat": "pantry",
+   "servings": [
+    {
+     "label": "2 tsp",
+     "kcal": 60,
+     "p": 1.5
+    },
+    {
+     "label": "2 heaped tbsp",
+     "kcal": 120,
+     "p": 3
+    }
+   ],
+   "aka": [
+    "bournvita",
+    "chocolate drink"
+   ]
+  },
+  {
+   "id": "groundnuts",
+   "name": "Groundnuts (roasted)",
+   "cat": "pantry",
+   "servings": [
+    {
+     "label": "small handful (30 g)",
+     "kcal": 170,
+     "p": 7
+    },
+    {
+     "label": "1 small sachet (50 g)",
+     "kcal": 290,
+     "p": 12
+    }
+   ],
+   "aka": [
+    "peanuts",
+    "nkatie"
+   ],
+   "note": "Easy to overeat. Measure once."
+  },
+  {
+   "id": "soya_chunks",
+   "name": "Soya chunks",
+   "cat": "pantry",
+   "servings": [
+    {
+     "label": "40 g dry",
+     "kcal": 140,
+     "p": 20
+    },
+    {
+     "label": "80 g dry",
+     "kcal": 280,
+     "p": 40
+    }
+   ],
+   "aka": [
+    "soya meat",
+    "soy chunks"
+   ]
+  },
+  {
+   "id": "beans",
+   "name": "Beans, cooked (plain)",
+   "cat": "pantry",
+   "servings": [
+    {
+     "label": "1 cup",
+     "kcal": 230,
+     "p": 15
+    },
+    {
+     "label": "½ cup",
+     "kcal": 115,
+     "p": 7.5
+    }
+   ],
+   "aka": [
+    "black eyed peas",
+    "cowpea",
+    "adua"
+   ]
+  },
+  {
+   "id": "egg_boiled",
+   "name": "Egg, boiled",
+   "cat": "protein",
+   "servings": [
+    {
+     "label": "1 egg",
+     "kcal": 75,
+     "p": 6
+    }
+   ],
+   "aka": [
+    "boiled egg",
+    "eggs"
+   ]
+  },
+  {
+   "id": "egg_fried",
+   "name": "Egg, fried / omelette",
+   "cat": "protein",
+   "servings": [
+    {
+     "label": "1 egg, fried in oil",
+     "kcal": 110,
+     "p": 6
+    },
+    {
+     "label": "2-egg omelette",
+     "kcal": 230,
+     "p": 12
+    },
+    {
+     "label": "3-egg omelette",
+     "kcal": 340,
+     "p": 18
+    }
+   ],
+   "aka": [
+    "omelette",
+    "scrambled egg",
+    "fried egg"
+   ]
+  },
+  {
+   "id": "chicken_fried",
+   "name": "Chicken, fried",
+   "cat": "protein",
+   "servings": [
+    {
+     "label": "1 wing",
+     "kcal": 160,
+     "p": 11
+    },
+    {
+     "label": "1 drumstick",
+     "kcal": 200,
+     "p": 16
+    },
+    {
+     "label": "1 thigh",
+     "kcal": 280,
+     "p": 20
+    },
+    {
+     "label": "1 quarter (leg)",
+     "kcal": 450,
+     "p": 38
+    }
+   ],
+   "aka": [
+    "fried chicken"
+   ]
+  },
+  {
+   "id": "chicken_grilled",
+   "name": "Chicken, grilled",
+   "cat": "protein",
+   "servings": [
+    {
+     "label": "1 wing",
+     "kcal": 120,
+     "p": 11
+    },
+    {
+     "label": "1 drumstick",
+     "kcal": 160,
+     "p": 17
+    },
+    {
+     "label": "1 thigh",
+     "kcal": 220,
+     "p": 22
+    },
+    {
+     "label": "1 quarter (leg)",
+     "kcal": 380,
+     "p": 42
+    },
+    {
+     "label": "1 palm breast (100 g)",
+     "kcal": 165,
+     "p": 31
+    }
+   ],
+   "aka": [
+    "grilled chicken",
+    "roast chicken",
+    "bbq chicken"
+   ]
+  },
+  {
+   "id": "tilapia",
+   "name": "Tilapia, grilled",
+   "cat": "protein",
+   "servings": [
+    {
+     "label": "small whole",
+     "kcal": 220,
+     "p": 30
+    },
+    {
+     "label": "medium whole",
+     "kcal": 330,
+     "p": 42
+    },
+    {
+     "label": "large whole",
+     "kcal": 480,
+     "p": 60
+    }
+   ],
+   "aka": [
+    "tilapia",
+    "grilled fish"
+   ]
+  },
+  {
+   "id": "fish_fried",
+   "name": "Fish, fried",
+   "cat": "protein",
+   "servings": [
+    {
+     "label": "1 piece (palm size)",
+     "kcal": 250,
+     "p": 20
+    },
+    {
+     "label": "1 medium whole fish",
+     "kcal": 300,
+     "p": 30
+    }
+   ],
+   "aka": [
+    "fried fish",
+    "red fish",
+    "herring",
+    "salmon (local)"
+   ]
+  },
+  {
+   "id": "keta_school_boys",
+   "name": "Keta school boys / small fried fish",
+   "cat": "protein",
+   "servings": [
+    {
+     "label": "1 fish",
+     "kcal": 50,
+     "p": 5
+    },
+    {
+     "label": "5 fish",
+     "kcal": 250,
+     "p": 25
+    }
+   ],
+   "aka": [
+    "keta",
+    "sprats",
+    "small fish"
+   ]
+  },
+  {
+   "id": "fish_soup",
+   "name": "Fish (in soup or stew)",
+   "cat": "protein",
+   "servings": [
+    {
+     "label": "1 piece",
+     "kcal": 90,
+     "p": 12
+    },
+    {
+     "label": "2 pieces",
+     "kcal": 180,
+     "p": 24
+    }
+   ],
+   "aka": [
+    "smoked fish",
+    "momone",
+    "salmon"
+   ]
+  },
+  {
+   "id": "goat",
+   "name": "Goat meat",
+   "cat": "protein",
+   "servings": [
+    {
+     "label": "1 piece (in soup)",
+     "kcal": 70,
+     "p": 10
+    },
+    {
+     "label": "palm size (100 g)",
+     "kcal": 145,
+     "p": 27
+    }
+   ],
+   "aka": [
+    "goat",
+    "aponkye"
+   ]
+  },
+  {
+   "id": "beef",
+   "name": "Beef",
+   "cat": "protein",
+   "servings": [
+    {
+     "label": "1 piece (in stew)",
+     "kcal": 80,
+     "p": 10
+    },
+    {
+     "label": "palm size (100 g)",
+     "kcal": 250,
+     "p": 26
+    }
+   ],
+   "aka": [
+    "cow meat",
+    "meat"
+   ]
+  },
+  {
+   "id": "wele",
+   "name": "Wele (cow skin)",
+   "cat": "protein",
+   "servings": [
+    {
+     "label": "1 piece",
+     "kcal": 50,
+     "p": 8
+    }
+   ],
+   "aka": [
+    "cow skin",
+    "welle"
+   ],
+   "note": "Little useful protein."
+  },
+  {
+   "id": "gizzard",
+   "name": "Gizzard",
+   "cat": "protein",
+   "servings": [
+    {
+     "label": "1 stick (grilled)",
+     "kcal": 150,
+     "p": 18
+    }
+   ],
+   "aka": [
+    "gizzards"
+   ]
+  },
+  {
+   "id": "chofi",
+   "name": "Chofi (turkey tail)",
+   "cat": "protein",
+   "servings": [
+    {
+     "label": "1 piece",
+     "kcal": 250,
+     "p": 7
+    }
+   ],
+   "aka": [
+    "turkey tail",
+    "chofi"
+   ],
+   "note": "Mostly fat."
+  },
+  {
+   "id": "khebab_beef",
+   "name": "Khebab, beef",
+   "cat": "protein",
+   "servings": [
+    {
+     "label": "1 stick",
+     "kcal": 100,
+     "p": 9
+    },
+    {
+     "label": "3 sticks",
+     "kcal": 300,
+     "p": 27
+    }
+   ],
+   "aka": [
+    "kebab",
+    "kyinkyinga",
+    "suya",
+    "khebab"
+   ]
+  },
+  {
+   "id": "khebab_chicken",
+   "name": "Khebab, chicken",
+   "cat": "protein",
+   "servings": [
+    {
+     "label": "1 stick",
+     "kcal": 90,
+     "p": 10
+    },
+    {
+     "label": "3 sticks",
+     "kcal": 270,
+     "p": 30
+    }
+   ],
+   "aka": [
+    "chicken kebab",
+    "kyinkyinga"
+   ]
+  },
+  {
+   "id": "wagashi",
+   "name": "Wagashi (local cheese)",
+   "cat": "protein",
+   "servings": [
+    {
+     "label": "100 g",
+     "kcal": 250,
+     "p": 20
+    }
+   ],
+   "aka": [
+    "wagash",
+    "waagashi",
+    "cheese"
+   ]
+  },
+  {
+   "id": "crab",
+   "name": "Crab",
+   "cat": "protein",
+   "servings": [
+    {
+     "label": "1 crab (in soup)",
+     "kcal": 80,
+     "p": 12
+    }
+   ],
+   "aka": [
+    "crab"
+   ]
+  },
+  {
+   "id": "snail",
+   "name": "Snail",
+   "cat": "protein",
+   "servings": [
+    {
+     "label": "1 large snail",
+     "kcal": 60,
+     "p": 12
+    }
+   ],
+   "aka": [
+    "nwa"
+   ]
+  },
+  {
+   "id": "whey",
+   "name": "Whey protein",
+   "cat": "protein",
+   "servings": [
+    {
+     "label": "1 scoop",
+     "kcal": 120,
+     "p": 25
+    }
+   ],
+   "aka": [
+    "protein shake",
+    "whey"
+   ]
+  },
+  {
+   "id": "rice_plain",
+   "name": "Plain rice",
+   "cat": "staples",
+   "servings": [
+    {
+     "label": "½ cup (cupped hand)",
+     "kcal": 100,
+     "p": 2
+    },
+    {
+     "label": "1 cup cooked",
+     "kcal": 200,
+     "p": 4
+    },
+    {
+     "label": "1 vendor scoop",
+     "kcal": 300,
+     "p": 6
+    }
+   ],
+   "aka": [
+    "white rice",
+    "rice"
+   ]
+  },
+  {
+   "id": "rice_ball",
+   "name": "Omo tuo (rice ball)",
+   "cat": "staples",
+   "servings": [
+    {
+     "label": "½ ball",
+     "kcal": 150,
+     "p": 3
+    },
+    {
+     "label": "1 ball",
+     "kcal": 300,
+     "p": 6
+    }
+   ],
+   "aka": [
+    "rice ball",
+    "omotuo"
+   ]
+  },
+  {
+   "id": "banku",
+   "name": "Banku",
+   "cat": "staples",
+   "servings": [
+    {
+     "label": "small ball",
+     "kcal": 250,
+     "p": 4
+    },
+    {
+     "label": "medium ball",
+     "kcal": 400,
+     "p": 7
+    },
+    {
+     "label": "large ball",
+     "kcal": 550,
+     "p": 9
+    }
+   ],
+   "aka": [
+    "banku"
+   ]
+  },
+  {
+   "id": "kenkey",
+   "name": "Kenkey (Ga or Fante)",
+   "cat": "staples",
+   "servings": [
+    {
+     "label": "½ ball",
+     "kcal": 200,
+     "p": 5
+    },
+    {
+     "label": "1 ball",
+     "kcal": 400,
+     "p": 9
+    }
+   ],
+   "aka": [
+    "dokon",
+    "komi",
+    "fante kenkey",
+    "ga kenkey"
+   ]
+  },
+  {
+   "id": "fufu",
+   "name": "Fufu",
+   "cat": "staples",
+   "servings": [
+    {
+     "label": "small ball",
+     "kcal": 300,
+     "p": 2
+    },
+    {
+     "label": "medium ball",
+     "kcal": 450,
+     "p": 3
+    },
+    {
+     "label": "large ball",
+     "kcal": 650,
+     "p": 4
+    }
+   ],
+   "aka": [
+    "fufuo",
+    "foufou"
+   ]
+  },
+  {
+   "id": "tz",
+   "name": "Tuo zaafi (TZ)",
+   "cat": "staples",
+   "servings": [
+    {
+     "label": "1 ball",
+     "kcal": 350,
+     "p": 7
+    }
+   ],
+   "aka": [
+    "tz",
+    "tuo"
+   ]
+  },
+  {
+   "id": "yam_boiled",
+   "name": "Yam, boiled",
+   "cat": "staples",
+   "servings": [
+    {
+     "label": "1 fist-size piece",
+     "kcal": 175,
+     "p": 2.5
+    },
+    {
+     "label": "2 pieces",
+     "kcal": 350,
+     "p": 5
+    }
+   ],
+   "aka": [
+    "ampesi",
+    "yam"
+   ]
+  },
+  {
+   "id": "plantain_boiled",
+   "name": "Plantain, boiled",
+   "cat": "staples",
+   "servings": [
+    {
+     "label": "½ plantain",
+     "kcal": 120,
+     "p": 1
+    },
+    {
+     "label": "1 plantain",
+     "kcal": 230,
+     "p": 2.5
+    }
+   ],
+   "aka": [
+    "ampesi",
+    "boiled plantain"
+   ]
+  },
+  {
+   "id": "plantain_fried",
+   "name": "Plantain, fried",
+   "cat": "staples",
+   "servings": [
+    {
+     "label": "5 slices",
+     "kcal": 220,
+     "p": 1
+    },
+    {
+     "label": "½ plantain, fried",
+     "kcal": 250,
+     "p": 1.5
+    }
+   ],
+   "aka": [
+    "fried plantain",
+    "dodo"
+   ]
+  },
+  {
+   "id": "cocoyam",
+   "name": "Cocoyam, boiled",
+   "cat": "staples",
+   "servings": [
+    {
+     "label": "1 piece",
+     "kcal": 150,
+     "p": 2
+    }
+   ],
+   "aka": [
+    "mankani",
+    "ampesi"
+   ]
+  },
+  {
+   "id": "gari",
+   "name": "Gari (dry)",
+   "cat": "staples",
+   "servings": [
+    {
+     "label": "½ cup",
+     "kcal": 215,
+     "p": 1
+    },
+    {
+     "label": "1 cup",
+     "kcal": 430,
+     "p": 2
+    }
+   ],
+   "aka": [
+    "garri",
+    "gari"
+   ]
+  },
+  {
+   "id": "gari_foto",
+   "name": "Gari foto",
+   "cat": "staples",
+   "servings": [
+    {
+     "label": "1 cup (with stew)",
+     "kcal": 350,
+     "p": 3
+    }
+   ],
+   "aka": [
+    "garri foto",
+    "gari jollof"
+   ]
+  },
+  {
+   "id": "bread_slice",
+   "name": "Bread (sliced)",
+   "cat": "staples",
+   "servings": [
+    {
+     "label": "1 small slice",
+     "kcal": 65,
+     "p": 2
+    },
+    {
+     "label": "1 slice",
+     "kcal": 90,
+     "p": 3
+    },
+    {
+     "label": "1 thick slice",
+     "kcal": 130,
+     "p": 4
+    }
+   ],
+   "aka": [
+    "tea bread",
+    "sliced bread",
+    "brown bread",
+    "toast"
+   ]
+  },
+  {
+   "id": "bread_loaf",
+   "name": "Bread (loaf)",
+   "cat": "staples",
+   "servings": [
+    {
+     "label": "small tea bread loaf",
+     "kcal": 400,
+     "p": 12
+    },
+    {
+     "label": "big tea bread loaf",
+     "kcal": 800,
+     "p": 24
+    },
+    {
+     "label": "1 big slice sugar / butter bread",
+     "kcal": 160,
+     "p": 4
+    }
+   ],
+   "aka": [
+    "sugar bread",
+    "butter bread",
+    "brown bread",
+    "agege"
+   ]
+  },
+  {
+   "id": "rolls",
+   "name": "Bread roll / burger bun",
+   "cat": "staples",
+   "servings": [
+    {
+     "label": "1 roll",
+     "kcal": 150,
+     "p": 5
+    }
+   ],
+   "aka": [
+    "bun",
+    "roll"
+   ]
+  },
+  {
+   "id": "jollof",
+   "name": "Jollof rice (rice only)",
+   "cat": "staples",
+   "servings": [
+    {
+     "label": "1 cup",
+     "kcal": 280,
+     "p": 5
+    },
+    {
+     "label": "1 vendor scoop",
+     "kcal": 420,
+     "p": 8
+    },
+    {
+     "label": "1 full pack, rice only",
+     "kcal": 700,
+     "p": 13
+    }
+   ],
+   "aka": [
+    "jollof"
+   ]
+  },
+  {
+   "id": "fried_rice",
+   "name": "Fried rice (rice only)",
+   "cat": "staples",
+   "servings": [
+    {
+     "label": "1 cup",
+     "kcal": 300,
+     "p": 6
+    },
+    {
+     "label": "1 vendor scoop",
+     "kcal": 450,
+     "p": 9
+    },
+    {
+     "label": "1 full pack, rice only",
+     "kcal": 750,
+     "p": 14
+    }
+   ],
+   "aka": [
+    "fried rice"
+   ]
+  },
+  {
+   "id": "waakye",
+   "name": "Waakye (rice & beans only)",
+   "cat": "staples",
+   "servings": [
+    {
+     "label": "1 cup",
+     "kcal": 250,
+     "p": 8
+    },
+    {
+     "label": "1 vendor scoop",
+     "kcal": 380,
+     "p": 12
+    }
+   ],
+   "aka": [
+    "waache",
+    "waakye"
+   ]
+  },
+  {
+   "id": "angwamo",
+   "name": "Angwa moo (oil rice)",
+   "cat": "staples",
+   "servings": [
+    {
+     "label": "1 cup",
+     "kcal": 300,
+     "p": 5
+    }
+   ],
+   "aka": [
+    "oil rice",
+    "angwa mo"
+   ]
+  },
+  {
+   "id": "couscous",
+   "name": "Couscous",
+   "cat": "staples",
+   "servings": [
+    {
+     "label": "1 cup cooked",
+     "kcal": 180,
+     "p": 6
+    }
+   ]
+  },
+  {
+   "id": "potato",
+   "name": "Irish potato, boiled",
+   "cat": "staples",
+   "servings": [
+    {
+     "label": "1 medium",
+     "kcal": 130,
+     "p": 3
+    }
+   ],
+   "aka": [
+    "potatoes",
+    "mashed potato"
+   ]
+  },
+  {
+   "id": "sweet_potato",
+   "name": "Sweet potato, boiled",
+   "cat": "staples",
+   "servings": [
+    {
+     "label": "1 medium",
+     "kcal": 110,
+     "p": 2
+    }
+   ]
+  },
+  {
+   "id": "stew_tomato",
+   "name": "Tomato stew",
+   "cat": "soups",
+   "servings": [
+    {
+     "label": "½ ladle",
+     "kcal": 60,
+     "p": 0.5
+    },
+    {
+     "label": "1 ladle",
+     "kcal": 120,
+     "p": 1
+    }
+   ],
+   "aka": [
+    "stew",
+    "gravy",
+    "ready made stew"
+   ],
+   "note": "Skim the oil on top."
+  },
+  {
+   "id": "stew_egg",
+   "name": "Egg stew (with egg)",
+   "cat": "soups",
+   "servings": [
+    {
+     "label": "1 ladle",
+     "kcal": 220,
+     "p": 10
+    }
+   ],
+   "aka": [
+    "egg stew"
+   ]
+  },
+  {
+   "id": "stew_garden_egg",
+   "name": "Garden egg stew",
+   "cat": "soups",
+   "servings": [
+    {
+     "label": "1 ladle",
+     "kcal": 150,
+     "p": 3
+    }
+   ],
+   "aka": [
+    "garden egg",
+    "eggplant stew"
+   ]
+  },
+  {
+   "id": "stew_kontomire",
+   "name": "Kontomire stew",
+   "cat": "soups",
+   "servings": [
+    {
+     "label": "1 ladle",
+     "kcal": 180,
+     "p": 6
+    }
+   ],
+   "aka": [
+    "palava sauce",
+    "nkontomire",
+    "cocoyam leaves"
+   ]
+  },
+  {
+   "id": "stew_beans",
+   "name": "Beans stew (red red)",
+   "cat": "soups",
+   "servings": [
+    {
+     "label": "1 cup",
+     "kcal": 300,
+     "p": 12
+    }
+   ],
+   "aka": [
+    "red red",
+    "beans stew",
+    "yoo ke gari"
+   ]
+  },
+  {
+   "id": "stew_okro",
+   "name": "Okro stew / soup",
+   "cat": "soups",
+   "servings": [
+    {
+     "label": "1 ladle",
+     "kcal": 150,
+     "p": 5
+    }
+   ],
+   "aka": [
+    "okra",
+    "okro"
+   ]
+  },
+  {
+   "id": "soup_light",
+   "name": "Light soup (no meat)",
+   "cat": "soups",
+   "servings": [
+    {
+     "label": "1 bowl",
+     "kcal": 100,
+     "p": 3
+    }
+   ],
+   "aka": [
+    "pepper soup",
+    "tomato soup"
+   ]
+  },
+  {
+   "id": "soup_groundnut",
+   "name": "Groundnut soup (no meat)",
+   "cat": "soups",
+   "servings": [
+    {
+     "label": "1 ladle",
+     "kcal": 250,
+     "p": 8
+    },
+    {
+     "label": "1 bowl",
+     "kcal": 450,
+     "p": 14
+    }
+   ],
+   "aka": [
+    "nkatie nkwan",
+    "peanut soup"
+   ]
+  },
+  {
+   "id": "soup_palmnut",
+   "name": "Palm nut soup (no meat)",
+   "cat": "soups",
+   "servings": [
+    {
+     "label": "1 ladle",
+     "kcal": 300,
+     "p": 5
+    },
+    {
+     "label": "1 bowl",
+     "kcal": 550,
+     "p": 9
+    }
+   ],
+   "aka": [
+    "abenkwan",
+    "banga"
+   ]
+  },
+  {
+   "id": "soup_ayoyo",
+   "name": "Ayoyo soup",
+   "cat": "soups",
+   "servings": [
+    {
+     "label": "1 ladle",
+     "kcal": 100,
+     "p": 3
+    }
+   ],
+   "aka": [
+    "ayoyo",
+    "jute leaves"
+   ]
+  },
+  {
+   "id": "waakye_plate",
+   "name": "Waakye full plate",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "everything (gari, talia, egg, wele, fish, stew, shito)",
+     "kcal": 1150,
+     "p": 40
+    },
+    {
+     "label": "smart: ¾ scoop, 3 eggs, fish, salad, small shito",
+     "kcal": 630,
+     "p": 44
+    }
+   ],
+   "aka": [
+    "waakye special"
+   ],
+   "note": "Most vendors' 'everything' plate is over 1,000 kcal."
+  },
+  {
+   "id": "indomie_joint",
+   "name": "Indomie from a joint",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "plain with egg and veg",
+     "kcal": 650,
+     "p": 16
+    },
+    {
+     "label": "with egg, sausage and veg",
+     "kcal": 750,
+     "p": 20
+    },
+    {
+     "label": "with egg and chicken",
+     "kcal": 950,
+     "p": 38
+    }
+   ],
+   "aka": [
+    "indomie joint",
+    "stir fried noodles",
+    "indomie special"
+   ]
+  },
+  {
+   "id": "fried_rice_chicken",
+   "name": "Fried rice & chicken (pack)",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "small pack",
+     "kcal": 850,
+     "p": 35
+    },
+    {
+     "label": "regular pack",
+     "kcal": 1200,
+     "p": 48
+    }
+   ],
+   "aka": [
+    "fried rice and chicken",
+    "chicken and rice"
+   ]
+  },
+  {
+   "id": "jollof_chicken",
+   "name": "Jollof & chicken (pack)",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "small pack",
+     "kcal": 800,
+     "p": 35
+    },
+    {
+     "label": "regular pack",
+     "kcal": 1150,
+     "p": 48
+    }
+   ],
+   "aka": [
+    "jollof and chicken"
+   ]
+  },
+  {
+   "id": "banku_tilapia",
+   "name": "Banku & tilapia",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "small banku plate",
+     "kcal": 650,
+     "p": 35
+    },
+    {
+     "label": "medium banku plate",
+     "kcal": 800,
+     "p": 38
+    }
+   ],
+   "aka": [
+    "banku and tilapia"
+   ]
+  },
+  {
+   "id": "kenkey_fish",
+   "name": "Kenkey & fried fish",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "1 ball + 1 fish + pepper",
+     "kcal": 700,
+     "p": 35
+    }
+   ],
+   "aka": [
+    "kenkey and fish"
+   ]
+  },
+  {
+   "id": "fufu_light",
+   "name": "Fufu & light soup with goat / fish",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "1 bowl",
+     "kcal": 800,
+     "p": 30
+    }
+   ],
+   "aka": [
+    "fufu and light soup"
+   ]
+  },
+  {
+   "id": "fufu_groundnut",
+   "name": "Fufu & groundnut soup with chicken",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "1 bowl",
+     "kcal": 1000,
+     "p": 40
+    }
+   ],
+   "aka": [
+    "fufu and groundnut soup"
+   ]
+  },
+  {
+   "id": "fufu_palmnut",
+   "name": "Fufu & palm nut soup with meat",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "1 bowl",
+     "kcal": 1050,
+     "p": 32
+    }
+   ],
+   "aka": [
+    "abenkwan and fufu"
+   ]
+  },
+  {
+   "id": "omo_tuo_soup",
+   "name": "Omo tuo & groundnut soup",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "1 bowl",
+     "kcal": 850,
+     "p": 32
+    }
+   ],
+   "aka": [
+    "rice ball and soup"
+   ]
+  },
+  {
+   "id": "banku_okro",
+   "name": "Banku & okro stew",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "1 plate",
+     "kcal": 750,
+     "p": 28
+    }
+   ],
+   "aka": [
+    "banku and okro"
+   ]
+  },
+  {
+   "id": "tz_ayoyo",
+   "name": "TZ with ayoyo & meat",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "1 plate",
+     "kcal": 650,
+     "p": 25
+    }
+   ],
+   "aka": [
+    "tuo zaafi",
+    "tz"
+   ]
+  },
+  {
+   "id": "red_red",
+   "name": "Red red with plantain",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "1 plate",
+     "kcal": 650,
+     "p": 22
+    }
+   ],
+   "aka": [
+    "red red",
+    "beans and plantain"
+   ]
+  },
+  {
+   "id": "gobe",
+   "name": "Gob3 (gari & beans)",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "1 plate with oil and plantain",
+     "kcal": 850,
+     "p": 25
+    }
+   ],
+   "aka": [
+    "gobe",
+    "gob3",
+    "beans and gari"
+   ]
+  },
+  {
+   "id": "kelewele",
+   "name": "Kelewele",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "small pack",
+     "kcal": 300,
+     "p": 2
+    },
+    {
+     "label": "big pack",
+     "kcal": 500,
+     "p": 3
+    }
+   ],
+   "aka": [
+    "spicy plantain"
+   ]
+  },
+  {
+   "id": "fried_yam",
+   "name": "Fried yam & pepper",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "1 piece",
+     "kcal": 140,
+     "p": 1.5
+    },
+    {
+     "label": "4 pieces",
+     "kcal": 560,
+     "p": 6
+    }
+   ],
+   "aka": [
+    "fried yam",
+    "yam chips"
+   ]
+  },
+  {
+   "id": "roasted_plantain",
+   "name": "Roasted plantain (kofi brokeman)",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "1 plantain",
+     "kcal": 230,
+     "p": 2
+    },
+    {
+     "label": "with 30 g groundnuts",
+     "kcal": 400,
+     "p": 9
+    }
+   ],
+   "aka": [
+    "kofi brokeman",
+    "borodi",
+    "roast plantain"
+   ]
+  },
+  {
+   "id": "corn",
+   "name": "Corn on the cob",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "1 roasted cob",
+     "kcal": 150,
+     "p": 5
+    },
+    {
+     "label": "1 boiled cob",
+     "kcal": 120,
+     "p": 4
+    }
+   ],
+   "aka": [
+    "aburo",
+    "maize"
+   ]
+  },
+  {
+   "id": "egg_sandwich",
+   "name": "Egg sandwich (street)",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "2 eggs in bread",
+     "kcal": 480,
+     "p": 18
+    },
+    {
+     "label": "3 eggs in bread",
+     "kcal": 590,
+     "p": 24
+    }
+   ],
+   "aka": [
+    "egg bread",
+    "bread and egg"
+   ]
+  },
+  {
+   "id": "hausa_koko_koose",
+   "name": "Hausa koko & koose",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "1 cup koko + 3 koose",
+     "kcal": 330,
+     "p": 10
+    }
+   ],
+   "aka": [
+    "koko and koose"
+   ]
+  },
+  {
+   "id": "koose",
+   "name": "Koose",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "1 piece",
+     "kcal": 70,
+     "p": 2.5
+    },
+    {
+     "label": "3 pieces",
+     "kcal": 210,
+     "p": 7.5
+    }
+   ],
+   "aka": [
+    "akara",
+    "kose"
+   ]
+  },
+  {
+   "id": "abolo",
+   "name": "Abolo",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "1 piece",
+     "kcal": 100,
+     "p": 2
+    }
+   ]
+  },
+  {
+   "id": "agbeli_kaklo",
+   "name": "Agbeli kaklo",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "1 piece",
+     "kcal": 110,
+     "p": 0.5
+    }
+   ],
+   "aka": [
+    "cassava fritter"
+   ]
+  },
+  {
+   "id": "ghana_salad",
+   "name": "Ghana salad (egg, beans, salad cream)",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "1 plate",
+     "kcal": 450,
+     "p": 15
+    }
+   ],
+   "aka": [
+    "salad",
+    "ghana salad"
+   ]
+  },
+  {
+   "id": "coleslaw",
+   "name": "Coleslaw",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "small portion",
+     "kcal": 120,
+     "p": 1
+    }
+   ],
+   "aka": [
+    "slaw"
+   ]
+  },
+  {
+   "id": "chips_chicken",
+   "name": "Chips & chicken",
+   "cat": "street",
+   "servings": [
+    {
+     "label": "regular",
+     "kcal": 900,
+     "p": 35
+    }
+   ],
+   "aka": [
+    "fries and chicken",
+    "chicken and chips"
+   ]
+  },
+  {
+   "id": "pizza",
+   "name": "Pizza",
+   "cat": "fastfood",
+   "servings": [
+    {
+     "label": "1 slice (medium pizza)",
+     "kcal": 250,
+     "p": 11
+    },
+    {
+     "label": "1 slice (large pizza)",
+     "kcal": 300,
+     "p": 13
+    },
+    {
+     "label": "personal / small pizza",
+     "kcal": 900,
+     "p": 38
+    },
+    {
+     "label": "whole medium (8 slices)",
+     "kcal": 2000,
+     "p": 88
+    },
+    {
+     "label": "whole large (8 slices)",
+     "kcal": 2400,
+     "p": 104
+    }
+   ],
+   "aka": [
+    "pizzaman",
+    "dominos",
+    "pepperoni",
+    "margherita"
+   ]
+  },
+  {
+   "id": "shawarma_chicken",
+   "name": "Shawarma, chicken",
+   "cat": "fastfood",
+   "servings": [
+    {
+     "label": "regular",
+     "kcal": 650,
+     "p": 32
+    },
+    {
+     "label": "jumbo / large",
+     "kcal": 950,
+     "p": 48
+    }
+   ],
+   "aka": [
+    "shawarma",
+    "schwarma",
+    "chicken wrap"
+   ],
+   "note": "Most of the calories are the mayo and cream."
+  },
+  {
+   "id": "shawarma_beef",
+   "name": "Shawarma, beef",
+   "cat": "fastfood",
+   "servings": [
+    {
+     "label": "regular",
+     "kcal": 700,
+     "p": 32
+    },
+    {
+     "label": "jumbo / large",
+     "kcal": 1000,
+     "p": 48
+    }
+   ],
+   "aka": [
+    "shawarma",
+    "beef wrap"
+   ]
+  },
+  {
+   "id": "loaded_fries",
+   "name": "Loaded fries",
+   "cat": "fastfood",
+   "servings": [
+    {
+     "label": "regular",
+     "kcal": 900,
+     "p": 30
+    },
+    {
+     "label": "large",
+     "kcal": 1300,
+     "p": 45
+    }
+   ],
+   "aka": [
+    "loaded chips"
+   ]
+  },
+  {
+   "id": "fries",
+   "name": "Fries / chips",
+   "cat": "fastfood",
+   "servings": [
+    {
+     "label": "small",
+     "kcal": 300,
+     "p": 4
+    },
+    {
+     "label": "medium",
+     "kcal": 400,
+     "p": 5
+    },
+    {
+     "label": "large",
+     "kcal": 550,
+     "p": 7
+    }
+   ],
+   "aka": [
+    "chips",
+    "french fries"
+   ]
+  },
+  {
+   "id": "burger_chicken",
+   "name": "Chicken burger",
+   "cat": "fastfood",
+   "servings": [
+    {
+     "label": "1 burger",
+     "kcal": 500,
+     "p": 25
+    }
+   ],
+   "aka": [
+    "burger",
+    "zinger"
+   ]
+  },
+  {
+   "id": "burger_beef",
+   "name": "Beef burger",
+   "cat": "fastfood",
+   "servings": [
+    {
+     "label": "1 burger",
+     "kcal": 550,
+     "p": 28
+    },
+    {
+     "label": "cheeseburger",
+     "kcal": 600,
+     "p": 32
+    },
+    {
+     "label": "double burger",
+     "kcal": 850,
+     "p": 48
+    }
+   ],
+   "aka": [
+    "burger",
+    "hamburger",
+    "cheeseburger"
+   ]
+  },
+  {
+   "id": "wings",
+   "name": "Chicken wings",
+   "cat": "fastfood",
+   "servings": [
+    {
+     "label": "6 wings",
+     "kcal": 600,
+     "p": 42
+    },
+    {
+     "label": "10 wings",
+     "kcal": 1000,
+     "p": 70
+    }
+   ],
+   "aka": [
+    "wings",
+    "spicy wings"
+   ]
+  },
+  {
+   "id": "nuggets",
+   "name": "Chicken nuggets",
+   "cat": "fastfood",
+   "servings": [
+    {
+     "label": "6 pieces",
+     "kcal": 280,
+     "p": 14
+    },
+    {
+     "label": "10 pieces",
+     "kcal": 470,
+     "p": 24
+    }
+   ],
+   "aka": [
+    "nuggets"
+   ]
+  },
+  {
+   "id": "hot_dog",
+   "name": "Hot dog",
+   "cat": "fastfood",
+   "servings": [
+    {
+     "label": "1 hot dog",
+     "kcal": 300,
+     "p": 10
+    }
+   ],
+   "aka": [
+    "hotdog"
+   ]
+  },
+  {
+   "id": "club_sandwich",
+   "name": "Club sandwich",
+   "cat": "fastfood",
+   "servings": [
+    {
+     "label": "1 sandwich",
+     "kcal": 600,
+     "p": 30
+    }
+   ],
+   "aka": [
+    "sandwich"
+   ]
+  },
+  {
+   "id": "spring_roll",
+   "name": "Spring roll",
+   "cat": "fastfood",
+   "servings": [
+    {
+     "label": "1 roll",
+     "kcal": 100,
+     "p": 3
+    },
+    {
+     "label": "4 rolls",
+     "kcal": 400,
+     "p": 12
+    }
+   ],
+   "aka": [
+    "spring rolls"
+   ]
+  },
+  {
+   "id": "samosa",
+   "name": "Samosa",
+   "cat": "fastfood",
+   "servings": [
+    {
+     "label": "1 samosa",
+     "kcal": 130,
+     "p": 3
+    },
+    {
+     "label": "4 samosas",
+     "kcal": 520,
+     "p": 12
+    }
+   ],
+   "aka": [
+    "samosas"
+   ]
+  },
+  {
+   "id": "pancakes",
+   "name": "Pancakes",
+   "cat": "fastfood",
+   "servings": [
+    {
+     "label": "2 with syrup",
+     "kcal": 350,
+     "p": 8
+    }
+   ],
+   "aka": [
+    "pancake",
+    "crepe"
+   ]
+  },
+  {
+   "id": "ice_cream",
+   "name": "Ice cream",
+   "cat": "fastfood",
+   "servings": [
+    {
+     "label": "1 scoop",
+     "kcal": 140,
+     "p": 2
+    },
+    {
+     "label": "1 cone",
+     "kcal": 250,
+     "p": 4
+    }
+   ],
+   "aka": [
+    "icecream",
+    "cone"
+   ]
+  },
+  {
+   "id": "meat_pie",
+   "name": "Meat pie",
+   "cat": "snacks",
+   "servings": [
+    {
+     "label": "1 pie",
+     "kcal": 400,
+     "p": 9
+    }
+   ],
+   "aka": [
+    "pie"
+   ]
+  },
+  {
+   "id": "chicken_pie",
+   "name": "Chicken pie",
+   "cat": "snacks",
+   "servings": [
+    {
+     "label": "1 pie",
+     "kcal": 350,
+     "p": 10
+    }
+   ],
+   "aka": [
+    "pie"
+   ]
+  },
+  {
+   "id": "fish_pie",
+   "name": "Fish pie",
+   "cat": "snacks",
+   "servings": [
+    {
+     "label": "1 pie",
+     "kcal": 300,
+     "p": 8
+    }
+   ],
+   "aka": [
+    "pie"
+   ]
+  },
+  {
+   "id": "sausage_roll",
+   "name": "Sausage roll",
+   "cat": "snacks",
+   "servings": [
+    {
+     "label": "1 roll",
+     "kcal": 300,
+     "p": 7
+    }
+   ]
+  },
+  {
+   "id": "egg_roll",
+   "name": "Egg roll",
+   "cat": "snacks",
+   "servings": [
+    {
+     "label": "1 roll",
+     "kcal": 350,
+     "p": 10
+    }
+   ],
+   "aka": [
+    "eggroll"
+   ]
+  },
+  {
+   "id": "bofrot",
+   "name": "Bofrot / puff-puff",
+   "cat": "snacks",
+   "servings": [
+    {
+     "label": "1 small",
+     "kcal": 110,
+     "p": 2
+    },
+    {
+     "label": "1 big",
+     "kcal": 200,
+     "p": 3
+    },
+    {
+     "label": "5 small",
+     "kcal": 550,
+     "p": 10
+    }
+   ],
+   "aka": [
+    "puff puff",
+    "buffloaf",
+    "togbei"
+   ]
+  },
+  {
+   "id": "doughnut",
+   "name": "Doughnut",
+   "cat": "snacks",
+   "servings": [
+    {
+     "label": "1 doughnut",
+     "kcal": 250,
+     "p": 4
+    }
+   ],
+   "aka": [
+    "donut"
+   ]
+  },
+  {
+   "id": "rock_bun",
+   "name": "Rock bun / cake slice",
+   "cat": "snacks",
+   "servings": [
+    {
+     "label": "1 piece",
+     "kcal": 250,
+     "p": 4
+    }
+   ],
+   "aka": [
+    "cake",
+    "bun"
+   ]
+  },
+  {
+   "id": "chin_chin",
+   "name": "Chin chin",
+   "cat": "snacks",
+   "servings": [
+    {
+     "label": "small pack",
+     "kcal": 300,
+     "p": 5
+    }
+   ],
+   "aka": [
+    "chinchin"
+   ]
+  },
+  {
+   "id": "plantain_chips",
+   "name": "Plantain chips",
+   "cat": "snacks",
+   "servings": [
+    {
+     "label": "small pack",
+     "kcal": 250,
+     "p": 1
+    },
+    {
+     "label": "big pack",
+     "kcal": 500,
+     "p": 2
+    }
+   ],
+   "aka": [
+    "chips",
+    "plantain chips"
+   ]
+  },
+  {
+   "id": "biscuits",
+   "name": "Biscuits",
+   "cat": "snacks",
+   "servings": [
+    {
+     "label": "4 crackers / digestives",
+     "kcal": 140,
+     "p": 2
+    },
+    {
+     "label": "1 small pack",
+     "kcal": 150,
+     "p": 2
+    }
+   ],
+   "aka": [
+    "cream crackers",
+    "digestive",
+    "cookies",
+    "choco"
+   ]
+  },
+  {
+   "id": "chocolate",
+   "name": "Chocolate bar",
+   "cat": "snacks",
+   "servings": [
+    {
+     "label": "small bar (50 g)",
+     "kcal": 260,
+     "p": 3
+    }
+   ],
+   "aka": [
+    "kingsbite",
+    "golden tree"
+   ]
+  },
+  {
+   "id": "cashew",
+   "name": "Cashew nuts",
+   "cat": "snacks",
+   "servings": [
+    {
+     "label": "small handful (30 g)",
+     "kcal": 165,
+     "p": 5
+    }
+   ],
+   "aka": [
+    "cashews"
+   ]
+  },
+  {
+   "id": "tiger_nuts",
+   "name": "Tiger nuts",
+   "cat": "snacks",
+   "servings": [
+    {
+     "label": "small handful (30 g)",
+     "kcal": 140,
+     "p": 2
+    }
+   ],
+   "aka": [
+    "atadwe"
+   ]
+  },
+  {
+   "id": "popcorn",
+   "name": "Popcorn",
+   "cat": "snacks",
+   "servings": [
+    {
+     "label": "small bag",
+     "kcal": 150,
+     "p": 3
+    }
+   ],
+   "aka": [
+    "pop corn"
+   ]
+  },
+  {
+   "id": "yoghurt_plain",
+   "name": "Plain yoghurt",
+   "cat": "snacks",
+   "servings": [
+    {
+     "label": "200 ml",
+     "kcal": 130,
+     "p": 9
+    },
+    {
+     "label": "cup (500 ml)",
+     "kcal": 320,
+     "p": 22
+    }
+   ],
+   "aka": [
+    "yogurt",
+    "yoghurt"
+   ]
+  },
+  {
+   "id": "yoghurt_sweet",
+   "name": "Sweet yoghurt drink",
+   "cat": "snacks",
+   "servings": [
+    {
+     "label": "1 sachet / bottle",
+     "kcal": 220,
+     "p": 6
+    }
+   ],
+   "aka": [
+    "fan yogo",
+    "yomi",
+    "yogurt drink"
+   ]
+  },
+  {
+   "id": "fan_ice",
+   "name": "FanIce / FanChoco",
+   "cat": "snacks",
+   "servings": [
+    {
+     "label": "1 sachet",
+     "kcal": 150,
+     "p": 3
+    }
+   ],
+   "aka": [
+    "fanice",
+    "fanchoco",
+    "fanmilk",
+    "ice cream sachet"
+   ]
+  },
+  {
+   "id": "koko",
+   "name": "Hausa koko / koko",
+   "cat": "breakfast",
+   "servings": [
+    {
+     "label": "1 cup, with sugar",
+     "kcal": 130,
+     "p": 3
+    },
+    {
+     "label": "1 cup, with milk and sugar",
+     "kcal": 180,
+     "p": 5
+    }
+   ],
+   "aka": [
+    "porridge",
+    "hausa koko",
+    "koko"
+   ]
+  },
+  {
+   "id": "tom_brown",
+   "name": "Tom brown",
+   "cat": "breakfast",
+   "servings": [
+    {
+     "label": "1 cup with milk and sugar",
+     "kcal": 250,
+     "p": 7
+    }
+   ],
+   "aka": [
+    "tombrown"
+   ]
+  },
+  {
+   "id": "rice_water",
+   "name": "Rice water",
+   "cat": "breakfast",
+   "servings": [
+    {
+     "label": "1 cup with milk and sugar",
+     "kcal": 200,
+     "p": 4
+    }
+   ],
+   "aka": [
+    "rice porridge"
+   ]
+  },
+  {
+   "id": "oats_porridge",
+   "name": "Oats porridge",
+   "cat": "breakfast",
+   "servings": [
+    {
+     "label": "1 bowl with milk and sugar",
+     "kcal": 300,
+     "p": 10
+    }
+   ],
+   "aka": [
+    "oats"
+   ]
+  },
+  {
+   "id": "cornflakes",
+   "name": "Cornflakes with milk",
+   "cat": "breakfast",
+   "servings": [
+    {
+     "label": "1 bowl",
+     "kcal": 250,
+     "p": 8
+    }
+   ],
+   "aka": [
+    "cereal",
+    "cornflakes"
+   ]
+  },
+  {
+   "id": "weetabix",
+   "name": "Weetabix with milk",
+   "cat": "breakfast",
+   "servings": [
+    {
+     "label": "2 biscuits",
+     "kcal": 260,
+     "p": 10
+    }
+   ],
+   "aka": [
+    "weetabix"
+   ]
+  },
+  {
+   "id": "ekuegbemi",
+   "name": "Ekuegbemi / millet porridge",
+   "cat": "breakfast",
+   "servings": [
+    {
+     "label": "1 cup with sugar",
+     "kcal": 150,
+     "p": 3
+    }
+   ],
+   "aka": [
+    "millet porridge",
+    "oblayo"
+   ]
+  },
+  {
+   "id": "water",
+   "name": "Water",
+   "cat": "drinks",
+   "servings": [
+    {
+     "label": "1 sachet / bottle",
+     "kcal": 0,
+     "p": 0
+    }
+   ],
+   "aka": [
+    "pure water",
+    "sachet water"
+   ]
+  },
+  {
+   "id": "tea_milk_sugar",
+   "name": "Tea with milk & sugar",
+   "cat": "drinks",
+   "servings": [
+    {
+     "label": "2 tsp sugar, 2 tbsp milk",
+     "kcal": 150,
+     "p": 4
+    },
+    {
+     "label": "1 tsp sugar, 2 tbsp milk",
+     "kcal": 130,
+     "p": 4
+    },
+    {
+     "label": "no sugar, 2 tbsp milk",
+     "kcal": 100,
+     "p": 4
+    }
+   ],
+   "aka": [
+    "lipton",
+    "tea"
+   ]
+  },
+  {
+   "id": "tea_milk_honey",
+   "name": "Tea with milk & honey",
+   "cat": "drinks",
+   "servings": [
+    {
+     "label": "2 tsp honey, 2 tbsp milk",
+     "kcal": 120,
+     "p": 4
+    }
+   ],
+   "aka": [
+    "lipton",
+    "tea"
+   ]
+  },
+  {
+   "id": "milo_drink",
+   "name": "Milo drink",
+   "cat": "drinks",
+   "servings": [
+    {
+     "label": "Milo + milk + 2 tsp sugar",
+     "kcal": 200,
+     "p": 6
+    },
+    {
+     "label": "Milo + milk, no sugar",
+     "kcal": 140,
+     "p": 5.5
+    },
+    {
+     "label": "Milo with lots of milk (5 tbsp)",
+     "kcal": 260,
+     "p": 11.5
+    }
+   ],
+   "aka": [
+    "milo",
+    "chocolate drink"
+   ]
+  },
+  {
+   "id": "coffee",
+   "name": "Coffee with milk & sugar",
+   "cat": "drinks",
+   "servings": [
+    {
+     "label": "1 cup",
+     "kcal": 120,
+     "p": 3
+    }
+   ],
+   "aka": [
+    "nescafe",
+    "coffee"
+   ]
+  },
+  {
+   "id": "soda",
+   "name": "Soft drink (Coke, Fanta, Sprite)",
+   "cat": "drinks",
+   "servings": [
+    {
+     "label": "330 ml can / bottle",
+     "kcal": 140,
+     "p": 0
+    },
+    {
+     "label": "500 ml plastic",
+     "kcal": 210,
+     "p": 0
+    },
+    {
+     "label": "1 litre",
+     "kcal": 420,
+     "p": 0
+    }
+   ],
+   "aka": [
+    "coke",
+    "fanta",
+    "sprite",
+    "pepsi",
+    "soda",
+    "minerals",
+    "verna"
+   ]
+  },
+  {
+   "id": "malt",
+   "name": "Malt drink",
+   "cat": "drinks",
+   "servings": [
+    {
+     "label": "330 ml",
+     "kcal": 180,
+     "p": 2
+    }
+   ],
+   "aka": [
+    "malta guinness",
+    "beta malt",
+    "malt"
+   ]
+  },
+  {
+   "id": "sobolo",
+   "name": "Sobolo",
+   "cat": "drinks",
+   "servings": [
+    {
+     "label": "350 ml bottle",
+     "kcal": 130,
+     "p": 0.5
+    },
+    {
+     "label": "500 ml bottle",
+     "kcal": 180,
+     "p": 0.5
+    }
+   ],
+   "aka": [
+    "bissap",
+    "zobo",
+    "hibiscus"
+   ]
+  },
+  {
+   "id": "asaana",
+   "name": "Asaana",
+   "cat": "drinks",
+   "servings": [
+    {
+     "label": "500 ml",
+     "kcal": 200,
+     "p": 1
+    }
+   ],
+   "aka": [
+    "caramel drink"
+   ]
+  },
+  {
+   "id": "juice",
+   "name": "Fruit juice (box / bottle)",
+   "cat": "drinks",
+   "servings": [
+    {
+     "label": "small (250 ml)",
+     "kcal": 115,
+     "p": 0
+    },
+    {
+     "label": "1 litre",
+     "kcal": 460,
+     "p": 0
+    }
+   ],
+   "aka": [
+    "kalyppo",
+    "ceres",
+    "tampico",
+    "juice"
+   ]
+  },
+  {
+   "id": "energy_drink",
+   "name": "Energy drink",
+   "cat": "drinks",
+   "servings": [
+    {
+     "label": "250 ml",
+     "kcal": 115,
+     "p": 0
+    },
+    {
+     "label": "330 ml",
+     "kcal": 150,
+     "p": 0
+    }
+   ],
+   "aka": [
+    "rush",
+    "storm",
+    "red bull",
+    "monster",
+    "energy"
+   ]
+  },
+  {
+   "id": "alvaro",
+   "name": "Alvaro",
+   "cat": "drinks",
+   "servings": [
+    {
+     "label": "330 ml",
+     "kcal": 140,
+     "p": 0
+    }
+   ]
+  },
+  {
+   "id": "beer",
+   "name": "Beer",
+   "cat": "drinks",
+   "servings": [
+    {
+     "label": "330 ml can",
+     "kcal": 140,
+     "p": 1
+    },
+    {
+     "label": "625 ml bottle",
+     "kcal": 260,
+     "p": 2
+    }
+   ],
+   "aka": [
+    "club",
+    "star",
+    "guinness",
+    "beer"
+   ]
+  },
+  {
+   "id": "fresh_juice",
+   "name": "Fresh juice (orange / pineapple)",
+   "cat": "drinks",
+   "servings": [
+    {
+     "label": "500 ml",
+     "kcal": 230,
+     "p": 3
+    }
+   ],
+   "aka": [
+    "orange juice",
+    "pineapple juice"
+   ]
+  },
+  {
+   "id": "coconut_water",
+   "name": "Coconut water",
+   "cat": "drinks",
+   "servings": [
+    {
+     "label": "1 coconut",
+     "kcal": 45,
+     "p": 1
+    }
+   ],
+   "aka": [
+    "coconut"
+   ]
+  },
+  {
+   "id": "banana",
+   "name": "Banana",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "1 medium",
+     "kcal": 100,
+     "p": 1
+    }
+   ],
+   "aka": [
+    "banana"
+   ]
+  },
+  {
+   "id": "orange",
+   "name": "Orange",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "1 orange",
+     "kcal": 60,
+     "p": 1
+    }
+   ],
+   "aka": [
+    "orange"
+   ]
+  },
+  {
+   "id": "pineapple",
+   "name": "Pineapple",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "1 cup / slice",
+     "kcal": 80,
+     "p": 1
+    }
+   ]
+  },
+  {
+   "id": "watermelon",
+   "name": "Watermelon",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "1 slice",
+     "kcal": 85,
+     "p": 1.5
+    }
+   ]
+  },
+  {
+   "id": "pawpaw",
+   "name": "Pawpaw",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "1 cup",
+     "kcal": 60,
+     "p": 1
+    }
+   ],
+   "aka": [
+    "papaya"
+   ]
+  },
+  {
+   "id": "mango",
+   "name": "Mango",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "1 medium",
+     "kcal": 200,
+     "p": 2
+    }
+   ]
+  },
+  {
+   "id": "apple",
+   "name": "Apple",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "1 apple",
+     "kcal": 95,
+     "p": 0.5
+    }
+   ]
+  },
+  {
+   "id": "avocado",
+   "name": "Avocado (pear)",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "½ avocado",
+     "kcal": 160,
+     "p": 2
+    }
+   ],
+   "aka": [
+    "pear",
+    "avocado"
+   ]
+  },
+  {
+   "id": "coconut",
+   "name": "Coconut (flesh)",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "1 piece",
+     "kcal": 160,
+     "p": 1.5
+    }
+   ]
+  },
+  {
+   "id": "veg_side",
+   "name": "Vegetables / salad side",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "1 cup cabbage, cucumber, carrot, tomato",
+     "kcal": 30,
+     "p": 1
+    }
+   ],
+   "aka": [
+    "salad",
+    "cabbage",
+    "cucumber",
+    "carrot",
+    "lettuce",
+    "tomato",
+    "onion"
+   ]
+  },
+  {
+   "id": "garden_eggs",
+   "name": "Garden eggs",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "2 garden eggs",
+     "kcal": 40,
+     "p": 1
+    }
+   ],
+   "aka": [
+    "eggplant"
+   ]
+  },
+  {
+   "id": "oil",
+   "name": "Cooking oil",
+   "cat": "extras",
+   "servings": [
+    {
+     "label": "1 tsp",
+     "kcal": 40,
+     "p": 0
+    },
+    {
+     "label": "1 tbsp",
+     "kcal": 120,
+     "p": 0
+    }
+   ],
+   "aka": [
+    "vegetable oil",
+    "frytol",
+    "palm oil"
+   ]
+  },
+  {
+   "id": "shito",
+   "name": "Shito",
+   "cat": "extras",
+   "servings": [
+    {
+     "label": "1 tsp",
+     "kcal": 30,
+     "p": 0.3
+    },
+    {
+     "label": "1 tbsp",
+     "kcal": 90,
+     "p": 1
+    }
+   ],
+   "aka": [
+    "black pepper sauce"
+   ]
+  },
+  {
+   "id": "ketchup",
+   "name": "Ketchup",
+   "cat": "extras",
+   "servings": [
+    {
+     "label": "1 tbsp",
+     "kcal": 20,
+     "p": 0
+    }
+   ],
+   "aka": [
+    "tomato sauce"
+   ]
+  },
+  {
+   "id": "mayonnaise",
+   "name": "Mayonnaise",
+   "cat": "extras",
+   "servings": [
+    {
+     "label": "1 tbsp",
+     "kcal": 95,
+     "p": 0
+    }
+   ],
+   "aka": [
+    "mayo"
+   ]
+  },
+  {
+   "id": "salad_cream",
+   "name": "Salad cream",
+   "cat": "extras",
+   "servings": [
+    {
+     "label": "1 tbsp",
+     "kcal": 60,
+     "p": 0
+    }
+   ]
+  },
+  {
+   "id": "margarine",
+   "name": "Margarine / butter",
+   "cat": "extras",
+   "servings": [
+    {
+     "label": "1 tsp",
+     "kcal": 35,
+     "p": 0
+    },
+    {
+     "label": "1 tbsp",
+     "kcal": 100,
+     "p": 0
+    }
+   ],
+   "aka": [
+    "blue band",
+    "butter"
+   ]
+  },
+  {
+   "id": "groundnut_paste",
+   "name": "Groundnut paste",
+   "cat": "extras",
+   "servings": [
+    {
+     "label": "1 tbsp",
+     "kcal": 95,
+     "p": 4
+    }
+   ],
+   "aka": [
+    "peanut butter"
+   ]
+  },
+  {
+   "id": "sugar",
+   "name": "Sugar",
+   "cat": "extras",
+   "servings": [
+    {
+     "label": "1 tsp",
+     "kcal": 16,
+     "p": 0
+    },
+    {
+     "label": "1 cube",
+     "kcal": 10,
+     "p": 0
+    }
+   ],
+   "aka": [
+    "sugar"
+   ]
+  },
+  {
+   "id": "honey",
+   "name": "Honey",
+   "cat": "extras",
+   "servings": [
+    {
+     "label": "1 tsp",
+     "kcal": 20,
+     "p": 0
+    },
+    {
+     "label": "1 tbsp",
+     "kcal": 60,
+     "p": 0
+    }
+   ]
+  },
+  {
+   "id": "jam",
+   "name": "Jam",
+   "cat": "extras",
+   "servings": [
+    {
+     "label": "1 tbsp",
+     "kcal": 50,
+     "p": 0
+    }
+   ]
+  },
+  {
+   "id": "choco_spread",
+   "name": "Chocolate spread",
+   "cat": "extras",
+   "servings": [
+    {
+     "label": "1 tbsp",
+     "kcal": 100,
+     "p": 1
+    }
+   ],
+   "aka": [
+    "nutella"
+   ]
+  },
+  {
+   "id": "pepper",
+   "name": "Pepper (ground / fresh)",
+   "cat": "extras",
+   "servings": [
+    {
+     "label": "1 serving",
+     "kcal": 20,
+     "p": 0.5
+    }
+   ],
+   "aka": [
+    "ground pepper",
+    "green pepper",
+    "pepper sauce"
+   ]
+  },
+  {
+   "id": "shrimp_powder",
+   "name": "Shrimp powder / abobi",
+   "cat": "extras",
+   "servings": [
+    {
+     "label": "1 tbsp",
+     "kcal": 30,
+     "p": 6
+    }
+   ],
+   "aka": [
+    "abobi",
+    "crayfish",
+    "momone powder"
+   ]
+  }
+ ]
+}
