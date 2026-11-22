@@ -1,6 +1,10 @@
 // Calorie and protein calculator: the food list (`assets/data/foods.json`), search, and the
 // day's running list of what was eaten.
 //
+// Some foods are build-ups: a base (a cup of tea, 2 eggs, a pack of Indomie) plus add-ons the
+// user picks amounts of (sugar, honey, milk, onion, sausage...). Each add-on points at another
+// food's serving, so its values come from one place.
+//
 // Pure Dart. The list is kept for one day; the protein it adds up to is logged to the Food >
 // Today checklist as protein points (1 point = 20 g, in half points), and only the difference
 // since the last log is sent, so logging twice never double-counts.
@@ -26,6 +30,34 @@ class FoodCategory {
   final String id, label;
 }
 
+/// Something that can be added to a build-up food, in [step]s of one [serving] of [foodId]
+/// ("1 tsp" of sugar, shown as "2 tsp sugar").
+class FoodAddon {
+  const FoodAddon({
+    required this.foodId,
+    required this.name,
+    required this.serving,
+    required this.one,
+    required this.many,
+    this.step = 1,
+  });
+
+  final String foodId;
+
+  /// Short name shown in the build-up ("Egg" rather than "Egg, boiled").
+  final String name;
+
+  /// Values for a quantity of 1.
+  final FoodServing serving;
+
+  /// Unit text for one and for more than one ("tsp sugar" / "tsp sugar", "egg" / "eggs").
+  final String one, many;
+  final double step;
+
+  CalcExtra toExtra(double qty) =>
+      CalcExtra(foodId: foodId, one: one, many: many, kcal: serving.kcal, proteinG: serving.proteinG, qty: qty);
+}
+
 class Food {
   const Food({
     required this.id,
@@ -34,6 +66,7 @@ class Food {
     required this.servings,
     this.aka = const [],
     this.note,
+    this.addons = const [],
   });
 
   factory Food.fromJson(Map<String, dynamic> j) => Food(
@@ -51,6 +84,14 @@ class Food {
   /// Other names people search for ("talia", "puff puff", "pear").
   final List<String> aka;
   final String? note;
+
+  /// What can be added on top of the base serving (empty for a plain pick).
+  final List<FoodAddon> addons;
+
+  bool get isBuildUp => addons.isNotEmpty;
+
+  Food _withAddons(List<FoodAddon> addons) =>
+      Food(id: id, name: name, category: category, servings: servings, aka: aka, note: note, addons: addons);
 }
 
 /// The bundled food list.
@@ -72,7 +113,37 @@ class FoodDatabase {
       if (f.servings.isEmpty) throw FormatException('food "${f.id}" has no servings');
       foods.add(f);
     }
-    return FoodDatabase(categories: categories, foods: foods, note: j['note'] as String?);
+    // Second pass: add-ons point at other foods' servings.
+    final byId = {for (final f in foods) f.id: f};
+    final rawById = {for (final raw in j['foods'] as List) (raw as Map)['id'] as String: raw};
+    final built = [
+      for (final f in foods)
+        f._withAddons([
+          for (final a in (rawById[f.id]!['addons'] as List? ?? const []))
+            _addon(f.id, (a as Map).cast<String, dynamic>(), byId),
+        ]),
+    ];
+    return FoodDatabase(categories: categories, foods: built, note: j['note'] as String?);
+  }
+
+  static FoodAddon _addon(String owner, Map<String, dynamic> a, Map<String, Food> byId) {
+    final target = byId[a['food']];
+    if (target == null) throw FormatException('food "$owner" has an add-on of unknown food "${a['food']}"');
+    final index = (a['s'] as num?)?.toInt() ?? 0;
+    if (index < 0 || index >= target.servings.length) {
+      throw FormatException('food "$owner" add-on "${target.id}" has no serving $index');
+    }
+    final one = a['one'] as String;
+    final step = (a['step'] as num?)?.toDouble() ?? 1;
+    if (step <= 0) throw FormatException('food "$owner" add-on "${target.id}" has step $step');
+    return FoodAddon(
+      foodId: target.id,
+      name: a['name'] as String? ?? target.name,
+      serving: target.servings[index],
+      one: one,
+      many: a['many'] as String? ?? one,
+      step: step,
+    );
   }
 
   final List<FoodCategory> categories;
@@ -116,8 +187,60 @@ class FoodDatabase {
       s.toLowerCase().replaceAll('ɛ', 'e').replaceAll('ɔ', 'o').replaceAll(RegExp(r'[^a-z0-9]+'), ' ').trim();
 }
 
-/// One line of the day's list: [qty] x a serving. The serving's values are copied in, so the
-/// list stays right even if the food list changes. [foodId] is null for a food typed in by hand.
+/// An add-on in a list entry ("2 tsp honey"), with its values copied in.
+class CalcExtra {
+  const CalcExtra({
+    required this.foodId,
+    required this.one,
+    required this.many,
+    required this.kcal,
+    required this.proteinG,
+    required this.qty,
+  });
+
+  factory CalcExtra.fromJson(Map<String, dynamic> j) => CalcExtra(
+    foodId: j['food'] as String,
+    one: j['one'] as String,
+    many: j['many'] as String? ?? j['one'] as String,
+    kcal: (j['kcal'] as num).toDouble(),
+    proteinG: (j['p'] as num).toDouble(),
+    qty: (j['qty'] as num).toDouble(),
+  );
+
+  final String foodId, one, many;
+
+  /// Per 1 of [qty].
+  final double kcal, proteinG;
+  final double qty;
+
+  double get totalKcal => kcal * qty;
+  double get totalProteinG => proteinG * qty;
+
+  /// "2 tsp honey", "½ onion", "3 eggs".
+  String get label => '${quantityText(qty)} ${qty > 1 ? many : one}';
+
+  Map<String, dynamic> toJson() => {
+    'food': foodId,
+    'one': one,
+    if (many != one) 'many': many,
+    'kcal': kcal,
+    'p': proteinG,
+    'qty': qty,
+  };
+}
+
+/// 0.5 -> "½", 1.5 -> "1½", 2 -> "2", 0.25 -> "0.25".
+String quantityText(double q) {
+  final whole = q.floor();
+  final rest = q - whole;
+  if ((rest - 0.5).abs() < 1e-9) return whole == 0 ? '½' : '$whole½';
+  if (rest.abs() < 1e-9) return '$whole';
+  return q.toStringAsFixed(2).replaceFirst(RegExp(r'0+$'), '');
+}
+
+/// One line of the day's list: [qty] x (a serving plus its [extras]). Values are copied in, so
+/// the list stays right even if the food list changes. [foodId] is null for a food typed in by
+/// hand.
 class CalcEntry {
   const CalcEntry({
     this.foodId,
@@ -126,16 +249,19 @@ class CalcEntry {
     required this.kcal,
     required this.proteinG,
     this.qty = 1,
+    this.extras = const [],
   });
 
-  factory CalcEntry.of(Food food, FoodServing serving, {double qty = 1}) => CalcEntry(
-    foodId: food.id,
-    name: food.name,
-    serving: serving.label,
-    kcal: serving.kcal,
-    proteinG: serving.proteinG,
-    qty: qty,
-  );
+  factory CalcEntry.of(Food food, FoodServing serving, {double qty = 1, List<CalcExtra> extras = const []}) =>
+      CalcEntry(
+        foodId: food.id,
+        name: food.name,
+        serving: serving.label,
+        kcal: serving.kcal,
+        proteinG: serving.proteinG,
+        qty: qty,
+        extras: extras,
+      );
 
   factory CalcEntry.fromJson(Map<String, dynamic> j) => CalcEntry(
     foodId: j['food'] as String?,
@@ -144,20 +270,38 @@ class CalcEntry {
     kcal: (j['kcal'] as num).toDouble(),
     proteinG: (j['p'] as num).toDouble(),
     qty: (j['qty'] as num?)?.toDouble() ?? 1,
+    extras: [
+      for (final x in (j['extras'] as List? ?? const [])) CalcExtra.fromJson((x as Map).cast<String, dynamic>()),
+    ],
   );
 
   final String? foodId;
   final String name, serving;
 
-  /// Per serving.
+  /// The base serving, without [extras].
   final double kcal, proteinG;
   final double qty;
 
-  double get totalKcal => kcal * qty;
-  double get totalProteinG => proteinG * qty;
+  /// Add-ons in each serving (a cup of tea's sugar and milk), multiplied by [qty] with it.
+  final List<CalcExtra> extras;
 
-  CalcEntry copyWith({double? qty}) =>
-      CalcEntry(foodId: foodId, name: name, serving: serving, kcal: kcal, proteinG: proteinG, qty: qty ?? this.qty);
+  double get kcalEach => kcal + extras.fold(0.0, (s, x) => s + x.totalKcal);
+  double get proteinGEach => proteinG + extras.fold(0.0, (s, x) => s + x.totalProteinG);
+  double get totalKcal => kcalEach * qty;
+  double get totalProteinG => proteinGEach * qty;
+
+  /// "1 cup (tea bag) + 2 tsp honey, 2 tbsp milk powder".
+  String get description => extras.isEmpty ? serving : '$serving + ${[for (final x in extras) x.label].join(', ')}';
+
+  CalcEntry copyWith({double? qty}) => CalcEntry(
+    foodId: foodId,
+    name: name,
+    serving: serving,
+    kcal: kcal,
+    proteinG: proteinG,
+    qty: qty ?? this.qty,
+    extras: extras,
+  );
 
   Map<String, dynamic> toJson() => {
     if (foodId != null) 'food': foodId,
@@ -166,6 +310,7 @@ class CalcEntry {
     'kcal': kcal,
     'p': proteinG,
     'qty': qty,
+    if (extras.isNotEmpty) 'extras': [for (final x in extras) x.toJson()],
   };
 }
 

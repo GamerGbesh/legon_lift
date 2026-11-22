@@ -299,7 +299,7 @@ class _EntryTile extends StatelessWidget {
         minTileHeight: Sizes.minTap,
         contentPadding: const EdgeInsets.symmetric(horizontal: Space.l, vertical: Space.xs),
         title: Text(entry.name, style: AppText.bodyStrong.copyWith(color: t.onSurface)),
-        subtitle: Text('$qty${entry.serving}', style: AppText.label.copyWith(color: t.muted)),
+        subtitle: Text('$qty${entry.description}', style: AppText.label.copyWith(color: t.muted)),
         trailing: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.end,
@@ -334,16 +334,25 @@ Future<void> _remove(BuildContext context, FoodCalculatorStore store, int index,
 }
 
 Future<void> _edit(BuildContext context, FoodCalculatorStore store, int index, CalcEntry entry) async {
-  final food = entry.foodId == null ? null : store.db?.byId(entry.foodId!);
+  final listed = entry.foodId == null ? null : store.db?.byId(entry.foodId!);
+  // An entry saved with a serving the food no longer has keeps its own values (only the amount
+  // can change), so editing never silently swaps in a different serving.
+  final food = listed != null && listed.servings.any((s) => s.label == entry.serving) ? listed : null;
   final servings = food?.servings ?? [FoodServing(label: entry.serving, kcal: entry.kcal, proteinG: entry.proteinG)];
   final initial = food == null ? 0 : servings.indexWhere((s) => s.label == entry.serving);
+  final addons = food?.addons ?? const <FoodAddon>[];
   final result = await _showServingSheet(
     context,
     name: entry.name,
     note: food?.note,
     servings: servings,
+    addons: addons,
     initialIndex: initial < 0 ? 0 : initial,
     initialQty: entry.qty,
+    initialAddonQty: [
+      for (final a in addons)
+        entry.extras.where((x) => x.foodId == a.foodId && x.one == a.one).fold(0.0, (s, x) => s + x.qty),
+    ],
     editing: true,
   );
   if (result == null || !context.mounted) return;
@@ -361,9 +370,16 @@ Future<void> _edit(BuildContext context, FoodCalculatorStore store, int index, C
       kcal: s.kcal,
       proteinG: s.proteinG,
       qty: result.qty,
+      // A food no longer on the list keeps the extras it had.
+      extras: food == null ? entry.extras : _extras(addons, result.addonQty),
     ),
   );
 }
+
+List<CalcExtra> _extras(List<FoodAddon> addons, List<double> qty) => [
+  for (final (i, a) in addons.indexed)
+    if (qty[i] > 0) a.toExtra(qty[i]),
+];
 
 Future<void> _confirmClear(BuildContext context, FoodCalculatorStore store) async {
   final ok = await showDialog<bool>(
@@ -441,9 +457,17 @@ class _FoodPickerState extends State<_FoodPicker> {
   }
 
   Future<void> _pick(Food food) async {
-    final result = await _showServingSheet(context, name: food.name, note: food.note, servings: food.servings);
+    final result = await _showServingSheet(
+      context,
+      name: food.name,
+      note: food.note,
+      servings: food.servings,
+      addons: food.addons,
+    );
     if (result == null || result.remove || !mounted) return;
-    Navigator.of(context).pop(CalcEntry.of(food, food.servings[result.index], qty: result.qty));
+    Navigator.of(context).pop(
+      CalcEntry.of(food, food.servings[result.index], qty: result.qty, extras: _extras(food.addons, result.addonQty)),
+    );
   }
 
   Future<void> _custom() async {
@@ -484,7 +508,10 @@ class _FoodPickerState extends State<_FoodPicker> {
                       onPressed: () => setState(_query.clear),
                     ),
             ),
-            onChanged: (_) => setState(() {}),
+            onChanged: (q) => setState(() {
+              // Typing searches everything, so "Recent" should not stay highlighted.
+              if (_category == _recentId && q.trim().isNotEmpty) _category = null;
+            }),
           ),
         ),
         const SizedBox(height: Space.s),
@@ -548,7 +575,13 @@ class _FoodTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final t = context.tokens;
     final s = food.servings.first;
-    final more = food.servings.length > 1 ? ' · +${food.servings.length - 1} more' : '';
+    final String more;
+    if (food.isBuildUp) {
+      final names = [for (final a in food.addons.take(3)) a.name.toLowerCase()];
+      more = ' · add ${names.join(', ')}…';
+    } else {
+      more = food.servings.length > 1 ? ' · +${food.servings.length - 1} more' : '';
+    }
     return ListTile(
       minTileHeight: Sizes.minTap,
       contentPadding: const EdgeInsets.symmetric(horizontal: Space.page),
@@ -566,15 +599,17 @@ class _FoodTile extends StatelessWidget {
 // ---------------------------------------------------------------------------------------------
 // Serving + amount sheet
 
-typedef _ServingResult = ({int index, double qty, bool remove});
+typedef _ServingResult = ({int index, double qty, List<double> addonQty, bool remove});
 
 Future<_ServingResult?> _showServingSheet(
   BuildContext context, {
   required String name,
   String? note,
   required List<FoodServing> servings,
+  List<FoodAddon> addons = const [],
   int initialIndex = 0,
   double initialQty = 1,
+  List<double>? initialAddonQty,
   bool editing = false,
 }) => showModalBottomSheet<_ServingResult>(
   context: context,
@@ -584,27 +619,35 @@ Future<_ServingResult?> _showServingSheet(
     name: name,
     note: note,
     servings: servings,
+    addons: addons,
     initialIndex: initialIndex,
     initialQty: initialQty,
+    initialAddonQty: initialAddonQty ?? List.filled(addons.length, 0),
     editing: editing,
   ),
 );
 
+/// Pick a serving and how many; for a build-up food also how much of each add-on. The totals and
+/// the button stay pinned at the bottom while the add-ons scroll.
 class _ServingSheet extends StatefulWidget {
   const _ServingSheet({
     required this.name,
     required this.note,
     required this.servings,
+    required this.addons,
     required this.initialIndex,
     required this.initialQty,
+    required this.initialAddonQty,
     required this.editing,
   });
 
   final String name;
   final String? note;
   final List<FoodServing> servings;
+  final List<FoodAddon> addons;
   final int initialIndex;
   final double initialQty;
+  final List<double> initialAddonQty;
   final bool editing;
 
   @override
@@ -614,81 +657,210 @@ class _ServingSheet extends StatefulWidget {
 class _ServingSheetState extends State<_ServingSheet> {
   late int _index = widget.initialIndex;
   late double _qty = widget.initialQty;
+  late final List<double> _addonQty = [...widget.initialAddonQty];
+
+  _ServingResult _result({bool remove = false}) => (index: _index, qty: _qty, addonQty: _addonQty, remove: remove);
 
   @override
   Widget build(BuildContext context) {
     final t = context.tokens;
     final s = widget.servings[_index];
-    final kcal = s.kcal * _qty, protein = s.proteinG * _qty;
-    return SingleChildScrollView(
-      padding: const EdgeInsets.fromLTRB(Space.page, 0, Space.page, Space.l),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Text(widget.name, style: AppText.title.copyWith(color: t.onSurface)),
-          if (widget.note != null) ...[
-            const SizedBox(height: Space.s),
-            InfoNote(text: widget.note!, icon: Icons.lightbulb_outline, color: t.primary),
-          ],
-          if (widget.servings.length > 1) ...[
-            const SizedBox(height: Space.l),
-            Text('Serving', style: AppText.label.copyWith(color: t.muted)),
-            const SizedBox(height: Space.xs),
-            Wrap(
-              spacing: Space.s,
-              runSpacing: Space.s,
+    var kcalEach = s.kcal, proteinEach = s.proteinG;
+    for (final (i, a) in widget.addons.indexed) {
+      kcalEach += a.serving.kcal * _addonQty[i];
+      proteinEach += a.serving.proteinG * _addonQty[i];
+    }
+    final kcal = kcalEach * _qty, protein = proteinEach * _qty;
+    final points = proteinPointsFor(protein);
+    final added = [
+      for (final (i, a) in widget.addons.indexed)
+        if (_addonQty[i] > 0) a.toExtra(_addonQty[i]).label,
+    ];
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Flexible(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.fromLTRB(Space.page, 0, Space.page, Space.m),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                for (final (i, sv) in widget.servings.indexed)
-                  ChoiceChip(
-                    label: Text(sv.label),
-                    selected: _index == i,
-                    onSelected: (_) => setState(() => _index = i),
+                Text(widget.name, style: AppText.title.copyWith(color: t.onSurface)),
+                if (widget.note != null) ...[
+                  const SizedBox(height: Space.s),
+                  InfoNote(text: widget.note!, icon: Icons.lightbulb_outline, color: t.primary),
+                ],
+                if (widget.servings.length > 1) ...[
+                  const SizedBox(height: Space.l),
+                  Text(widget.addons.isEmpty ? 'Serving' : 'Start with', style: AppText.label.copyWith(color: t.muted)),
+                  const SizedBox(height: Space.xs),
+                  Wrap(
+                    spacing: Space.s,
+                    runSpacing: Space.s,
+                    children: [
+                      for (final (i, sv) in widget.servings.indexed)
+                        ChoiceChip(
+                          label: Text(sv.label),
+                          selected: _index == i,
+                          onSelected: (_) => setState(() => _index = i),
+                        ),
+                    ],
                   ),
+                ] else ...[
+                  const SizedBox(height: Space.xs),
+                  Text(s.label, style: AppText.body.copyWith(color: t.muted)),
+                ],
+                const SizedBox(height: Space.l),
+                Text('How many', style: AppText.label.copyWith(color: t.muted)),
+                const SizedBox(height: Space.xs),
+                NumberStepper(
+                  value: _qty,
+                  step: 0.5,
+                  min: 0.5,
+                  max: 20,
+                  unit: '×',
+                  onChanged: (v) => setState(() => _qty = v),
+                ),
+                if (widget.addons.isNotEmpty) ...[
+                  const SizedBox(height: Space.l),
+                  Text('Add to it', style: AppText.bodyStrong.copyWith(color: t.onSurface)),
+                  Text(
+                    _qty == 1
+                        ? 'Leave at 0 what you did not add.'
+                        : 'Amounts are for each one; the ${trimNumber(_qty)} × multiplies them too.',
+                    style: AppText.label.copyWith(color: t.muted),
+                  ),
+                  const SizedBox(height: Space.xs),
+                  for (final (i, a) in widget.addons.indexed)
+                    _AddonRow(addon: a, qty: _addonQty[i], onChanged: (v) => setState(() => _addonQty[i] = v)),
+                ],
               ],
             ),
-          ] else ...[
-            const SizedBox(height: Space.xs),
-            Text(s.label, style: AppText.body.copyWith(color: t.muted)),
-          ],
-          const SizedBox(height: Space.l),
-          Text('How many', style: AppText.label.copyWith(color: t.muted)),
-          const SizedBox(height: Space.xs),
-          NumberStepper(
-            value: _qty,
-            step: 0.5,
-            min: 0.5,
-            max: 20,
-            unit: '×',
-            onChanged: (v) => setState(() => _qty = v),
           ),
-          const SizedBox(height: Space.l),
-          Text(
-            '≈ ${groupedInt(kcal)} kcal · ${trimNumber(protein)} g protein · ${trimNumber(proteinPointsFor(protein))} '
-            '${_points(proteinPointsFor(protein))}',
-            textAlign: TextAlign.center,
-            style: AppText.tabular(AppText.bodyStrong).copyWith(color: t.onSurface),
+        ),
+        Material(
+          color: t.surface,
+          elevation: widget.addons.isEmpty ? 0 : 8,
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(Space.page, Space.m, Space.page, Space.l),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                if (added.isNotEmpty) ...[
+                  Text(
+                    '${s.label} + ${added.join(', ')}',
+                    textAlign: TextAlign.center,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: AppText.label.copyWith(color: t.muted),
+                  ),
+                  const SizedBox(height: Space.xs),
+                ],
+                Text(
+                  '≈ ${groupedInt(kcal)} kcal · ${trimNumber(protein)} g protein · ${trimNumber(points)} ${_points(points)}',
+                  textAlign: TextAlign.center,
+                  style: AppText.tabular(AppText.bodyStrong).copyWith(color: t.onSurface),
+                ),
+                const SizedBox(height: Space.m),
+                BigButton(
+                  label: widget.editing ? 'Save' : 'Add to list',
+                  icon: widget.editing ? Icons.check : Icons.add,
+                  height: Sizes.heroButton,
+                  onPressed: () => Navigator.of(context).pop(_result()),
+                ),
+                if (widget.editing) ...[
+                  const SizedBox(height: Space.s),
+                  BigButton(
+                    label: 'Remove from list',
+                    kind: BigButtonKind.destructive,
+                    height: Sizes.minTap,
+                    onPressed: () => Navigator.of(context).pop(_result(remove: true)),
+                  ),
+                ],
+              ],
+            ),
           ),
-          const SizedBox(height: Space.l),
-          BigButton(
-            label: widget.editing ? 'Save' : 'Add to list',
-            icon: widget.editing ? Icons.check : Icons.add,
-            height: Sizes.heroButton,
-            onPressed: () => Navigator.of(context).pop((index: _index, qty: _qty, remove: false)),
-          ),
-          if (widget.editing) ...[
-            const SizedBox(height: Space.s),
-            BigButton(
-              label: 'Remove from list',
-              kind: BigButtonKind.destructive,
-              height: Sizes.minTap,
-              onPressed: () => Navigator.of(context).pop((index: _index, qty: _qty, remove: true)),
+        ),
+      ],
+    );
+  }
+}
+
+/// "Honey · 1 tsp = 20 kcal" with a small (-) qty (+).
+class _AddonRow extends StatelessWidget {
+  const _AddonRow({required this.addon, required this.qty, required this.onChanged});
+
+  final FoodAddon addon;
+  final double qty;
+  final ValueChanged<double> onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    final t = context.tokens;
+    final on = qty > 0;
+    final unit = addon.toExtra(addon.step);
+    final detail = on
+        ? '${addon.toExtra(qty).label} · ${groupedInt(addon.serving.kcal * qty)} kcal'
+        : '${unit.label} = ${groupedInt(unit.totalKcal)} kcal';
+    Widget button(IconData icon, String tooltip, VoidCallback? onPressed) => SizedBox.square(
+      dimension: 48,
+      child: IconButton.filledTonal(
+        tooltip: tooltip,
+        style: IconButton.styleFrom(
+          backgroundColor: t.surface2,
+          foregroundColor: t.onSurface,
+          disabledBackgroundColor: t.surface2.withValues(alpha: 0.4),
+          disabledForegroundColor: t.muted.withValues(alpha: 0.4),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Radii.button)),
+        ),
+        onPressed: onPressed,
+        icon: Icon(icon),
+      ),
+    );
+    return Semantics(
+      container: true,
+      label: '${addon.name}: ${on ? addon.toExtra(qty).label : 'none'}',
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: Space.xs),
+        child: Row(
+          children: [
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(addon.name, style: (on ? AppText.bodyStrong : AppText.body).copyWith(color: t.onSurface)),
+                  Text(detail, style: AppText.label.copyWith(color: on ? t.primary : t.muted)),
+                ],
+              ),
+            ),
+            button(
+              Icons.remove,
+              'Less ${addon.name.toLowerCase()}',
+              on ? () => onChanged(_snap(qty - addon.step)) : null,
+            ),
+            SizedBox(
+              width: 48,
+              child: Text(
+                quantityText(qty),
+                textAlign: TextAlign.center,
+                style: AppText.tabular(AppText.bodyStrong).copyWith(color: on ? t.onSurface : t.muted),
+              ),
+            ),
+            button(
+              Icons.add,
+              'More ${addon.name.toLowerCase()}',
+              qty < 20 ? () => onChanged(_snap(qty + addon.step)) : null,
             ),
           ],
-        ],
+        ),
       ),
     );
   }
+
+  static double _snap(double v) => v < 1e-9 ? 0 : double.parse(v.toStringAsFixed(2));
 }
 
 // ---------------------------------------------------------------------------------------------

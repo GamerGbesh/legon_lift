@@ -137,6 +137,11 @@
      "p": 25
     },
     {
+     "label": "1 tbsp (20 g)",
+     "kcal": 45,
+     "p": 5
+    },
+    {
      "label": "small tin (200 g)",
      "kcal": 440,
      "p": 50
@@ -196,6 +201,105 @@
     "indomie",
     "ramen",
     "onion chicken"
+   ],
+   "addons": [
+    {
+     "food": "stew_tomato",
+     "s": 0,
+     "one": "ladle stew",
+     "name": "Stew",
+     "many": "ladles stew",
+     "step": 0.5
+    },
+    {
+     "food": "oil",
+     "s": 0,
+     "one": "tsp oil",
+     "name": "Oil"
+    },
+    {
+     "food": "shito",
+     "s": 0,
+     "one": "tsp shito"
+    },
+    {
+     "food": "egg_boiled",
+     "s": 0,
+     "one": "egg",
+     "name": "Egg",
+     "many": "eggs"
+    },
+    {
+     "food": "sausage_tin",
+     "s": 0,
+     "one": "sausage",
+     "name": "Sausage",
+     "many": "sausages"
+    },
+    {
+     "food": "corned_beef",
+     "s": 1,
+     "one": "tbsp corned beef"
+    },
+    {
+     "food": "tuna",
+     "s": 0,
+     "one": "tin tuna",
+     "name": "Tuna",
+     "many": "tins tuna",
+     "step": 0.5
+    },
+    {
+     "food": "sardines",
+     "s": 0,
+     "one": "tin sardines",
+     "name": "Sardines",
+     "many": "tins sardines",
+     "step": 0.5
+    },
+    {
+     "food": "onion",
+     "s": 0,
+     "one": "onion",
+     "many": "onions",
+     "step": 0.5
+    },
+    {
+     "food": "tomato",
+     "s": 0,
+     "one": "tomato",
+     "many": "tomatoes",
+     "step": 0.5
+    },
+    {
+     "food": "chilli",
+     "s": 0,
+     "one": "fresh pepper",
+     "name": "Fresh pepper",
+     "many": "fresh peppers"
+    },
+    {
+     "food": "green_pepper",
+     "s": 0,
+     "one": "green pepper",
+     "name": "Green pepper",
+     "many": "green peppers",
+     "step": 0.5
+    },
+    {
+     "food": "cabbage",
+     "s": 0,
+     "one": "cup cabbage",
+     "many": "cups cabbage",
+     "step": 0.5
+    },
+    {
+     "food": "carrot",
+     "s": 0,
+     "one": "carrot",
+     "many": "carrots",
+     "step": 0.5
+    }
    ]
   },
   {
@@ -223,6 +327,105 @@
     "talia",
     "pasta",
     "macaroni"
+   ],
+   "addons": [
+    {
+     "food": "stew_tomato",
+     "s": 0,
+     "one": "ladle stew",
+     "name": "Stew",
+     "many": "ladles stew",
+     "step": 0.5
+    },
+    {
+     "food": "oil",
+     "s": 0,
+     "one": "tsp oil",
+     "name": "Oil"
+    },
+    {
+     "food": "shito",
+     "s": 0,
+     "one": "tsp shito"
+    },
+    {
+     "food": "egg_boiled",
+     "s": 0,
+     "one": "egg",
+     "name": "Egg",
+     "many": "eggs"
+    },
+    {
+     "food": "sausage_tin",
+     "s": 0,
+     "one": "sausage",
+     "name": "Sausage",
+     "many": "sausages"
+    },
+    {
+     "food": "corned_beef",
+     "s": 1,
+     "one": "tbsp corned beef"
+    },
+    {
+     "food": "tuna",
+     "s": 0,
+     "one": "tin tuna",
+     "name": "Tuna",
+     "many": "tins tuna",
+     "step": 0.5
+    },
+    {
+     "food": "sardines",
+     "s": 0,
+     "one": "tin sardines",
+     "name": "Sardines",
+     "many": "tins sardines",
+     "step": 0.5
+    },
+    {
+     "food": "onion",
+     "s": 0,
+     "one": "onion",
+     "many": "onions",
+     "step": 0.5
+    },
+    {
+     "food": "tomato",
+     "s": 0,
+     "one": "tomato",
+     "many": "tomatoes",
+     "step": 0.5
+    },
+    {
+     "food": "chilli",
+     "s": 0,
+     "one": "fresh pepper",
+     "name": "Fresh pepper",
+     "many": "fresh peppers"
+    },
+    {
+     "food": "green_pepper",
+     "s": 0,
+     "one": "green pepper",
+     "name": "Green pepper",
+     "many": "green peppers",
+     "step": 0.5
+    },
+    {
+     "food": "cabbage",
+     "s": 0,
+     "one": "cup cabbage",
+     "many": "cups cabbage",
+     "step": 0.5
+    },
+    {
+     "food": "carrot",
+     "s": 0,
+     "one": "carrot",
+     "many": "carrots",
+     "step": 0.5
+    }
    ]
   },
   {
@@ -280,6 +483,11 @@
    "cat": "pantry",
    "servings": [
     {
+     "label": "1 tbsp",
+     "kcal": 20,
+     "p": 1
+    },
+    {
      "label": "2 tbsp",
      "kcal": 40,
      "p": 2
@@ -305,6 +513,11 @@
      "label": "1 glass (250 ml)",
      "kcal": 160,
      "p": 8
+    },
+    {
+     "label": "1 splash (50 ml)",
+     "kcal": 32,
+     "p": 1.6
     }
    ],
    "aka": [
@@ -325,6 +538,11 @@
      "label": "2 heaped tbsp",
      "kcal": 120,
      "p": 3
+    },
+    {
+     "label": "1 tsp",
+     "kcal": 30,
+     "p": 0.75
     }
    ],
    "aka": [
@@ -346,6 +564,11 @@
      "label": "1 small sachet (50 g)",
      "kcal": 290,
      "p": 12
+    },
+    {
+     "label": "1 tbsp (10 g)",
+     "kcal": 57,
+     "p": 2.3
     }
    ],
    "aka": [
@@ -373,6 +596,22 @@
    "aka": [
     "soya meat",
     "soy chunks"
+   ]
+  },
+  {
+   "id": "cheese",
+   "name": "Cheese",
+   "cat": "pantry",
+   "servings": [
+    {
+     "label": "1 slice",
+     "kcal": 70,
+     "p": 4
+    }
+   ],
+   "aka": [
+    "cheese slice",
+    "laughing cow"
    ]
   },
   {
@@ -415,29 +654,100 @@
   },
   {
    "id": "egg_fried",
-   "name": "Egg, fried / omelette",
+   "name": "Eggs: fried, omelette or scrambled",
    "cat": "protein",
    "servings": [
     {
-     "label": "1 egg, fried in oil",
-     "kcal": 110,
+     "label": "1 egg",
+     "kcal": 75,
      "p": 6
     },
     {
-     "label": "2-egg omelette",
-     "kcal": 230,
+     "label": "2 eggs",
+     "kcal": 150,
      "p": 12
     },
     {
-     "label": "3-egg omelette",
-     "kcal": 340,
+     "label": "3 eggs",
+     "kcal": 225,
      "p": 18
+    },
+    {
+     "label": "4 eggs",
+     "kcal": 300,
+     "p": 24
     }
    ],
    "aka": [
     "omelette",
     "scrambled egg",
     "fried egg"
+   ],
+   "note": "Add the oil you fry with: 1 tsp is 40 kcal.",
+   "addons": [
+    {
+     "food": "oil",
+     "s": 0,
+     "one": "tsp oil",
+     "name": "Oil"
+    },
+    {
+     "food": "margarine",
+     "s": 0,
+     "one": "tsp margarine"
+    },
+    {
+     "food": "onion",
+     "s": 0,
+     "one": "onion",
+     "many": "onions",
+     "step": 0.5
+    },
+    {
+     "food": "tomato",
+     "s": 0,
+     "one": "tomato",
+     "many": "tomatoes",
+     "step": 0.5
+    },
+    {
+     "food": "chilli",
+     "s": 0,
+     "one": "fresh pepper",
+     "name": "Fresh pepper",
+     "many": "fresh peppers"
+    },
+    {
+     "food": "green_pepper",
+     "s": 0,
+     "one": "green pepper",
+     "name": "Green pepper",
+     "many": "green peppers",
+     "step": 0.5
+    },
+    {
+     "food": "sausage_tin",
+     "s": 0,
+     "one": "sausage",
+     "name": "Sausage",
+     "many": "sausages"
+    },
+    {
+     "food": "corned_beef",
+     "s": 1,
+     "one": "tbsp corned beef"
+    },
+    {
+     "food": "milk_powder",
+     "s": 0,
+     "one": "tbsp milk powder"
+    },
+    {
+     "food": "cheese",
+     "s": 0,
+     "one": "slice cheese",
+     "many": "slices cheese"
+    }
    ]
   },
   {
@@ -1076,7 +1386,103 @@
     "tea bread",
     "sliced bread",
     "brown bread",
-    "toast"
+    "toast",
+    "sandwich"
+   ],
+   "note": "Spreads and fillings are for each slice; use 'How many' for the number of slices.",
+   "addons": [
+    {
+     "food": "margarine",
+     "s": 0,
+     "one": "tsp margarine"
+    },
+    {
+     "food": "groundnut_paste",
+     "s": 0,
+     "one": "tbsp groundnut paste"
+    },
+    {
+     "food": "choco_spread",
+     "s": 0,
+     "one": "tbsp chocolate spread"
+    },
+    {
+     "food": "jam",
+     "s": 0,
+     "one": "tbsp jam"
+    },
+    {
+     "food": "mayonnaise",
+     "s": 0,
+     "one": "tbsp mayo"
+    },
+    {
+     "food": "ketchup",
+     "s": 0,
+     "one": "tbsp ketchup"
+    },
+    {
+     "food": "cheese",
+     "s": 0,
+     "one": "slice cheese",
+     "many": "slices cheese"
+    },
+    {
+     "food": "egg_boiled",
+     "s": 0,
+     "one": "egg",
+     "name": "Egg",
+     "many": "eggs"
+    },
+    {
+     "food": "sausage_tin",
+     "s": 0,
+     "one": "sausage",
+     "name": "Sausage",
+     "many": "sausages"
+    },
+    {
+     "food": "corned_beef",
+     "s": 1,
+     "one": "tbsp corned beef"
+    },
+    {
+     "food": "tuna",
+     "s": 0,
+     "one": "tin tuna",
+     "name": "Tuna",
+     "many": "tins tuna",
+     "step": 0.5
+    },
+    {
+     "food": "sardines",
+     "s": 0,
+     "one": "tin sardines",
+     "name": "Sardines",
+     "many": "tins sardines",
+     "step": 0.5
+    },
+    {
+     "food": "onion",
+     "s": 0,
+     "one": "onion",
+     "many": "onions",
+     "step": 0.5
+    },
+    {
+     "food": "tomato",
+     "s": 0,
+     "one": "tomato",
+     "many": "tomatoes",
+     "step": 0.5
+    },
+    {
+     "food": "lettuce",
+     "s": 0,
+     "one": "cup lettuce",
+     "many": "cups lettuce",
+     "step": 0.5
+    }
    ]
   },
   {
@@ -1256,14 +1662,14 @@
    "cat": "soups",
    "servings": [
     {
-     "label": "½ ladle",
-     "kcal": 60,
-     "p": 0.5
-    },
-    {
      "label": "1 ladle",
      "kcal": 120,
      "p": 1
+    },
+    {
+     "label": "½ ladle",
+     "kcal": 60,
+     "p": 0.5
     }
    ],
    "aka": [
@@ -2479,6 +2885,37 @@
    "aka": [
     "yogurt",
     "yoghurt"
+   ],
+   "addons": [
+    {
+     "food": "sugar",
+     "s": 0,
+     "one": "tsp sugar"
+    },
+    {
+     "food": "honey",
+     "s": 0,
+     "one": "tsp honey"
+    },
+    {
+     "food": "groundnuts",
+     "s": 2,
+     "one": "tbsp groundnuts",
+     "name": "Groundnuts"
+    },
+    {
+     "food": "banana",
+     "s": 0,
+     "one": "banana",
+     "many": "bananas",
+     "step": 0.5
+    },
+    {
+     "food": "oats",
+     "s": 0,
+     "one": "× ½ cup oats",
+     "step": 0.5
+    }
    ]
   },
   {
@@ -2522,20 +2959,66 @@
    "cat": "breakfast",
    "servings": [
     {
-     "label": "1 cup, with sugar",
-     "kcal": 130,
-     "p": 3
+     "label": "1 cup, plain",
+     "kcal": 100,
+     "p": 2.5
     },
     {
-     "label": "1 cup, with milk and sugar",
-     "kcal": 180,
-     "p": 5
+     "label": "1 big cup, plain",
+     "kcal": 150,
+     "p": 4
     }
    ],
    "aka": [
     "porridge",
     "hausa koko",
     "koko"
+   ],
+   "addons": [
+    {
+     "food": "sugar",
+     "s": 0,
+     "one": "tsp sugar"
+    },
+    {
+     "food": "honey",
+     "s": 0,
+     "one": "tsp honey"
+    },
+    {
+     "food": "milk_powder",
+     "s": 0,
+     "one": "tbsp milk powder"
+    },
+    {
+     "food": "evap_milk",
+     "s": 0,
+     "one": "tbsp evaporated milk"
+    },
+    {
+     "food": "fresh_milk",
+     "s": 1,
+     "one": "splash fresh milk",
+     "many": "splashes fresh milk"
+    },
+    {
+     "food": "groundnuts",
+     "s": 2,
+     "one": "tbsp groundnuts",
+     "name": "Groundnuts"
+    },
+    {
+     "food": "koose",
+     "s": 0,
+     "one": "koose"
+    },
+    {
+     "food": "bread_slice",
+     "s": 1,
+     "one": "slice bread",
+     "name": "Bread",
+     "many": "slices bread"
+    }
    ]
   },
   {
@@ -2544,13 +3027,47 @@
    "cat": "breakfast",
    "servings": [
     {
-     "label": "1 cup with milk and sugar",
-     "kcal": 250,
-     "p": 7
+     "label": "1 cup, plain",
+     "kcal": 150,
+     "p": 5
     }
    ],
    "aka": [
     "tombrown"
+   ],
+   "addons": [
+    {
+     "food": "sugar",
+     "s": 0,
+     "one": "tsp sugar"
+    },
+    {
+     "food": "honey",
+     "s": 0,
+     "one": "tsp honey"
+    },
+    {
+     "food": "milk_powder",
+     "s": 0,
+     "one": "tbsp milk powder"
+    },
+    {
+     "food": "evap_milk",
+     "s": 0,
+     "one": "tbsp evaporated milk"
+    },
+    {
+     "food": "fresh_milk",
+     "s": 1,
+     "one": "splash fresh milk",
+     "many": "splashes fresh milk"
+    },
+    {
+     "food": "groundnuts",
+     "s": 2,
+     "one": "tbsp groundnuts",
+     "name": "Groundnuts"
+    }
    ]
   },
   {
@@ -2559,13 +3076,47 @@
    "cat": "breakfast",
    "servings": [
     {
-     "label": "1 cup with milk and sugar",
-     "kcal": 200,
-     "p": 4
+     "label": "1 cup, plain",
+     "kcal": 120,
+     "p": 2
     }
    ],
    "aka": [
     "rice porridge"
+   ],
+   "addons": [
+    {
+     "food": "sugar",
+     "s": 0,
+     "one": "tsp sugar"
+    },
+    {
+     "food": "honey",
+     "s": 0,
+     "one": "tsp honey"
+    },
+    {
+     "food": "milk_powder",
+     "s": 0,
+     "one": "tbsp milk powder"
+    },
+    {
+     "food": "evap_milk",
+     "s": 0,
+     "one": "tbsp evaporated milk"
+    },
+    {
+     "food": "fresh_milk",
+     "s": 1,
+     "one": "splash fresh milk",
+     "many": "splashes fresh milk"
+    },
+    {
+     "food": "groundnuts",
+     "s": 2,
+     "one": "tbsp groundnuts",
+     "name": "Groundnuts"
+    }
    ]
   },
   {
@@ -2574,44 +3125,196 @@
    "cat": "breakfast",
    "servings": [
     {
-     "label": "1 bowl with milk and sugar",
-     "kcal": 300,
-     "p": 10
-    }
-   ],
-   "aka": [
-    "oats"
-   ]
-  },
-  {
-   "id": "cornflakes",
-   "name": "Cornflakes with milk",
-   "cat": "breakfast",
-   "servings": [
+     "label": "30 g oats",
+     "kcal": 115,
+     "p": 4
+    },
     {
-     "label": "1 bowl",
-     "kcal": 250,
+     "label": "45 g oats (½ cup)",
+     "kcal": 170,
+     "p": 6
+    },
+    {
+     "label": "60 g oats",
+     "kcal": 230,
      "p": 8
     }
    ],
    "aka": [
+    "oats",
+    "quaker"
+   ],
+   "note": "Cooked in water; add the milk and sweetener you use.",
+   "addons": [
+    {
+     "food": "milk_powder",
+     "s": 0,
+     "one": "tbsp milk powder"
+    },
+    {
+     "food": "evap_milk",
+     "s": 0,
+     "one": "tbsp evaporated milk"
+    },
+    {
+     "food": "fresh_milk",
+     "s": 1,
+     "one": "splash fresh milk",
+     "many": "splashes fresh milk"
+    },
+    {
+     "food": "sugar",
+     "s": 0,
+     "one": "tsp sugar"
+    },
+    {
+     "food": "honey",
+     "s": 0,
+     "one": "tsp honey"
+    },
+    {
+     "food": "milo",
+     "s": 2,
+     "one": "tsp Milo",
+     "name": "Milo"
+    },
+    {
+     "food": "banana",
+     "s": 0,
+     "one": "banana",
+     "many": "bananas",
+     "step": 0.5
+    },
+    {
+     "food": "groundnuts",
+     "s": 2,
+     "one": "tbsp groundnuts",
+     "name": "Groundnuts"
+    },
+    {
+     "food": "groundnut_paste",
+     "s": 0,
+     "one": "tbsp groundnut paste"
+    },
+    {
+     "food": "egg_boiled",
+     "s": 0,
+     "one": "egg on the side",
+     "name": "Egg",
+     "many": "eggs on the side"
+    }
+   ]
+  },
+  {
+   "id": "cornflakes",
+   "name": "Cornflakes / cereal",
+   "cat": "breakfast",
+   "servings": [
+    {
+     "label": "1 bowl (30 g)",
+     "kcal": 110,
+     "p": 2
+    },
+    {
+     "label": "big bowl (50 g)",
+     "kcal": 185,
+     "p": 3.5
+    }
+   ],
+   "aka": [
     "cereal",
-    "cornflakes"
+    "cornflakes",
+    "golden morn"
+   ],
+   "addons": [
+    {
+     "food": "milk_powder",
+     "s": 0,
+     "one": "tbsp milk powder"
+    },
+    {
+     "food": "evap_milk",
+     "s": 0,
+     "one": "tbsp evaporated milk"
+    },
+    {
+     "food": "fresh_milk",
+     "s": 1,
+     "one": "splash fresh milk",
+     "many": "splashes fresh milk"
+    },
+    {
+     "food": "sugar",
+     "s": 0,
+     "one": "tsp sugar"
+    },
+    {
+     "food": "honey",
+     "s": 0,
+     "one": "tsp honey"
+    },
+    {
+     "food": "banana",
+     "s": 0,
+     "one": "banana",
+     "many": "bananas",
+     "step": 0.5
+    }
    ]
   },
   {
    "id": "weetabix",
-   "name": "Weetabix with milk",
+   "name": "Weetabix",
    "cat": "breakfast",
    "servings": [
     {
      "label": "2 biscuits",
-     "kcal": 260,
-     "p": 10
+     "kcal": 135,
+     "p": 4.5
+    },
+    {
+     "label": "3 biscuits",
+     "kcal": 200,
+     "p": 6.5
     }
    ],
    "aka": [
     "weetabix"
+   ],
+   "addons": [
+    {
+     "food": "milk_powder",
+     "s": 0,
+     "one": "tbsp milk powder"
+    },
+    {
+     "food": "evap_milk",
+     "s": 0,
+     "one": "tbsp evaporated milk"
+    },
+    {
+     "food": "fresh_milk",
+     "s": 1,
+     "one": "splash fresh milk",
+     "many": "splashes fresh milk"
+    },
+    {
+     "food": "sugar",
+     "s": 0,
+     "one": "tsp sugar"
+    },
+    {
+     "food": "honey",
+     "s": 0,
+     "one": "tsp honey"
+    },
+    {
+     "food": "banana",
+     "s": 0,
+     "one": "banana",
+     "many": "bananas",
+     "step": 0.5
+    }
    ]
   },
   {
@@ -2620,14 +3323,99 @@
    "cat": "breakfast",
    "servings": [
     {
-     "label": "1 cup with sugar",
-     "kcal": 150,
-     "p": 3
+     "label": "1 cup, plain",
+     "kcal": 100,
+     "p": 2
     }
    ],
    "aka": [
     "millet porridge",
     "oblayo"
+   ],
+   "addons": [
+    {
+     "food": "sugar",
+     "s": 0,
+     "one": "tsp sugar"
+    },
+    {
+     "food": "honey",
+     "s": 0,
+     "one": "tsp honey"
+    },
+    {
+     "food": "milk_powder",
+     "s": 0,
+     "one": "tbsp milk powder"
+    },
+    {
+     "food": "evap_milk",
+     "s": 0,
+     "one": "tbsp evaporated milk"
+    },
+    {
+     "food": "fresh_milk",
+     "s": 1,
+     "one": "splash fresh milk",
+     "many": "splashes fresh milk"
+    },
+    {
+     "food": "groundnuts",
+     "s": 2,
+     "one": "tbsp groundnuts",
+     "name": "Groundnuts"
+    }
+   ]
+  },
+  {
+   "id": "gari_soakings",
+   "name": "Gari soakings",
+   "cat": "breakfast",
+   "servings": [
+    {
+     "label": "½ cup gari in cold water",
+     "kcal": 215,
+     "p": 1
+    },
+    {
+     "label": "1 cup gari in cold water",
+     "kcal": 430,
+     "p": 2
+    }
+   ],
+   "aka": [
+    "soaked gari",
+    "gari and sugar",
+    "gari soak"
+   ],
+   "note": "Low protein: milk and groundnuts help.",
+   "addons": [
+    {
+     "food": "sugar",
+     "s": 0,
+     "one": "tsp sugar"
+    },
+    {
+     "food": "milk_powder",
+     "s": 0,
+     "one": "tbsp milk powder"
+    },
+    {
+     "food": "evap_milk",
+     "s": 0,
+     "one": "tbsp evaporated milk"
+    },
+    {
+     "food": "groundnuts",
+     "s": 2,
+     "one": "tbsp groundnuts",
+     "name": "Groundnuts"
+    },
+    {
+     "food": "honey",
+     "s": 0,
+     "one": "tsp honey"
+    }
    ]
   },
   {
@@ -2647,87 +3435,163 @@
    ]
   },
   {
-   "id": "tea_milk_sugar",
-   "name": "Tea with milk & sugar",
+   "id": "tea",
+   "name": "Tea",
    "cat": "drinks",
    "servings": [
     {
-     "label": "2 tsp sugar, 2 tbsp milk",
-     "kcal": 150,
-     "p": 4
-    },
-    {
-     "label": "1 tsp sugar, 2 tbsp milk",
-     "kcal": 130,
-     "p": 4
-    },
-    {
-     "label": "no sugar, 2 tbsp milk",
-     "kcal": 100,
-     "p": 4
+     "label": "1 cup (tea bag)",
+     "kcal": 2,
+     "p": 0
     }
    ],
    "aka": [
     "lipton",
-    "tea"
-   ]
-  },
-  {
-   "id": "tea_milk_honey",
-   "name": "Tea with milk & honey",
-   "cat": "drinks",
-   "servings": [
-    {
-     "label": "2 tsp honey, 2 tbsp milk",
-     "kcal": 120,
-     "p": 4
-    }
+    "tea",
+    "green tea",
+    "lemon tea",
+    "ginger tea"
    ],
-   "aka": [
-    "lipton",
-    "tea"
+   "addons": [
+    {
+     "food": "sugar",
+     "s": 0,
+     "one": "tsp sugar"
+    },
+    {
+     "food": "honey",
+     "s": 0,
+     "one": "tsp honey"
+    },
+    {
+     "food": "milk_powder",
+     "s": 0,
+     "one": "tbsp milk powder"
+    },
+    {
+     "food": "evap_milk",
+     "s": 0,
+     "one": "tbsp evaporated milk"
+    },
+    {
+     "food": "fresh_milk",
+     "s": 1,
+     "one": "splash fresh milk",
+     "many": "splashes fresh milk"
+    },
+    {
+     "food": "milo",
+     "s": 2,
+     "one": "tsp Milo",
+     "name": "Milo"
+    },
+    {
+     "food": "lemon",
+     "s": 0,
+     "one": "slice lemon",
+     "many": "slices lemon"
+    },
+    {
+     "food": "ginger",
+     "s": 0,
+     "one": "thumb ginger",
+     "many": "thumbs ginger"
+    }
    ]
   },
   {
    "id": "milo_drink",
-   "name": "Milo drink",
+   "name": "Milo / Bournvita drink",
    "cat": "drinks",
    "servings": [
     {
-     "label": "Milo + milk + 2 tsp sugar",
-     "kcal": 200,
-     "p": 6
+     "label": "2 tsp Milo",
+     "kcal": 60,
+     "p": 1.5
     },
     {
-     "label": "Milo + milk, no sugar",
-     "kcal": 140,
-     "p": 5.5
-    },
-    {
-     "label": "Milo with lots of milk (5 tbsp)",
-     "kcal": 260,
-     "p": 11.5
-    }
-   ],
-   "aka": [
-    "milo",
-    "chocolate drink"
-   ]
-  },
-  {
-   "id": "coffee",
-   "name": "Coffee with milk & sugar",
-   "cat": "drinks",
-   "servings": [
-    {
-     "label": "1 cup",
+     "label": "4 tsp Milo",
      "kcal": 120,
      "p": 3
     }
    ],
    "aka": [
+    "milo",
+    "chocolate drink",
+    "bournvita",
+    "richoco"
+   ],
+   "addons": [
+    {
+     "food": "sugar",
+     "s": 0,
+     "one": "tsp sugar"
+    },
+    {
+     "food": "honey",
+     "s": 0,
+     "one": "tsp honey"
+    },
+    {
+     "food": "milk_powder",
+     "s": 0,
+     "one": "tbsp milk powder"
+    },
+    {
+     "food": "evap_milk",
+     "s": 0,
+     "one": "tbsp evaporated milk"
+    },
+    {
+     "food": "fresh_milk",
+     "s": 1,
+     "one": "splash fresh milk",
+     "many": "splashes fresh milk"
+    }
+   ]
+  },
+  {
+   "id": "coffee",
+   "name": "Coffee",
+   "cat": "drinks",
+   "servings": [
+    {
+     "label": "1 cup (instant, black)",
+     "kcal": 5,
+     "p": 0.3
+    }
+   ],
+   "aka": [
     "nescafe",
     "coffee"
+   ],
+   "addons": [
+    {
+     "food": "sugar",
+     "s": 0,
+     "one": "tsp sugar"
+    },
+    {
+     "food": "honey",
+     "s": 0,
+     "one": "tsp honey"
+    },
+    {
+     "food": "milk_powder",
+     "s": 0,
+     "one": "tbsp milk powder"
+    },
+    {
+     "food": "evap_milk",
+     "s": 0,
+     "one": "tbsp evaporated milk"
+    },
+    {
+     "food": "fresh_milk",
+     "s": 1,
+     "one": "splash fresh milk",
+     "many": "splashes fresh milk"
+    }
    ]
   },
   {
@@ -3050,24 +3914,373 @@
    ]
   },
   {
-   "id": "veg_side",
-   "name": "Vegetables / salad side",
+   "id": "salad",
+   "name": "Salad (build your own)",
    "cat": "fruitveg",
    "servings": [
     {
-     "label": "1 cup cabbage, cucumber, carrot, tomato",
-     "kcal": 30,
+     "label": "1 cup lettuce & cabbage",
+     "kcal": 20,
      "p": 1
+    },
+    {
+     "label": "2 cups lettuce & cabbage",
+     "kcal": 40,
+     "p": 2
     }
    ],
    "aka": [
     "salad",
-    "cabbage",
-    "cucumber",
-    "carrot",
-    "lettuce",
-    "tomato",
-    "onion"
+    "vegetable salad",
+    "coleslaw"
+   ],
+   "note": "Dressing is where the calories are.",
+   "addons": [
+    {
+     "food": "tomato",
+     "s": 0,
+     "one": "tomato",
+     "many": "tomatoes",
+     "step": 0.5
+    },
+    {
+     "food": "cucumber",
+     "s": 0,
+     "one": "cucumber",
+     "many": "cucumbers",
+     "step": 0.5
+    },
+    {
+     "food": "carrot",
+     "s": 0,
+     "one": "carrot",
+     "many": "carrots",
+     "step": 0.5
+    },
+    {
+     "food": "onion",
+     "s": 0,
+     "one": "onion",
+     "many": "onions",
+     "step": 0.5
+    },
+    {
+     "food": "green_pepper",
+     "s": 0,
+     "one": "green pepper",
+     "name": "Green pepper",
+     "many": "green peppers",
+     "step": 0.5
+    },
+    {
+     "food": "sweet_corn",
+     "s": 0,
+     "one": "× 2 tbsp sweet corn"
+    },
+    {
+     "food": "egg_boiled",
+     "s": 0,
+     "one": "egg",
+     "name": "Egg",
+     "many": "eggs"
+    },
+    {
+     "food": "beans",
+     "s": 1,
+     "one": "× ½ cup beans",
+     "name": "Beans"
+    },
+    {
+     "food": "tuna",
+     "s": 0,
+     "one": "tin tuna",
+     "name": "Tuna",
+     "many": "tins tuna",
+     "step": 0.5
+    },
+    {
+     "food": "avocado",
+     "s": 0,
+     "one": "× ½ avocado",
+     "name": "Avocado"
+    },
+    {
+     "food": "salad_cream",
+     "s": 0,
+     "one": "tbsp salad cream"
+    },
+    {
+     "food": "mayonnaise",
+     "s": 0,
+     "one": "tbsp mayo"
+    },
+    {
+     "food": "oil",
+     "s": 0,
+     "one": "tsp oil",
+     "name": "Oil"
+    }
+   ]
+  },
+  {
+   "id": "onion",
+   "name": "Onion",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "1 medium",
+     "kcal": 40,
+     "p": 1
+    }
+   ],
+   "aka": [
+    "onions"
+   ]
+  },
+  {
+   "id": "tomato",
+   "name": "Tomato",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "1 medium",
+     "kcal": 20,
+     "p": 1
+    }
+   ],
+   "aka": [
+    "tomatoes"
+   ]
+  },
+  {
+   "id": "chilli",
+   "name": "Pepper, fresh (chilli)",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "1 pepper",
+     "kcal": 5,
+     "p": 0.2
+    }
+   ],
+   "aka": [
+    "kpakpo shito",
+    "scotch bonnet",
+    "chili",
+    "hot pepper"
+   ]
+  },
+  {
+   "id": "green_pepper",
+   "name": "Green pepper (bell pepper)",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "1 pepper",
+     "kcal": 25,
+     "p": 1
+    }
+   ],
+   "aka": [
+    "bell pepper",
+    "sweet pepper",
+    "capsicum"
+   ]
+  },
+  {
+   "id": "cabbage",
+   "name": "Cabbage",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "1 cup shredded",
+     "kcal": 20,
+     "p": 1
+    }
+   ]
+  },
+  {
+   "id": "carrot",
+   "name": "Carrot",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "1 medium",
+     "kcal": 25,
+     "p": 0.5
+    }
+   ],
+   "aka": [
+    "carrots"
+   ]
+  },
+  {
+   "id": "cucumber",
+   "name": "Cucumber",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "1 medium",
+     "kcal": 30,
+     "p": 1
+    }
+   ]
+  },
+  {
+   "id": "lettuce",
+   "name": "Lettuce",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "1 cup",
+     "kcal": 5,
+     "p": 0.5
+    }
+   ]
+  },
+  {
+   "id": "spring_onion",
+   "name": "Spring onion",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "2 stalks",
+     "kcal": 10,
+     "p": 0.5
+    }
+   ],
+   "aka": [
+    "green onion",
+    "scallion"
+   ]
+  },
+  {
+   "id": "okro",
+   "name": "Okro (fresh)",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "5 pods",
+     "kcal": 20,
+     "p": 1
+    }
+   ],
+   "aka": [
+    "okra",
+    "okro"
+   ]
+  },
+  {
+   "id": "kontomire",
+   "name": "Kontomire (cooked leaves)",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "1 cup",
+     "kcal": 30,
+     "p": 3
+    }
+   ],
+   "aka": [
+    "cocoyam leaves",
+    "nkontomire"
+   ]
+  },
+  {
+   "id": "spinach",
+   "name": "Spinach / aleefu (cooked)",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "1 cup",
+     "kcal": 40,
+     "p": 5
+    }
+   ],
+   "aka": [
+    "aleefu",
+    "amaranth",
+    "spinach"
+   ]
+  },
+  {
+   "id": "green_beans",
+   "name": "Green beans",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "1 cup",
+     "kcal": 35,
+     "p": 2
+    }
+   ],
+   "aka": [
+    "french beans"
+   ]
+  },
+  {
+   "id": "sweet_corn",
+   "name": "Sweet corn",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "2 tbsp",
+     "kcal": 30,
+     "p": 1
+    },
+    {
+     "label": "1 small tin",
+     "kcal": 200,
+     "p": 6
+    }
+   ],
+   "aka": [
+    "corn",
+    "sweetcorn"
+   ]
+  },
+  {
+   "id": "ginger",
+   "name": "Ginger",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "1 thumb",
+     "kcal": 5,
+     "p": 0.1
+    }
+   ]
+  },
+  {
+   "id": "garlic",
+   "name": "Garlic",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "2 cloves",
+     "kcal": 10,
+     "p": 0.4
+    }
+   ]
+  },
+  {
+   "id": "lemon",
+   "name": "Lemon / lime",
+   "cat": "fruitveg",
+   "servings": [
+    {
+     "label": "1 slice",
+     "kcal": 2,
+     "p": 0
+    },
+    {
+     "label": "1 whole",
+     "kcal": 20,
+     "p": 0.5
+    }
+   ],
+   "aka": [
+    "lime"
    ]
   },
   {
@@ -3271,7 +4484,7 @@
   },
   {
    "id": "pepper",
-   "name": "Pepper (ground / fresh)",
+   "name": "Pepper sauce / ground pepper",
    "cat": "extras",
    "servings": [
     {
@@ -3282,8 +4495,8 @@
    ],
    "aka": [
     "ground pepper",
-    "green pepper",
-    "pepper sauce"
+    "pepper sauce",
+    "black pepper"
    ]
   },
   {
