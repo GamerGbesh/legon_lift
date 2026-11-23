@@ -44,9 +44,47 @@ class SetTable extends StatelessWidget {
             _ActiveRow(row: row)
           else
             _RowLine(row: row),
+        if (active != null) _SetCountButtons(busy: c.busy),
         const SizedBox(height: Space.m),
         if (active != null) _LogButton(row: active),
       ],
+    );
+  }
+}
+
+/// "Remove set" / "Add set" right under the table, so changing the set count is one tap.
+class _SetCountButtons extends StatelessWidget {
+  const _SetCountButtons({required this.busy});
+
+  final bool busy;
+
+  @override
+  Widget build(BuildContext context) {
+    final c = context.read<SessionPlayerController>();
+    const size = Size.fromHeight(48);
+    return Padding(
+      padding: const EdgeInsets.only(top: Space.s),
+      child: Row(
+        children: [
+          Expanded(
+            child: OutlinedButton.icon(
+              style: OutlinedButton.styleFrom(minimumSize: size),
+              onPressed: busy ? null : c.removeSet,
+              icon: const Icon(Icons.remove),
+              label: const Text('Remove set'),
+            ),
+          ),
+          const SizedBox(width: Space.s),
+          Expanded(
+            child: OutlinedButton.icon(
+              style: OutlinedButton.styleFrom(minimumSize: size),
+              onPressed: busy ? null : c.addSet,
+              icon: const Icon(Icons.add),
+              label: const Text('Add set'),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -1580,7 +1580,7 @@ class SessionPlayerController extends ChangeNotifier {
     final h = _hold;
     if (h != null && h.running && h.remainingSec(now) == 0) {
       _hold = null;
-      if (settings.sound) unawaited(_sound.beep());
+      if (settings.sound) unawaited(_sound.restDone());
       if (settings.vibration) unawaited(_haptics.heavyTriple());
       await logSet(durationSec: h.totalSec);
     }
@@ -1649,15 +1649,11 @@ class SessionPlayerController extends ChangeNotifier {
     final stop = currentStop;
     if (t == null || stop == null) return;
     if (!silent) {
+      // Every timer rings when it runs down, short ones too (a 0.15 s beep was easy to miss).
       final long = (t.totalSec ?? 0) >= PlayerTiming.notifyTimerAtSec;
-      if (long) {
-        await _restAlarm.cancel();
-        if (settings.sound) unawaited(_sound.restDone());
-        if (settings.vibration) unawaited(_haptics.heavyTriple());
-      } else {
-        if (settings.sound) unawaited(_sound.beep());
-        if (settings.vibration) unawaited(_haptics.light());
-      }
+      if (long) await _restAlarm.cancel();
+      if (settings.sound) unawaited(_sound.restDone());
+      if (settings.vibration) unawaited(long ? _haptics.heavyTriple() : _haptics.light());
     }
     await _completeItem(logCardio: true, finishedTimer: true);
   }

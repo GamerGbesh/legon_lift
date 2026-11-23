@@ -19,7 +19,9 @@ class AudioSoundService implements SoundService {
   static final AudioContext duckingContext = AudioContext(
     android: const AudioContextAndroid(
       audioFocus: AndroidAudioFocus.gainTransientMayDuck,
-      usageType: AndroidUsageType.assistanceSonification,
+      // Alarm usage: plays on the alarm volume, so it is heard with the phone on vibrate/silent
+      // (sonification is muted then, and the timer ring went unheard in the gym).
+      usageType: AndroidUsageType.alarm,
       contentType: AndroidContentType.sonification,
     ),
   );
