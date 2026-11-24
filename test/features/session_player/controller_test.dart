@@ -211,6 +211,27 @@ void main() {
       expect(c.stops.first.isPending, isTrue);
     });
 
+    test('a finished exercise can be reopened to add a forgotten set', () async {
+      h = await PlayerHarness.start(plan: Plans.mainOnly);
+      final c = await h.open();
+      final first = c.currentStop!;
+      final se = first.exercise!;
+      while (c.currentStop!.id == first.id) {
+        await c.logSet();
+        await c.skipRest();
+      }
+      final logged = h.session.allSets.where((x) => x.sessionExerciseId == se.id).length;
+      expect(c.stops.firstWhere((s) => s.id == first.id).isPending, isFalse);
+
+      await c.jumpTo(first.id);
+      expect(c.currentStop!.id, first.id);
+      await c.addSet();
+      expect(c.activeRow, isNotNull);
+      expect(c.activeRow!.se.id, se.id);
+      await c.logSet();
+      expect(h.session.allSets.where((x) => x.sessionExerciseId == se.id), hasLength(logged + 1));
+    });
+
     test('doNextFirst moves the exercise after the next one; a primary only once', () async {
       h = await PlayerHarness.start(plan: Plans.mainOnly);
       final c = await h.open();
@@ -383,6 +404,15 @@ void main() {
       final after = again.activeRow!;
       expect((after.kind, after.label, after.weightKg, again.cursor.findWeight), before);
       expect(again.rest, isNotNull, reason: 'the rest deadline survives');
+    });
+
+    test('every prescribed working set is planned after the find tries (not one fewer)', () async {
+      h = await PlayerHarness.start(plan: Plans.firstMain(1, findWeight: true));
+      final c = await h.open();
+      final se = h.session.exercises.single;
+      final working = c.rowsOf().where((r) => r.se.id == se.id && r.workingNumber != null);
+      expect(se.target.working.length, greaterThan(1));
+      expect(working, hasLength(se.target.working.length));
     });
 
     test('skipping a ramp set starts the working sets at the current weight', () async {

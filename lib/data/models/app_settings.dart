@@ -26,6 +26,8 @@ class AppSettings {
     this.rirPrompt = RirPrompt.every,
     this.restCompoundSec = 120,
     this.restIsolationSec = 75,
+    this.setsPerExercise = 3,
+    this.smithEarly = false,
     this.themeMode = ThemeModePref.dark,
     this.palette = PaletteId.legonNight,
     this.reminderTime,
@@ -41,6 +43,14 @@ class AppSettings {
       hydrationNudges, hotDayAuto, largeText;
   final RirPrompt rirPrompt;
   final int restCompoundSec, restIsolationSec;
+
+  /// Working sets of every lift (primary, secondary, accessory) on a normal training day. The
+  /// program's own counts are raised to this; deload and retest days keep theirs.
+  final int setsPerExercise;
+  static const int minSetsPerExercise = 1, maxSetsPerExercise = 5;
+
+  /// Smith machine exercises from week 1 instead of from the Build phase.
+  final bool smithEarly;
   final ThemeModePref themeMode;
   final PaletteId palette;
 
@@ -64,6 +74,8 @@ class AppSettings {
         rirPrompt: RirPrompt.fromWire(readStringOrNull(j, 'rirPrompt') ?? 'every'),
         restCompoundSec: readIntOrNull(j, 'restCompoundSec') ?? 120,
         restIsolationSec: readIntOrNull(j, 'restIsolationSec') ?? 75,
+        smithEarly: readBool(j, 'smithEarly', fallback: false),
+        setsPerExercise: (readIntOrNull(j, 'setsPerExercise') ?? 3).clamp(minSetsPerExercise, maxSetsPerExercise),
         themeMode: ThemeModePref.fromWire(readStringOrNull(j, 'themeMode') ?? 'dark'),
         palette: PaletteId.fromWire(readStringOrNull(j, 'palette') ?? 'legon_night'),
         reminderTime: readStringOrNull(j, 'reminderTime'),
@@ -87,6 +99,8 @@ class AppSettings {
         'rirPrompt': rirPrompt.wire,
         'restCompoundSec': restCompoundSec,
         'restIsolationSec': restIsolationSec,
+        'setsPerExercise': setsPerExercise,
+        'smithEarly': smithEarly,
         'themeMode': themeMode.wire,
         'palette': palette.wire,
         'reminderTime': reminderTime,
@@ -110,6 +124,8 @@ class AppSettings {
     RirPrompt? rirPrompt,
     int? restCompoundSec,
     int? restIsolationSec,
+    int? setsPerExercise,
+    bool? smithEarly,
     ThemeModePref? themeMode,
     PaletteId? palette,
     String? Function()? reminderTime,
@@ -132,6 +148,8 @@ class AppSettings {
         rirPrompt: rirPrompt ?? this.rirPrompt,
         restCompoundSec: restCompoundSec ?? this.restCompoundSec,
         restIsolationSec: restIsolationSec ?? this.restIsolationSec,
+        setsPerExercise: setsPerExercise ?? this.setsPerExercise,
+        smithEarly: smithEarly ?? this.smithEarly,
         themeMode: themeMode ?? this.themeMode,
         palette: palette ?? this.palette,
         reminderTime: reminderTime != null ? reminderTime() : this.reminderTime,
@@ -142,7 +160,7 @@ class AppSettings {
 
   List<Object?> get _props => [
         keepAwake, sound, vibration, restNotification, autoRest, warmupSets, warmupBlock, cooldownBlock, //
-        hydrationNudges, hotDayAuto, largeText, rirPrompt, restCompoundSec, restIsolationSec, themeMode, palette,
+        hydrationNudges, hotDayAuto, largeText, rirPrompt, restCompoundSec, restIsolationSec, setsPerExercise, smithEarly, themeMode, palette,
         reminderTime, weighInTime, gymBagReminder, equipment,
       ];
   @override

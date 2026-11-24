@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:legon_lift/features/program/custom_program.dart';
+import 'package:legon_lift/features/program/day_editor_screen.dart';
 import 'package:legon_lift/features/program/program_screen.dart';
 import 'package:legon_lift/state/program_store.dart';
 import 'package:material_ui/material_ui.dart';
@@ -17,6 +18,15 @@ void main() {
     expect(find.textContaining('Front shoulders'), findsOneWidget);
     expect(find.textContaining(RegExp(r'^\d+ exercises · about \d+ min$')), findsNWidgets(3));
     expect(find.text('Add a day'), findsNothing); // ready-made programs keep their days
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('a day shows the set count the session uses (Settings > Sets per exercise)', (tester) async {
+    await pumpScreen(tester, FakeApp.seeded(), const DayEditorScreen(dayId: 'push'));
+    final incline = find.text('Incline Dumbbell Press');
+    await tester.scrollUntilVisible(incline, 200, scrollable: find.byType(Scrollable).first);
+    final card = find.ancestor(of: incline, matching: find.byType(Card));
+    expect(find.descendant(of: card, matching: find.textContaining('3 × 10–12')), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 

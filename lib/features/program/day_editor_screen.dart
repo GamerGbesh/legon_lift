@@ -13,7 +13,9 @@ import '../../core/format.dart';
 import '../../data/assets/asset_catalog.dart';
 import '../../data/models/models.dart';
 import '../../state/profile_store.dart';
+import '../../domain/session_builder.dart';
 import '../../state/program_store.dart';
+import '../../state/settings_store.dart';
 import '../../state/today_store.dart';
 import '../../widgets/exercise_thumb.dart';
 import '../../widgets/section_header.dart';
@@ -224,7 +226,12 @@ class _SlotTile extends StatelessWidget {
     final t = context.tokens;
     final catalog = context.read<AssetCatalog>();
     final ex = catalog.exercise(slot.exerciseId);
-    final item = slot.item;
+    final phaseId = context.read<ProgramStore>().phase?.phaseId;
+    final easyWeek = phaseId == PhaseId.deload || phaseId == PhaseId.retest;
+    // Show the set count the session will use (Settings > Sets per exercise).
+    final item = custom || easyWeek
+        ? slot.item
+        : withUserSets(slot.item, context.watch<SettingsStore>().settings.setsPerExercise);
     final optional = item.optional || slot.block.optional;
     final range = item.repRange;
     final amount = item.durationSeconds != null

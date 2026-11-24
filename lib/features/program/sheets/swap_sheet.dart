@@ -34,7 +34,8 @@ class _SwapSheet extends StatefulWidget {
 class _SwapSheetState extends State<_SwapSheet> {
   late final Future<List<SwapOption>> _options = context
       .read<ProgramStore>()
-      .swapOptions(widget.dayId, widget.slot, context.read<SettingsStore>().settings.equipment);
+      .swapOptions(widget.dayId, widget.slot, context.read<SettingsStore>().settings.equipment,
+          smithEarly: context.read<SettingsStore>().settings.smithEarly);
 
   @override
   Widget build(BuildContext context) {

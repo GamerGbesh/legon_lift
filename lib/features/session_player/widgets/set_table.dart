@@ -44,7 +44,7 @@ class SetTable extends StatelessWidget {
             _ActiveRow(row: row)
           else
             _RowLine(row: row),
-        if (active != null) _SetCountButtons(busy: c.busy),
+        _SetCountButtons(busy: c.busy, canRemove: active != null),
         const SizedBox(height: Space.m),
         if (active != null) _LogButton(row: active),
       ],
@@ -52,11 +52,12 @@ class SetTable extends StatelessWidget {
   }
 }
 
-/// "Remove set" / "Add set" right under the table, so changing the set count is one tap.
+/// "Remove set" / "Add set" right under the table, so changing the set count is one tap. Add
+/// set also works on a finished exercise (reopened from the plan) for a forgotten set.
 class _SetCountButtons extends StatelessWidget {
-  const _SetCountButtons({required this.busy});
+  const _SetCountButtons({required this.busy, required this.canRemove});
 
-  final bool busy;
+  final bool busy, canRemove;
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +70,7 @@ class _SetCountButtons extends StatelessWidget {
           Expanded(
             child: OutlinedButton.icon(
               style: OutlinedButton.styleFrom(minimumSize: size),
-              onPressed: busy ? null : c.removeSet,
+              onPressed: busy || !canRemove ? null : c.removeSet,
               icon: const Icon(Icons.remove),
               label: const Text('Remove set'),
             ),

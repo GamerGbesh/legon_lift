@@ -319,7 +319,7 @@ class ProgramStore extends ChangeNotifier {
   }
 
   /// Up to 4 alternatives for a slot (SPEC 6.9), excluding the day's other exercises.
-  Future<List<SwapOption>> swapOptions(String dayId, DaySlot slot, EquipmentProfile eq) async {
+  Future<List<SwapOption>> swapOptions(String dayId, DaySlot slot, EquipmentProfile eq, {bool smithEarly = false}) async {
     final p = phase;
     final ex = _catalog.tryExercise(slot.exerciseId);
     if (p == null || ex == null) return const [];
@@ -329,7 +329,7 @@ class ProgramStore extends ChangeNotifier {
     final history = states == null
         ? const <String, ExerciseState>{}
         : await states.getAll(_catalog.exercises.map((e) => e.id));
-    return suggestSwaps(ex, slot.item, _catalog, eq, p, dayIds, prefs, history);
+    return suggestSwaps(ex, slot.item, _catalog, eq, p, dayIds, prefs, history, smithEarly: smithEarly);
   }
 }
 

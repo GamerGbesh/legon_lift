@@ -90,9 +90,17 @@ void main() {
     expect(app.settings.settings!.rirPrompt, RirPrompt.never);
   });
 
+  testWidgets('sets per exercise starts at 3 and moves by one', (tester) async {
+    final app = await open(tester);
+    await tap(tester, find.byTooltip('More').first);
+    expect(app.settings.settings!.setsPerExercise, 4);
+  });
+
   testWidgets('rest steppers move in 15 s steps', (tester) async {
     final app = await open(tester);
-    final more = find.byTooltip('More').first;
+    await reveal(tester, find.text('Rest after big lifts'));
+    final stepper = find.ancestor(of: find.text('Rest after big lifts'), matching: find.byType(Column)).first;
+    final more = find.descendant(of: stepper, matching: find.byTooltip('More'));
     await tap(tester, more);
     expect(app.settings.settings!.restCompoundSec, 135);
     expect(find.text('2:15'), findsOneWidget);

@@ -25,6 +25,14 @@ const Set<int> calibrationWeeks = {6, 10};
 const String _lyingLegCurlId = 'lying_leg_curl';
 const String _seatedLegCurlId = 'seated_leg_curl';
 
+/// Roles that count as lifts for Settings > Sets per exercise.
+const Set<ItemRole> userSetRoles = {ItemRole.primary, ItemRole.secondary, ItemRole.accessory};
+
+/// [item] with its working sets raised to [setsPerExercise] when it is a lift. The caller skips
+/// deload/retest days and custom programs (whose set counts the user picked one by one).
+ProgramItem withUserSets(ProgramItem item, int setsPerExercise) =>
+    !userSetRoles.contains(item.role) || item.sets >= setsPerExercise ? item : item.copyWith(sets: setsPerExercise);
+
 /// Notice copy (plain language, shown before the session).
 const String week1Notice =
     "This week's sessions take ~5 min longer while we find your weights; the cardio finisher is skipped.";
@@ -71,8 +79,8 @@ class _SessionBuilder {
       day = _deloadTransform(day);
       phase = phase.copyWith(loadMultiplier: reactiveDeloadLoadMultiplier);
     }
-    unlocks = effectiveUnlocks(phase, limitations, rules);
-    lockedByLimitation = phase.unlocks.difference(unlocks);
+    unlocks = effectiveUnlocks(phase, limitations, rules, smithEarly: input.settings.smithEarly);
+    lockedByLimitation = {...phase.unlocks, if (input.settings.smithEarly) smithUnlockKey}.difference(unlocks);
     final overrides = {
       for (final o in input.overrides)
         if (o.dayId == day.dayId) o.slotKey: o,
@@ -121,7 +129,8 @@ class _SessionBuilder {
             if (o?.optionalEnabled == false && (item.optional || b.optional)) continue; // switched off
             final resolved = _resolve(item, overrides, work: true);
             if (resolved == null) continue;
-            final (resolvedItem, ex) = resolved;
+            final resolvedItem = _withUserSets(resolved.$1, noTrim: noTrim);
+            final ex = resolved.$2;
             final optional = (item.optional || b.optional) && o?.optionalEnabled != true;
             slots.add(_Slot(item, resolvedItem, ex, optional: optional));
           }
@@ -211,6 +220,8 @@ class _SessionBuilder {
       if (!fits()) overBudgetNotice();
     } else if (!fits()) {
       var done = false;
+      // The user's own set count is never trimmed (Settings > Sets per exercise).
+      final setFloor = math.max(minTrimmedSets, template.isCustom ? 0 : input.settings.setsPerExercise);
       // a. warm-up cardio 300 -> 180 s.
       if (cardio != null && cardioSeconds > minWarmupCardioSeconds) {
         cardioSeconds = minWarmupCardioSeconds;
@@ -219,7 +230,7 @@ class _SessionBuilder {
       // b. accessory sets - 1, from the last block backwards (never below 2).
       for (final s in reversed) {
         if (done) break;
-        if (!s.included || s.original.role != ItemRole.accessory || s.sets <= minTrimmedSets) continue;
+        if (!s.included || s.original.role != ItemRole.accessory || s.sets <= setFloor) continue;
         s.sets -= 1;
         done = fits();
       }
@@ -233,7 +244,7 @@ class _SessionBuilder {
       // d. secondary sets - 1, from last to first (never below 2).
       for (final s in reversed) {
         if (done) break;
-        if (!s.included || s.original.role != ItemRole.secondary || s.sets <= minTrimmedSets) continue;
+        if (!s.included || s.original.role != ItemRole.secondary || s.sets <= setFloor) continue;
         s.sets -= 1;
         done = fits();
       }
@@ -445,6 +456,9 @@ class _SessionBuilder {
     if (input.cardioOff && usesCardioMachine(ex)) return 'Skipped ${ex.name}: cardio machines are off';
     return 'Skipped ${ex.name}: no suitable alternative today';
   }
+
+  ProgramItem _withUserSets(ProgramItem item, {required bool noTrim}) =>
+      noTrim || template.isCustom ? item : withUserSets(item, input.settings.setsPerExercise);
 
   bool _isCardioItem(ProgramItem item) =>
       cardioWarmupIds.contains(item.exerciseId) ||

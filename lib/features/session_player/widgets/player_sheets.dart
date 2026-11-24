@@ -392,7 +392,7 @@ class _StepListSheet extends StatelessWidget {
         controller: scroll,
         padding: const EdgeInsets.fromLTRB(Space.page, Space.l, Space.page, Space.xxl),
         children: [
-          _sheetTitle(context, "Today's plan", subtitle: 'Tap anything not done yet to jump to it.'),
+          _sheetTitle(context, "Today's plan", subtitle: 'Tap a step to jump to it. Finished exercises reopen so you can add or fix a set.'),
           for (final s in c.stops)
             ListTile(
               minTileHeight: Sizes.minTap,
@@ -416,7 +416,8 @@ class _StepListSheet extends StatelessWidget {
                   fontWeight: s.id == current ? FontWeight.w700 : null,
                 ),
               ),
-              onTap: s.isPending && s.id != current
+              // Finished exercises can be reopened to fix a set or add a forgotten one.
+              onTap: s.id != current && (s.isPending || s.kind.hasSets)
                   ? () {
                       Navigator.of(context).pop();
                       unawaited(c.jumpTo(s.id));

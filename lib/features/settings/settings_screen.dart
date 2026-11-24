@@ -64,6 +64,13 @@ class SettingsScreen extends StatelessWidget {
             onTap: () => Navigator.of(context).push(EquipmentScreen.route()),
           ),
           const SectionHeader('Workout'),
+          _SetsStepper(value: s.setsPerExercise, onChanged: (n) => set(s.copyWith(setsPerExercise: n))),
+          _Switch(
+            title: 'Smith machine from week 1',
+            subtitle: 'Otherwise Smith exercises unlock in week 5. Ask staff for a quick demo first.',
+            value: s.smithEarly,
+            onChanged: (v) => set(s.copyWith(smithEarly: v)),
+          ),
           _RestStepper(
             label: 'Rest after big lifts',
             seconds: s.restCompoundSec,
@@ -319,6 +326,39 @@ class _RestStepper extends StatelessWidget {
             max: 300,
             decimals: 0,
             unit: 'sec',
+            onChanged: (v) => onChanged(v.round()),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _SetsStepper extends StatelessWidget {
+  const _SetsStepper({required this.value, required this.onChanged});
+
+  final int value;
+  final ValueChanged<int> onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    final t = context.tokens;
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: Space.s),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text('Sets per exercise', style: AppText.body.copyWith(color: t.onSurface)),
+          Text('Working sets of every lift. Easy (deload) weeks use fewer.',
+              style: AppText.label.copyWith(color: t.muted)),
+          const SizedBox(height: Space.xs),
+          NumberStepper(
+            value: value.toDouble(),
+            step: 1,
+            min: AppSettings.minSetsPerExercise.toDouble(),
+            max: AppSettings.maxSetsPerExercise.toDouble(),
+            decimals: 0,
+            unit: 'sets',
             onChanged: (v) => onChanged(v.round()),
           ),
         ],

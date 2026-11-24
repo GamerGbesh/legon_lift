@@ -56,9 +56,14 @@ bool exerciseAvoided(Exercise ex, List<String> limitations, Map<String, dynamic>
   return false;
 }
 
-/// [phase]'s unlock keys minus the keys a limitation locks (`lock_unlocks`, SPEC 6.8).
-Set<String> effectiveUnlocks(Phase phase, List<String> limitations, Map<String, dynamic> limitationRules) {
-  final unlocks = {...phase.unlocks};
+/// Unlock key of the Smith machine exercises.
+const String smithUnlockKey = 'smith_machine';
+
+/// [phase]'s unlock keys (plus the Smith machine when [smithEarly]) minus the keys a limitation
+/// locks (`lock_unlocks`, SPEC 6.8).
+Set<String> effectiveUnlocks(Phase phase, List<String> limitations, Map<String, dynamic> limitationRules,
+    {bool smithEarly = false}) {
+  final unlocks = {...phase.unlocks, if (smithEarly) smithUnlockKey};
   for (final l in limitations) {
     final rule = limitationRules[l];
     if (rule is Map) unlocks.removeAll(_strings(rule['lock_unlocks']));
@@ -100,10 +105,10 @@ String equipmentLabel(Exercise ex, GymProfileDefaults gym) {
 /// pain cool-down (defaults to the current time).
 List<SwapOption> suggestSwaps(Exercise ex, ProgramItem item, AssetCatalog c, EquipmentProfile eq, Phase phase,
     Set<String> todayIds, Map<String, ExercisePrefs> prefs, Map<String, ExerciseState> states,
-    {int max = 4, List<String> limitations = const [], DateTime? now}) {
+    {int max = 4, List<String> limitations = const [], DateTime? now, bool smithEarly = false}) {
   if (max <= 0) return const [];
   final rules = c.personalization.limitationRules;
-  final unlocks = effectiveUnlocks(phase, limitations, rules);
+  final unlocks = effectiveUnlocks(phase, limitations, rules, smithEarly: smithEarly);
   final at = now ?? DateTime.now();
 
   final similar = c.exercises

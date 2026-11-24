@@ -868,11 +868,10 @@ class SessionPlayerController extends ChangeNotifier {
     return RampProgress.ongoing(state);
   }
 
-  /// Planned working sets of [se] (after add/remove set; find-your-weight: max(1, sets - 1)).
-  int _plannedWorking(SessionExercise se) {
-    final n = se.target.working.length;
-    return se.target.findWeight && (_catalog.tryExercise(se.exerciseId)?.isLoaded ?? false) ? math.max(1, n - 1) : n;
-  }
+  /// Planned working sets of [se] (after add/remove set). In find-your-weight mode the
+  /// prescription already holds `max(1, sets - 1)` working sets (the find tries make up the
+  /// rest), so it is not reduced again here.
+  int _plannedWorking(SessionExercise se) => se.target.working.length;
 
   InSessionHint? _hintAfter(SessionExercise se, SetLog last) {
     final stop = _stopForSe(se.id);
@@ -1910,7 +1909,8 @@ class SessionPlayerController extends ChangeNotifier {
     if (stop == null || phase == null || ex == null) return const [];
     final m = stop.exercises.indexWhere((e) => e.id == se.id);
     final today = {for (final e in _session!.exercises) e.exerciseId};
-    return suggestSwaps(ex, _itemFor(stop, m), _catalog, equipment, phase, today, _prefs, _exerciseStates);
+    return suggestSwaps(ex, _itemFor(stop, m), _catalog, equipment, phase, today, _prefs, _exerciseStates,
+        smithEarly: settings.smithEarly);
   }
 
   /// Swaps [se] to [exerciseId]. Keeps the sets/rep target; takes the substitute's own working
