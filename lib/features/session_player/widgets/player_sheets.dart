@@ -15,6 +15,7 @@ import '../../../state/session_player_controller.dart';
 import '../../../widgets/big_button.dart';
 import '../../../widgets/exercise_thumb.dart';
 import '../../../widgets/number_stepper.dart';
+import '../../program/sheets/exercise_picker_sheet.dart';
 import 'player_copy.dart';
 
 Future<T?> _sheet<T>(BuildContext context, SessionPlayerController c, WidgetBuilder builder) =>
@@ -416,6 +417,7 @@ class _StepListSheet extends StatelessWidget {
                   fontWeight: s.id == current ? FontWeight.w700 : null,
                 ),
               ),
+              subtitle: s.isAdded ? Text('Added today', style: AppText.label.copyWith(color: t.secondary)) : null,
               // Finished exercises can be reopened to fix a set or add a forgotten one.
               onTap: s.id != current && (s.isPending || s.kind.hasSets)
                   ? () {
@@ -424,10 +426,48 @@ class _StepListSheet extends StatelessWidget {
                     }
                   : null,
             ),
+          const SizedBox(height: Space.m),
+          OutlinedButton.icon(
+            icon: const Icon(Icons.playlist_add),
+            label: const Text('Add an exercise'),
+            onPressed: () {
+              final root = Navigator.of(context).context;
+              Navigator.of(context).pop();
+              unawaited(addExerciseFlow(root, c));
+            },
+          ),
         ],
       ),
     );
   }
+}
+
+/// "Add an exercise": picks one from the library and adds it to today's workout.
+Future<void> addExerciseFlow(BuildContext context, SessionPlayerController c) async {
+  final id = await showExercisePicker(context, exclude: c.addExerciseExcludes);
+  if (id != null) await c.addExercise(id);
+}
+
+/// Removes the current added exercise, asking first when it has logged sets.
+Future<void> confirmRemoveExercise(BuildContext context, SessionPlayerController c) async {
+  final se = c.currentStop?.exercise;
+  if (se == null) return;
+  final logged = se.sets.isNotEmpty;
+  if (logged) {
+    final ok = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text('Remove ${c.exerciseOf(se).name}?'),
+        content: const Text('The sets you logged for it today are deleted too.'),
+        actions: [
+          TextButton(onPressed: () => Navigator.of(context).pop(false), child: const Text('Keep')),
+          FilledButton(onPressed: () => Navigator.of(context).pop(true), child: const Text('Remove')),
+        ],
+      ),
+    );
+    if (ok != true) return;
+  }
+  await c.removeAddedExercise();
 }
 
 // ---------------------------------------------------------------------------------------------
@@ -475,6 +515,26 @@ class _MoreSheet extends StatelessWidget {
             _ActionTile(icon: Icons.low_priority, title: 'Do the next exercise first', onTap: () => act(c.doNextFirst)),
           if (stop?.kind == StopKind.extra)
             _ActionTile(icon: Icons.fast_forward, title: 'Skip the extras', onTap: () => act(c.skipExtras)),
+          _ActionTile(
+            icon: Icons.playlist_add,
+            title: 'Add an exercise',
+            subtitle: 'Log something extra you are doing today.',
+            onTap: () {
+              Navigator.of(context).pop();
+              unawaited(addExerciseFlow(rootContext, c));
+            },
+          ),
+          if (c.canRemoveExercise)
+            _ActionTile(
+              icon: Icons.delete_outline,
+              title: 'Remove this exercise',
+              subtitle: 'You added it today. Its sets are deleted.',
+              color: t.danger,
+              onTap: () {
+                Navigator.of(context).pop();
+                unawaited(confirmRemoveExercise(rootContext, c));
+              },
+            ),
           if (hasSets && row != null)
             _ActionTile(
               icon: Icons.sticky_note_2_outlined,

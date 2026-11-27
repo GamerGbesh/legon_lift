@@ -322,6 +322,108 @@ void main() {
     });
   });
 
+  group('add an exercise', () {
+    const added = 'diverging_lat_pulldown';
+
+    test('on a fresh exercise it plays now, before it; the main ones keep their order', () async {
+      h = await PlayerHarness.start(plan: Plans.mainOnly);
+      final c = await h.open();
+      final first = c.currentStop!;
+      final mainsBefore = [for (final s in c.stops) s.id];
+      await c.addExercise(added);
+
+      final now = c.currentStop!;
+      expect(now.isAdded, isTrue);
+      expect(now.exercise!.exerciseId, added);
+      expect(c.stops.first.id, now.id);
+      expect([for (final s in c.stops.skip(1)) s.id], mainsBefore);
+      expect(c.activeRow!.exercise.id, added);
+      expect(first.isAdded, isFalse);
+
+      // Logs like any other exercise.
+      await c.logSet();
+      expect(h.session.allSets.where((x) => x.exerciseId == added), hasLength(1));
+    });
+
+    test('after a logged set it comes next and the current exercise stays', () async {
+      h = await PlayerHarness.start(plan: Plans.mainOnly);
+      final c = await h.open();
+      final first = c.currentStop!;
+      await c.logSet();
+      await c.addExercise(added);
+      expect(c.currentStop!.id, first.id);
+      expect(c.stops[1].isAdded, isTrue);
+      expect(c.takeMessage(), contains('comes next'));
+    });
+
+    test('during the warm-up it goes before the first exercise', () async {
+      h = await PlayerHarness.start();
+      final c = await h.open();
+      expect(c.currentStop!.kind, StopKind.warmupCardio);
+      await c.addExercise(added);
+      expect(c.currentStop!.kind, StopKind.warmupCardio);
+      final firstMain = c.stops.firstWhere((s) => s.kind.isMain);
+      expect(firstMain.isAdded, isTrue);
+      expect(c.stops.last.kind, StopKind.cooldown);
+    });
+
+    test('remove deletes it with its sets and goes back to the plan', () async {
+      h = await PlayerHarness.start(plan: Plans.mainOnly);
+      final c = await h.open();
+      final first = c.currentStop!;
+      await c.addExercise(added);
+      await c.logSet();
+      await c.skipRest();
+      expect(c.canRemoveExercise, isTrue);
+      await c.removeAddedExercise();
+
+      expect(h.session.exercises.any((e) => e.exerciseId == added), isFalse);
+      expect(h.session.allSets.any((x) => x.exerciseId == added), isFalse);
+      expect(c.currentStop!.id, first.id);
+      expect(c.stops.any((s) => s.isAdded), isFalse);
+      expect(c.canRemoveExercise, isFalse);
+    });
+
+    test("the plan's own exercises cannot be removed", () async {
+      h = await PlayerHarness.start(plan: Plans.mainOnly);
+      final c = await h.open();
+      expect(c.canRemoveExercise, isFalse);
+      final count = h.session.exercises.length;
+      await c.removeAddedExercise();
+      expect(h.session.exercises, hasLength(count));
+    });
+
+    test('survives a kill and is saved with the workout', () async {
+      h = await PlayerHarness.start(plan: Plans.firstMain(1));
+      var c = await h.open();
+      await c.addExercise(added);
+      final stop = c.currentStop!.id;
+      await c.logSet();
+      await c.skipRest();
+      c = await h.open();
+      expect(c.currentStop!.id, stop);
+      while (c.currentStop?.id == stop) {
+        await c.logSet();
+        await c.skipRest();
+      }
+      expect(c.stops.where((s) => s.isAdded), hasLength(1));
+      await c.endWorkout(save: true);
+      expect(h.session.status, SessionStatus.completed);
+      final se = h.session.exercises.singleWhere((e) => e.exerciseId == added);
+      expect(se.status, SessionExerciseStatus.done);
+      expect(se.sets, isNotEmpty);
+    });
+
+    test("picker leaves out today's exercises and cardio", () async {
+      h = await PlayerHarness.start(plan: Plans.mainOnly);
+      final c = await h.open();
+      final ex = c.addExerciseExcludes;
+      expect(ex, containsAll(h.session.exercises.map((e) => e.exerciseId)));
+      expect(ex, contains('bike_steady_state'));
+      expect(ex, isNot(contains(added)));
+    });
+  });
+
   group('timed stops', () {
     test('warm-up timer is deadline based and logs the cardio when done', () async {
       h = await PlayerHarness.start();

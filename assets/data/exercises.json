@@ -1932,7 +1932,8 @@
   "substitutions": [
    "lat_pulldown_close_neutral",
    "lat_pulldown_underhand",
-   "straight_arm_cable_pulldown"
+   "straight_arm_cable_pulldown",
+   "diverging_lat_pulldown"
   ],
   "freeExerciseDbId": "Wide-Grip_Lat_Pulldown",
   "images": [
@@ -2022,6 +2023,7 @@
    "lat_pulldown_wide",
    "lat_pulldown_underhand",
    "seated_cable_row",
+   "diverging_lat_pulldown",
    "straight_arm_cable_pulldown"
   ],
   "freeExerciseDbId": "V-Bar_Pulldown",
@@ -2109,7 +2111,8 @@
   "substitutions": [
    "lat_pulldown_close_neutral",
    "lat_pulldown_wide",
-   "seated_cable_row"
+   "seated_cable_row",
+   "diverging_lat_pulldown"
   ],
   "freeExerciseDbId": "Underhand_Cable_Pulldowns",
   "images": [
@@ -7959,5 +7962,78 @@
    "assets/exercises/head_supported_db_rear_delt_raise_0.jpg",
    "assets/exercises/head_supported_db_rear_delt_raise_1.jpg"
   ]
+ },
+ {
+  "id": "diverging_lat_pulldown",
+  "name": "Diverging Lat Pulldown (Machine)",
+  "aliases": [
+   "Diverging Lateral Pulldown",
+   "Iso-Lateral Pulldown",
+   "Plate-Loaded Lat Pulldown",
+   "Front Lat Pulldown Machine"
+  ],
+  "category": "pull",
+  "primaryMuscles": [
+   "lats"
+  ],
+  "secondaryMuscles": [
+   "upper_back",
+   "biceps",
+   "rear_delts"
+  ],
+  "equipment": [
+   "lat_pulldown_machine"
+  ],
+  "mechanic": "compound",
+  "difficulty": 1,
+  "unilateral": false,
+  "loadType": "stack",
+  "weightIncrementKg": 5,
+  "startingWeightKg": {
+   "low": 20,
+   "high": 30,
+   "note": "Log the total weight you move: the pin number on a stack machine, or all the plates on both arms if it is plate-loaded. Start light; you should hit 12 clean reps with 2-3 left in the tank."
+  },
+  "defaultSets": 3,
+  "repRange": [
+   8,
+   12
+  ],
+  "restSeconds": 90,
+  "durationSeconds": null,
+  "setup": [
+   "Set the seat so the handles are just within reach with your arms fully straight overhead.",
+   "Set the thigh pad so it presses firmly on top of your thighs with feet flat on the floor - you should not lift off the seat when you pull.",
+   "Grab one handle in each hand (neutral or overhand, whichever handles the machine has), chest up, slight lean back."
+  ],
+  "cues": [
+   "Drive your elbows down and out, then in to your sides",
+   "Let the handles travel in their arc - don't fight the machine",
+   "Squeeze your lats for 1 second at the bottom",
+   "Control it up for 2-3 seconds and feel the stretch at the top"
+  ],
+  "mistakes": [
+   "Leaning far back and turning it into a row",
+   "Yanking with body swing to move too much weight",
+   "Stopping halfway up instead of getting a full stretch",
+   "Letting one arm do more work than the other"
+  ],
+  "breathing": "Breathe in at the top with arms straight; exhale as you pull the handles down.",
+  "safety": "Seated and supported, so it is shoulder- and back-friendly. Each arm moves on its own, which shows up a weaker side - match the reps on both. Return the handles to the top under control before standing up; don't let them fly up. Wipe the handles and your palms before each set so your grip doesn't slip.",
+  "substitutions": [
+   "lat_pulldown_wide",
+   "lat_pulldown_close_neutral",
+   "lat_pulldown_underhand"
+  ],
+  "freeExerciseDbId": null,
+  "images": [],
+  "video": null,
+  "sources": [
+   "User's gym (UG Legon) has a diverging lat pulldown machine; added at the user's request."
+  ],
+  "movementPattern": "vertical_pull",
+  "tracking": "weight_reps",
+  "dumbbellCount": null,
+  "localImages": []
  }
 ]

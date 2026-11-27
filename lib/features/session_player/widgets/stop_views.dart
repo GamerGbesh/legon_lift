@@ -74,6 +74,11 @@ class ExerciseStopView extends StatelessWidget {
             child: Text('EXTRA ${stop.extraNumber} OF ${stop.extraCount} · ${PlayerCopy.extrasIntro}',
                 style: AppText.overline.copyWith(color: t.secondary)),
           ),
+        if (stop.isAdded)
+          Padding(
+            padding: const EdgeInsets.only(bottom: Space.s),
+            child: Text('ADDED TODAY · NOT PART OF YOUR PROGRAM', style: AppText.overline.copyWith(color: t.secondary)),
+          ),
         if (stop.kind == StopKind.superset)
           Padding(
             padding: const EdgeInsets.only(bottom: Space.s),
@@ -92,6 +97,8 @@ class ExerciseStopView extends StatelessWidget {
           child: Row(
             children: [
               ToolButton(icon: Icons.swap_horiz, label: 'Busy? Swap', onPressed: () => unawaited(showSwapSheet(context, c, se))),
+              const SizedBox(width: Space.s),
+              ToolButton(icon: Icons.playlist_add, label: 'Add exercise', onPressed: () => unawaited(addExerciseFlow(context, c))),
               const SizedBox(width: Space.s),
               if (ex.needsBarMath) ...[
                 ToolButton(

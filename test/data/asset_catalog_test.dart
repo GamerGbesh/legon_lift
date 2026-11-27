@@ -12,7 +12,7 @@ void main() {
 
   test('loads the three bundled files', () {
     final c = loadTestCatalog();
-    expect(c.exercises, hasLength(96));
+    expect(c.exercises, hasLength(97));
     expect(c.templates.map((t) => t.programId), containsAll([
       'ppl_3day', 'upper_lower_rotating_3day', 'chest_back_legs_arms_3day', 'upper_lower_2day', 'upper_lower_4day',
     ]));

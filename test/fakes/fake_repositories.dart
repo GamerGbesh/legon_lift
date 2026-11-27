@@ -268,10 +268,21 @@ class FakeSessionRepository implements SessionRepository {
   @override
   Future<SessionExercise> addExtra(String sessionId, ExerciseStep step) async {
     final s = _require(sessionId);
-    final added = sessionExerciseFromStep(sessionId, step, position: s.exercises.length, blockType: BlockType.main);
+    final last = s.exercises.fold(-1, (m, e) => e.position > m ? e.position : m);
+    final added = sessionExerciseFromStep(sessionId, step, position: last + 1, blockType: BlockType.main);
     sessions[sessionId] = s.copyWith(exercises: [...s.exercises, added]);
     _changed();
     return added;
+  }
+
+  @override
+  Future<void> removeExercise(String sessionExerciseId) async {
+    for (final s in sessions.values.toList()) {
+      if (!s.exercises.any((e) => e.id == sessionExerciseId)) continue;
+      sessions[s.id] = s.copyWith(exercises: s.exercises.where((e) => e.id != sessionExerciseId).toList());
+      _changed();
+      return;
+    }
   }
 
   @override

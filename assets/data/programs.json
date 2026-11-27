@@ -600,7 +600,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": "Grip just wider than shoulders, thighs locked under pad. Pull bar to upper chest, lead with elbows, lean back only slightly."
           },
@@ -1712,7 +1713,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": ""
           },
@@ -2893,7 +2895,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": ""
           },
@@ -3978,7 +3981,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": "DELOAD: ~90% of last working weight, stop with 4+ reps left. "
           },
@@ -4980,7 +4984,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": "TEST: after normal warm-up sets, use your last Phase-3 working weight and do as many good reps as possible, stopping when you have ~1 left. App computes e1RM = w * (1 + (reps + 1)/30) and compares to your week-1 numbers. Then 1 back-off set of 8 at 80% (RIR 3)."
           },
@@ -5716,7 +5721,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": ""
           },
@@ -7225,7 +7231,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": ""
           },
@@ -8706,7 +8713,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": ""
           },
@@ -10173,7 +10181,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": "DELOAD: ~90% of last working weight, stop with 4+ reps left. "
           },
@@ -11584,7 +11593,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": "TEST: after normal warm-up sets, use your last Phase-3 working weight and do as many good reps as possible, stopping when you have about 1 left. Then 1 back-off set of 8 at 80% (stop 3 short)."
           },
@@ -13023,7 +13033,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": ""
           },
@@ -14166,7 +14177,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": ""
           },
@@ -15308,7 +15320,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": ""
           },
@@ -16438,7 +16451,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": "DELOAD: ~90% of last working weight, stop with 4+ reps left. "
           },
@@ -17489,7 +17503,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": "TEST: after normal warm-up sets, use your last Phase-3 working weight and do as many good reps as possible, stopping when you have about 1 left. Then 1 back-off set of 8 at 80% (stop 3 short)."
           },
@@ -18570,7 +18585,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": ""
           },
@@ -19339,7 +19355,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": ""
           },
@@ -20108,7 +20125,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": ""
           },
@@ -20865,7 +20883,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": "DELOAD: ~90% of last working weight, stop with 4+ reps left. "
           },
@@ -21594,7 +21613,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": "TEST: after normal warm-up sets, use your last Phase-3 working weight and do as many good reps as possible, stopping when you have about 1 left. Then 1 back-off set of 8 at 80% (stop 3 short)."
           },
@@ -22355,7 +22375,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": ""
           },
@@ -23864,7 +23885,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": ""
           },
@@ -25345,7 +25367,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": ""
           },
@@ -26812,7 +26835,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": "DELOAD: ~90% of last working weight, stop with 4+ reps left. "
           },
@@ -28223,7 +28247,8 @@
            "substitutions": [
             "lat_pulldown_close_neutral",
             "straight_arm_cable_pulldown",
-            "lat_pulldown_underhand"
+            "lat_pulldown_underhand",
+            "diverging_lat_pulldown"
            ],
            "notes": "TEST: after normal warm-up sets, use your last Phase-3 working weight and do as many good reps as possible, stopping when you have about 1 left. Then 1 back-off set of 8 at 80% (stop 3 short)."
           },

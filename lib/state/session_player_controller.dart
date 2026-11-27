@@ -48,6 +48,15 @@ abstract final class PlayerTiming {
 
 enum PlayerStatus { loading, missing, playing, finishing, completed, discarded }
 
+/// Slot key prefix of exercises the user added during the session ("Add an exercise"):
+/// `added:1`, `added:2`, ... in the order they were added. They are not in the plan snapshot and
+/// can be removed again; the plan's own exercises can only be swapped or skipped.
+const String addedSlotPrefix = 'added:';
+
+bool isAddedSlot(String slotKey) => slotKey.startsWith(addedSlotPrefix);
+
+int _addedNumber(String slotKey) => int.tryParse(slotKey.substring(addedSlotPrefix.length)) ?? 0;
+
 /// What a stop of the player is. A stop is one screen of the flow; extras are one stop each.
 enum StopKind {
   warmupCardio,
@@ -117,6 +126,9 @@ class PlayerStop {
 
   /// The main session exercise of a single-exercise stop or timed cardio stop.
   SessionExercise? get exercise => exercises.isEmpty ? null : exercises.first;
+
+  /// An exercise the user added during the session (removable).
+  bool get isAdded => kind == StopKind.exercise && (exercise != null && isAddedSlot(exercise!.slotKey));
 
   /// Lowest session position (display order of set-based stops).
   int? get position => exercises.isEmpty ? null : exercises.map((e) => e.position).reduce(math.min);
@@ -784,14 +796,39 @@ class SessionPlayerController extends ChangeNotifier {
               id: stops.length, kind: StopKind.cooldown, step: step, items: items, state: visitState(stops.length)));
       }
     }
+    // Exercises added during the session: one stop each, after the plan's stops so the plan's
+    // stop ids never shift, in the order they were added.
+    final planCount = stops.length;
+    final added = pool.where((e) => !claimed.contains(e.id) && isAddedSlot(e.slotKey)).toList()
+      ..sort((a, b) => _addedNumber(a.slotKey).compareTo(_addedNumber(b.slotKey)));
+    for (final se in added) {
+      final ex = _catalog.tryExercise(se.exerciseId);
+      if (ex == null) continue;
+      final step = ExerciseStep(
+          index: -1, item: _addedItem(ex, sets: se.target.working.length, role: se.role), rx: se.target, slotKey: se.slotKey);
+      stops.add(PlayerStop(
+          id: stops.length,
+          kind: StopKind.exercise,
+          step: step,
+          members: [step],
+          exercises: [se],
+          state: seState([se], stops.length)));
+    }
     _stops = stops;
 
-    // Display order: plan order, with the main stops re-sorted by their session positions
-    // (the only thing "Do the next exercise first" changes).
-    final mainSlots = [for (final (i, st) in stops.indexed) if (st.kind.isMain) i];
-    final mains = [for (final i in mainSlots) stops[i]]
+    // Display order: plan order with the added stops joining the main work, and the main stops
+    // re-sorted by their session positions ("Do the next exercise first" and "Add an exercise"
+    // change those).
+    final display = [...stops.take(planCount)];
+    final lastMain = display.lastIndexWhere((st) => st.kind.isMain);
+    var at = lastMain >= 0
+        ? lastMain + 1
+        : display.indexWhere((st) => st.kind == StopKind.extra || st.kind == StopKind.finisher || st.kind == StopKind.cooldown);
+    if (at < 0) at = display.length;
+    display.insertAll(at, stops.skip(planCount));
+    final mainSlots = [for (final (i, st) in display.indexed) if (st.kind.isMain) i];
+    final mains = [for (final i in mainSlots) display[i]]
       ..sort((a, b) => (a.position ?? 0).compareTo(b.position ?? 0));
-    final display = [...stops];
     for (final (k, i) in mainSlots.indexed) {
       display[i] = mains[k];
     }
@@ -1942,6 +1979,8 @@ class SessionPlayerController extends ChangeNotifier {
           for (var i = 0; i < fresh.target.working.length; i++) rx.working[math.min(i, rx.working.length - 1)],
         ]);
       }
+      // An added exercise has no program slot: its swaps are for today only.
+      if (stop.isAdded) scope = SwapScope.today;
       final original = fresh.originalExerciseId ?? fresh.exerciseId;
       if (scope == SwapScope.today && exerciseId != original) {
         askDefault = await _sameSwapLastTime(fresh, original, exerciseId);
@@ -1974,6 +2013,121 @@ class SessionPlayerController extends ChangeNotifier {
     });
     return askDefault;
   }
+
+  // ------------------------------------------------------------------------------------------
+  // Events: add / remove an exercise
+  // ------------------------------------------------------------------------------------------
+
+  /// The program item of an exercise added during the session.
+  ProgramItem _addedItem(Exercise ex, {int? sets, ItemRole? role}) => ProgramItem(
+        exerciseId: ex.id,
+        sets: math.max(1, sets ?? ex.defaultSets),
+        repRange: ex.repRange,
+        durationSeconds: ex.durationSeconds,
+        restSeconds: ex.restSeconds,
+        role: role ?? (ex.mechanic == Mechanic.compound ? ItemRole.secondary : ItemRole.accessory),
+        warmupSets: ex.mechanic == Mechanic.compound ? 'auto' : 0,
+        substitutions: ex.substitutions,
+      );
+
+  /// Exercises the "Add an exercise" picker leaves out: today's exercises and cardio machines.
+  Set<String> get addExerciseExcludes => {
+        for (final e in _session?.exercises ?? const <SessionExercise>[]) e.exerciseId,
+        for (final e in _catalog.exercises)
+          if (e.category == ExerciseCategory.cardio) e.id,
+      };
+
+  /// Adds [exerciseId] to today's workout (it does not change the program). It goes before the
+  /// current exercise when that has nothing logged yet (and plays now), after it when it has
+  /// sets logged, and before the first exercise during the warm-up.
+  Future<void> addExercise(String exerciseId) => _run(() async {
+        final s = _session;
+        final ex = _catalog.tryExercise(exerciseId);
+        final phase = _phase;
+        if (s == null || ex == null) return;
+        if (phase == null) {
+          _message = "Couldn't add ${ex.name}: the program for this workout is missing.";
+          return;
+        }
+        final current = currentStop;
+        final number = s.exercises
+                .where((e) => isAddedSlot(e.slotKey))
+                .fold(0, (m, e) => math.max(m, _addedNumber(e.slotKey))) +
+            1;
+        final item = _addedItem(ex);
+        final states = await _states.getAll({exerciseId, ...?seedTransferSources[exerciseId]});
+        final state = states[exerciseId];
+        final prefs = await _states.prefs(exerciseId);
+        final seed = state?.workingKg == null ? transferSeed(exerciseId, states, equipment) : null;
+        var rx = prescribe(ex, item, phase, s.trainingWeek, state, equipment, prefs, GapRule.none,
+            isDeload: s.isDeload, hotDay: s.hotDay, seedKg: seed);
+        if (!settings.warmupSets) rx = rx.copyWith(warmups: const []);
+        final se = await _sessions.addExtra(
+            sessionId, ExerciseStep(index: -1, item: item, rx: rx, slotKey: '$addedSlotPrefix$number'));
+        if (state != null) _exerciseStates[exerciseId] = state;
+        _prefs = await _states.allPrefs();
+        _previous[exerciseId] = await _sessions.lastExposure(exerciseId, excludingSessionId: sessionId);
+        await _reload();
+
+        // Place it in the play order.
+        final addedStop = _stopForSe(se.id);
+        if (addedStop == null) return;
+        final order = [..._display]..removeWhere((x) => x.id == addedStop.id);
+        final cur = current == null ? -1 : order.indexWhere((x) => x.id == current.id);
+        final firstMain = order.indexWhere((x) => x.kind.isMain);
+        final started = current != null && current.isPending && current.exercises.any((e) => e.sets.isNotEmpty);
+        int? at;
+        var playNow = true;
+        if (current != null && current.kind.isMain) {
+          at = started ? cur + 1 : cur;
+          playNow = !started;
+        } else if (firstMain >= 0 && cur >= 0 && cur < firstMain) {
+          at = firstMain;
+          playNow = false;
+        }
+        if (at != null) {
+          order.insert(at, addedStop);
+          final ids = [for (final st in order) ...st.exercises.map((e) => e.id)];
+          final rest = [
+            for (final e in [..._session!.exercises]..sort((a, b) => a.position.compareTo(b.position)))
+              if (!ids.contains(e.id)) e.id,
+          ];
+          await _sessions.reorder(sessionId, [...ids, ...rest]);
+          await _reload();
+        }
+        final fresh = _stopForSe(se.id);
+        if (playNow && fresh != null) {
+          await _jump(fresh);
+          _message = 'Added ${ex.name} to today.';
+        } else {
+          _message = 'Added ${ex.name}. It comes next.';
+        }
+      });
+
+  /// True when the current stop is an exercise added today (it can be removed).
+  bool get canRemoveExercise => currentStop?.isAdded ?? false;
+
+  /// Removes the current exercise if it was added today (with its logged sets) and plays the next.
+  Future<void> removeAddedExercise() => _run(() async {
+        final stop = currentStop;
+        if (stop == null || !stop.isAdded) return;
+        final se = stop.exercise!;
+        final next = _nextPendingAfter(stop);
+        final nextSe = next?.exercises.firstOrNull?.id;
+        final nextId = next?.id;
+        await _sessions.removeExercise(se.id);
+        _drafts.removeWhere((k, _) => k.startsWith('${se.id}:'));
+        _undo = null;
+        _questions = const [];
+        await _reload();
+        _message = 'Removed ${_name(se.exerciseId)} from today.';
+        final target = nextSe != null ? _stopForSe(nextSe) : (nextId == null ? null : _stopById(nextId));
+        if (target == null) {
+          await _finish();
+          return;
+        }
+        await _moveTo(target, keepRest: false);
+      });
 
   /// "Make this your default?" after the same swap twice in a row.
   Future<void> makeDefault(SessionExercise se) => _run(() async {

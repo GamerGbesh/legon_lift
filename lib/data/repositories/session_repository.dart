@@ -44,6 +44,9 @@ abstract class SessionRepository {
   /// Adds an exercise at the end of the session (extras, "add exercise").
   Future<SessionExercise> addExtra(String sessionId, ExerciseStep step);
 
+  /// Deletes an exercise the user added during the session, with its logged sets.
+  Future<void> removeExercise(String sessionExerciseId);
+
   /// Marks the session completed (ended now) and clears the cursor.
   Future<Session> complete(String sessionId, {int? feeling, String? note, double? bodyweightKg});
 
@@ -271,15 +274,28 @@ class SqfliteSessionRepository implements SessionRepository {
   @override
   Future<SessionExercise> addExtra(String sessionId, ExerciseStep step) async {
     final added = await _d.transaction((txn) async {
-      final count = Sqflite.firstIntValue(
-              await txn.rawQuery('SELECT COUNT(*) FROM session_exercises WHERE session_id = ?', [sessionId])) ??
-          0;
-      final e = sessionExerciseFromStep(sessionId, step, position: count, blockType: BlockType.main);
+      final last = Sqflite.firstIntValue(
+              await txn.rawQuery('SELECT MAX(position) FROM session_exercises WHERE session_id = ?', [sessionId])) ??
+          -1;
+      final e = sessionExerciseFromStep(sessionId, step, position: last + 1, blockType: BlockType.main);
       await txn.insert('session_exercises', e.toMap());
       return e;
     });
     _changed();
     return added;
+  }
+
+  @override
+  Future<void> removeExercise(String sessionExerciseId) async {
+    await _d.transaction((txn) async {
+      final rows = await txn.query('session_exercises',
+          columns: ['session_id'], where: 'id = ?', whereArgs: [sessionExerciseId], limit: 1);
+      if (rows.isEmpty) return;
+      await txn.delete('set_logs', where: 'session_exercise_id = ?', whereArgs: [sessionExerciseId]);
+      await txn.delete('session_exercises', where: 'id = ?', whereArgs: [sessionExerciseId]);
+      await _touch(txn, rows.first['session_id']! as String);
+    });
+    _changed();
   }
 
   @override

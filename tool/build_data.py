@@ -63,7 +63,8 @@ PATTERN = {
     "smith_machine_close_grip_bench_press": "horizontal_push",
     # pull
     "lat_pulldown_wide": "vertical_pull", "lat_pulldown_close_neutral": "vertical_pull",
-    "lat_pulldown_underhand": "vertical_pull", "straight_arm_cable_pulldown": "straight_arm_pull",
+    "lat_pulldown_underhand": "vertical_pull", "diverging_lat_pulldown": "vertical_pull",
+    "straight_arm_cable_pulldown": "straight_arm_pull",
     "seated_cable_row": "horizontal_pull", "chest_supported_db_row": "horizontal_pull",
     "one_arm_db_row": "horizontal_pull", "smith_machine_bent_over_row": "horizontal_pull",
     "barbell_bent_over_row": "horizontal_pull", "cable_face_pull": "rear_delt",
@@ -117,6 +118,8 @@ CROSS_LINKS = [
     ("machine_calf_raise", "dumbbell_standing_calf_raise"),
     ("scapular_pulldown", "scapular_wall_slides"),
     ("lat_pulldown_wide", "lat_pulldown_close_neutral"),
+    ("lat_pulldown_wide", "diverging_lat_pulldown"),
+    ("lat_pulldown_close_neutral", "diverging_lat_pulldown"),
     ("seated_cable_row", "chest_supported_db_row"),
     ("seated_cable_row", "one_arm_db_row"),
     ("cable_face_pull", "incline_reverse_db_fly"),
