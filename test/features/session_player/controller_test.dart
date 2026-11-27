@@ -362,6 +362,7 @@ void main() {
       expect(c.currentStop!.kind, StopKind.warmupCardio);
       await c.addExercise(added);
       expect(c.currentStop!.kind, StopKind.warmupCardio);
+      expect(c.takeMessage(), contains('after the warm-up'));
       final firstMain = c.stops.firstWhere((s) => s.kind.isMain);
       expect(firstMain.isAdded, isTrue);
       expect(c.stops.last.kind, StopKind.cooldown);

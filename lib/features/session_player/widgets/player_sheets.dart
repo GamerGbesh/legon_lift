@@ -508,7 +508,7 @@ class _MoreSheet extends StatelessWidget {
             _ActionTile(
               icon: Icons.skip_next,
               title: 'Skip this exercise',
-              subtitle: 'It stays in your program.',
+              subtitle: stop?.isAdded ?? false ? 'It was only added for today.' : 'It stays in your program.',
               onTap: () => act(() => c.skipExercise(SkipReason.other)),
             ),
           if (hasSets && c.canDoNextFirst())

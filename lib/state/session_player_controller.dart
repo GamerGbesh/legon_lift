@@ -2078,12 +2078,14 @@ class SessionPlayerController extends ChangeNotifier {
         final started = current != null && current.isPending && current.exercises.any((e) => e.sets.isNotEmpty);
         int? at;
         var playNow = true;
+        var duringWarmup = false;
         if (current != null && current.kind.isMain) {
           at = started ? cur + 1 : cur;
           playNow = !started;
         } else if (firstMain >= 0 && cur >= 0 && cur < firstMain) {
           at = firstMain;
           playNow = false;
+          duringWarmup = true;
         }
         if (at != null) {
           order.insert(at, addedStop);
@@ -2100,7 +2102,9 @@ class SessionPlayerController extends ChangeNotifier {
           await _jump(fresh);
           _message = 'Added ${ex.name} to today.';
         } else {
-          _message = 'Added ${ex.name}. It comes next.';
+          _message = duringWarmup
+              ? 'Added ${ex.name}. It comes right after the warm-up.'
+              : 'Added ${ex.name}. It comes next.';
         }
       });
 
