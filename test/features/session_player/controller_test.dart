@@ -92,6 +92,16 @@ void main() {
       expect(c.activeRow!.weightKg, row.weightKg + 5);
     });
 
+    test('the next set starts from the reps just logged', () async {
+      h = await PlayerHarness.start(plan: Plans.mainOnly);
+      final c = await h.open();
+      final planned = c.activeRow!.reps;
+      c.setDraftReps(planned - 2);
+      await c.logSet();
+      expect(c.activeRow!.reps, planned - 2);
+      expect(c.draftReps, planned - 2);
+    });
+
     test('answerRir stores the answer; skipRest clears the deadline and the alarm', () async {
       h = await PlayerHarness.start(plan: Plans.mainOnly);
       final c = await h.open();

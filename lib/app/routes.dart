@@ -26,6 +26,9 @@ abstract final class Routes {
   /// Args: `String sessionId`.
   static const sessionSummary = '/session/summary';
 
+  /// The same summary reopened from History. Args: `String sessionId`.
+  static const historySummary = '/history/summary';
+
   /// Args: [ExerciseDetailArgs].
   static const exercise = '/exercise';
 
@@ -51,6 +54,7 @@ Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     Routes.onboarding => const OnboardingFlow(),
     Routes.session => PlayerScreen(args: args is PlayerArgs ? args : const PlayerArgs()),
     Routes.sessionSummary => SummaryScreen(sessionId: args! as String),
+    Routes.historySummary => SummaryScreen(sessionId: args! as String, fromHistory: true),
     Routes.exercise => ExerciseDetailScreen(args: args! as ExerciseDetailArgs),
     Routes.programDay => DayEditorScreen(dayId: args! as String),
     Routes.programSplit => const SplitPickerScreen(),

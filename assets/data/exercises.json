@@ -7471,10 +7471,11 @@
  },
  {
   "id": "machine_calf_raise",
-  "name": "Calf Raise Machine",
+  "name": "Seated Calf Press Machine",
   "aliases": [
-   "Standing Calf Raise Machine",
-   "Seated Calf Raise Machine",
+   "Calf Press Machine",
+   "Seated Calf Press",
+   "Calf Raise Machine",
    "Ankle Machine",
    "Calf Machine"
   ],
@@ -7494,7 +7495,7 @@
   "startingWeightKg": {
    "low": 30,
    "high": 60,
-   "note": "This is the machine listed as the 'Ankle machine' at the UG gym. Stack numbers differ between brands, so treat the number as a pin setting. Standing machine: start where 15 slow, full-range reps feel steady. Seated machine (plates on a lever over your knees): log only the plates you add and start with 10-20 kg."
+   "note": "This is the machine listed as the 'Ankle machine' at the UG gym: you sit with your legs out in front and push a footplate with the balls of your feet. Stack numbers differ between brands, so treat the number as a pin setting. Start where 15 slow, full-range reps feel steady."
   },
   "defaultSets": 3,
   "repRange": [
@@ -7504,55 +7505,54 @@
   "restSeconds": 60,
   "durationSeconds": null,
   "setup": [
-   "Check which kind it is. Standing: pads rest on your shoulders. Seated: a pad rests on top of your thighs just above the knees.",
-   "Standing: set the shoulder pads so you have to bend your knees slightly to get under them, then stand up tall to lift the weight off the stack.",
-   "Seated: set the thigh pad so it presses lightly on your lower thighs, then push up on your toes and release the safety lever.",
-   "Put only the balls of your feet on the edge of the step, hip-width apart, toes pointing forward. Heels hang off.",
-   "Hold the handles lightly for balance. Wipe the step dry if it is sweaty."
+   "Adjust the seat so that with the balls of your feet on the footplate your legs are almost straight (a tiny bend in the knees, not locked).",
+   "Sit with your back and hips flat against the back pad and hold the handles.",
+   "Put only the balls of your feet on the bottom edge of the footplate, hip-width apart, toes pointing forward. Heels hang off.",
+   "Push the plate (or yourself, on machines where the seat slides back) out by pointing your toes, then let it come back slowly.",
+   "Wipe the footplate dry if it is sweaty."
   ],
   "cues": [
-   "Let your heels sink below the step for a deep stretch, pause 1-2 seconds",
-   "Push through the big toe and rise as high as you can",
-   "Squeeze at the top for 1 second",
-   "Slow on the way down, no bouncing",
+   "Let your heels come back towards you for a deep stretch, pause 1-2 seconds",
+   "Push through the big toe and point your feet as far as you can",
+   "Squeeze at the end for 1 second",
+   "Slow on the way back, no bouncing",
    "Knees stay still: only the ankles move"
   ],
   "mistakes": [
-   "Bouncing at the bottom instead of pausing",
+   "Bouncing at the stretch instead of pausing",
    "Tiny half reps with heavy weight",
-   "Bending and straightening the knees to help (standing version)",
+   "Bending and straightening the knees to help push",
+   "Feet sliding up so you push with the middle of the foot",
    "Rolling onto the outside edges of the feet"
   ],
-  "breathing": "Breathe out as you rise, breathe in as you lower. Keep breathing steadily for the whole set.",
-  "safety": "A very safe machine for a beginner. The main risk is a foot slipping off a wet step, so use dry shoes, keep the whole ball of each foot on the step and re-engage the safety lever (seated) before you step off. On the standing version, do not round your back under the pads; stand tall. Calves get very sore after the first sessions, so keep week 1 easy.",
+  "breathing": "Breathe out as you push, breathe in as it comes back. Keep breathing steadily for the whole set.",
+  "safety": "A very safe machine for a beginner. The main risk is a foot slipping off the footplate, so use dry shoes and keep the whole ball of each foot on the plate. Never lock the knees hard. Calves get very sore after the first sessions, so keep week 1 easy.",
   "substitutions": [
    "leg_press_calf_raise",
    "smith_machine_calf_raise",
    "dumbbell_standing_calf_raise"
   ],
-  "freeExerciseDbId": "Standing_Calf_Raises",
+  "freeExerciseDbId": "Calf_Press_On_The_Leg_Press_Machine",
   "images": [
-   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Calf_Raises/0.jpg",
-   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Calf_Raises/1.jpg"
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Press_On_The_Leg_Press_Machine/0.jpg",
+   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Press_On_The_Leg_Press_Machine/1.jpg"
   ],
   "video": {
-   "url": "https://www.youtube.com/watch?v=VFly5vISChc",
-   "title": "Standing Calf Raise Machine • One of the best options for calf development (muscle on back side of",
-   "channel": "Dr. John Andrus DPT",
+   "url": "https://www.youtube.com/watch?v=KxEYX_cuesM",
+   "title": "Leg Press Calves",
+   "channel": "Renaissance Periodization",
    "verified": true
   },
   "sources": [
-   "https://www.strengthlog.com/standing-calf-raise/",
    "https://www.strengthlog.com/seated-calf-raise/",
-   "https://www.youtube.com/watch?v=VFly5vISChc",
-   "https://www.youtube.com/watch?v=z1N8ZRsb4bg"
+   "https://www.youtube.com/watch?v=KxEYX_cuesM"
   ],
   "movementPattern": "calf_raise",
   "tracking": "weight_reps",
   "dumbbellCount": null,
   "localImages": [
-   "assets/exercises/machine_calf_raise_0.jpg",
-   "assets/exercises/machine_calf_raise_1.jpg"
+   "assets/exercises/leg_press_calf_raise_0.jpg",
+   "assets/exercises/leg_press_calf_raise_1.jpg"
   ]
  },
  {

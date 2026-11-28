@@ -984,13 +984,18 @@ class SessionPlayerController extends ChangeNotifier {
           : rx.working[math.min(k, rx.working.length - 1)];
       final log = workLogs.remove(index);
       var kg = foundKg ?? (rampState?.currentKg ?? plan.weightKg);
+      var reps = plan.reps;
       if (log == null && lastLogged != null && ex.isLoaded) {
         final h = _hintAfter(se, lastLogged);
         kg = h != null && h.automatic && h.suggestedKg != null ? h.suggestedKg! : lastLogged.weightKg;
       }
+      // The next set starts from the reps of the set just done, like the weight does.
+      if (log == null && lastLogged != null && ex.tracking != Tracking.time && lastLogged.reps > 0) {
+        reps = lastLogged.reps;
+      }
       final label = '$letter${k + 1}';
       out.add(row(plan.kind == SetKind.warmup ? SetKind.working : plan.kind, label, log?.targetKg ?? kg,
-          log?.targetReps ?? plan.reps,
+          log?.targetReps ?? reps,
           duration: plan.durationSec, rir: plan.targetRir ?? rx.targetRir, log: log, number: k + 1));
       if (log != null) lastLogged = log;
     }

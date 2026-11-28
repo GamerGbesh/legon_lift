@@ -209,6 +209,18 @@ class _ActiveRow extends StatelessWidget {
                 if (v != null) c.setDraftWeight(v);
               },
             ),
+            if (ex.loadType == LoadType.plateLoaded)
+              Padding(
+                padding: const EdgeInsets.only(top: Space.xs),
+                child: Text(
+                  c.draftWeight > 0
+                      ? 'All plates you added, both sides together (${Fmt.weight(c.draftWeight / 2)} each side). '
+                          "Don't count the sled."
+                      : "All plates you added, both sides together. Don't count the sled.",
+                  textAlign: TextAlign.center,
+                  style: AppText.label.copyWith(color: t.muted),
+                ),
+              ),
             const SizedBox(height: Space.s),
           ],
           if (row.isTimed)

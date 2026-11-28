@@ -164,6 +164,15 @@ class _SessionDetailScreenState extends State<SessionDetailScreen> {
             appBar: AppBar(
               title: Text(session.dayName),
               actions: [
+                if (session.status == SessionStatus.completed)
+                  IconButton(
+                    tooltip: 'Workout summary',
+                    icon: const Icon(Icons.emoji_events_outlined),
+                    onPressed: () async {
+                      await Navigator.of(context).pushNamed(Routes.historySummary, arguments: session.id);
+                      if (mounted) _reload();
+                    },
+                  ),
                 FutureBuilder<bool>(
                   future: _canDelete,
                   builder: (context, can) => can.data == true

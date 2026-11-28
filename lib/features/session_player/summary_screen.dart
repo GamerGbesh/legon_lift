@@ -5,6 +5,7 @@ import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:confetti/confetti.dart';
+import 'package:intl/intl.dart' show DateFormat;
 import 'package:material_ui/material_ui.dart';
 import 'package:provider/provider.dart';
 
@@ -24,10 +25,14 @@ import '../../widgets/stat_tile.dart';
 
 /// Workout summary screen.
 class SummaryScreen extends StatefulWidget {
-  const SummaryScreen({super.key, required this.sessionId});
+  const SummaryScreen({super.key, required this.sessionId, this.fromHistory = false});
 
   /// The completed session.
   final String sessionId;
+
+  /// Reopened from History: Back just closes it, the saved reflection is shown, and body weight
+  /// is not offered (it would be logged for today, not for that workout's day).
+  final bool fromHistory;
 
   @override
   State<SummaryScreen> createState() => _SummaryScreenState();
@@ -105,7 +110,11 @@ class _SummaryScreenState extends State<SummaryScreen> {
       _session = s;
       _bests = bests;
       _next = next;
-      _milestones = milestones.recent;
+      _milestones = widget.fromHistory ? const [] : milestones.recent;
+      if (widget.fromHistory) {
+        _feeling = s.feeling;
+        _note.text = s.note ?? '';
+      }
       _firstEver = completed <= 1;
       _bodyweight = s.bodyweightKg ?? lastWeight ?? profileWeight ?? 95;
       _loaded = true;
@@ -116,6 +125,19 @@ class _SummaryScreenState extends State<SummaryScreen> {
   Future<void> _done() async {
     final s = _session;
     final navigator = Navigator.of(context);
+    if (s != null && widget.fromHistory) {
+      final note = _note.text.trim();
+      if (_feeling != s.feeling || note != (s.note ?? '')) {
+        await context.read<SessionRepository>().saveReflection(
+              s.id,
+              feeling: _feeling,
+              note: note.isEmpty ? null : note,
+              bodyweightKg: s.bodyweightKg,
+            );
+      }
+      navigator.pop();
+      return;
+    }
     if (s != null) {
       final note = _note.text.trim();
       final weight = _logWeight ? _bodyweight : null;
@@ -173,7 +195,13 @@ class _SummaryScreenState extends State<SummaryScreen> {
                   const SizedBox(height: Space.s),
                   Text(headline, textAlign: TextAlign.center, style: AppText.headline.copyWith(color: t.onSurface)),
                   const SizedBox(height: Space.xs),
-                  Text(s.dayName, textAlign: TextAlign.center, style: AppText.body.copyWith(color: t.muted)),
+                  Text(
+                    widget.fromHistory
+                        ? '${s.dayName} · ${DateFormat('EEE d MMM yyyy').format(s.startedAt.toLocal())}'
+                        : s.dayName,
+                    textAlign: TextAlign.center,
+                    style: AppText.body.copyWith(color: t.muted),
+                  ),
                   const SizedBox(height: Space.xl),
                   GridView.count(
                     crossAxisCount: 2,
@@ -245,7 +273,8 @@ class _SummaryScreenState extends State<SummaryScreen> {
                     ],
                   ),
                   const SizedBox(height: Space.l),
-                  SwitchListTile(
+                  if (!widget.fromHistory)
+                    SwitchListTile(
                     contentPadding: EdgeInsets.zero,
                     title: Text('Log my body weight', style: AppText.body.copyWith(color: t.onSurface)),
                     subtitle: Text('Best first thing in the morning, but any time is fine.',
@@ -253,7 +282,7 @@ class _SummaryScreenState extends State<SummaryScreen> {
                     value: _logWeight,
                     onChanged: (v) => setState(() => _logWeight = v),
                   ),
-                  if (_logWeight)
+                  if (_logWeight && !widget.fromHistory)
                     NumberStepper(
                       value: _bodyweight ?? 95,
                       step: 0.1,

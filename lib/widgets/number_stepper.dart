@@ -4,9 +4,11 @@ import 'package:material_ui/material_ui.dart';
 import '../app/theme/tokens.dart';
 import '../app/theme/typography.dart';
 import '../core/format.dart';
+import 'number_entry_sheet.dart';
 
-/// (-) value unit (+) with 64 dp buttons and a 40 sp value. Tapping the value calls [onTapValue]
-/// (usually `showNumberEntrySheet`). The buttons disable at [min] / [max].
+/// (-) value unit (+) with 64 dp buttons and a 40 sp value. Tapping the value calls [onTapValue],
+/// or, when that is null, opens the number keypad (`showNumberEntrySheet`, titled [entryTitle]).
+/// The buttons disable at [min] / [max].
 class NumberStepper extends StatelessWidget {
   const NumberStepper({
     super.key,
@@ -18,6 +20,7 @@ class NumberStepper extends StatelessWidget {
     this.max,
     this.decimals = 1,
     this.onTapValue,
+    this.entryTitle,
   });
 
   final double value;
@@ -29,6 +32,9 @@ class NumberStepper extends StatelessWidget {
   final int decimals;
   final VoidCallback? onTapValue;
 
+  /// Title of the keypad sheet opened when [onTapValue] is null.
+  final String? entryTitle;
+
   double _clamp(double v) {
     final hi = max;
     var out = v < min ? min : v;
@@ -39,6 +45,19 @@ class NumberStepper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = context.tokens;
+    final onTap = onTapValue ??
+        () async {
+          final v = await showNumberEntrySheet(
+            context,
+            title: entryTitle ?? (RegExp('[a-z]').hasMatch(unit) ? 'Enter $unit' : 'Enter a number'),
+            initial: value,
+            unit: unit,
+            decimals: decimals,
+            min: min,
+            max: max,
+          );
+          if (v != null) onChanged(_clamp(v));
+        };
     final shown = Fmt.number(value, maxDecimals: decimals);
     Widget button(IconData icon, String tooltip, double? next) => SizedBox.square(
           dimension: Sizes.stepper,
@@ -65,11 +84,11 @@ class NumberStepper extends StatelessWidget {
         Expanded(
           child: Semantics(
             label: '$shown $unit',
-            hint: onTapValue == null ? null : 'Tap to type a number',
-            button: onTapValue != null,
+            hint: 'Tap to type a number',
+            button: true,
             excludeSemantics: true,
             child: InkWell(
-              onTap: onTapValue,
+              onTap: onTap,
               borderRadius: BorderRadius.circular(Radii.button),
               child: ConstrainedBox(
                 constraints: const BoxConstraints(minHeight: Sizes.stepper),
