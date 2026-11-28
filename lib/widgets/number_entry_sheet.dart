@@ -1,5 +1,5 @@
 // Owner: WS4. Shared helper (additive to SPEC 12.3): the numeric keypad sheet opened by tapping a
-// NumberStepper value (SPEC 4.4 "Tapping a value opens a numeric keypad sheet").
+// NumberStepper value (SPEC 4.4 "Tapping a value opens a numeric keypad sheet"), with + − × ÷.
 import 'package:material_ui/material_ui.dart';
 
 import '../app/theme/tokens.dart';
@@ -7,7 +7,8 @@ import '../app/theme/typography.dart';
 import '../core/format.dart';
 import 'big_button.dart';
 
-/// Shows a big-key numeric keypad and returns the typed number (null when dismissed).
+/// Shows a big-key numeric keypad with + − × ÷ (worked out left to right) and returns the result
+/// (null when dismissed).
 /// Values outside [min]..[max] disable "Done" and show the allowed range.
 Future<double?> showNumberEntrySheet(
   BuildContext context, {
@@ -59,7 +60,38 @@ class _NumberEntrySheetState extends State<_NumberEntrySheet> {
   /// The first key press replaces the pre-filled value instead of appending to it.
   bool _fresh = true;
 
-  double? get _value => double.tryParse(_text);
+  static const _ops = '+−×÷';
+
+  bool get _hasOp => _text.split('').any(_ops.contains);
+
+  /// The current number being typed (after the last operator).
+  String get _operand {
+    var i = _text.length - 1;
+    while (i >= 0 && !_ops.contains(_text[i])) {
+      i--;
+    }
+    return _text.substring(i + 1);
+  }
+
+  /// Evaluates the typed sum left to right, like a simple calculator ("25+11.3×2" = 72.6).
+  /// A trailing operator is ignored; dividing by zero gives null.
+  double? get _value {
+    final parts = RegExp(r'[0-9.]+|[+−×÷]').allMatches(_text).map((m) => m[0]!).toList();
+    if (parts.isNotEmpty && _ops.contains(parts.last)) parts.removeLast();
+    if (parts.isEmpty) return null;
+    var acc = double.tryParse(parts.first);
+    for (var i = 1; i + 1 < parts.length && acc != null; i += 2) {
+      final n = double.tryParse(parts[i + 1]);
+      if (n == null) return null;
+      acc = switch (parts[i]) {
+        '+' => acc + n,
+        '−' => acc - n,
+        '×' => acc * n,
+        _ => n == 0 ? null : acc / n,
+      };
+    }
+    return acc == null ? null : double.parse(acc.toStringAsFixed(widget.decimals));
+  }
 
   bool get _valid {
     final v = _value;
@@ -70,21 +102,38 @@ class _NumberEntrySheetState extends State<_NumberEntrySheet> {
 
   void _press(String key) {
     setState(() {
-      if (_fresh && key != '⌫') _text = '';
+      final op = _ops.contains(key);
+      // The first key replaces the pre-filled value, except an operator, which works on it.
+      if (_fresh && key != '⌫' && !op) _text = '';
       _fresh = false;
       if (key == '⌫') {
         _text = _text.isEmpty ? '' : _text.substring(0, _text.length - 1);
         return;
       }
-      if (key == '.') {
-        if (widget.decimals == 0 || _text.contains('.')) return;
-        _text = _text.isEmpty ? '0.' : '$_text.';
+      if (op) {
+        if (_text.isEmpty) return;
+        final last = _text[_text.length - 1];
+        if (_ops.contains(last)) {
+          _text = '${_text.substring(0, _text.length - 1)}$key';
+        } else {
+          if (last == '.') _text = _text.substring(0, _text.length - 1);
+          _text = '$_text$key';
+        }
         return;
       }
-      final dot = _text.indexOf('.');
-      if (dot >= 0 && _text.length - dot - 1 >= widget.decimals) return;
-      if (_text.replaceAll('.', '').length >= 6) return;
-      _text = _text == '0' ? key : '$_text$key';
+      final cur = _operand;
+      final head = _text.substring(0, _text.length - cur.length);
+      if (key == '.') {
+        // Decimals allowed mid-sum even for whole-number fields (e.g. 25÷2.5); the result is rounded.
+        if (cur.contains('.') || (widget.decimals == 0 && !_hasOp)) return;
+        _text = '$head${cur.isEmpty ? '0.' : '$cur.'}';
+        return;
+      }
+      final dot = cur.indexOf('.');
+      if (dot >= 0 && cur.length - dot - 1 >= (_hasOp && widget.decimals < 2 ? 2 : widget.decimals)) return;
+      if (cur.replaceAll('.', '').length >= 6) return;
+      if (_text.length >= 24) return;
+      _text = '$head${cur == '0' ? key : '$cur$key'}';
     });
   }
 
@@ -110,10 +159,12 @@ class _NumberEntrySheetState extends State<_NumberEntrySheet> {
                     foregroundColor: t.onSurface,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Radii.button)),
                   ),
-                  onPressed: label == '.' && widget.decimals == 0 ? null : () => _press(label),
+                  onPressed: label == '.' && widget.decimals == 0 && !_hasOp ? null : () => _press(label),
                   child: label == '⌫'
                       ? const Icon(Icons.backspace_outlined, size: 28)
-                      : Text(label, style: AppText.value.copyWith(fontSize: 30)),
+                      : Text(label,
+                          style: AppText.value
+                              .copyWith(fontSize: 30, color: _ops.contains(label) ? t.primary : null)),
                 ),
               ),
             ),
@@ -135,24 +186,53 @@ class _NumberEntrySheetState extends State<_NumberEntrySheet> {
               borderRadius: BorderRadius.circular(Radii.button),
               border: Border.all(color: _valid || _text.isEmpty ? t.surface2 : t.warning, width: 2),
             ),
-            child: Text.rich(
-              TextSpan(children: [
-                TextSpan(text: _text.isEmpty ? '0' : _text, style: AppText.value.copyWith(fontSize: 48)),
-                TextSpan(text: ' ${widget.unit}', style: AppText.body.copyWith(color: t.muted)),
-              ]),
-              style: TextStyle(color: _text.isEmpty ? t.muted : t.onSurface),
+            padding: const EdgeInsets.symmetric(horizontal: Space.m),
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text.rich(
+                TextSpan(children: [
+                  TextSpan(text: _text.isEmpty ? '0' : _text, style: AppText.value.copyWith(fontSize: 48)),
+                  if (!_hasOp) TextSpan(text: ' ${widget.unit}', style: AppText.body.copyWith(color: t.muted)),
+                ]),
+                style: TextStyle(color: _text.isEmpty ? t.muted : t.onSurface),
+                maxLines: 1,
+              ),
             ),
           ),
+
           const SizedBox(height: Space.xs),
-          Text(range, textAlign: TextAlign.center, style: AppText.label.copyWith(color: _valid ? t.muted : t.warning)),
+          // While a sum is typed this line shows its result (and the range when it is out of range).
+          _hasOp
+              ? Text(
+                  _value == null
+                      ? '= ?'
+                      : '= ${Fmt.number(_value!, maxDecimals: widget.decimals)} ${widget.unit}'
+                          '${_valid ? '' : '  ($range)'}',
+                  textAlign: TextAlign.center,
+                  style: AppText.label.copyWith(fontWeight: FontWeight.w700).copyWith(color: _valid ? t.primary : t.warning),
+                )
+              : Text(range,
+                  textAlign: TextAlign.center, style: AppText.label.copyWith(color: _valid ? t.muted : t.warning)),
           const SizedBox(height: Space.s),
           for (final row in const [
-            ['1', '2', '3'],
-            ['4', '5', '6'],
-            ['7', '8', '9'],
-            ['.', '0', '⌫'],
+            ['1', '2', '3', '÷'],
+            ['4', '5', '6', '×'],
+            ['7', '8', '9', '−'],
+            ['.', '0', '⌫', '+'],
           ])
-            Row(children: [for (final k in row) key(k, semantics: k == '⌫' ? 'Delete' : (k == '.' ? 'Decimal point' : null))]),
+            Row(children: [
+              for (final k in row)
+                key(k,
+                    semantics: switch (k) {
+                      '⌫' => 'Delete',
+                      '.' => 'Decimal point',
+                      '÷' => 'Divide',
+                      '×' => 'Times',
+                      '−' => 'Minus',
+                      '+' => 'Plus',
+                      _ => null,
+                    }),
+            ]),
           const SizedBox(height: Space.m),
           BigButton(
             label: 'Done',

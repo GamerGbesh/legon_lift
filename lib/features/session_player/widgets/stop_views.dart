@@ -111,6 +111,17 @@ class ExerciseStopView extends StatelessWidget {
                 ),
                 const SizedBox(width: Space.s),
               ],
+              if (ex.loadType == LoadType.plateLoaded) ...[
+                ToolButton(
+                  icon: Icons.calculate_outlined,
+                  label: 'Plates',
+                  onPressed: () async {
+                    final kg = await showSledPlatesSheet(context, currentKg: c.draftWeight, equipment: c.equipment);
+                    if (kg != null) c.setDraftWeight(kg);
+                  },
+                ),
+                const SizedBox(width: Space.s),
+              ],
               ToolButton(icon: Icons.help_outline, label: 'How', onPressed: () => unawaited(showHowToSheet(context, ex, launcher))),
               const SizedBox(width: Space.s),
               ToolButton(icon: Icons.play_circle_outline, label: 'Video', onPressed: () => unawaited(openVideo(context, launcher, ex))),

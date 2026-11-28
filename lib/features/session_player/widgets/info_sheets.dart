@@ -1,4 +1,6 @@
 // Owner: WS3. How-to sheet and plate calculator sheet (SPEC 4.4).
+import 'dart:async';
+
 import 'package:material_ui/material_ui.dart';
 
 import '../../../app/theme/tokens.dart';
@@ -8,6 +10,7 @@ import '../../../data/models/models.dart';
 import '../../../domain/api.dart';
 import '../../../services/api.dart';
 import '../../../widgets/big_button.dart';
+import '../../../widgets/number_entry_sheet.dart';
 import '../../../widgets/number_stepper.dart';
 import 'exercise_media.dart';
 import 'player_copy.dart';
@@ -232,6 +235,131 @@ class _PlateSheetState extends State<_PlateSheet> {
           BigButton(
             label: r.exact ? 'Use ${Fmt.weight(r.totalKg)}' : 'Close',
             onPressed: () => Navigator.of(context).pop(r.exact ? r.totalKg : null),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Leg press plate adder: tap the plates on ONE side, the sheet doubles it. Returns the total of
+/// both sides (what the leg press logs; the sled is not counted), or null.
+Future<double?> showSledPlatesSheet(
+  BuildContext context, {
+  required double currentKg,
+  required EquipmentProfile equipment,
+}) =>
+    showModalBottomSheet<double>(
+      context: context,
+      isScrollControlled: true,
+      useSafeArea: true,
+      builder: (context) => _SledPlatesSheet(currentKg: currentKg, equipment: equipment),
+    );
+
+class _SledPlatesSheet extends StatefulWidget {
+  const _SledPlatesSheet({required this.currentKg, required this.equipment});
+
+  final double currentKg;
+  final EquipmentProfile equipment;
+
+  @override
+  State<_SledPlatesSheet> createState() => _SledPlatesSheetState();
+}
+
+class _SledPlatesSheetState extends State<_SledPlatesSheet> {
+  late final List<double> _side = _start();
+
+  /// Starts from the current weight when the plates can make it, else from no plates.
+  List<double> _start() {
+    if (widget.currentKg <= 0) return [];
+    final r = calculatePlates(widget.currentKg, 0, widget.equipment.platesKg);
+    return r.exact ? [...r.perSide] : [];
+  }
+
+  double get _sideKg => double.parse(_side.fold<double>(0, (a, b) => a + b).toStringAsFixed(2));
+  double get _totalKg => double.parse((_sideKg * 2).toStringAsFixed(2));
+
+  void _add(double kg) => setState(() {
+        _side
+          ..add(kg)
+          ..sort((a, b) => b.compareTo(a));
+      });
+
+  Future<void> _other() async {
+    final v = await showNumberEntrySheet(context, title: 'Plate weight', initial: 0, unit: 'kg', decimals: 2, max: 50);
+    if (v != null && v > 0) _add(v);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final t = context.tokens;
+    final plates = widget.equipment.platesKg.toSet().toList()..sort((a, b) => b.compareTo(a));
+    return SingleChildScrollView(
+      padding: const EdgeInsets.fromLTRB(Space.page, 0, Space.page, Space.xl),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text('Leg press plates', style: AppText.headline.copyWith(color: t.onSurface)),
+          const SizedBox(height: Space.xs),
+          Text('Tap the plates on ONE side. The app doubles it for you. Tap a plate in the list to remove it.',
+              style: AppText.body.copyWith(color: t.muted)),
+          const SizedBox(height: Space.l),
+          _PlateStack(perSide: _side, colorOf: _PlateSheetState.plateColor),
+          const SizedBox(height: Space.s),
+          Text(
+            _side.isEmpty
+                ? 'Each side: no plates yet'
+                : 'Each side: ${_side.map(Fmt.number).join(' + ')} = ${Fmt.weight(_sideKg)}',
+            textAlign: TextAlign.center,
+            style: AppText.body.copyWith(color: t.onSurface),
+          ),
+          const SizedBox(height: Space.xs),
+          Text(
+            'Total: ${Fmt.weight(_totalKg)}',
+            textAlign: TextAlign.center,
+            style: PlayerText.strong(AppText.headline).copyWith(color: t.primary),
+          ),
+          if (_side.isNotEmpty) ...[
+            const SizedBox(height: Space.m),
+            Wrap(
+              alignment: WrapAlignment.center,
+              spacing: Space.s,
+              runSpacing: Space.s,
+              children: [
+                for (final (i, p) in _side.indexed)
+                  InputChip(
+                    label: Text('${Fmt.number(p)} kg'),
+                    onDeleted: () => setState(() => _side.removeAt(i)),
+                    deleteButtonTooltipMessage: 'Remove',
+                  ),
+              ],
+            ),
+          ],
+          const SizedBox(height: Space.xl),
+          Text('Add a plate (one side)', style: AppText.label.copyWith(color: t.muted)),
+          const SizedBox(height: Space.s),
+          Wrap(
+            spacing: Space.s,
+            runSpacing: Space.s,
+            children: [
+              for (final p in plates)
+                ActionChip(
+                  avatar: const Icon(Icons.add, size: 18),
+                  label: Text('${Fmt.number(p)} kg'),
+                  onPressed: () => _add(p),
+                ),
+              ActionChip(
+                avatar: const Icon(Icons.dialpad, size: 18),
+                label: const Text('Other'),
+                onPressed: () => unawaited(_other()),
+              ),
+            ],
+          ),
+          const SizedBox(height: Space.xl),
+          BigButton(
+            label: 'Use ${Fmt.weight(_totalKg)}',
+            icon: Icons.check,
+            onPressed: () => Navigator.of(context).pop(_totalKg),
           ),
         ],
       ),
